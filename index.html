@@ -5432,81 +5432,71 @@
     <!-- ============================================== -->
     <main id="recipeCreateView" style="display:none;">
       <!-- Active Header Card -->
-      <section class="count-header-card" style="margin-bottom: 10px;">
-        <div class="count-header-brand-line">
+      <section class="count-header-card" style="margin-bottom: 10px; padding: 14px 16px;">
+        <div class="count-header-brand-line" style="margin-bottom: 6px;">
           <div class="count-header-logo" onclick="returnToDashboard()" style="cursor:pointer;" title="Ana Sayfaya Dön">
             <span class="brand-logo-card" style="padding: 4px 10px; border-radius: 8px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
-              <img class="app-header-logo-img" alt="Deli Napolitan" style="height: 22px; width: auto; object-fit: contain; vertical-align: middle; display: inline-block;">
+              <img class="app-header-logo-img" alt="Deli Napolitan" style="height: 20px; width: auto; object-fit: contain; vertical-align: middle; display: inline-block;">
             </span>
           </div>
-          <div style="font-size:0.75rem; color:#A8A29E; font-weight:600;">Master Reçete & Oran Tanımlama</div>
-        </div>
-
-        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
-          <div>
-            <h2 class="count-header-main-title" id="recipeCreateHeaderTitle" style="margin-bottom:4px;">Yeni Master Reçete Ekle</h2>
-            <p style="color:#D6D3D1; font-size:0.86rem;">
-              Standart mutfak reçetenizi tanımlayın; baz ürün üzerinden çalışan otomatik gramaj ve çarpan hesaplayıcısı oluşturulsun.
-            </p>
-          </div>
-          <span style="background:rgba(245, 158, 11, 0.2); border:1px solid rgba(245, 158, 11, 0.4); color:#FDE68A; padding:5px 12px; border-radius:20px; font-size:0.76rem; font-weight:700;">
-            ⚖️ 1. Satır = Baz Ürün Referansı
+          <span style="background:rgba(245, 158, 11, 0.2); border:1px solid rgba(245, 158, 11, 0.45); color:#FDE68A; padding:3px 10px; border-radius:20px; font-size:0.72rem; font-weight:700;">
+            ⚖️ 1. Satır = Baz Ürün
           </span>
         </div>
+
+        <h2 class="count-header-main-title" id="recipeCreateHeaderTitle" style="font-size:1.25rem; margin-bottom:2px;">Yeni Master Reçete Ekle</h2>
+        <p style="color:#D6D3D1; font-size:0.82rem; line-height:1.35; margin:0;">
+          Reçete malzemelerini girin; baz ürüne göre çalışan dinamik gramaj hesaplayıcısı otomatik oluşturulsun.
+        </p>
       </section>
 
-      <!-- Nav Bar -->
-      <nav class="count-nav-bar" style="margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
-        <div style="display:flex; align-items:center; gap:8px;">
-          <button type="button" class="btn-back-dashboard" onclick="openRecipesView()" title="Tüm Reçetelere Dön">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="15 18 9 12 15 6"/>
-            </svg>
-            Reçetelere Dön
-          </button>
-          <button type="button" class="btn-reset-count" onclick="returnToDashboard()" style="padding: 9px 14px; font-size:0.82rem;" title="Ana Sayfaya Dön">
-            Ana Menü
-          </button>
-        </div>
+      <!-- Mobil Uyumlu Üst Navigasyon Barı -->
+      <nav class="count-nav-bar" style="margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+        <button type="button" class="btn-back-dashboard" onclick="openRecipesView()" style="height: 42px; padding: 0 14px; font-size: 0.85rem;" title="Tüm Reçetelere Dön">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px; height:16px;">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+          Reçetelere Dön
+        </button>
 
-        <button type="button" onclick="saveCustomRecipeFromView()" style="background: linear-gradient(135deg, #16A34A 0%, #15803D 100%); color: #FFFFFF; border: none; padding: 10px 18px; border-radius: 10px; font-size: 0.86rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; box-shadow: 0 3px 10px rgba(22, 163, 74, 0.25);">
+        <button type="button" onclick="saveCustomRecipeFromView()" style="background: linear-gradient(135deg, #16A34A 0%, #15803D 100%); color: #FFFFFF; border: none; height: 42px; padding: 0 16px; border-radius: 10px; font-size: 0.86rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 3px 10px rgba(22, 163, 74, 0.25);">
           <span>💾</span>
-          <span>Master Reçeteyi Kaydet</span>
+          <span>Kaydet</span>
         </button>
       </nav>
 
       <!-- 2 SATIR KULLANMA ÖZETİ KUTUSU -->
-      <section style="background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border: 1.5px solid #F59E0B; border-radius: 14px; padding: 14px 18px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(245, 158, 11, 0.1);">
-        <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-          <span style="font-size:1.15rem;">📌</span>
-          <strong style="font-size:0.9rem; font-weight:800; color:#92400E; letter-spacing:0.01em;">MASTER REÇETE KULLANIM ÖZETİ</strong>
+      <section style="background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%); border: 1.5px solid #F59E0B; border-radius: 12px; padding: 12px 14px; margin-bottom: 14px; box-shadow: 0 2px 6px rgba(245, 158, 11, 0.08);">
+        <div style="display:flex; align-items:center; gap:6px; margin-bottom:6px;">
+          <span style="font-size:1rem;">📌</span>
+          <strong style="font-size:0.82rem; font-weight:800; color:#92400E; letter-spacing:0.01em;">KULLANIM ÖZETİ</strong>
         </div>
-        <div style="display:flex; flex-direction:column; gap:6px; font-size:0.85rem; color:#78350F; line-height:1.45;">
+        <div style="display:flex; flex-direction:column; gap:5px; font-size:0.81rem; color:#78350F; line-height:1.4;">
           <div>
-            <strong>1. Baz Ürün Belirleme (1. Satır):</strong> Tablonun <strong>1. satırı</strong> reçetenin <strong>Baz Ürününe (Ana Malzemesine)</strong> ayrılmıştır (Mercimek Çorbası reçetesindeki <em>Kırmızı Mercimek</em> gibi); diğer tüm malzemelerin oranları bu baz ürünün gramajına göre otomatik kilitlenir.
+            <strong>1. Baz Ürün (1. Satır):</strong> İlk kart <strong>Baz Ürüne (Ana Malzemeye)</strong> ayrılmıştır (Mercimek Çorbasındaki <em>Kırmızı Mercimek</em> gibi); diğer malzemelerin oranları bu baz ürüne kilitlenir.
           </div>
           <div>
-            <strong>2. Dinamik Gramaj Değiştirme:</strong> Master reçeteyi kaydettikten sonra, reçete sayfasında sadece <strong>baz ürünün gramajını</strong> değiştirdiğinizde diğer tüm malzemelerin miktarları aynı oranda anında hesaplanır.
+            <strong>2. Gramaj Değiştirme:</strong> Kaydettikten sonra reçete sayfasında sadece <strong>baz ürünün gramajını</strong> değiştirdiğinizde tüm malzemeler aynı oranda otomatik hesaplanır.
           </div>
         </div>
       </section>
 
-      <!-- REÇETE TEMEL BİLGİLERİ -->
-      <section class="recipe-table-card" style="padding: 18px; margin-bottom: 16px;">
+      <!-- 1. BÖLÜM: REÇETE TEMEL BİLGİLERİ (MOBİL KART) -->
+      <section style="background: #FFFFFF; border: 1.5px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 14px; box-shadow: var(--shadow-sm);">
         <input type="hidden" id="customRecipeEditId" value="">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+        <div style="display: flex; flex-direction: column; gap: 12px;">
           <div>
-            <label style="display:block; font-size:0.8rem; font-weight:800; color:var(--text-main); margin-bottom:6px;">
+            <label for="customRecipeNameInput" style="display:block; font-size:0.78rem; font-weight:800; color:var(--text-main); margin-bottom:5px;">
               Reçete Adı <span style="color:#DC2626;">*</span>
             </label>
-            <input type="text" id="customRecipeNameInput" placeholder="Örn: Pomodoro Sos, Domates Çorbası..." style="width:100%; padding:11px 13px; border:1.5px solid var(--border); border-radius:10px; font-size:0.95rem; font-weight:700; color:var(--text-main); background:#FFFFFF;">
+            <input type="text" id="customRecipeNameInput" placeholder="Örn: Pomodoro Sos, Domates Çorbası..." style="width:100%; height:46px; padding:0 13px; border:1.5px solid var(--border); border-radius:10px; font-size:16px; font-weight:700; color:var(--text-main); background:#FFFFFF; box-sizing:border-box;">
           </div>
 
           <div>
-            <label style="display:block; font-size:0.8rem; font-weight:800; color:var(--text-main); margin-bottom:6px;">
+            <label for="customRecipeTagSelect" style="display:block; font-size:0.78rem; font-weight:800; color:var(--text-main); margin-bottom:5px;">
               Reçete Kategorisi / Etiket
             </label>
-            <select id="customRecipeTagSelect" style="width:100%; padding:11px 13px; border:1.5px solid var(--border); border-radius:10px; font-size:0.92rem; font-weight:700; color:var(--text-main); background:#FFFFFF; cursor:pointer;">
+            <select id="customRecipeTagSelect" style="width:100%; height:46px; padding:0 12px; border:1.5px solid var(--border); border-radius:10px; font-size:16px; font-weight:700; color:var(--text-main); background:#FFFFFF; box-sizing:border-box; cursor:pointer;">
               <option value="Sote ve Pişirme">🍳 Sote ve Pişirme</option>
               <option value="Çorba">🥣 Çorba</option>
               <option value="Taban Sos">🍅 Taban Sos</option>
@@ -5515,127 +5505,99 @@
             </select>
           </div>
 
-          <div style="grid-column: 1 / -1;">
-            <label style="display:block; font-size:0.8rem; font-weight:800; color:var(--text-main); margin-bottom:6px;">
-              Kısa Açıklama / Pişirme Özeti (İsteğe Bağlı)
+          <div>
+            <label for="customRecipeDescInput" style="display:block; font-size:0.78rem; font-weight:800; color:var(--text-main); margin-bottom:5px;">
+              Kısa Açıklama (İsteğe Bağlı)
             </label>
-            <input type="text" id="customRecipeDescInput" placeholder="Örn: Baz ürün miktarını değiştirdiğinizde tüm sos malzemeleri otomatik orantılanır..." style="width:100%; padding:10px 13px; border:1.5px solid var(--border); border-radius:10px; font-size:0.88rem; color:var(--text-main); background:#FFFFFF;">
+            <input type="text" id="customRecipeDescInput" placeholder="Örn: Baz ürün miktarına göre tüm malzemeler otomatik orantılanır..." style="width:100%; height:44px; padding:0 13px; border:1.5px solid var(--border); border-radius:10px; font-size:16px; color:var(--text-main); background:#FFFFFF; box-sizing:border-box;">
           </div>
         </div>
       </section>
 
-      <!-- MASTER REÇETE MALZEME VE GRAMAJ GİRİŞ TABLOSU -->
-      <section class="recipe-table-card" style="margin-bottom: 20px;">
-        <div class="recipe-table-header" style="flex-wrap:wrap; gap:10px;">
-          <div style="display:flex; align-items:center; gap:8px;">
-            <span style="font-size:1.2rem;">⚖️</span>
-            <h3 style="font-size:1.02rem; font-weight:800; color:var(--text-main); margin:0;">
-              Master Reçete Malzemeleri ve Gramajları
+      <!-- 2. BÖLÜM: MALZEMELER VE GRAMAJLAR (MOBİL KART DÜZENİ - TABLOSUZ) -->
+      <section style="background: #FFFFFF; border: 1.5px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 14px; box-shadow: var(--shadow-sm);">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:6px; margin-bottom:12px; padding-bottom:10px; border-bottom:1.5px solid var(--border);">
+          <div style="display:flex; align-items:center; gap:7px;">
+            <span style="font-size:1.15rem;">⚖️</span>
+            <h3 style="font-size:0.98rem; font-weight:800; color:var(--text-main); margin:0;">
+              Malzemeler ve Gramajlar
             </h3>
           </div>
-          <div style="font-size:0.78rem; font-weight:700; color:#92400E; background:#FEF3C7; border:1px solid #FDE68A; padding:4px 10px; border-radius:20px;">
-            1. Satır = Baz Ürün (%100 Referans)
-          </div>
-        </div>
-
-        <div class="recipe-table-wrapper">
-          <table class="recipe-table" id="customRecipeCreatorTable">
-            <thead>
-              <tr>
-                <th style="width: 52px;">Satır</th>
-                <th style="min-width: 190px;">Malzeme Adı</th>
-                <th style="width: 145px;">Gramaj / Miktar</th>
-                <th style="width: 110px;">Birim</th>
-                <th style="width: 145px;">Baz Oranı</th>
-                <th style="min-width: 160px;">Hazırlık / Kullanım Notu</th>
-                <th style="width: 54px; text-align:center;">Sil</th>
-              </tr>
-            </thead>
-            <tbody id="customRecipeFormTbody">
-              <!-- 1. SATIR: SABİT BAZ ÜRÜN SATIRI -->
-              <tr class="row-master-mince" style="background:#FFFBEB; border-left: 4px solid #F59E0B;">
-                <td style="font-weight:800; color:#92400E;">
-                  <span style="display:inline-flex; align-items:center; justify-content:center; background:#F59E0B; color:#FFF; border-radius:6px; padding:2px 7px; font-size:0.75rem;">1</span>
-                </td>
-                <td>
-                  <div style="display:flex; flex-direction:column; gap:4px;">
-                    <span style="font-size:0.7rem; font-weight:800; color:#B45309; letter-spacing:0.02em;">🥣 BAZ ÜRÜN (ANA MALZEME) *</span>
-                    <input type="text" id="customBaseIngName" placeholder="Örn: Kırmızı Mercimek" oninput="updateCustomRecipeLiveRatios()" style="width:100%; padding:9px 10px; border:1.5px solid #F59E0B; border-radius:8px; font-weight:800; font-size:0.9rem; background:#FFFFFF; color:var(--text-main);">
-                  </div>
-                </td>
-                <td>
-                  <div style="display:flex; flex-direction:column; gap:4px;">
-                    <span style="font-size:0.7rem; font-weight:800; color:#B45309;">BAZ GRAMAJ *</span>
-                    <input type="number" id="customBaseIngQty" placeholder="300" min="0.1" step="any" inputmode="decimal" oninput="updateCustomRecipeLiveRatios()" style="width:100%; padding:9px 10px; border:1.5px solid #F59E0B; border-radius:8px; font-weight:800; font-size:0.95rem; text-align:right; background:#FFFFFF; color:var(--text-main);">
-                  </div>
-                </td>
-                <td>
-                  <div style="display:flex; flex-direction:column; gap:4px;">
-                    <span style="font-size:0.7rem; font-weight:700; color:#B45309;">BİRİM</span>
-                    <select id="customBaseIngUnit" onchange="updateCustomRecipeLiveRatios()" style="width:100%; padding:9px 8px; border:1.5px solid #F59E0B; border-radius:8px; font-weight:700; font-size:0.86rem; background:#FFFFFF;">
-                      <option value="g" selected>g (gram)</option>
-                      <option value="ml">ml</option>
-                      <option value="Litre">Litre</option>
-                      <option value="adet">adet</option>
-                    </select>
-                  </div>
-                </td>
-                <td>
-                  <span class="recipe-ratio-tag" style="background:#FEF3C7; color:#92400E; border:1px solid #F59E0B; font-weight:800;">
-                    100% (Baz Ürün)
-                  </span>
-                </td>
-                <td>
-                  <input type="text" id="customBaseIngNote" placeholder="Örn: Ana malzeme (oran referansı)" style="width:100%; padding:9px 10px; border:1px solid #FDE68A; border-radius:8px; font-size:0.84rem; background:#FFFFFF;">
-                </td>
-                <td style="text-align:center;">
-                  <span title="1. Satır Baz Üründür, silinemez" style="font-size:0.75rem; font-weight:800; color:#B45309; background:#FEF3C7; padding:4px 7px; border-radius:6px;">BAZ</span>
-                </td>
-              </tr>
-            </tbody>
-            <tbody id="customOtherIngredientsTbody">
-              <!-- 2. satır ve sonrası dinamik olarak eklenir -->
-            </tbody>
-          </table>
-        </div>
-
-        <div style="padding: 14px 18px; background: #F8FAFC; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
-          <button type="button" onclick="addCustomRecipeIngredientRow()" style="background: #FFFFFF; color: var(--text-main); border: 1.5px dashed #94A3B8; padding: 10px 16px; border-radius: 10px; font-size: 0.86rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
-            <span style="color:#16A34A; font-size:1.05rem;">＋</span>
-            <span>Malzeme Satırı Ekle</span>
-          </button>
-
-          <button type="button" onclick="saveCustomRecipeFromView()" style="background: linear-gradient(135deg, #16A34A 0%, #15803D 100%); color: #FFFFFF; border: none; padding: 11px 22px; border-radius: 10px; font-size: 0.9rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);">
-            <span>💾</span>
-            <span>Master Reçeteyi Kaydet</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- YAZILI REÇETE TARİFİ / HAZIRLANIŞI (TEK METİN KUTUSU) -->
-      <section class="recipe-table-card" style="margin-bottom: 20px;">
-        <div class="recipe-table-header" style="flex-wrap:wrap; gap:10px;">
-          <div style="display:flex; align-items:center; gap:8px;">
-            <span style="font-size:1.2rem;">📝</span>
-            <h3 style="font-size:1.02rem; font-weight:800; color:var(--text-main); margin:0;">
-              Yazılı Reçete Tarifi / Hazırlanışı (İsteğe Bağlı)
-            </h3>
-          </div>
-          <span style="font-size:0.76rem; font-weight:600; color:var(--text-muted);">
-            Reçete sayfasında malzeme tablosunun altında tek bir metin kutusu olarak görünür
+          <span style="font-size:0.73rem; font-weight:800; color:#92400E; background:#FEF3C7; border:1px solid #FDE68A; padding:3px 9px; border-radius:20px;">
+            1. Satır = Baz Ürün
           </span>
         </div>
 
-        <div style="padding: 16px 18px;">
-          <textarea id="customRecipeInstructionsInput" rows="7" placeholder="Reçetenin hazırlanışını, pişirme süresini, ateş derecesini veya püf noktalarını buraya yazabilirsiniz..." style="width:100%; padding:13px 14px; border:1.5px solid var(--border); border-radius:12px; font-size:0.92rem; line-height:1.65; color:var(--text-main); background:#FFFFFF; resize:vertical; font-family:inherit;"></textarea>
+        <!-- 1. SATIR: SABİT BAZ ÜRÜN KARTI (MOBİL ERGONOMİK) -->
+        <div style="background: #FFFBEB; border: 2px solid #F59E0B; border-radius: 14px; padding: 13px; margin-bottom: 12px; display: flex; flex-direction: column; gap: 10px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap;">
+            <div style="display:inline-flex; align-items:center; gap:6px;">
+              <span style="background:#F59E0B; color:#FFFFFF; font-weight:800; font-size:0.74rem; padding:3px 8px; border-radius:6px;">1. SATIR</span>
+              <span style="font-size:0.8rem; font-weight:800; color:#92400E;">🥣 BAZ ÜRÜN (ANA MALZEME) *</span>
+            </div>
+            <span style="background:#FEF3C7; color:#B45309; border:1px solid #F59E0B; font-size:0.72rem; font-weight:800; padding:2px 8px; border-radius:20px;">
+              %100 Referans
+            </span>
+          </div>
 
-          <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
-            <button type="button" onclick="saveCustomRecipeFromView()" style="background: linear-gradient(135deg, #16A34A 0%, #15803D 100%); color: #FFFFFF; border: none; padding: 11px 22px; border-radius: 10px; font-size: 0.9rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);">
-              <span>💾</span>
-              <span>Master Reçeteyi Kaydet</span>
-            </button>
+          <div>
+            <input type="text" id="customBaseIngName" placeholder="Baz ürün adı (Örn: Kırmızı Mercimek)" oninput="updateCustomRecipeLiveRatios()" style="width:100%; height:46px; padding:0 12px; border:1.5px solid #F59E0B; border-radius:10px; font-weight:800; font-size:16px; background:#FFFFFF; color:var(--text-main); box-sizing:border-box;">
+          </div>
+
+          <div style="display:grid; grid-template-columns: 1fr 125px; gap:8px;">
+            <div>
+              <label for="customBaseIngQty" style="display:block; font-size:0.72rem; font-weight:800; color:#92400E; margin-bottom:4px;">BAZ GRAMAJ / MİKTAR *</label>
+              <input type="number" id="customBaseIngQty" placeholder="300" min="0.1" step="any" inputmode="decimal" oninput="updateCustomRecipeLiveRatios()" style="width:100%; height:46px; padding:0 12px; border:1.5px solid #F59E0B; border-radius:10px; font-weight:800; font-size:16px; background:#FFFFFF; color:var(--text-main); box-sizing:border-box;">
+            </div>
+            <div>
+              <label for="customBaseIngUnit" style="display:block; font-size:0.72rem; font-weight:800; color:#92400E; margin-bottom:4px;">BİRİM</label>
+              <select id="customBaseIngUnit" onchange="updateCustomRecipeLiveRatios()" style="width:100%; height:46px; padding:0 10px; border:1.5px solid #F59E0B; border-radius:10px; font-weight:700; font-size:16px; background:#FFFFFF; color:var(--text-main); box-sizing:border-box;">
+                <option value="g" selected>g (gram)</option>
+                <option value="ml">ml</option>
+                <option value="Litre">Litre</option>
+                <option value="adet">adet</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <input type="text" id="customBaseIngNote" placeholder="Hazırlık notu (isteğe bağlı, örn: yıkanıp süzülmüş)" style="width:100%; height:40px; padding:0 12px; border:1px solid #FDE68A; border-radius:8px; font-size:15px; background:#FFFFFF; color:var(--text-main); box-sizing:border-box;">
           </div>
         </div>
+
+        <!-- 2. SATIR VE SONRASI: DİĞER MALZEME KARTLARI LİSTESİ -->
+        <div id="customOtherIngredientsTbody" style="display: flex; flex-direction: column; gap: 10px;">
+          <!-- Dinamik malzeme kartları buraya eklenir -->
+        </div>
+
+        <!-- Tam Genişlik Mobil Malzeme Ekleme Butonu -->
+        <button type="button" onclick="addCustomRecipeIngredientRow(null, true)" style="width: 100%; height: 48px; margin-top: 12px; background: #F0FDF4; color: #15803D; border: 2px dashed #16A34A; border-radius: 12px; font-size: 0.92rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+          <span style="font-size:1.2rem; line-height:1;">＋</span>
+          <span>Yeni Malzeme Satırı Ekle</span>
+        </button>
+      </section>
+
+      <!-- 3. BÖLÜM: YAZILI REÇETE TARİFİ / HAZIRLANIŞI (TEK METİN KUTUSU) -->
+      <section style="background: #FFFFFF; border: 1.5px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 18px; box-shadow: var(--shadow-sm);">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:6px; margin-bottom:10px;">
+          <div style="display:flex; align-items:center; gap:7px;">
+            <span style="font-size:1.15rem;">📝</span>
+            <h3 style="font-size:0.98rem; font-weight:800; color:var(--text-main); margin:0;">
+              Yazılı Reçete Tarifi / Hazırlanışı
+            </h3>
+          </div>
+          <span style="font-size:0.74rem; font-weight:600; color:var(--text-muted);">
+            İsteğe bağlı
+          </span>
+        </div>
+
+        <textarea id="customRecipeInstructionsInput" rows="6" placeholder="Reçetenin hazırlanışını, pişirme süresini veya püf noktalarını buraya yazabilirsiniz. Reçete sayfasında malzemelerin altında tek bir metin kutusu olarak görünür..." style="width:100%; padding:12px 13px; border:1.5px solid var(--border); border-radius:12px; font-size:16px; line-height:1.6; color:var(--text-main); background:#FFFFFF; resize:vertical; font-family:inherit; box-sizing:border-box;"></textarea>
+
+        <!-- Tam Genişlik Mobil Kaydet Butonu -->
+        <button type="button" onclick="saveCustomRecipeFromView()" style="width: 100%; height: 52px; margin-top: 14px; background: linear-gradient(135deg, #16A34A 0%, #15803D 100%); color: #FFFFFF; border: none; border-radius: 12px; font-size: 1rem; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 14px rgba(22, 163, 74, 0.3);">
+          <span>💾</span>
+          <span>Master Reçeteyi Kaydet</span>
+        </button>
       </section>
 
       <!-- Canlı Senkronize Butonu (Sayfa Altı) -->
@@ -5665,50 +5627,48 @@
         <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
           <div>
             <h2 class="count-header-main-title" id="customDetailTitle" style="margin-bottom:4px;">Reçete Adı</h2>
-            <p id="customDetailDesc" style="color:#D6D3D1; font-size:0.86rem;">
+            <p id="customDetailDesc" style="color:#D6D3D1; font-size:0.84rem; line-height:1.4;">
               Baz ürün miktarını değiştirdiğinizde diğer tüm malzemelerin gramajları master reçete oranına göre otomatik hesaplanır.
             </p>
           </div>
-          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+          <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
             <button type="button" class="btn-recipe-tag-trigger" onclick="openCustomRecipeTagModal()" title="Bu tarifin etiketini değiştir">
-              🏷️ Etiket: <strong id="customDetailTagText">Sote ve Pişirme</strong> ✎
+              🏷️ <strong id="customDetailTagText">Sote ve Pişirme</strong> ✎
             </button>
-            <span id="customDetailMasterBadge" style="background:rgba(245, 158, 11, 0.2); border:1px solid rgba(245, 158, 11, 0.4); color:#FDE68A; padding:4px 10px; border-radius:20px; font-size:0.75rem; font-weight:700;">
+            <span id="customDetailMasterBadge" style="background:rgba(245, 158, 11, 0.2); border:1px solid rgba(245, 158, 11, 0.4); color:#FDE68A; padding:4px 10px; border-radius:20px; font-size:0.74rem; font-weight:700;">
               🥣 Master Oran (Baz: 300g)
             </span>
           </div>
         </div>
       </section>
 
-      <!-- Nav & Controls Bar -->
-      <nav class="count-nav-bar" style="margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
-        <div style="display:flex; align-items:center; gap:8px;">
-          <button type="button" class="btn-back-dashboard" onclick="openRecipesView()" title="Tüm Reçetelere Dön">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <!-- Mobil Uyumlu Nav & Kontroller Barı -->
+      <nav class="count-nav-bar" style="margin-bottom: 12px; display: flex; flex-direction: column; gap: 8px;">
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; width:100%;">
+          <button type="button" class="btn-back-dashboard" onclick="openRecipesView()" style="height:40px; padding:0 12px; font-size:0.83rem;" title="Tüm Reçetelere Dön">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px; height:16px;">
               <polyline points="15 18 9 12 15 6"/>
             </svg>
             Reçetelere Dön
           </button>
-          <button type="button" class="btn-reset-count" onclick="returnToDashboard()" style="padding: 9px 14px; font-size:0.82rem;" title="Ana Sayfaya Dön">
-            Ana Menü
-          </button>
+
+          <div style="display:flex; align-items:center; gap:6px;">
+            <button type="button" class="btn-recipe-tag-trigger" onclick="editCurrentCustomRecipe()" style="height:40px; padding:0 12px; font-size:0.8rem;" title="Master reçete malzemelerini ve oranlarını düzenle">
+              ✏️ Düzenle
+            </button>
+            <button type="button" class="btn-recipe-tag-trigger" onclick="deleteCurrentCustomRecipe()" style="height:40px; padding:0 11px; font-size:0.8rem; color:#DC2626; border-color:#FCA5A5; background:#FEF2F2;" title="Bu reçeteyi sil">
+              🗑️ Sil
+            </button>
+          </div>
         </div>
 
-        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-          <button type="button" class="btn-recipe-tag-trigger" onclick="editCurrentCustomRecipe()" title="Master reçete malzemelerini ve oranlarını düzenle">
-            ✏️ Master Reçeteyi Düzenle
-          </button>
-          <button type="button" class="btn-recipe-tag-trigger" onclick="deleteCurrentCustomRecipe()" style="color:#DC2626; border-color:#FCA5A5; background:#FEF2F2;" title="Bu reçeteyi sil">
-            🗑️ Sil
-          </button>
-          <button type="button" class="btn-reset-recipe" id="customDetailResetBtn" onclick="resetCustomRecipeCalculator()" title="Master reçete baz oranına geri dön">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px; height:14px;">
-              <polyline points="1 4 1 10 7 10"/>
-              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
-            </svg>
-            <span id="customDetailResetBtnText">Standart Orana Sıfırla</span>
-          </button>
-        </div>
+        <button type="button" class="btn-reset-recipe" id="customDetailResetBtn" onclick="resetCustomRecipeCalculator()" style="width:100%; justify-content:center; height:38px; font-size:0.8rem;" title="Master reçete baz oranına geri dön">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px; height:14px;">
+            <polyline points="1 4 1 10 7 10"/>
+            <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+          </svg>
+          <span id="customDetailResetBtnText">Standart Orana Sıfırla</span>
+        </button>
       </nav>
 
       <!-- ANA MALZEME / DİNAMİK BAZ ÜRÜN KONTROL KARTI -->
@@ -5778,8 +5738,8 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/>
             </svg>
-            <h3 style="font-size:1.05rem; font-weight:800; color:var(--text-main);">
-              Orantılı Malzeme Tablosu (<span id="customDetailDisplayWeight">300</span> <span id="customDetailDisplayUnit">g</span> <span id="customDetailDisplayBaseName">Baz Ürün</span> İçin)
+            <h3 style="font-size:1rem; font-weight:800; color:var(--text-main);">
+              Orantılı Malzeme Listesi (<span id="customDetailDisplayWeight">300</span> <span id="customDetailDisplayUnit">g</span> <span id="customDetailDisplayBaseName">Baz Ürün</span>)
             </h3>
           </div>
           <div class="recipe-total-badge" id="customDetailTotalBadge" style="background:#FEF3C7; color:#92400E; border-color:#FDE68A;">
@@ -5807,17 +5767,17 @@
       </section>
 
       <!-- YAZILI REÇETE TARİFİ & HAZIRLANIŞI (TEK METİN KUTUSU) -->
-      <section class="recipe-steps-section" id="customDetailInstructionsSection" style="display:none; margin-top: 18px;">
-        <h3 class="recipe-steps-heading">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <section class="recipe-steps-section" id="customDetailInstructionsSection" style="display:none; margin-top: 16px;">
+        <h3 class="recipe-steps-heading" style="font-size:1.15rem; margin-bottom:10px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="9 11 12 14 22 4"/>
             <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
           </svg>
           Hazırlık & Pişirme Tarifi
         </h3>
 
-        <div class="step-card" style="padding: 20px 22px;">
-          <div id="customDetailInstructionsText" style="white-space: pre-wrap; font-size: 0.95rem; line-height: 1.75; color: var(--text-main); font-weight: 500;"></div>
+        <div class="step-card" style="padding: 16px 18px;">
+          <div id="customDetailInstructionsText" style="white-space: pre-wrap; font-size: 0.94rem; line-height: 1.7; color: var(--text-main); font-weight: 500;"></div>
         </div>
       </section>
 
@@ -13893,8 +13853,8 @@
         if (baseUnitSelect) baseUnitSelect.value = 'g';
         if (baseNoteInput) baseNoteInput.value = 'Ana malzeme (tüm oranların bazı)';
 
-        // Varsayılan 4 adet malzeme satırı aç (2., 3., 4., 5. satırlar)
-        for (let i = 0; i < 4; i++) {
+        // Varsayılan 2 adet malzeme kartı aç (2. ve 3. satırlar; kullanıcı tek dokunuşla yeni satır ekleyebilir)
+        for (let i = 0; i < 2; i++) {
           addCustomRecipeIngredientRow();
         }
       }
@@ -13902,57 +13862,71 @@
       updateCustomRecipeLiveRatios();
     }
 
-    function addCustomRecipeIngredientRow(data = null) {
-      const tbody = document.getElementById('customOtherIngredientsTbody');
-      if (!tbody) return;
+    function addCustomRecipeIngredientRow(data = null, focusNew = false) {
+      const container = document.getElementById('customOtherIngredientsTbody');
+      if (!container) return;
 
-      const rowIndex = tbody.querySelectorAll('tr').length + 2; // 1. satır baz ürün olduğu için 2'den başlar
-      const tr = document.createElement('tr');
-      tr.className = 'custom-ing-row';
+      const rowIndex = container.querySelectorAll('.custom-ing-row').length + 2; // 1. satır baz ürün olduğu için 2'den başlar
+      const card = document.createElement('div');
+      card.className = 'custom-ing-row';
+      card.style.cssText = 'background:#F8FAFC; border:1.5px solid var(--border); border-radius:14px; padding:12px; display:flex; flex-direction:column; gap:8px;';
 
       const ingName = data && data.name ? data.name : '';
       const ingQty = (data && data.baseQty !== undefined && data.baseQty !== null) ? data.baseQty : '';
       const ingUnit = data && data.unit ? data.unit : 'g';
       const ingNote = data && data.note ? data.note : '';
 
-      tr.innerHTML = `
-        <td class="col-idx custom-ing-row-num" style="color:var(--text-light); font-weight:700;">${rowIndex}</td>
-        <td>
-          <input type="text" class="custom-ing-name" value="${escapeHtml(String(ingName))}" placeholder="Örn: Soğan, Domates Püresi, Tuz..." oninput="updateCustomRecipeLiveRatios()" style="width:100%; padding:9px 10px; border:1.5px solid var(--border); border-radius:8px; font-weight:700; font-size:0.88rem; background:#FFFFFF; color:var(--text-main);">
-        </td>
-        <td>
-          <input type="number" class="custom-ing-qty" value="${escapeHtml(String(ingQty))}" placeholder="Miktar" min="0" step="any" inputmode="decimal" oninput="updateCustomRecipeLiveRatios()" style="width:100%; padding:9px 10px; border:1.5px solid var(--border); border-radius:8px; font-weight:800; font-size:0.92rem; text-align:right; background:#FFFFFF; color:var(--text-main);">
-        </td>
-        <td>
-          <select class="custom-ing-unit" onchange="updateCustomRecipeLiveRatios()" style="width:100%; padding:9px 8px; border:1.5px solid var(--border); border-radius:8px; font-weight:700; font-size:0.85rem; background:#FFFFFF;">
-            <option value="g" ${ingUnit === 'g' ? 'selected' : ''}>g (gram)</option>
-            <option value="ml" ${ingUnit === 'ml' ? 'selected' : ''}>ml</option>
-            <option value="Litre" ${ingUnit === 'Litre' ? 'selected' : ''}>Litre</option>
-            <option value="adet" ${ingUnit === 'adet' ? 'selected' : ''}>adet</option>
-            <option value="çevrim" ${ingUnit === 'çevrim' ? 'selected' : ''}>çevrim</option>
-          </select>
-        </td>
-        <td>
-          <span class="recipe-ratio-tag custom-ing-ratio-preview" style="font-size:0.76rem;">—</span>
-        </td>
-        <td>
-          <input type="text" class="custom-ing-note" value="${escapeHtml(String(ingNote))}" placeholder="İsteğe bağlı hazırlık notu..." style="width:100%; padding:9px 10px; border:1px solid var(--border); border-radius:8px; font-size:0.83rem; background:#FFFFFF;">
-        </td>
-        <td style="text-align:center;">
-          <button type="button" onclick="removeCustomRecipeIngredientRow(this)" title="Satırı Sil" style="background:#FEE2E2; color:#DC2626; border:1px solid #FCA5A5; border-radius:8px; width:32px; height:32px; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; justify-content:center;">✕</button>
-        </td>
+      card.innerHTML = `
+        <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap;">
+          <span class="custom-ing-row-num" style="background:#E2E8F0; color:#1E293B; font-weight:800; font-size:0.75rem; padding:3px 9px; border-radius:6px;">${rowIndex}. SATIR • MALZEME</span>
+          <div style="display:flex; align-items:center; gap:6px;">
+            <span class="recipe-ratio-tag custom-ing-ratio-preview" style="font-size:0.74rem; font-weight:700; padding:3px 8px; border-radius:6px; background:#FFFFFF; color:#475569; border:1px solid #CBD5E1;">Oran: —</span>
+            <button type="button" onclick="removeCustomRecipeIngredientRow(this)" title="Malzemeyi Sil" style="background:#FEE2E2; color:#DC2626; border:1px solid #FCA5A5; border-radius:8px; height:28px; padding:0 9px; font-size:0.75rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:4px;">✕ Sil</button>
+          </div>
+        </div>
+
+        <div>
+          <input type="text" class="custom-ing-name" value="${escapeHtml(String(ingName))}" placeholder="Malzeme adı (Örn: Soğan, Domates Püresi, Tuz...)" oninput="updateCustomRecipeLiveRatios()" style="width:100%; height:44px; padding:0 12px; border:1.5px solid var(--border); border-radius:10px; font-weight:700; font-size:16px; background:#FFFFFF; color:var(--text-main); box-sizing:border-box;">
+        </div>
+
+        <div style="display:grid; grid-template-columns: 1fr 125px; gap:8px;">
+          <div>
+            <input type="number" class="custom-ing-qty" value="${escapeHtml(String(ingQty))}" placeholder="Gramaj / Miktar" min="0" step="any" inputmode="decimal" oninput="updateCustomRecipeLiveRatios()" style="width:100%; height:44px; padding:0 12px; border:1.5px solid var(--border); border-radius:10px; font-weight:800; font-size:16px; background:#FFFFFF; color:var(--text-main); box-sizing:border-box;">
+          </div>
+          <div>
+            <select class="custom-ing-unit" onchange="updateCustomRecipeLiveRatios()" style="width:100%; height:44px; padding:0 10px; border:1.5px solid var(--border); border-radius:10px; font-weight:700; font-size:16px; background:#FFFFFF; color:var(--text-main); box-sizing:border-box;">
+              <option value="g" ${ingUnit === 'g' ? 'selected' : ''}>g (gram)</option>
+              <option value="ml" ${ingUnit === 'ml' ? 'selected' : ''}>ml</option>
+              <option value="Litre" ${ingUnit === 'Litre' ? 'selected' : ''}>Litre</option>
+              <option value="adet" ${ingUnit === 'adet' ? 'selected' : ''}>adet</option>
+              <option value="çevrim" ${ingUnit === 'çevrim' ? 'selected' : ''}>çevrim</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <input type="text" class="custom-ing-note" value="${escapeHtml(String(ingNote))}" placeholder="Hazırlık / kullanım notu (isteğe bağlı)" style="width:100%; height:38px; padding:0 12px; border:1px solid #E2E8F0; border-radius:8px; font-size:15px; background:#FFFFFF; color:var(--text-main); box-sizing:border-box;">
+        </div>
       `;
 
-      tbody.appendChild(tr);
+      container.appendChild(card);
       updateCustomRecipeLiveRatios();
+
+      if (focusNew) {
+        if (navigator.vibrate) { try { navigator.vibrate(10); } catch (e) {} }
+        const nameInp = card.querySelector('.custom-ing-name');
+        if (nameInp) {
+          setTimeout(() => { nameInp.focus(); }, 30);
+        }
+      }
     }
 
     function removeCustomRecipeIngredientRow(btn) {
-      const tbody = document.getElementById('customOtherIngredientsTbody');
-      if (!tbody) return;
-      const tr = btn.closest('tr');
-      if (tr) tr.remove();
-      if (tbody.querySelectorAll('tr').length === 0) {
+      const container = document.getElementById('customOtherIngredientsTbody');
+      if (!container) return;
+      const card = btn.closest('.custom-ing-row');
+      if (card) card.remove();
+      if (container.querySelectorAll('.custom-ing-row').length === 0) {
         addCustomRecipeIngredientRow();
       } else {
         reindexCustomRecipeIngredientRows();
@@ -13961,11 +13935,11 @@
     }
 
     function reindexCustomRecipeIngredientRows() {
-      const tbody = document.getElementById('customOtherIngredientsTbody');
-      if (!tbody) return;
-      tbody.querySelectorAll('tr').forEach((tr, idx) => {
-        const numCell = tr.querySelector('.custom-ing-row-num');
-        if (numCell) numCell.textContent = String(idx + 2);
+      const container = document.getElementById('customOtherIngredientsTbody');
+      if (!container) return;
+      container.querySelectorAll('.custom-ing-row').forEach((card, idx) => {
+        const numCell = card.querySelector('.custom-ing-row-num');
+        if (numCell) numCell.textContent = `${idx + 2}. SATIR • MALZEME`;
       });
     }
 
@@ -13974,17 +13948,17 @@
       const baseQty = parseFloat(document.getElementById('customBaseIngQty')?.value || '0');
       const baseUnit = document.getElementById('customBaseIngUnit')?.value || 'g';
 
-      const tbody = document.getElementById('customOtherIngredientsTbody');
-      if (!tbody) return;
+      const container = document.getElementById('customOtherIngredientsTbody');
+      if (!container) return;
 
-      tbody.querySelectorAll('tr').forEach(tr => {
-        const qtyVal = parseFloat(tr.querySelector('.custom-ing-qty')?.value || '0');
-        const unitVal = tr.querySelector('.custom-ing-unit')?.value || 'g';
-        const previewEl = tr.querySelector('.custom-ing-ratio-preview');
+      container.querySelectorAll('.custom-ing-row').forEach(card => {
+        const qtyVal = parseFloat(card.querySelector('.custom-ing-qty')?.value || '0');
+        const unitVal = card.querySelector('.custom-ing-unit')?.value || 'g';
+        const previewEl = card.querySelector('.custom-ing-ratio-preview');
         if (!previewEl) return;
 
         if (!baseQty || baseQty <= 0 || !qtyVal || qtyVal <= 0) {
-          previewEl.textContent = '—';
+          previewEl.textContent = 'Oran: —';
           return;
         }
 
@@ -14030,13 +14004,13 @@
       }
 
       const ingredients = [];
-      const tbody = document.getElementById('customOtherIngredientsTbody');
-      if (tbody) {
-        tbody.querySelectorAll('tr').forEach((tr, idx) => {
-          const iName = (tr.querySelector('.custom-ing-name')?.value || '').trim();
-          const iQty = parseFloat(tr.querySelector('.custom-ing-qty')?.value || '0');
-          const iUnit = tr.querySelector('.custom-ing-unit')?.value || 'g';
-          const iNote = (tr.querySelector('.custom-ing-note')?.value || '').trim();
+      const container = document.getElementById('customOtherIngredientsTbody');
+      if (container) {
+        container.querySelectorAll('.custom-ing-row').forEach((card, idx) => {
+          const iName = (card.querySelector('.custom-ing-name')?.value || '').trim();
+          const iQty = parseFloat(card.querySelector('.custom-ing-qty')?.value || '0');
+          const iUnit = card.querySelector('.custom-ing-unit')?.value || 'g';
+          const iNote = (card.querySelector('.custom-ing-note')?.value || '').trim();
 
           if (iName && !isNaN(iQty) && iQty > 0) {
             ingredients.push({
