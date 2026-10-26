@@ -5612,6 +5612,32 @@
         </div>
       </section>
 
+      <!-- YAZILI REÇETE TARİFİ / HAZIRLANIŞI (TEK METİN KUTUSU) -->
+      <section class="recipe-table-card" style="margin-bottom: 20px;">
+        <div class="recipe-table-header" style="flex-wrap:wrap; gap:10px;">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:1.2rem;">📝</span>
+            <h3 style="font-size:1.02rem; font-weight:800; color:var(--text-main); margin:0;">
+              Yazılı Reçete Tarifi / Hazırlanışı (İsteğe Bağlı)
+            </h3>
+          </div>
+          <span style="font-size:0.76rem; font-weight:600; color:var(--text-muted);">
+            Reçete sayfasında malzeme tablosunun altında tek bir metin kutusu olarak görünür
+          </span>
+        </div>
+
+        <div style="padding: 16px 18px;">
+          <textarea id="customRecipeInstructionsInput" rows="7" placeholder="Reçetenin hazırlanışını, pişirme süresini, ateş derecesini veya püf noktalarını buraya yazabilirsiniz..." style="width:100%; padding:13px 14px; border:1.5px solid var(--border); border-radius:12px; font-size:0.92rem; line-height:1.65; color:var(--text-main); background:#FFFFFF; resize:vertical; font-family:inherit;"></textarea>
+
+          <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
+            <button type="button" onclick="saveCustomRecipeFromView()" style="background: linear-gradient(135deg, #16A34A 0%, #15803D 100%); color: #FFFFFF; border: none; padding: 11px 22px; border-radius: 10px; font-size: 0.9rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);">
+              <span>💾</span>
+              <span>Master Reçeteyi Kaydet</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
       <!-- Canlı Senkronize Butonu (Sayfa Altı) -->
       <div class="bottom-sync-wrapper">
         <button type="button" class="btn-sync-cloud live-sync-pill" onclick="openSyncModal()" title="Canlı Bulut Senkronizasyon Durumu">
@@ -5777,6 +5803,21 @@
               <!-- Dynamically populated rows -->
             </tbody>
           </table>
+        </div>
+      </section>
+
+      <!-- YAZILI REÇETE TARİFİ & HAZIRLANIŞI (TEK METİN KUTUSU) -->
+      <section class="recipe-steps-section" id="customDetailInstructionsSection" style="display:none; margin-top: 18px;">
+        <h3 class="recipe-steps-heading">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 11 12 14 22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+          Hazırlık & Pişirme Tarifi
+        </h3>
+
+        <div class="step-card" style="padding: 20px 22px;">
+          <div id="customDetailInstructionsText" style="white-space: pre-wrap; font-size: 0.95rem; line-height: 1.75; color: var(--text-main); font-weight: 500;"></div>
         </div>
       </section>
 
@@ -13806,6 +13847,7 @@
       const nameInput = document.getElementById('customRecipeNameInput');
       const tagSelect = document.getElementById('customRecipeTagSelect');
       const descInput = document.getElementById('customRecipeDescInput');
+      const instructionsInput = document.getElementById('customRecipeInstructionsInput');
 
       const baseNameInput = document.getElementById('customBaseIngName');
       const baseQtyInput = document.getElementById('customBaseIngQty');
@@ -13824,6 +13866,7 @@
         const rTag = recipeTags[existing.id] || existing.tag || 'Sote ve Pişirme';
         if (tagSelect) tagSelect.value = rTag;
         if (descInput) descInput.value = existing.desc || '';
+        if (instructionsInput) instructionsInput.value = existing.instructions || '';
 
         const b = existing.baseIngredient || { name: '', baseQty: 300, unit: 'g', note: '' };
         if (baseNameInput) baseNameInput.value = b.name || '';
@@ -13843,6 +13886,7 @@
         if (nameInput) nameInput.value = '';
         if (tagSelect) tagSelect.value = (activeRecipeTagFilter && activeRecipeTagFilter !== 'ALL') ? activeRecipeTagFilter : 'Sote ve Pişirme';
         if (descInput) descInput.value = '';
+        if (instructionsInput) instructionsInput.value = '';
 
         if (baseNameInput) baseNameInput.value = '';
         if (baseQtyInput) baseQtyInput.value = '300';
@@ -13960,6 +14004,7 @@
       const name = (document.getElementById('customRecipeNameInput')?.value || '').trim();
       const tag = document.getElementById('customRecipeTagSelect')?.value || 'Sote ve Pişirme';
       const desc = (document.getElementById('customRecipeDescInput')?.value || '').trim();
+      const instructions = (document.getElementById('customRecipeInstructionsInput')?.value || '').trim();
 
       const baseName = (document.getElementById('customBaseIngName')?.value || '').trim();
       const baseQty = parseFloat(document.getElementById('customBaseIngQty')?.value || '0');
@@ -14029,6 +14074,7 @@
         name,
         tag,
         desc,
+        instructions,
         baseIngredient: {
           name: baseName,
           baseQty: baseQty,
@@ -14309,6 +14355,20 @@
           totalBadge.textContent = `Tahmini Toplam: ~${(totalWeightGrams / 1000).toLocaleString('tr-TR', { minimumFractionDigits: 1, maximumFractionDigits: 2 })} kg (${Math.round(totalWeightGrams).toLocaleString('tr-TR')} g)`;
         } else {
           totalBadge.textContent = `Tahmini Toplam: ~${Math.round(totalWeightGrams).toLocaleString('tr-TR')} g`;
+        }
+      }
+
+      // Render Written Recipe Instructions (Single Text Box) below Ingredients Table
+      const instSection = document.getElementById('customDetailInstructionsSection');
+      const instTextEl = document.getElementById('customDetailInstructionsText');
+      if (instSection && instTextEl) {
+        const rawInst = String(recipe.instructions || '').trim();
+        if (rawInst) {
+          instTextEl.textContent = rawInst;
+          instSection.style.display = 'block';
+        } else {
+          instTextEl.textContent = '';
+          instSection.style.display = 'none';
         }
       }
     }
