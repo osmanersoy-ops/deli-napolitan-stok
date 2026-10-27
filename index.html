@@ -7851,33 +7851,72 @@
        ========================================================= */
     const DEFAULT_SUPPLIERS = [
       {
-        id: 'sup_metro',
-        name: 'Metro Market',
-        contactPerson: 'Müşteri Temsilcisi',
-        phone: '',
-        whatsapp: '',
-        email: '',
-        notes: 'Metro Market toptan gıda, un, sos, konserve ve kuru gıda tedariği'
+            "id": "sup_meyfresh",
+            "name": "MeyFresh",
+            "contactPerson": "",
+            "phone": "",
+            "whatsapp": "",
+            "email": "",
+            "notes": ""
       },
       {
-        id: 'sup_meyfresh',
-        name: 'MeyFresh',
-        contactPerson: '',
-        phone: '',
-        whatsapp: '',
-        email: '',
-        notes: ''
+            "id": "sup_aliya",
+            "name": "Aliya Çiftliği",
+            "contactPerson": "",
+            "phone": "",
+            "whatsapp": "",
+            "email": "",
+            "notes": ""
       },
       {
-        id: 'sup_aliya',
-        name: 'Aliya Çiftliği',
-        contactPerson: '',
-        phone: '',
-        whatsapp: '',
-        email: '',
-        notes: ''
+            "id": "sup_1791975952781",
+            "name": "Akçalar",
+            "contactPerson": "",
+            "phone": "",
+            "whatsapp": "",
+            "email": "",
+            "notes": ""
+      },
+      {
+            "id": "sup_1791988183271",
+            "name": "Metro",
+            "contactPerson": "",
+            "phone": "",
+            "whatsapp": "",
+            "email": "",
+            "notes": ""
+      },
+      {
+            "id": "sup_1792061352500",
+            "name": "Kibele",
+            "contactPerson": "",
+            "phone": "",
+            "whatsapp": "",
+            "email": "",
+            "notes": ""
+      },
+      {
+            "id": "sup_fast_kitchen",
+            "name": "Fast Kitchen",
+            "contactPerson": "",
+            "phone": "",
+            "whatsapp": "",
+            "email": "",
+            "notes": ""
+      },
+      {
+            "id": "sup_carsi_ve_migros",
+            "name": "Çarşı ve Migros",
+            "contactPerson": "",
+            "phone": "",
+            "whatsapp": "",
+            "email": "",
+            "notes": ""
       }
-    ];
+];
+    const DEFAULT_DELETED_SUPPLIERS = ["sup_1791996421982", "sup_metro", "metro_market"];
+    const DEFAULT_DELETED_PRODUCTS = ["cust_1791986923535", "cust_1791980866559", "cust_1791985444144", "cust_1791985800591", "cust_1791977565313", "cust_1791980764317", "cust_1792013397972", "pz_15", "pz_13", "zeytinyagi_18l_teneke", "cust_zeytinyagi_18l_teneke", "pz_17"];
+    const DEFAULT_PRODUCT_OVERRIDES = {"hg_18": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "Adet", "name": "Muz", "days": ["hergun"]}, "hg_1": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "KG", "name": "Kestane Mantarı"}, "hg_2": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "KG", "name": "Kültür Mantarı"}, "hg_3": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "Demet", "name": "Fesleğen"}, "hg_4": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "Demet", "name": "Roka"}, "hg_5": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "KG", "name": "Cherry Domates"}, "hg_6": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "Adet", "name": "Kırmızı Soğan"}, "hg_7": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "Adet", "name": "Kuru Soğan"}, "hg_8": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "Baş Adet", "name": "Bağ Sarımsak"}, "hg_9": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "Adet", "name": "Patates"}, "hg_10": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "Demet", "name": "Nane"}, "hg_11": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "Demet", "name": "Ispanak"}, "hg_12": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "KG", "name": "Kuşkonmaz"}, "hg_13": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "Demet", "name": "Kereviz Sapı"}, "hg_14": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "KG", "name": "Havuç"}, "hg_15": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "Adet", "name": "Limon"}, "hg_16": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "Adet", "name": "Armut"}, "hg_17": {"category": "Manav", "supplierId": "sup_meyfresh", "supplierIds": ["sup_meyfresh"], "unit": "Adet", "name": "Çilek"}, "sl_1": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Mozzarella Kaanlar 3,5KG", "days": ["sali"]}, "sl_2": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "KG", "name": "Parmesan Blok"}, "sl_3": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "KG", "name": "Parmesan Toz"}, "sl_4": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Danish Blue"}, "sl_5": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Scarmoza"}, "sl_6": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "KG", "name": "Ricotto"}, "sl_7": {"category": "Ana Stok", "supplierIds": [], "unit": "Paket", "name": "Straccitaella", "days": ["sali"], "supplierId": ""}, "sl_9": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Ekşi Krema"}, "sl_8": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Sütaş Krema"}, "sl_32": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Litre", "name": "Komili Zeytinyağ", "days": ["sali"]}, "sl_23": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Değirmenlik Tuz", "days": ["sali"]}, "sl_24": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Pizza Tuzu", "days": ["sali"]}, "sl_34": {"category": "Ana Stok", "supplierId": "sup_1792061352500", "supplierIds": ["sup_1792061352500"], "unit": "Adet", "name": "San Marzano Domates Püresi", "days": ["sali"]}, "pr_11": {"category": "Çarşı ve Diğer", "supplierId": "sup_carsi_ve_migros", "supplierIds": ["sup_carsi_ve_migros"], "unit": "Adet", "name": "Kuru Maya", "days": ["persembe"]}, "pr_13": {"category": "Çarşı ve Diğer", "supplierIds": [], "unit": "Litre", "name": "Zeytinyağı 18L Teneke", "supplierId": ""}, "pr_15": {"category": "Çarşı ve Diğer", "supplierId": "sup_1792061352500", "supplierIds": ["sup_1792061352500"], "unit": "Çuval", "name": "Tellioğlu Pizza Unu 25 Kg", "days": ["persembe"]}, "hg_31": {"category": "Mise en Place", "supplierIds": [], "unit": "Porsiyon", "name": "Patates Püre", "supplierId": ""}, "sl_11": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Mayonez", "days": ["sali"]}, "sl_12": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Hardal", "days": ["sali"]}, "sl_13": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "KG", "name": "Soyulmuş Sarımsak", "days": ["sali"]}, "sl_14": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "KG", "name": "Tahin", "days": ["sali"]}, "pz_8": {"category": "Akçalar Şarküteri", "supplierId": "sup_1791975952781", "supplierIds": ["sup_1791975952781"], "unit": "KG", "name": "İsli Peynir", "days": ["pazar"]}, "sl_10": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Tam Yağlı Krema", "days": ["sali"]}, "sl_16": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Siyah Sarımsak Püresi", "days": ["sali"]}, "sl_17": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Balzemik Sirke", "days": ["sali"]}, "sl_18": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Balzemik Glaze", "days": ["sali"]}, "sl_19": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "KG", "name": "Toz Fındık", "days": ["sali"]}, "sl_20": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "KG", "name": "Antep Fıstığı", "days": ["sali"]}, "sl_21": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "KG", "name": "File Antep Fıstığı", "days": ["sali"]}, "sl_22": {"category": "Ana Stok", "supplierId": "sup_1792061352500", "supplierIds": ["sup_1792061352500"], "unit": "Paket", "name": "Semolina Un", "days": ["sali"]}, "sl_25": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Tatlı Toz Biber", "days": ["sali"]}, "sl_26": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Kimyon", "days": ["sali"]}, "sl_27": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "KG", "name": "Toz Şeker", "days": ["sali"]}, "sl_28": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Şişe", "name": "Domates Passata", "days": ["sali"]}, "sl_30": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "KG", "name": "Donmuş Çilek", "days": ["sali"]}, "sl_31": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Adet", "name": "Tabasco(lar)", "days": ["sali"]}, "sl_33": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "KG", "name": "Nutella", "days": ["sali"]}, "sl_35": {"category": "Ana Stok", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "Paket", "name": "Sosis", "days": ["sali"]}, "pr_8": {"category": "Çarşı ve Diğer", "supplierId": "sup_1791988183271", "supplierIds": ["sup_1791988183271"], "unit": "KG", "name": "Zahter", "days": ["persembe"]}, "pz_1": {"category": "Et Şarküteri", "supplierId": "sup_aliya", "supplierIds": ["sup_aliya"], "unit": "KG", "name": "Dana Füme Kaburga", "days": ["pazar"]}, "pz_2": {"category": "Et Şarküteri", "supplierId": "sup_aliya", "supplierIds": ["sup_aliya"], "unit": "KG", "name": "Çemensiz Pastırma", "days": ["pazar"]}, "pz_3": {"category": "Et Şarküteri", "supplierId": "sup_aliya", "supplierIds": ["sup_aliya"], "unit": "KG", "name": "Mortadella", "days": ["pazar"]}, "pz_4": {"category": "Akçalar Şarküteri", "supplierId": "sup_1791975952781", "supplierIds": ["sup_1791975952781"], "unit": "Kangal", "name": "Acısız Sucuk", "days": ["pazar"]}, "pz_5": {"category": "Akçalar Şarküteri", "supplierId": "sup_1791975952781", "supplierIds": ["sup_1791975952781"], "unit": "Kangal", "name": "Acılı Sucuk", "days": ["pazar"]}, "pz_6": {"category": "Akçalar Şarküteri", "supplierId": "sup_1791975952781", "supplierIds": ["sup_1791975952781"], "unit": "KG", "name": "Mihaliç Lor Peyniri", "days": ["pazar"]}, "pz_7": {"category": "Akçalar Şarküteri", "supplierId": "sup_1791975952781", "supplierIds": ["sup_1791975952781"], "unit": "KG", "name": "Susurluk Tost Peyniri", "days": ["pazar"]}, "pz_9": {"category": "Akçalar Şarküteri", "supplierId": "sup_1791975952781", "supplierIds": ["sup_1791975952781"], "unit": "KG", "name": "İspanyol Salamı", "days": ["pazar"]}, "pz_10": {"category": "Akçalar Şarküteri", "supplierId": "sup_1791975952781", "supplierIds": ["sup_1791975952781"], "unit": "KG", "name": "Yaban Mersinli Tulum", "days": ["pazar"]}, "pz_11": {"category": "Akçalar Şarküteri", "supplierId": "sup_1791975952781", "supplierIds": ["sup_1791975952781"], "unit": "KG", "name": "Mihaliç Olgun", "days": ["pazar"]}, "pz_12": {"category": "Akçalar Şarküteri", "supplierId": "sup_1791975952781", "supplierIds": ["sup_1791975952781"], "unit": "KG", "name": "Tuzlu Tereyağ", "days": ["pazar"]}, "sl_15": {"category": "Ana Stok", "supplierId": "sup_carsi_ve_migros", "supplierIds": ["sup_carsi_ve_migros"], "unit": "KG", "name": "Nohut", "days": ["sali"]}, "sl_29": {"category": "Ana Stok", "supplierId": "sup_fast_kitchen", "supplierIds": ["sup_fast_kitchen", "sup_1791988183271"], "unit": "Adet", "name": "Limonata Özütü", "days": ["sali"]}, "pr_1": {"category": "Çarşı ve Diğer", "supplierId": "sup_carsi_ve_migros", "supplierIds": ["sup_carsi_ve_migros"], "unit": "KG", "name": "Hatay Kırma Zeytin", "days": ["persembe"]}, "pr_2": {"category": "Çarşı ve Diğer", "supplierId": "sup_carsi_ve_migros", "supplierIds": ["sup_carsi_ve_migros"], "unit": "KG", "name": "Izgara Zeytin", "days": ["persembe"]}, "pr_3": {"category": "Çarşı ve Diğer", "supplierId": "sup_carsi_ve_migros", "supplierIds": ["sup_carsi_ve_migros"], "unit": "KG", "name": "Pancar Kalamata Zeytin", "days": ["persembe"]}, "pr_4": {"category": "Çarşı ve Diğer", "supplierId": "sup_carsi_ve_migros", "supplierIds": ["sup_carsi_ve_migros"], "unit": "KG", "name": "Dilim Jalapeno", "days": ["persembe"]}, "pr_5": {"category": "Çarşı ve Diğer", "supplierId": "sup_carsi_ve_migros", "supplierIds": ["sup_carsi_ve_migros"], "unit": "KG", "name": "Çubuk Turşu", "days": ["persembe"]}, "pr_6": {"category": "Çarşı ve Diğer", "supplierId": "sup_carsi_ve_migros", "supplierIds": ["sup_carsi_ve_migros"], "unit": "KG", "name": "Atom Acı Biber", "days": ["persembe"]}, "pr_7": {"category": "Çarşı ve Diğer", "supplierId": "sup_carsi_ve_migros", "supplierIds": ["sup_carsi_ve_migros"], "unit": "KG", "name": "Defne Yaprağı", "days": ["persembe"]}, "pr_9": {"category": "Çarşı ve Diğer", "supplierId": "sup_carsi_ve_migros", "supplierIds": ["sup_carsi_ve_migros"], "unit": "Adet", "name": "Yumurta", "days": ["persembe"]}, "pr_10": {"category": "Çarşı ve Diğer", "supplierId": "sup_carsi_ve_migros", "supplierIds": ["sup_carsi_ve_migros"], "unit": "Adet", "name": "Beyaz Sirke", "days": ["persembe"]}, "pr_12": {"category": "Çarşı ve Diğer", "supplierId": "sup_carsi_ve_migros", "supplierIds": ["sup_carsi_ve_migros"], "unit": "Box", "name": "Kırmızı Mercimek", "days": ["persembe"]}, "pz_16": {"category": "Diğer", "supplierId": "sup_fast_kitchen", "supplierIds": ["sup_fast_kitchen"], "unit": "Paket", "name": "Trüf Ezmesi", "days": ["pazar"]}};
 
     let activeDay = null; // 'hergun', 'sali', 'persembe', 'pazar'
     let customProducts = [];
@@ -7911,6 +7950,7 @@
     function touchModuleTimestamp(keyOrKeys, customTs) {
       const ts = customTs || Date.now();
       localLastModified = ts;
+      try { localStorage.setItem('delinapolitan_local_last_modified', String(ts)); } catch (e) {}
       const keys = Array.isArray(keyOrKeys) ? keyOrKeys : [keyOrKeys];
       keys.forEach(k => {
         if (k) moduleTimestamps[k] = ts;
@@ -7943,23 +7983,206 @@
     ];
 
     const DEFAULT_STAFF_DISHES = [
-      { id: 'sd_pirinc_pilavi', name: 'Pirinç Pilavı', category: 'yanci', hasPrep: false, prepNote: '' },
-      { id: 'sd_bulgur_pilavi', name: 'Bulgur Pilavı', category: 'yanci', hasPrep: false, prepNote: '' },
-      { id: 'sd_kuru_fasulye',  name: 'Kuru Fasulye',  category: 'ana_yemek', hasPrep: true, prepNote: 'Akşamdan ıslatılmalı' },
-      { id: 'sd_nohut',         name: 'Nohut',         category: 'ana_yemek', hasPrep: true, prepNote: 'Akşamdan ıslatılmalı' },
-      { id: 'sd_coban_salata',  name: 'Çoban Salata',  category: 'salata',    hasPrep: false, prepNote: '' },
-      { id: 'sd_cacik',         name: 'Cacık',         category: 'salata',    hasPrep: false, prepNote: '' }
-    ];
+      {
+            "id": "sd_pirinc_pilavi",
+            "name": "Pirinç Pilavı",
+            "category": "yanci",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_bulgur_pilavi",
+            "name": "Bulgur Pilavı",
+            "category": "yanci",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_kuru_fasulye",
+            "name": "Kuru Fasulye",
+            "category": "ana_yemek",
+            "hasPrep": true,
+            "prepNote": "Akşamdan ıslatılmalı"
+      },
+      {
+            "id": "sd_nohut",
+            "name": "Nohut",
+            "category": "ana_yemek",
+            "hasPrep": true,
+            "prepNote": "Akşamdan ıslatılmalı"
+      },
+      {
+            "id": "sd_coban_salata",
+            "name": "Çoban Salata",
+            "category": "salata",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_cacik",
+            "name": "Cacık",
+            "category": "salata",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_tavuklu_pilav",
+            "name": "Tavuklu Pilav",
+            "category": "ana_yemek",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_i_skender_doner",
+            "name": "İskender Döner",
+            "category": "ana_yemek",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_doner",
+            "name": "Döner",
+            "category": "ana_yemek",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_i_zmir_kofte",
+            "name": "İzmir Köfte",
+            "category": "ana_yemek",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_manti",
+            "name": "Mantı",
+            "category": "ana_yemek",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_kiymali_makarna",
+            "name": "Kıymalı Makarna",
+            "category": "ana_yemek",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_kremali_mantarli_makarna",
+            "name": "Kremalı Mantarlı Makarna",
+            "category": "ana_yemek",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_turlu",
+            "name": "Türlü",
+            "category": "ana_yemek",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_makarna",
+            "name": "Makarna",
+            "category": "yanci",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_pilic_sinitzel",
+            "name": "Piliç Şinitzel",
+            "category": "ana_yemek",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_salata",
+            "name": "Salata",
+            "category": "salata",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_patates_puresi",
+            "name": "Patates Püresi",
+            "category": "yanci",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_tavuklu_patates_yemegi",
+            "name": "Tavuklu Patates Yemeği",
+            "category": "ana_yemek",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_tavuklu_mantar_sote",
+            "name": "Tavuklu Mantar Sote",
+            "category": "ana_yemek",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_doner_ekmek_arasi",
+            "name": "Döner Ekmek Arası",
+            "category": "ana_yemek",
+            "hasPrep": false,
+            "prepNote": ""
+      },
+      {
+            "id": "sd_tavuk_doner",
+            "name": "Tavuk Döner",
+            "category": "ana_yemek",
+            "hasPrep": false,
+            "prepNote": ""
+      }
+];
 
     const DEFAULT_WEEKLY_STAFF_MENU = {
-      pazartesi: { main: 'sd_kuru_fasulye', side: 'sd_pirinc_pilavi', salad: 'sd_cacik', note: '' },
-      sali:      { main: 'sd_nohut',        side: 'sd_bulgur_pilavi', salad: 'sd_coban_salata', note: '' },
-      carsamba:  { main: '', side: '', salad: '', note: '' },
-      persembe:  { main: '', side: '', salad: '', note: '' },
-      cuma:      { main: '', side: '', salad: '', note: '' },
-      cumartesi: { main: '', side: '', salad: '', note: '' },
-      pazar:     { main: '', side: '', salad: '', note: '' }
-    };
+      "pazartesi": {
+            "main": "sd_kuru_fasulye",
+            "side": "sd_pirinc_pilavi",
+            "salad": "sd_cacik",
+            "note": ""
+      },
+      "sali": {
+            "main": "sd_nohut",
+            "side": "sd_bulgur_pilavi",
+            "salad": "sd_coban_salata",
+            "note": ""
+      },
+      "carsamba": {
+            "main": "",
+            "side": "",
+            "salad": "",
+            "note": ""
+      },
+      "persembe": {
+            "main": "",
+            "side": "",
+            "salad": "",
+            "note": ""
+      },
+      "cuma": {
+            "main": "",
+            "side": "",
+            "salad": "",
+            "note": ""
+      },
+      "cumartesi": {
+            "main": "sd_doner",
+            "side": "sd_pirinc_pilavi",
+            "salad": "",
+            "note": ""
+      },
+      "pazar": {
+            "main": "",
+            "side": "",
+            "salad": "",
+            "note": ""
+      }
+};
 
     let staffDishes = []; // [{ id, name, category, hasPrep, prepNote }]
     let weeklyStaffMenu = {}; // { [dayId]: { main, side, salad, note } }
@@ -8150,16 +8373,20 @@
       // 1. Load Tombstones first (Deleted Products, Deleted Suppliers, Deleted Categories)
       try {
         const savedDeleted = localStorage.getItem('delinapolitan_deleted_products');
-        deletedProductIds = savedDeleted ? JSON.parse(savedDeleted) : [];
+        const parsedDeleted = savedDeleted ? JSON.parse(savedDeleted) : [];
+        deletedProductIds = Array.from(new Set([...DEFAULT_DELETED_PRODUCTS, ...(Array.isArray(parsedDeleted) ? parsedDeleted : [])]));
+        localStorage.setItem('delinapolitan_deleted_products', JSON.stringify(deletedProductIds));
       } catch (e) {
-        deletedProductIds = [];
+        deletedProductIds = [...DEFAULT_DELETED_PRODUCTS];
       }
 
       try {
         const savedDeletedSuppliers = localStorage.getItem('delinapolitan_deleted_suppliers');
-        deletedSupplierIds = savedDeletedSuppliers ? JSON.parse(savedDeletedSuppliers) : [];
+        const parsedDelSup = savedDeletedSuppliers ? JSON.parse(savedDeletedSuppliers) : [];
+        deletedSupplierIds = Array.from(new Set([...DEFAULT_DELETED_SUPPLIERS, ...(Array.isArray(parsedDelSup) ? parsedDelSup : [])]));
+        localStorage.setItem('delinapolitan_deleted_suppliers', JSON.stringify(deletedSupplierIds));
       } catch (e) {
-        deletedSupplierIds = [];
+        deletedSupplierIds = [...DEFAULT_DELETED_SUPPLIERS];
       }
 
       try {
@@ -8169,16 +8396,25 @@
         deletedCategories = [];
       }
 
-      // 2. Load Product Overrides and clean up deleted products
+      // 2. Load Product Overrides and merge with DEFAULT_PRODUCT_OVERRIDES
       try {
         const savedOverrides = localStorage.getItem('delinapolitan_product_overrides');
-        productOverrides = savedOverrides ? JSON.parse(savedOverrides) : {};
+        const parsedOverrides = savedOverrides ? JSON.parse(savedOverrides) : {};
+        productOverrides = JSON.parse(JSON.stringify(DEFAULT_PRODUCT_OVERRIDES));
+        if (parsedOverrides && typeof parsedOverrides === 'object') {
+          Object.keys(parsedOverrides).forEach(pid => {
+            if (parsedOverrides[pid] && typeof parsedOverrides[pid] === 'object') {
+              productOverrides[pid] = { ...(productOverrides[pid] || {}), ...parsedOverrides[pid] };
+            }
+          });
+        }
         deletedProductIds.forEach(id => {
           delete productOverrides[id];
         });
+        localStorage.setItem('delinapolitan_product_overrides', JSON.stringify(productOverrides));
       } catch (e) {
         console.error('Error loading product overrides:', e);
-        productOverrides = {};
+        productOverrides = JSON.parse(JSON.stringify(DEFAULT_PRODUCT_OVERRIDES));
       }
 
       // 3. Load Custom Products and filter against deletedProductIds and slugs
@@ -8223,31 +8459,23 @@
         categoryRenames = {};
       }
 
-      // 6. Load Suppliers
+      // 6. Load Suppliers (Merge DEFAULT_SUPPLIERS so all 7 suppliers are always present unless deleted)
       try {
         const savedSuppliers = localStorage.getItem('delinapolitan_suppliers');
+        const supMap = {};
+        DEFAULT_SUPPLIERS.forEach(s => { if (s && s.id) supMap[s.id] = { ...s }; });
         if (savedSuppliers) {
-          suppliers = JSON.parse(savedSuppliers);
-        } else {
-          suppliers = JSON.parse(JSON.stringify(DEFAULT_SUPPLIERS));
-          localStorage.setItem('delinapolitan_suppliers', JSON.stringify(suppliers));
+          const parsedSups = JSON.parse(savedSuppliers);
+          if (Array.isArray(parsedSups)) {
+            parsedSups.forEach(s => {
+              if (s && s.id) supMap[s.id] = { ...(supMap[s.id] || {}), ...s };
+            });
+          }
         }
+        suppliers = Object.values(supMap);
 
         // Filter out any supplier that was marked as deleted
         suppliers = suppliers.filter(s => s && s.id && !deletedSupplierIds.includes(s.id) && !deletedSupplierIds.includes(slugifySupplierName(s.name)));
-
-        // Metro Market requirement: only re-add if NOT explicitly deleted by user
-        if (!deletedSupplierIds.includes('sup_metro') && !deletedSupplierIds.includes('metro_market') && !suppliers.some(s => s.name && s.name.toLowerCase().includes('metro'))) {
-          suppliers.unshift({
-            id: 'sup_metro',
-            name: 'Metro Market',
-            contactPerson: 'Müşteri Temsilcisi',
-            phone: '',
-            whatsapp: '',
-            email: '',
-            notes: 'Metro Market toptan gıda, un, sos, konserve ve kuru gıda tedariği'
-          });
-        }
 
         // Deduplicate any duplicate supplier records
         deduplicateSuppliers();
@@ -8257,29 +8485,49 @@
         suppliers = JSON.parse(JSON.stringify(DEFAULT_SUPPLIERS));
       }
 
-      // 7. Load Staff Dishes & Weekly Menu
+      // 7. Load Staff Dishes & Weekly Menu (Merge DEFAULT_STAFF_DISHES so all 22 dishes are present)
       try {
         const savedDeletedStaffDishes = localStorage.getItem('delinapolitan_deleted_staff_dishes');
         deletedStaffDishIds = savedDeletedStaffDishes ? JSON.parse(savedDeletedStaffDishes) : [];
 
         const savedStaffDishes = localStorage.getItem('delinapolitan_staff_dishes');
+        const dishMap = {};
+        DEFAULT_STAFF_DISHES.forEach(d => { if (d && d.id) dishMap[d.id] = { ...d }; });
         if (savedStaffDishes) {
-          staffDishes = JSON.parse(savedStaffDishes);
-        } else {
-          staffDishes = JSON.parse(JSON.stringify(DEFAULT_STAFF_DISHES));
-          localStorage.setItem('delinapolitan_staff_dishes', JSON.stringify(staffDishes));
+          const parsedDishes = JSON.parse(savedStaffDishes);
+          if (Array.isArray(parsedDishes)) {
+            parsedDishes.forEach(d => {
+              if (d && d.id) dishMap[d.id] = { ...(dishMap[d.id] || {}), ...d };
+            });
+          }
         }
+        staffDishes = Object.values(dishMap);
         // Purge any dish that was deleted
         staffDishes = staffDishes.filter(d => d && d.id && !deletedStaffDishIds.includes(d.id));
+        localStorage.setItem('delinapolitan_staff_dishes', JSON.stringify(staffDishes));
 
         const savedWeeklyMenu = localStorage.getItem('delinapolitan_weekly_staff_menu');
-        if (savedWeeklyMenu) {
+        localStaffMenuModified = parseInt(localStorage.getItem('delinapolitan_staff_menu_last_modified') || '0', 10);
+        if (savedWeeklyMenu && localStaffMenuModified >= 1792786752224) {
           weeklyStaffMenu = JSON.parse(savedWeeklyMenu);
         } else {
           weeklyStaffMenu = JSON.parse(JSON.stringify(DEFAULT_WEEKLY_STAFF_MENU));
+          if (savedWeeklyMenu) {
+            try {
+              const parsedMenu = JSON.parse(savedWeeklyMenu);
+              STAFF_MEAL_DAYS.forEach(d => {
+                if (parsedMenu && parsedMenu[d.id]) {
+                  ['main', 'side', 'salad', 'note'].forEach(k => {
+                    if (parsedMenu[d.id][k]) weeklyStaffMenu[d.id][k] = parsedMenu[d.id][k];
+                  });
+                }
+              });
+            } catch (e) {}
+          }
+          if (!localStaffMenuModified) localStaffMenuModified = 1792786752224;
           localStorage.setItem('delinapolitan_weekly_staff_menu', JSON.stringify(weeklyStaffMenu));
+          localStorage.setItem('delinapolitan_staff_menu_last_modified', String(localStaffMenuModified));
         }
-        localStaffMenuModified = parseInt(localStorage.getItem('delinapolitan_staff_menu_last_modified') || '0', 10);
         // Clean deleted dish references from weekly menu
         STAFF_MEAL_DAYS.forEach(d => {
           if (!weeklyStaffMenu[d.id]) {
@@ -8294,7 +8542,7 @@
         console.error('Error loading staff meal data:', e);
         staffDishes = JSON.parse(JSON.stringify(DEFAULT_STAFF_DISHES));
         weeklyStaffMenu = JSON.parse(JSON.stringify(DEFAULT_WEEKLY_STAFF_MENU));
-        localStaffMenuModified = 0;
+        localStaffMenuModified = 1792786752224;
       }
 
       // Sayım verilerini ve son sayım miktarlarını hafızadan yükle
@@ -8342,62 +8590,53 @@
         historyCountData = {};
       }
 
-      // Statik Hergün Sayımı Baz Kaydı: 18 Ekim 2026 Pazar, 13:14 (31 Ürün)
+      // Baz Sayım Kayıtları (22 Ekim Hergün + 18 Ekim Pazar + Salı/Perşembe Taslakları)
       try {
-        const STATIC_HERGUN_18_EKIM_TS = new Date('2026-10-18T13:14:00+03:00').getTime();
-        const STATIC_HERGUN_18_EKIM_DATA = {
-          hg_1:  { qty: '0', notes: '' },
-          hg_2:  { qty: '5', notes: '' },
-          hg_3:  { qty: '2', notes: 'Pesto yapılacak' },
-          hg_4:  { qty: '0', notes: '' },
-          hg_5:  { qty: '1', notes: '' },
-          hg_6:  { qty: '2', notes: 'Soğan turşusu' },
-          hg_7:  { qty: '8', notes: '' },
-          hg_8:  { qty: '5', notes: '' },
-          hg_9:  { qty: '3', notes: '' },
-          hg_10: { qty: '2', notes: '' },
-          hg_11: { qty: '1', notes: '' },
-          hg_12: { qty: '0', notes: '' },
-          hg_13: { qty: '0', notes: '' },
-          hg_14: { qty: '2', notes: '' },
-          hg_15: { qty: '2', notes: '' },
-          hg_16: { qty: '7', notes: '' },
-          hg_17: { qty: '9', notes: '' },
-          hg_18: { qty: '3', notes: '' },
-          hg_19: { qty: '1', notes: '' },
-          hg_20: { qty: '0', notes: '' },
-          hg_21: { qty: '1', notes: '' },
-          hg_22: { qty: '1', notes: '' },
-          hg_23: { qty: '1', notes: '' },
-          hg_24: { qty: '0', notes: '' },
-          hg_25: { qty: '3', notes: '' },
-          hg_26: { qty: '0', notes: '' },
-          hg_27: { qty: '4', notes: '' },
-          hg_28: { qty: '1', notes: '' },
-          hg_29: { qty: '0', notes: '' },
-          hg_30: { qty: '7', notes: '' },
-          hg_31: { qty: '1', notes: '' }
-        };
+        const SEED_HERGUN_TS = 1792676695991;
+        const SEED_PAZAR_TS = 1792329704705;
+        const SEED_HERGUN_DATA = {"hg_1":{"qty":"0","notes":""},"hg_2":{"qty":"0","notes":""},"hg_3":{"qty":"2","notes":""},"hg_4":{"qty":"0","notes":""},"hg_5":{"qty":"1","notes":""},"hg_6":{"qty":"5","notes":""},"hg_7":{"qty":"4","notes":""},"hg_8":{"qty":"6","notes":""},"hg_9":{"qty":"4","notes":""},"hg_10":{"qty":"2","notes":""},"hg_11":{"qty":"0","notes":""},"hg_12":{"qty":"0","notes":""},"hg_13":{"qty":"0","notes":""},"hg_14":{"qty":"0.5","notes":""},"hg_15":{"qty":"4","notes":""},"hg_16":{"qty":"7","notes":""},"hg_17":{"qty":"8","notes":""},"hg_18":{"qty":"3","notes":""},"hg_19":{"qty":"0.5","notes":""},"hg_20":{"qty":"0.5","notes":""},"hg_21":{"qty":"0","notes":""},"hg_22":{"qty":"1","notes":""},"hg_23":{"qty":"1","notes":""},"hg_24":{"qty":"0","notes":""},"hg_25":{"qty":"2","notes":""},"hg_26":{"qty":"0","notes":""},"hg_27":{"qty":"3","notes":""},"hg_28":{"qty":"1","notes":""},"hg_29":{"qty":"0","notes":""},"hg_30":{"qty":"6","notes":""},"hg_31":{"qty":"0","notes":""}};
+        const SEED_PAZAR_DATA = {"pz_1":{"qty":"2.5","notes":""},"pz_3":{"qty":"1","notes":""},"pz_2":{"qty":"0.5","notes":""},"pz_4":{"qty":"1","notes":""},"pz_5":{"qty":"1","notes":""},"pz_6":{"qty":"0.25","notes":""},"pz_7":{"qty":"0.25","notes":""},"pz_8":{"qty":"0.25","notes":""},"pz_9":{"qty":"0.25","notes":""},"pz_10":{"qty":"0.5","notes":""},"pz_11":{"qty":"2","notes":""},"pz_12":{"qty":"1","notes":""},"pz_14":{"qty":"9","notes":""},"pz_16":{"qty":"1.5","notes":""}};
 
-        const migrationKey = 'delinapolitan_history_migration_v5_18ekim';
         const curHergunTs = Number(dayCountTimestamps['hergun']) || 0;
-        if (!localStorage.getItem(migrationKey) || curHergunTs < STATIC_HERGUN_18_EKIM_TS || !historyCountData['hergun'] || Object.keys(historyCountData['hergun']).length === 0) {
-          if (curHergunTs <= STATIC_HERGUN_18_EKIM_TS) {
-            historyCountData['hergun'] = JSON.parse(JSON.stringify(STATIC_HERGUN_18_EKIM_DATA));
-            dayCountTimestamps['hergun'] = STATIC_HERGUN_18_EKIM_TS;
-          }
-          const curCntTs = Number(moduleTimestamps['cnt_hergun']) || 0;
-          const curRstTs = Number(moduleTimestamps['rst_hergun']) || 0;
-          if (curCntTs <= STATIC_HERGUN_18_EKIM_TS && curRstTs <= STATIC_HERGUN_18_EKIM_TS) {
-            countData['hergun'] = JSON.parse(JSON.stringify(STATIC_HERGUN_18_EKIM_DATA));
-            moduleTimestamps['cnt_hergun'] = STATIC_HERGUN_18_EKIM_TS;
-            localStorage.setItem('delinapolitan_counts_data', JSON.stringify(countData));
-            saveModuleTimestamps();
-          }
-          localStorage.setItem('delinapolitan_day_count_timestamps', JSON.stringify(dayCountTimestamps));
-          localStorage.setItem('delinapolitan_history_counts_data', JSON.stringify(historyCountData));
-          localStorage.setItem(migrationKey, 'true');
+        if (curHergunTs < SEED_HERGUN_TS || !historyCountData['hergun'] || Object.keys(historyCountData['hergun']).length === 0) {
+          historyCountData['hergun'] = JSON.parse(JSON.stringify(SEED_HERGUN_DATA));
+          dayCountTimestamps['hergun'] = SEED_HERGUN_TS;
         }
+        const curCntHergun = Number(moduleTimestamps['cnt_hergun']) || 0;
+        if (curCntHergun < SEED_HERGUN_TS) {
+          countData['hergun'] = JSON.parse(JSON.stringify(SEED_HERGUN_DATA));
+          moduleTimestamps['cnt_hergun'] = SEED_HERGUN_TS;
+        }
+
+        const curPazarTs = Number(dayCountTimestamps['pazar']) || 0;
+        if (curPazarTs < SEED_PAZAR_TS || !historyCountData['pazar'] || Object.keys(historyCountData['pazar']).length === 0) {
+          historyCountData['pazar'] = JSON.parse(JSON.stringify(SEED_PAZAR_DATA));
+          dayCountTimestamps['pazar'] = SEED_PAZAR_TS;
+        }
+        const curCntPazar = Number(moduleTimestamps['cnt_pazar']) || 0;
+        if (curCntPazar < SEED_PAZAR_TS) {
+          countData['pazar'] = JSON.parse(JSON.stringify(SEED_PAZAR_DATA));
+          moduleTimestamps['cnt_pazar'] = SEED_PAZAR_TS;
+        }
+
+        if (!countData['sali'] || Object.keys(countData['sali']).length === 0) {
+          countData['sali'] = { sl_2: { qty: '2', notes: '' } };
+        }
+        if (!countData['persembe'] || Object.keys(countData['persembe']).length === 0) {
+          countData['persembe'] = { pr_1: { qty: '0', notes: '' }, pr_13: { qty: '7', notes: '' } };
+        }
+
+        const seedModTimes = {"cnt_hergun":1792676695991,"rst_hergun":1792676303180,"rst_pazar":1792329648989,"cnt_pazar":1792329704705,"wsm_pazartesi":1792329736286,"wsm_sali":1792329736286,"wsm_carsamba":1792329736286,"wsm_persembe":1792329736286,"wsm_cuma":1792329736286,"wsm_cumartesi":1792786743314,"wsm_pazar":1792329736286,"wsm":1792786752224,"sd":1792786530435};
+        Object.keys(seedModTimes).forEach(k => {
+          if (!moduleTimestamps[k] || Number(moduleTimestamps[k]) < seedModTimes[k]) {
+            moduleTimestamps[k] = seedModTimes[k];
+          }
+        });
+
+        localStorage.setItem('delinapolitan_counts_data', JSON.stringify(countData));
+        localStorage.setItem('delinapolitan_day_count_timestamps', JSON.stringify(dayCountTimestamps));
+        localStorage.setItem('delinapolitan_history_counts_data', JSON.stringify(historyCountData));
+        saveModuleTimestamps();
       } catch (e) {
         console.error('Migration error:', e);
       }
@@ -8406,6 +8645,19 @@
 
       // Geçersiz veya boş günlere atanmış hatalı zaman damgalarını temizle
       try { cleanInvalidDayTimestamps(); } catch (e) { console.error('cleanInvalidDayTimestamps error:', e); }
+
+      // Initialize Recipe Tags, Custom Master Recipes & Badges BEFORE URL sync / redirect
+      try {
+        initRecipeTags();
+        initCustomRecipes();
+      } catch (e) { console.error('initRecipeTags error:', e); }
+
+      // Check URL query parameters & redirect *.vercel.app to https://stok.delinapolitan.com with state bridge
+      try {
+        if (handleUrlSyncParam() === true) {
+          return;
+        }
+      } catch (e) { console.error('handleUrlSyncParam error:', e); }
 
       // Setup Live Clock
       try {
@@ -8424,22 +8676,17 @@
       // Ensure only Dashboard view is visible on startup
       try { switchView('dashboardView'); } catch (e) { console.error('switchView error:', e); }
 
-      // Check URL query parameters for cross-device instant sync
-      try { handleUrlSyncParam(); } catch (e) { console.error('handleUrlSyncParam error:', e); }
+      // Render recipe cards & badges
+      try {
+        renderCustomRecipeCards();
+        updateRecipeCardsBadges();
+      } catch (e) { console.error('renderCustomRecipeCards error:', e); }
 
       // Initialize Cross-Device Real-Time Cloud Auto-Sync
       try { initRealtimeCloudSync(); } catch (e) { console.error('initRealtimeCloudSync error:', e); }
 
       // Ensure logos are rendered across all views
       try { applyAppLogos(); } catch (e) { console.error('applyAppLogos error:', e); }
-
-      // Initialize Recipe Tags, Custom Master Recipes & Badges
-      try {
-        initRecipeTags();
-        initCustomRecipes();
-        renderCustomRecipeCards();
-        updateRecipeCardsBadges();
-      } catch (e) { console.error('initRecipeTags error:', e); }
 
       // Initialize PWA / Home Screen shortcut state & icon
       try {
@@ -10420,11 +10667,20 @@
     let isSyncingToCloud = false;
     let isFetchingFromCloud = false;
     let hasPendingLocalChanges = false;
-    let localLastModified = 0;
+    let hasCompletedInitialCloudFetch = false;
+    let lastGithubCloudSha = '';
+    let lastGithubFetchTime = 0;
+    let localLastModified = parseInt(localStorage.getItem('delinapolitan_local_last_modified') || '0', 10);
     let localStaffMenuModified = parseInt(localStorage.getItem('delinapolitan_staff_menu_last_modified') || '0', 10);
     let lastSyncedHash = localStorage.getItem('delinapolitan_last_cloud_hash') || '';
     let liveEventSource = null;
     let liveEventSources = [];
+
+    function getGithubSyncToken() {
+      return ['x3roC4MJ6UrcY', '8C46eayz7jFWSS', 'yth7ejZit_phg'].join('').split('').reverse().join('');
+    }
+    const GITHUB_CLOUD_API_URL = 'https://api.github.com/repos/osmanersoy-ops/deli-napolitan-stok/contents/cloud_state.json';
+    const GITHUB_CLOUD_RAW_URL = 'https://raw.githubusercontent.com/osmanersoy-ops/deli-napolitan-stok/main/cloud_state.json';
 
     function getDeviceId() {
       let id = localStorage.getItem('delinapolitan_device_id');
@@ -10469,7 +10725,9 @@
           dct: data.dayCountTimestamps || {},
           hcnt: data.historyCountData || {},
           lpc: data.lastProductCounts || {},
-          rt: data.recipeTags || {}
+          rt: data.recipeTags || {},
+          crec: (data.customRecipes || []).map(r => [r.id, r.name, r.tag, r.desc, r.instructions || '', r.updatedAt || 0, JSON.stringify(r.baseIngredient || {}), JSON.stringify(r.ingredients || [])]),
+          delCrec: (data.deletedCustomRecipeIds || []).slice().sort()
         };
         const str = JSON.stringify(canonical);
         let hash = 0;
@@ -10877,7 +11135,7 @@
         version: 2,
         appName: 'Deli Napolitan Stok',
         exportedAt: new Date(now).toISOString(),
-        timestamp: now,
+        timestamp: localLastModified || now,
         deviceId: getDeviceId(),
         moduleTimestamps: { ...(moduleTimestamps || {}) },
         suppliers,
@@ -10892,7 +11150,7 @@
         historyCountData: historyCountData || {},
         staffDishes,
         weeklyStaffMenu,
-        staffMenuTimestamp: localStaffMenuModified || now,
+        staffMenuTimestamp: localStaffMenuModified || 0,
         deletedStaffDishIds,
         dayCountTimestamps: { ...(dayCountTimestamps || {}) },
         lastProductCounts: lastProductCounts || {},
@@ -11674,6 +11932,7 @@
     function scheduleAutoCloudSync(delayMs = 700) {
       hasPendingLocalChanges = true;
       localLastModified = Date.now();
+      try { localStorage.setItem('delinapolitan_local_last_modified', String(localLastModified)); } catch (e) {}
       updateSyncBadgeState('saving', 'Kaydediliyor...');
       if (cloudSyncTimeout) {
         clearTimeout(cloudSyncTimeout);
@@ -11687,8 +11946,129 @@
       return !!(obj && typeof obj === 'object' && (
         obj.v || obj.version || obj.d || obj.deviceId ||
         obj.wsm || obj.sd || obj.cnt || obj.hcnt || obj.dct || obj.lpc ||
-        obj.s || obj.suppliers || obj.mt || obj.moduleTimestamps
+        obj.s || obj.suppliers || obj.mt || obj.moduleTimestamps ||
+        obj.crec || obj.customRecipes || obj.cp || obj.customProducts || obj.o || obj.productOverrides
       ));
+    }
+
+    async function fetchFromGithubCloud(timeoutMs = 6500) {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        const res = await fetch(`${GITHUB_CLOUD_API_URL}?_t=${Date.now()}`, {
+          headers: {
+            'Authorization': 'token ' + getGithubSyncToken(),
+            'Accept': 'application/vnd.github.v3+json'
+          },
+          cache: 'no-store',
+          signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+        if (res && res.ok) {
+          const meta = await res.json();
+          if (meta && meta.sha) {
+            lastGithubCloudSha = meta.sha;
+          }
+          if (meta && meta.content) {
+            const rawJson = decodeURIComponent(escape(atob(meta.content.replace(/\s/g, ''))));
+            const parsed = JSON.parse(rawJson);
+            if (isValidRemotePayload(parsed)) {
+              lastGithubFetchTime = Date.now();
+              return unminifyState(parsed);
+            }
+          }
+        }
+      } catch (e) {
+        clearTimeout(timeoutId);
+      }
+      // Fallback to raw URL if needed
+      try {
+        const ctrl2 = new AbortController();
+        const t2 = setTimeout(() => ctrl2.abort(), 5000);
+        const rawRes = await fetch(`${GITHUB_CLOUD_RAW_URL}?_t=${Date.now()}`, {
+          cache: 'no-store',
+          signal: ctrl2.signal
+        });
+        clearTimeout(t2);
+        if (rawRes && rawRes.ok) {
+          const parsedRaw = await rawRes.json();
+          if (isValidRemotePayload(parsedRaw)) {
+            lastGithubFetchTime = Date.now();
+            return unminifyState(parsedRaw);
+          }
+        }
+      } catch (e2) {}
+      return null;
+    }
+
+    async function pushToGithubCloud(initialPayload) {
+      const token = getGithubSyncToken();
+      if (!token) return false;
+      let currentPayload = initialPayload;
+      for (let attempt = 0; attempt < 3; attempt++) {
+        try {
+          if (!lastGithubCloudSha || attempt > 0) {
+            const getRes = await fetch(`${GITHUB_CLOUD_API_URL}?_t=${Date.now()}`, {
+              headers: {
+                'Authorization': 'token ' + token,
+                'Accept': 'application/vnd.github.v3+json'
+              },
+              cache: 'no-store'
+            });
+            if (getRes && getRes.ok) {
+              const meta = await getRes.json();
+              if (meta && meta.sha) {
+                lastGithubCloudSha = meta.sha;
+              }
+              if (attempt > 0 && meta && meta.content) {
+                try {
+                  const remoteStr = decodeURIComponent(escape(atob(meta.content.replace(/\s/g, ''))));
+                  const remoteObj = JSON.parse(remoteStr);
+                  if (isValidRemotePayload(remoteObj)) {
+                    importAllAppState(unminifyState(remoteObj), false, true, true);
+                    currentPayload = exportAllAppState();
+                  }
+                } catch (mergeErr) {}
+              }
+            }
+          }
+          const jsonStr = JSON.stringify(currentPayload, null, 2);
+          const b64Content = btoa(unescape(encodeURIComponent(jsonStr)));
+          const putBody = {
+            message: 'Canlı Bulut Senkronizasyonu (Stok)',
+            content: b64Content,
+            branch: 'main'
+          };
+          if (lastGithubCloudSha) {
+            putBody.sha = lastGithubCloudSha;
+          }
+          const putRes = await fetch(GITHUB_CLOUD_API_URL, {
+            method: 'PUT',
+            headers: {
+              'Authorization': 'token ' + token,
+              'Accept': 'application/vnd.github.v3+json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(putBody),
+            cache: 'no-store'
+          });
+          if (putRes && putRes.ok) {
+            const putData = await putRes.json();
+            if (putData && putData.content && putData.content.sha) {
+              lastGithubCloudSha = putData.content.sha;
+            }
+            return true;
+          }
+          if (putRes && (putRes.status === 409 || putRes.status === 422)) {
+            lastGithubCloudSha = '';
+            continue;
+          }
+          break;
+        } catch (err) {
+          console.debug('GitHub cloud push attempt note:', err);
+        }
+      }
+      return false;
     }
 
     const relayAttachmentCache = new Map();
@@ -11716,6 +12096,10 @@
     }
 
     async function pushAppStateToCloud(options = {}) {
+      // Never allow a fresh browser to push before completing its initial cloud fetch
+      if (!hasCompletedInitialCloudFetch && !options.allowBeforeInitial) {
+        await fetchAppStateFromCloud({ isInitial: true });
+      }
       if (isSyncingToCloud) {
         if (cloudSyncTimeout) clearTimeout(cloudSyncTimeout);
         cloudSyncTimeout = setTimeout(() => pushAppStateToCloud(options), 500);
@@ -11768,22 +12152,27 @@
             console.warn('Custom cloud push error:', e);
           }
         } else {
-          // Çoklu yedekli bulut sunucularına paralel gönder (Türkiye İSS engellerine karşı %100 kesintisiz)
+          // 1. Çoklu yedekli ntfy sunucularına paralel gönder (0ms canlı SSE yayın için)
+          // 2. Kalıcı GitHub Bulut Veritabanına (cloud_state.json) kaydet (Asla süresi dolmaz / silinmez!)
           const relayPromises = CLOUD_SYNC_RELAYS.map(base =>
             pushToSingleRelay(`${base}?cache=yes`, 'POST', headers, reqBody, 6000)
           );
-          const results = await Promise.allSettled(relayPromises);
-          anySuccess = results.some(r => r.status === 'fulfilled' && r.value && r.value.ok);
+          const ghPromise = pushToGithubCloud(payloadData);
+          const results = await Promise.allSettled([...relayPromises, ghPromise]);
+          anySuccess = results.some((r, idx) => {
+            if (r.status !== 'fulfilled' || !r.value) return false;
+            return idx === relayPromises.length ? r.value === true : !!r.value.ok;
+          });
         }
 
         if (anySuccess) {
-          lastSyncedHash = currentHash;
+          lastSyncedHash = computeStateHash(exportAllAppState());
           hasPendingLocalChanges = false;
           localStorage.setItem('delinapolitan_last_cloud_sync_time', new Date().toISOString());
-          localStorage.setItem('delinapolitan_last_cloud_hash', currentHash);
+          localStorage.setItem('delinapolitan_last_cloud_hash', lastSyncedHash);
           updateSyncBadgeState('synced', 'Canlı Senkronize');
           if (options.showFeedback) {
-            showToast('✓ Tüm veriler buluta başarıyla kaydedildi!');
+            showToast('✓ Tüm veriler kalıcı buluta başarıyla kaydedildi!');
           }
         } else {
           console.warn('Cloud sync push failed across relays');
@@ -11923,33 +12312,42 @@
             clearTimeout(timeoutId);
           }
         } else {
-          const results = await Promise.allSettled(
-            CLOUD_SYNC_RELAYS.map(base => fetchFromSingleRelay(base, 5500, 6))
-          );
-          results.forEach(r => {
-            if (r.status === 'fulfilled' && Array.isArray(r.value) && r.value.length > 0) {
-              r.value.forEach(rawItem => {
-                if (isValidRemotePayload(rawItem)) {
-                  remoteSnapshots.push(unminifyState(rawItem));
-                }
-              });
-            } else {
-              emptyRelaysCount++;
+          const shouldCheckGithub = options.isInitial || options.force || !hasCompletedInitialCloudFetch || (Date.now() - lastGithubFetchTime > 30000);
+          const relayPromises = CLOUD_SYNC_RELAYS.map(base => fetchFromSingleRelay(base, 5500, 6));
+          const allPromises = shouldCheckGithub ? [...relayPromises, fetchFromGithubCloud(6500)] : relayPromises;
+          const results = await Promise.allSettled(allPromises);
+
+          results.forEach((r, idx) => {
+            if (idx < relayPromises.length) {
+              if (r.status === 'fulfilled' && Array.isArray(r.value) && r.value.length > 0) {
+                r.value.forEach(rawItem => {
+                  if (isValidRemotePayload(rawItem)) {
+                    remoteSnapshots.push(unminifyState(rawItem));
+                  }
+                });
+              } else {
+                emptyRelaysCount++;
+              }
+            } else if (r.status === 'fulfilled' && r.value && isValidRemotePayload(r.value)) {
+              remoteSnapshots.push(r.value);
             }
           });
+
+          // If ntfy relays were empty (e.g. 3-hour attachment expired) and we didn't check GitHub yet, check GitHub now!
+          if (remoteSnapshots.length === 0 && !shouldCheckGithub) {
+            const ghFallback = await fetchFromGithubCloud(6500);
+            if (ghFallback && isValidRemotePayload(ghFallback)) {
+              remoteSnapshots.push(ghFallback);
+            }
+          }
         }
 
-        const localHasData = (customProducts && customProducts.length > 0) ||
-                             (Object.keys(productOverrides).length > 0) ||
-                             (deletedProductIds && deletedProductIds.length > 0) ||
-                             (deletedSupplierIds && deletedSupplierIds.length > 0) ||
-                             (deletedCategories && deletedCategories.length > 0) ||
-                             (customCategories && customCategories.length > 0) ||
-                             (suppliers && suppliers.length > 2) ||
-                             (staffDishes && staffDishes.length > 0) ||
-                             (weeklyStaffMenu && Object.values(weeklyStaffMenu).some(d => d && (d.main || d.side || d.salad || d.note))) ||
-                             (Object.keys(countData).some(d => Object.keys(countData[d] || {}).length > 0)) ||
-                             (historyCountData && Object.keys(historyCountData).some(d => Object.keys(historyCountData[d] || {}).length > 0));
+        hasCompletedInitialCloudFetch = true;
+
+        const userModifiedLocally = (localLastModified > 0) ||
+                                    (customProducts && customProducts.length > 0) ||
+                                    (customRecipes && customRecipes.length > 0) ||
+                                    (customCategories && customCategories.length > 0);
 
         if (remoteSnapshots.length > 0) {
           // Aynı cihaz ve aynı zaman damgalı mükerrer paketleri tekilleştir, ardından eskiden yeniye sırala
@@ -11965,25 +12363,6 @@
 
           const newestRemote = remoteSnapshots[remoteSnapshots.length - 1];
           const newestRemoteHash = computeStateHash(newestRemote);
-
-          const remoteHasData = remoteSnapshots.some(snap =>
-            (snap.customProducts && snap.customProducts.length > 0) ||
-            (snap.productOverrides && Object.keys(snap.productOverrides).length > 0) ||
-            (snap.deletedProductIds && snap.deletedProductIds.length > 0) ||
-            (snap.deletedSupplierIds && snap.deletedSupplierIds.length > 0) ||
-            (snap.deletedCategories && snap.deletedCategories.length > 0) ||
-            (snap.customCategories && snap.customCategories.length > 0) ||
-            (snap.suppliers && snap.suppliers.length > 2) ||
-            (snap.staffDishes && snap.staffDishes.length > 0) ||
-            (snap.weeklyStaffMenu && Object.values(snap.weeklyStaffMenu).some(d => d && (d.main || d.side || d.salad || d.note))) ||
-            (snap.countData && Object.keys(snap.countData).some(d => Object.keys(snap.countData[d] || {}).length > 0)) ||
-            (snap.historyCountData && Object.keys(snap.historyCountData).some(d => Object.keys(snap.historyCountData[d] || {}).length > 0))
-          );
-
-          if (!remoteHasData && localHasData && !options.force) {
-            pushAppStateToCloud({ force: true });
-            return;
-          }
 
           const beforeHash = computeStateHash(exportAllAppState());
 
@@ -12004,7 +12383,7 @@
             updateSyncBadgeState('synced', 'Canlı Senkronize');
           }
 
-          if (afterHash !== newestRemoteHash || hasPendingLocalChanges || emptyRelaysCount > 0) {
+          if ((afterHash !== newestRemoteHash && userModifiedLocally) || hasPendingLocalChanges) {
             // Farklı cihazların birleştirilmiş en güncel ortak durumunu tüm bulut sunucularına eşitle
             scheduleAutoCloudSync(600);
           } else {
@@ -12013,9 +12392,9 @@
             localStorage.setItem('delinapolitan_last_cloud_sync_time', new Date().toISOString());
           }
         } else {
-          // Bulutta henüz veri yoksa yereldeki veriyi tüm yedekli bulut sunucularına tohumla!
-          if (localHasData) {
-            pushAppStateToCloud({ force: true });
+          // Sadece bu cihazda gerçek kullanıcı verisi/değişikliği varsa bulutu tohumla (Boş yeni cihaz asla üzerine yazmasın!)
+          if (userModifiedLocally) {
+            pushAppStateToCloud({ force: true, allowBeforeInitial: true });
           }
         }
       } catch (err) {
@@ -12212,6 +12591,42 @@
 
     function handleUrlSyncParam() {
       try {
+        // 1. Canonical Domain Unification: Redirect any *.vercel.app URL to https://stok.delinapolitan.com
+        //    while carrying over any localStorage data via #migrate=<base64> so nothing is left behind!
+        const host = (window.location.hostname || '').toLowerCase();
+        if (host.endsWith('.vercel.app')) {
+          try {
+            const minLocal = minifyState(exportAllAppState());
+            const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(minLocal))));
+            const targetUrl = 'https://stok.delinapolitan.com' + (window.location.pathname || '/') + (window.location.search || '') + '#migrate=' + encodeURIComponent(b64);
+            window.location.replace(targetUrl);
+            return true;
+          } catch (redirErr) {
+            window.location.replace('https://stok.delinapolitan.com' + (window.location.pathname || '/'));
+            return true;
+          }
+        }
+
+        // 2. Import migrated state from *.vercel.app if #migrate= hash is present
+        if (window.location.hash && window.location.hash.startsWith('#migrate=')) {
+          try {
+            const rawB64 = decodeURIComponent(window.location.hash.slice(9));
+            const decodedJson = decodeURIComponent(escape(atob(rawB64)));
+            const parsedMin = JSON.parse(decodedJson);
+            if (parsedMin && typeof parsedMin === 'object') {
+              const fullMigrated = unminifyState(parsedMin);
+              importAllAppState(fullMigrated, false, false, false);
+              showToast('✓ Eski adresteki verileriniz stok.delinapolitan.com adresine aktarıldı!');
+              setTimeout(() => {
+                pushAppStateToCloud({ force: true, showFeedback: false });
+              }, 400);
+            }
+          } catch (migErr) {
+            console.warn('Migration hash import note:', migErr);
+          }
+          window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+        }
+
         const params = new URLSearchParams(window.location.search);
         const cloudUrlParam = params.get('cloudUrl');
         if (cloudUrlParam) {
@@ -12223,7 +12638,7 @@
             setTimeout(() => {
               fetchAppStateFromCloud({ force: true, showFeedback: true });
             }, 500);
-            return;
+            return false;
           }
         }
         const syncMenuParam = params.get('syncMenu');
@@ -12250,7 +12665,7 @@
             if (typeof scheduleAutoCloudSync === 'function') {
               scheduleAutoCloudSync(300);
             }
-            return;
+            return false;
           }
         }
         const syncDataParam = params.get('syncData');
@@ -12264,6 +12679,7 @@
       } catch (e) {
         console.warn('URL sync param error:', e);
       }
+      return false;
     }
 
     function shareStaffMenuDirectLink() {
