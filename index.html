@@ -10679,8 +10679,9 @@
     function getGithubSyncToken() {
       return ['x3roC4MJ6UrcY', '8C46eayz7jFWSS', 'yth7ejZit_phg'].join('').split('').reverse().join('');
     }
+    const GITHUB_CLOUD_BRANCH = 'sync-data';
     const GITHUB_CLOUD_API_URL = 'https://api.github.com/repos/osmanersoy-ops/deli-napolitan-stok/contents/cloud_state.json';
-    const GITHUB_CLOUD_RAW_URL = 'https://raw.githubusercontent.com/osmanersoy-ops/deli-napolitan-stok/main/cloud_state.json';
+    const GITHUB_CLOUD_RAW_URL = 'https://raw.githubusercontent.com/osmanersoy-ops/deli-napolitan-stok/sync-data/cloud_state.json';
 
     function getDeviceId() {
       let id = localStorage.getItem('delinapolitan_device_id');
@@ -11955,7 +11956,7 @@
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
       try {
-        const res = await fetch(`${GITHUB_CLOUD_API_URL}?_t=${Date.now()}`, {
+        const res = await fetch(`${GITHUB_CLOUD_API_URL}?ref=${GITHUB_CLOUD_BRANCH}&_t=${Date.now()}`, {
           headers: {
             'Authorization': 'token ' + getGithubSyncToken(),
             'Accept': 'application/vnd.github.v3+json'
@@ -12008,7 +12009,7 @@
       for (let attempt = 0; attempt < 3; attempt++) {
         try {
           if (!lastGithubCloudSha || attempt > 0) {
-            const getRes = await fetch(`${GITHUB_CLOUD_API_URL}?_t=${Date.now()}`, {
+            const getRes = await fetch(`${GITHUB_CLOUD_API_URL}?ref=${GITHUB_CLOUD_BRANCH}&_t=${Date.now()}`, {
               headers: {
                 'Authorization': 'token ' + token,
                 'Accept': 'application/vnd.github.v3+json'
@@ -12020,13 +12021,20 @@
               if (meta && meta.sha) {
                 lastGithubCloudSha = meta.sha;
               }
-              if (attempt > 0 && meta && meta.content) {
+              if (meta && meta.content) {
                 try {
                   const remoteStr = decodeURIComponent(escape(atob(meta.content.replace(/\s/g, ''))));
                   const remoteObj = JSON.parse(remoteStr);
                   if (isValidRemotePayload(remoteObj)) {
-                    importAllAppState(unminifyState(remoteObj), false, true, true);
-                    currentPayload = exportAllAppState();
+                    const remoteUnmin = unminifyState(remoteObj);
+                    if (attempt > 0) {
+                      importAllAppState(remoteUnmin, false, true, true);
+                      currentPayload = exportAllAppState();
+                    }
+                    // If GitHub already has the exact same canonical state hash, do not create a redundant commit!
+                    if (computeStateHash(remoteUnmin) === computeStateHash(currentPayload)) {
+                      return true;
+                    }
                   }
                 } catch (mergeErr) {}
               }
@@ -12037,7 +12045,7 @@
           const putBody = {
             message: 'Canlı Bulut Senkronizasyonu (Stok)',
             content: b64Content,
-            branch: 'main'
+            branch: GITHUB_CLOUD_BRANCH
           };
           if (lastGithubCloudSha) {
             putBody.sha = lastGithubCloudSha;
@@ -12592,19 +12600,24 @@
     function handleUrlSyncParam() {
       try {
         // 1. Canonical Domain Unification: Redirect any *.vercel.app URL to https://stok.delinapolitan.com
-        //    while carrying over any localStorage data via #migrate=<base64> so nothing is left behind!
+        //    Only attach #migrate=<base64> if this .vercel.app browser actually has user-modified data in localStorage!
         const host = (window.location.hostname || '').toLowerCase();
         if (host.endsWith('.vercel.app')) {
           try {
-            const minLocal = minifyState(exportAllAppState());
-            const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(minLocal))));
-            const targetUrl = 'https://stok.delinapolitan.com' + (window.location.pathname || '/') + (window.location.search || '') + '#migrate=' + encodeURIComponent(b64);
-            window.location.replace(targetUrl);
-            return true;
-          } catch (redirErr) {
-            window.location.replace('https://stok.delinapolitan.com' + (window.location.pathname || '/'));
-            return true;
-          }
+            const hasLocalUserEdits = (localLastModified > 0) ||
+                                      (customProducts && customProducts.length > 0) ||
+                                      (customRecipes && customRecipes.length > 0) ||
+                                      (customCategories && customCategories.length > 0);
+            if (hasLocalUserEdits) {
+              const minLocal = minifyState(exportAllAppState());
+              const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(minLocal))));
+              const targetUrl = 'https://stok.delinapolitan.com' + (window.location.pathname || '/') + (window.location.search || '') + '#migrate=' + encodeURIComponent(b64);
+              window.location.replace(targetUrl);
+              return true;
+            }
+          } catch (redirErr) {}
+          window.location.replace('https://stok.delinapolitan.com' + (window.location.pathname || '/'));
+          return true;
         }
 
         // 2. Import migrated state from *.vercel.app if #migrate= hash is present
@@ -12614,12 +12627,14 @@
             const decodedJson = decodeURIComponent(escape(atob(rawB64)));
             const parsedMin = JSON.parse(decodedJson);
             if (parsedMin && typeof parsedMin === 'object') {
+              const beforeMigHash = computeStateHash(exportAllAppState());
               const fullMigrated = unminifyState(parsedMin);
               importAllAppState(fullMigrated, false, false, false);
-              showToast('✓ Eski adresteki verileriniz stok.delinapolitan.com adresine aktarıldı!');
-              setTimeout(() => {
-                pushAppStateToCloud({ force: true, showFeedback: false });
-              }, 400);
+              const afterMigHash = computeStateHash(exportAllAppState());
+              if (afterMigHash !== beforeMigHash) {
+                showToast('✓ Eski adresteki verileriniz stok.delinapolitan.com adresine aktarıldı!');
+                scheduleAutoCloudSync(400);
+              }
             }
           } catch (migErr) {
             console.warn('Migration hash import note:', migErr);
