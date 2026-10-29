@@ -1,23 +1,139 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-10-27T11:31:07.000Z",
-  "timestamp": 1793089867000,
-  "deviceId": "dev_5yxsqly_mvle6qpu",
+  "exportedAt": "2026-10-29T14:47:29.016Z",
+  "timestamp": 1793285249014,
+  "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
-    "cnt_hergun": 1792676695991,
-    "rst_hergun": 1792676303180,
-    "rst_pazar": 1792329648989,
+    "cnt_hergun": 1793285249013,
     "cnt_pazar": 1792329704705,
-    "wsm_pazartesi": 1792329736286,
-    "wsm_sali": 1792329736286,
-    "wsm_carsamba": 1792329736286,
-    "wsm_persembe": 1792329736286,
-    "wsm_cuma": 1792329736286,
-    "wsm_cumartesi": 1792786743314,
-    "wsm_pazar": 1792329736286,
-    "wsm": 1792786752224,
-    "sd": 1792786530435
+    "rst_hergun": 1793285249009,
+    "rst_pazar": 1792329648989,
+    "wsm_pazartesi": 1792967245661,
+    "wsm_sali": 1792967395559,
+    "wsm_carsamba": 1792967410608,
+    "wsm_persembe": 1792967426192,
+    "wsm_cuma": 1792967436225,
+    "wsm_cumartesi": 1792967445208,
+    "wsm_pazar": 1792967460558,
+    "wsm": 1792967462680,
+    "sd": 1792967388152,
+    "sup": 1792969830431,
+    "prod_cust_kabak": 1792969316562,
+    "prod_cust_sili_biber": 1792967808268,
+    "prod_cust_jumbo_karides": 1792968827915,
+    "prod_cust_baby_karides": 1792968833724,
+    "prod_cust_i_c_midye": 1792968813686,
+    "prod_cust_dana_brisket_fume": 1792968037845,
+    "prod_cust_dana_dil_fume": 1792968059064,
+    "prod_cust_tiramisu": 1792968396282,
+    "prod_cust_sote_baby_karides": 1792968387760,
+    "prod_cust_sote_jumbo_karides": 1792968378187,
+    "prod_cust_pismis_dil_fume": 1792968261195,
+    "prod_cust_izgaralanmis_kabak": 1792968441598,
+    "prod_cust_kedi_dili": 1792968570222,
+    "prod_cust_taze_kekik": 1792968617676,
+    "prod_cust_tarhun": 1792968652152,
+    "prod_cust_beyaz_sarimsak_puresi": 1792968715159,
+    "prod_cust_donmus_yaban_mersini": 1792968775087,
+    "prod_cust_beyaz_sarap_pirinc_sirkesi": 1792968907427,
+    "prod_cust_lime": 1792969376288,
+    "prod_cust_strec_film": 1792969633490,
+    "prod_cust_aluminyum_folyo": 1792969655519,
+    "prod_cust_firin_kagidi": 1792969696255,
+    "prod_cust_buzdolabi_poseti": 1792969721707,
+    "prod_cust_kagit_havlu_i_cten_cekmeli": 1792969766033,
+    "prod_cust_sikma_torbasi_krema_torbasi": 1792969850680,
+    "prod_cust_bulasik_makinesi_konsantre_deterjan": 1792969888514,
+    "prod_cust_bulasik_makinesi_konsantre_parlatici": 1792969914330,
+    "prod_cust_hopla_sivi_santi_bitkisel_krema": 1792969991468,
+    "prod_cust_yaprak_jelatin": 1792970032528,
+    "prod_cust_cubuk_vanilya": 1792970112528,
+    "prod_cust_portakal": 1792970248091,
+    "prod_hg_18": 1792970300896,
+    "prod_hg_1": 1792970300896,
+    "prod_hg_2": 1792970300896,
+    "prod_hg_3": 1792970300896,
+    "prod_hg_4": 1792970300896,
+    "prod_hg_5": 1792970300896,
+    "prod_hg_6": 1792970300896,
+    "prod_hg_7": 1792970300896,
+    "prod_hg_8": 1792970300896,
+    "prod_hg_9": 1792970300896,
+    "prod_hg_10": 1792970300896,
+    "prod_hg_11": 1792970300896,
+    "prod_hg_13": 1792970300896,
+    "prod_hg_14": 1792970300896,
+    "prod_hg_15": 1792970300896,
+    "prod_hg_16": 1792970300896,
+    "prod_hg_17": 1792970300896,
+    "prod_sl_1": 1792970300896,
+    "prod_sl_2": 1792970300896,
+    "prod_sl_3": 1792970300896,
+    "prod_sl_4": 1792970300896,
+    "prod_sl_5": 1792970300896,
+    "prod_sl_6": 1792970300896,
+    "prod_sl_7": 1792970300896,
+    "prod_sl_9": 1792970300896,
+    "prod_sl_8": 1792970300896,
+    "prod_sl_32": 1792970300896,
+    "prod_sl_23": 1792970300896,
+    "prod_sl_24": 1792970300896,
+    "prod_sl_34": 1792970300896,
+    "prod_pr_11": 1792970300896,
+    "prod_pr_13": 1792970300896,
+    "prod_pr_15": 1792970300896,
+    "prod_sl_11": 1792970300896,
+    "prod_sl_12": 1792970300896,
+    "prod_sl_13": 1792970300896,
+    "prod_sl_14": 1792970300896,
+    "prod_pz_8": 1792970300896,
+    "prod_sl_10": 1792970300896,
+    "prod_sl_16": 1792970300896,
+    "prod_sl_17": 1792970300896,
+    "prod_sl_18": 1792970300896,
+    "prod_sl_19": 1792970300896,
+    "prod_sl_20": 1792970300896,
+    "prod_sl_21": 1792970300896,
+    "prod_sl_22": 1792970300896,
+    "prod_sl_25": 1792970300896,
+    "prod_sl_26": 1792970300896,
+    "prod_sl_27": 1792970300896,
+    "prod_sl_28": 1792970300896,
+    "prod_sl_30": 1792968801259,
+    "prod_sl_31": 1792970300896,
+    "prod_sl_33": 1792970300896,
+    "prod_sl_35": 1792970300896,
+    "prod_pr_8": 1792970300896,
+    "prod_pz_1": 1792970300896,
+    "prod_pz_3": 1792970300896,
+    "prod_pz_4": 1792970300896,
+    "prod_pz_5": 1792970300896,
+    "prod_pz_6": 1792970300896,
+    "prod_pz_10": 1792970300896,
+    "prod_pz_11": 1792970300896,
+    "prod_pz_12": 1792970300896,
+    "prod_sl_15": 1792970300896,
+    "prod_sl_29": 1792968794521,
+    "prod_pr_1": 1792970300896,
+    "prod_pr_2": 1792970300896,
+    "prod_pr_3": 1792970300896,
+    "prod_pr_4": 1792970300896,
+    "prod_pr_5": 1792970300896,
+    "prod_pr_6": 1792970300896,
+    "prod_pr_7": 1792970300896,
+    "prod_pr_9": 1792970300896,
+    "prod_pr_10": 1792970300896,
+    "prod_pr_12": 1792970300896,
+    "prod_pz_16": 1792969462468,
+    "prod_pz_14": 1792969469433,
+    "prod_pz_7": 1792969243614,
+    "prod_pz_2": 1792969249064,
+    "prod_pz_9": 1792969253280,
+    "prod_hg_12": 1792969281163,
+    "prod_hg_31": 1792969299230,
+    "prod": 1792970300896,
+    "cat": 1792970300896
   },
   "suppliers": [
     {
@@ -82,6 +198,24 @@
       "whatsapp": "",
       "email": "",
       "notes": ""
+    },
+    {
+      "id": "sup_sarfci",
+      "name": "Sarfçı",
+      "contactPerson": "",
+      "phone": "",
+      "whatsapp": "",
+      "email": "",
+      "notes": "Salı günü sipariş verilmeli (cuma teslim)."
+    },
+    {
+      "id": "sup_cosan_pasta",
+      "name": "Coşan Pasta",
+      "contactPerson": "",
+      "phone": "",
+      "whatsapp": "",
+      "email": "",
+      "notes": ""
     }
   ],
   "deletedSupplierIds": [
@@ -89,7 +223,405 @@
     "sup_metro",
     "metro_market"
   ],
-  "customProducts": [],
+  "customProducts": [
+    {
+      "id": "cust_kabak",
+      "name": "Kabak",
+      "unit": "KG",
+      "category": "Manav",
+      "days": [
+        "hergun"
+      ],
+      "supplierIds": [
+        "sup_meyfresh"
+      ],
+      "supplierId": "sup_meyfresh"
+    },
+    {
+      "id": "cust_sili_biber",
+      "name": "Şili Biber",
+      "unit": "KG",
+      "category": "Manav",
+      "days": [
+        "hergun"
+      ],
+      "supplierIds": [
+        "sup_meyfresh"
+      ],
+      "supplierId": "sup_meyfresh"
+    },
+    {
+      "id": "cust_jumbo_karides",
+      "name": "Jumbo Karides",
+      "unit": "KG",
+      "category": "-18 Stoğu",
+      "days": [
+        "sali"
+      ],
+      "supplierIds": [
+        "sup_1791988183271"
+      ],
+      "supplierId": "sup_1791988183271"
+    },
+    {
+      "id": "cust_baby_karides",
+      "name": "Baby Karides",
+      "unit": "KG",
+      "category": "-18 Stoğu",
+      "days": [
+        "sali"
+      ],
+      "supplierIds": [
+        "sup_1791988183271"
+      ],
+      "supplierId": "sup_1791988183271"
+    },
+    {
+      "id": "cust_i_c_midye",
+      "name": "İç Midye",
+      "unit": "KG",
+      "category": "-18 Stoğu",
+      "days": [
+        "sali"
+      ],
+      "supplierIds": [
+        "sup_1791988183271"
+      ],
+      "supplierId": "sup_1791988183271"
+    },
+    {
+      "id": "cust_dana_brisket_fume",
+      "name": "Dana Brisket Füme",
+      "unit": "KG",
+      "category": "Et Şarküteri",
+      "days": [
+        "pazar"
+      ],
+      "supplierIds": [
+        "sup_aliya"
+      ],
+      "supplierId": "sup_aliya"
+    },
+    {
+      "id": "cust_dana_dil_fume",
+      "name": "Dana Dil Füme",
+      "unit": "KG",
+      "category": "Et Şarküteri",
+      "days": [
+        "pazar"
+      ],
+      "supplierIds": [
+        "sup_aliya"
+      ],
+      "supplierId": "sup_aliya"
+    },
+    {
+      "id": "cust_tiramisu",
+      "name": "Tiramisu",
+      "unit": "Porsiyon",
+      "category": "Mise en Place",
+      "days": [
+        "hergun"
+      ],
+      "supplierIds": [],
+      "supplierId": ""
+    },
+    {
+      "id": "cust_sote_baby_karides",
+      "name": "Sote Baby Karides",
+      "unit": "Porsiyon",
+      "category": "Mise en Place",
+      "days": [
+        "hergun"
+      ],
+      "supplierIds": [],
+      "supplierId": ""
+    },
+    {
+      "id": "cust_sote_jumbo_karides",
+      "name": "Sote Jumbo Karides",
+      "unit": "Porsiyon",
+      "category": "Mise en Place",
+      "days": [
+        "hergun"
+      ],
+      "supplierIds": [],
+      "supplierId": ""
+    },
+    {
+      "id": "cust_pismis_dil_fume",
+      "name": "Pişmiş Dil Füme",
+      "unit": "Porsiyon",
+      "category": "Mise en Place",
+      "days": [
+        "hergun"
+      ],
+      "supplierIds": [],
+      "supplierId": ""
+    },
+    {
+      "id": "cust_izgaralanmis_kabak",
+      "name": "Izgaralanmış Kabak",
+      "unit": "KG",
+      "category": "Mise en Place",
+      "days": [
+        "hergun"
+      ],
+      "supplierIds": [],
+      "supplierId": ""
+    },
+    {
+      "id": "cust_kedi_dili",
+      "name": "Kedi Dili",
+      "unit": "Paket",
+      "category": "Kuru Depo",
+      "days": [
+        "sali"
+      ],
+      "supplierIds": [
+        "sup_1791988183271"
+      ],
+      "supplierId": "sup_1791988183271"
+    },
+    {
+      "id": "cust_taze_kekik",
+      "name": "Taze Kekik",
+      "unit": "Paket",
+      "category": "Baharatlar ve Taze Otlar",
+      "days": [
+        "sali"
+      ],
+      "supplierIds": [
+        "sup_1791988183271"
+      ],
+      "supplierId": "sup_1791988183271"
+    },
+    {
+      "id": "cust_tarhun",
+      "name": "Tarhun",
+      "unit": "Paket",
+      "category": "Baharatlar ve Taze Otlar",
+      "days": [
+        "sali"
+      ],
+      "supplierIds": [
+        "sup_1791988183271"
+      ],
+      "supplierId": "sup_1791988183271"
+    },
+    {
+      "id": "cust_beyaz_sarimsak_puresi",
+      "name": "Beyaz Sarımsak Püresi",
+      "unit": "KG",
+      "category": "Ana Stok",
+      "days": [
+        "sali"
+      ],
+      "supplierIds": [
+        "sup_1791988183271"
+      ],
+      "supplierId": "sup_1791988183271"
+    },
+    {
+      "id": "cust_donmus_yaban_mersini",
+      "name": "Donmuş Yaban Mersini",
+      "unit": "Paket",
+      "category": "-18 Stoğu",
+      "days": [
+        "sali"
+      ],
+      "supplierIds": [
+        "sup_1791988183271"
+      ],
+      "supplierId": "sup_1791988183271"
+    },
+    {
+      "id": "cust_beyaz_sarap_pirinc_sirkesi",
+      "name": "Beyaz Şarap/Pirinç Sirkesi",
+      "unit": "Litre",
+      "category": "Sos & Yağ",
+      "days": [
+        "sali"
+      ],
+      "supplierIds": [
+        "sup_1791988183271"
+      ],
+      "supplierId": "sup_1791988183271"
+    },
+    {
+      "id": "cust_lime",
+      "name": "Lime",
+      "unit": "KG",
+      "category": "Manav",
+      "days": [
+        "hergun"
+      ],
+      "supplierIds": [
+        "sup_meyfresh"
+      ],
+      "supplierId": "sup_meyfresh"
+    },
+    {
+      "id": "cust_strec_film",
+      "name": "Streç Film",
+      "unit": "Adet",
+      "category": "Sarf Malzemeleri",
+      "days": [
+        "pazar"
+      ],
+      "supplierIds": [
+        "sup_sarfci"
+      ],
+      "supplierId": "sup_sarfci"
+    },
+    {
+      "id": "cust_aluminyum_folyo",
+      "name": "Alüminyum Folyo",
+      "unit": "Adet",
+      "category": "Sarf Malzemeleri",
+      "days": [
+        "pazar"
+      ],
+      "supplierIds": [
+        "sup_sarfci"
+      ],
+      "supplierId": "sup_sarfci"
+    },
+    {
+      "id": "cust_firin_kagidi",
+      "name": "Fırın Kağıdı",
+      "unit": "Paket",
+      "category": "Sarf Malzemeleri",
+      "days": [
+        "pazar"
+      ],
+      "supplierIds": [
+        "sup_sarfci"
+      ],
+      "supplierId": "sup_sarfci"
+    },
+    {
+      "id": "cust_buzdolabi_poseti",
+      "name": "Buzdolabı Poşeti",
+      "unit": "Paket",
+      "category": "Sarf Malzemeleri",
+      "days": [
+        "pazar"
+      ],
+      "supplierIds": [
+        "sup_carsi_ve_migros"
+      ],
+      "supplierId": "sup_carsi_ve_migros"
+    },
+    {
+      "id": "cust_kagit_havlu_i_cten_cekmeli",
+      "name": "Kağıt Havlu (İçten Çekmeli)",
+      "unit": "Paket",
+      "category": "Sarf Malzemeleri",
+      "days": [
+        "pazar"
+      ],
+      "supplierIds": [
+        "sup_sarfci"
+      ],
+      "supplierId": "sup_sarfci"
+    },
+    {
+      "id": "cust_sikma_torbasi_krema_torbasi",
+      "name": "Sıkma Torbası (Krema Torbası)",
+      "unit": "Paket",
+      "category": "Sarf Malzemeleri",
+      "days": [
+        "pazar"
+      ],
+      "supplierIds": [
+        "sup_1791988183271",
+        "sup_cosan_pasta"
+      ],
+      "supplierId": "sup_1791988183271"
+    },
+    {
+      "id": "cust_bulasik_makinesi_konsantre_deterjan",
+      "name": "Bulaşık Makinesi Konsantre Deterjan",
+      "unit": "Litre",
+      "category": "Sarf Malzemeleri",
+      "days": [
+        "pazar"
+      ],
+      "supplierIds": [
+        "sup_sarfci"
+      ],
+      "supplierId": "sup_sarfci"
+    },
+    {
+      "id": "cust_bulasik_makinesi_konsantre_parlatici",
+      "name": "Bulaşık Makinesi Konsantre Parlatıcı",
+      "unit": "Litre",
+      "category": "Sarf Malzemeleri",
+      "days": [
+        "pazar"
+      ],
+      "supplierIds": [
+        "sup_sarfci"
+      ],
+      "supplierId": "sup_sarfci"
+    },
+    {
+      "id": "cust_hopla_sivi_santi_bitkisel_krema",
+      "name": "Hopla Sıvı Şanti (Bitkisel Krema)",
+      "unit": "Adet",
+      "category": "Sos & Yağ",
+      "days": [
+        "pazar"
+      ],
+      "supplierIds": [
+        "sup_cosan_pasta"
+      ],
+      "supplierId": "sup_cosan_pasta"
+    },
+    {
+      "id": "cust_yaprak_jelatin",
+      "name": "Yaprak Jelatin",
+      "unit": "Paket",
+      "category": "Kuru Depo",
+      "days": [
+        "pazar"
+      ],
+      "supplierIds": [
+        "sup_cosan_pasta",
+        "sup_1791988183271"
+      ],
+      "supplierId": "sup_cosan_pasta"
+    },
+    {
+      "id": "cust_cubuk_vanilya",
+      "name": "Çubuk Vanilya",
+      "unit": "Adet",
+      "category": "Baharatlar ve Taze Otlar",
+      "days": [
+        "pazar"
+      ],
+      "supplierIds": [
+        "sup_carsi_ve_migros",
+        "sup_cosan_pasta",
+        "sup_1791988183271"
+      ],
+      "supplierId": "sup_carsi_ve_migros"
+    },
+    {
+      "id": "cust_portakal",
+      "name": "Portakal",
+      "unit": "KG",
+      "category": "Manav",
+      "days": [
+        "hergun"
+      ],
+      "supplierIds": [
+        "sup_meyfresh"
+      ],
+      "supplierId": "sup_meyfresh"
+    }
+  ],
   "productOverrides": {
     "hg_18": {
       "category": "Manav",
@@ -201,15 +733,6 @@
       ],
       "unit": "Demet",
       "name": "Ispanak"
-    },
-    "hg_12": {
-      "category": "Manav",
-      "supplierId": "sup_meyfresh",
-      "supplierIds": [
-        "sup_meyfresh"
-      ],
-      "unit": "KG",
-      "name": "Kuşkonmaz"
     },
     "hg_13": {
       "category": "Manav",
@@ -420,13 +943,6 @@
         "persembe"
       ]
     },
-    "hg_31": {
-      "category": "Mise en Place",
-      "supplierIds": [],
-      "unit": "Porsiyon",
-      "name": "Patates Püre",
-      "supplierId": ""
-    },
     "sl_11": {
       "category": "Ana Stok",
       "supplierId": "sup_1791988183271",
@@ -632,7 +1148,7 @@
       ]
     },
     "sl_30": {
-      "category": "Ana Stok",
+      "category": "-18 Stoğu",
       "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
@@ -703,18 +1219,6 @@
         "pazar"
       ]
     },
-    "pz_2": {
-      "category": "Et Şarküteri",
-      "supplierId": "sup_aliya",
-      "supplierIds": [
-        "sup_aliya"
-      ],
-      "unit": "KG",
-      "name": "Çemensiz Pastırma",
-      "days": [
-        "pazar"
-      ]
-    },
     "pz_3": {
       "category": "Et Şarküteri",
       "supplierId": "sup_aliya",
@@ -759,30 +1263,6 @@
       ],
       "unit": "KG",
       "name": "Mihaliç Lor Peyniri",
-      "days": [
-        "pazar"
-      ]
-    },
-    "pz_7": {
-      "category": "Akçalar Şarküteri",
-      "supplierId": "sup_1791975952781",
-      "supplierIds": [
-        "sup_1791975952781"
-      ],
-      "unit": "KG",
-      "name": "Susurluk Tost Peyniri",
-      "days": [
-        "pazar"
-      ]
-    },
-    "pz_9": {
-      "category": "Akçalar Şarküteri",
-      "supplierId": "sup_1791975952781",
-      "supplierIds": [
-        "sup_1791975952781"
-      ],
-      "unit": "KG",
-      "name": "İspanyol Salamı",
       "days": [
         "pazar"
       ]
@@ -836,7 +1316,7 @@
       ]
     },
     "sl_29": {
-      "category": "Ana Stok",
+      "category": "-18 Stoğu",
       "supplierId": "sup_fast_kitchen",
       "supplierIds": [
         "sup_fast_kitchen",
@@ -921,7 +1401,7 @@
       ]
     },
     "pr_7": {
-      "category": "Çarşı ve Diğer",
+      "category": "Baharatlar ve Taze Otlar",
       "supplierId": "sup_carsi_ve_migros",
       "supplierIds": [
         "sup_carsi_ve_migros"
@@ -969,13 +1449,126 @@
       ]
     },
     "pz_16": {
-      "category": "Diğer",
+      "category": "Sos & Yağ",
       "supplierId": "sup_fast_kitchen",
       "supplierIds": [
         "sup_fast_kitchen"
       ],
       "unit": "Paket",
       "name": "Trüf Ezmesi",
+      "days": [
+        "pazar"
+      ]
+    },
+    "cust_sote_jumbo_karides": {
+      "category": "Mise en Place",
+      "supplierIds": [],
+      "unit": "Porsiyon",
+      "name": "Sote Jumbo Karides",
+      "days": [
+        "hergun"
+      ],
+      "supplierId": ""
+    },
+    "cust_sote_baby_karides": {
+      "category": "Mise en Place",
+      "supplierIds": [],
+      "unit": "Porsiyon",
+      "name": "Sote Baby Karides",
+      "days": [
+        "hergun"
+      ],
+      "supplierId": ""
+    },
+    "cust_tiramisu": {
+      "category": "Mise en Place",
+      "supplierIds": [],
+      "unit": "Porsiyon",
+      "name": "Tiramisu",
+      "days": [
+        "hergun"
+      ],
+      "supplierId": ""
+    },
+    "cust_i_c_midye": {
+      "category": "-18 Stoğu",
+      "supplierId": "sup_1791988183271",
+      "supplierIds": [
+        "sup_1791988183271"
+      ],
+      "unit": "KG",
+      "name": "İç Midye",
+      "days": [
+        "sali"
+      ]
+    },
+    "cust_jumbo_karides": {
+      "category": "-18 Stoğu",
+      "supplierId": "sup_1791988183271",
+      "supplierIds": [
+        "sup_1791988183271"
+      ],
+      "unit": "KG",
+      "name": "Jumbo Karides",
+      "days": [
+        "sali"
+      ]
+    },
+    "cust_baby_karides": {
+      "category": "-18 Stoğu",
+      "supplierId": "sup_1791988183271",
+      "supplierIds": [
+        "sup_1791988183271"
+      ],
+      "unit": "KG",
+      "name": "Baby Karides",
+      "days": [
+        "sali"
+      ]
+    },
+    "cust_kabak": {
+      "category": "Manav",
+      "supplierId": "sup_meyfresh",
+      "supplierIds": [
+        "sup_meyfresh"
+      ],
+      "unit": "KG",
+      "name": "Kabak",
+      "days": [
+        "hergun"
+      ]
+    },
+    "pz_14": {
+      "category": "Sos & Yağ",
+      "supplierIds": [],
+      "unit": "Litre",
+      "name": "Acı Yağ 6L",
+      "days": [
+        "pazar"
+      ],
+      "supplierId": ""
+    },
+    "cust_strec_film": {
+      "category": "Sarf Malzemeleri",
+      "supplierId": "sup_sarfci",
+      "supplierIds": [
+        "sup_sarfci"
+      ],
+      "unit": "Adet",
+      "name": "Streç Film",
+      "days": [
+        "pazar"
+      ]
+    },
+    "cust_sikma_torbasi_krema_torbasi": {
+      "category": "Sarf Malzemeleri",
+      "supplierId": "sup_1791988183271",
+      "supplierIds": [
+        "sup_1791988183271",
+        "sup_cosan_pasta"
+      ],
+      "unit": "Paket",
+      "name": "Sıkma Torbası (Krema Torbası)",
       "days": [
         "pazar"
       ]
@@ -993,154 +1586,36 @@
     "pz_13",
     "zeytinyagi_18l_teneke",
     "cust_zeytinyagi_18l_teneke",
-    "pz_17"
+    "pz_17",
+    "pz_7",
+    "susurluk_tost_peyniri",
+    "cust_susurluk_tost_peyniri",
+    "pz_2",
+    "cemensiz_pastirma",
+    "cust_cemensiz_pastirma",
+    "pz_9",
+    "i_spanyol_salami",
+    "cust_i_spanyol_salami",
+    "hg_12",
+    "kuskonmaz",
+    "cust_kuskonmaz",
+    "hg_31",
+    "patates_pure",
+    "cust_patates_pure"
   ],
-  "deletedCategories": [],
-  "customCategories": [],
-  "categoryRenames": {},
+  "deletedCategories": [
+    "baharatlar"
+  ],
+  "customCategories": [
+    "Baharatlar ve Taze Otlar",
+    "-18 Stoğu",
+    "Sarf Malzemeleri"
+  ],
+  "categoryRenames": {
+    "Baharatlar": "Baharatlar ve Taze Otlar"
+  },
   "countData": {
-    "hergun": {
-      "hg_1": {
-        "qty": "0",
-        "notes": ""
-      },
-      "hg_2": {
-        "qty": "0",
-        "notes": ""
-      },
-      "hg_3": {
-        "qty": "2",
-        "notes": ""
-      },
-      "hg_4": {
-        "qty": "0",
-        "notes": ""
-      },
-      "hg_5": {
-        "qty": "1",
-        "notes": ""
-      },
-      "hg_6": {
-        "qty": "5",
-        "notes": ""
-      },
-      "hg_7": {
-        "qty": "4",
-        "notes": ""
-      },
-      "hg_8": {
-        "qty": "6",
-        "notes": ""
-      },
-      "hg_9": {
-        "qty": "4",
-        "notes": ""
-      },
-      "hg_10": {
-        "qty": "2",
-        "notes": ""
-      },
-      "hg_11": {
-        "qty": "0",
-        "notes": ""
-      },
-      "hg_12": {
-        "qty": "0",
-        "notes": ""
-      },
-      "hg_13": {
-        "qty": "0",
-        "notes": ""
-      },
-      "hg_14": {
-        "qty": "0.5",
-        "notes": ""
-      },
-      "hg_15": {
-        "qty": "4",
-        "notes": ""
-      },
-      "hg_16": {
-        "qty": "7",
-        "notes": ""
-      },
-      "hg_17": {
-        "qty": "8",
-        "notes": ""
-      },
-      "hg_18": {
-        "qty": "3",
-        "notes": ""
-      },
-      "hg_19": {
-        "qty": "0.5",
-        "notes": ""
-      },
-      "hg_20": {
-        "qty": "0.5",
-        "notes": ""
-      },
-      "hg_21": {
-        "qty": "0",
-        "notes": ""
-      },
-      "hg_22": {
-        "qty": "1",
-        "notes": ""
-      },
-      "hg_23": {
-        "qty": "1",
-        "notes": ""
-      },
-      "hg_24": {
-        "qty": "0",
-        "notes": ""
-      },
-      "hg_25": {
-        "qty": "2",
-        "notes": ""
-      },
-      "hg_26": {
-        "qty": "0",
-        "notes": ""
-      },
-      "hg_27": {
-        "qty": "3",
-        "notes": ""
-      },
-      "hg_28": {
-        "qty": "1",
-        "notes": ""
-      },
-      "hg_29": {
-        "qty": "0",
-        "notes": ""
-      },
-      "hg_30": {
-        "qty": "6",
-        "notes": ""
-      },
-      "hg_31": {
-        "qty": "0",
-        "notes": ""
-      }
-    },
-    "sali": {
-      "sl_2": {
-        "qty": "2",
-        "notes": ""
-      }
-    },
-    "persembe": {
-      "pr_1": {
-        "qty": "0",
-        "notes": ""
-      },
-      "pr_13": {
-        "qty": "7",
-        "notes": ""
-      }
-    },
+    "hergun": {},
     "pazar": {
       "pz_1": {
         "qty": "2.5",
@@ -1196,6 +1671,22 @@
       },
       "pz_16": {
         "qty": "1.5",
+        "notes": ""
+      }
+    },
+    "sali": {
+      "sl_2": {
+        "qty": "2",
+        "notes": ""
+      }
+    },
+    "persembe": {
+      "pr_1": {
+        "qty": "0",
+        "notes": ""
+      },
+      "pr_13": {
+        "qty": "7",
         "notes": ""
       }
     }
@@ -1540,59 +2031,123 @@
       "category": "ana_yemek",
       "hasPrep": false,
       "prepNote": ""
+    },
+    {
+      "id": "sd_yogurt",
+      "name": "Yoğurt",
+      "category": "salata",
+      "hasPrep": false,
+      "prepNote": ""
     }
   ],
   "weeklyStaffMenu": {
     "pazartesi": {
-      "main": "sd_kuru_fasulye",
+      "main": "sd_tavuklu_pilav",
       "side": "sd_pirinc_pilavi",
       "salad": "sd_cacik",
       "note": ""
     },
     "sali": {
-      "main": "sd_nohut",
-      "side": "sd_bulgur_pilavi",
-      "salad": "sd_coban_salata",
+      "main": "sd_i_skender_doner",
+      "side": "",
+      "salad": "sd_yogurt",
       "note": ""
     },
     "carsamba": {
-      "main": "",
-      "side": "",
+      "main": "sd_pilic_sinitzel",
+      "side": "sd_patates_puresi",
       "salad": "",
       "note": ""
     },
     "persembe": {
-      "main": "",
-      "side": "",
-      "salad": "",
-      "note": ""
-    },
-    "cuma": {
-      "main": "",
-      "side": "",
-      "salad": "",
-      "note": ""
-    },
-    "cumartesi": {
       "main": "sd_doner",
       "side": "sd_pirinc_pilavi",
       "salad": "",
       "note": ""
     },
-    "pazar": {
-      "main": "",
-      "side": "",
+    "cuma": {
+      "main": "sd_kuru_fasulye",
+      "side": "sd_pirinc_pilavi",
       "salad": "",
+      "note": ""
+    },
+    "cumartesi": {
+      "main": "sd_manti",
+      "side": "",
+      "salad": "sd_yogurt",
+      "note": ""
+    },
+    "pazar": {
+      "main": "sd_kiymali_makarna",
+      "side": "sd_makarna",
+      "salad": "sd_yogurt",
       "note": ""
     }
   },
-  "staffMenuTimestamp": 1792786752224,
-  "deletedStaffDishIds": [],
+  "staffMenuTimestamp": 1792967462680,
+  "deletedStaffDishIds": [
+    "sd_tavuk_yahni"
+  ],
   "dayCountTimestamps": {
     "hergun": 1792676695991,
     "pazar": 1792329704705
   },
   "lastProductCounts": {
+    "pz_1": {
+      "qty": "2.5",
+      "dayId": "pazar",
+      "updatedAt": 1792329704705
+    },
+    "pz_3": {
+      "qty": "1",
+      "dayId": "pazar",
+      "updatedAt": 1792329704705
+    },
+    "pz_4": {
+      "qty": "1",
+      "dayId": "pazar",
+      "updatedAt": 1792329704705
+    },
+    "pz_5": {
+      "qty": "1",
+      "dayId": "pazar",
+      "updatedAt": 1792329704705
+    },
+    "pz_6": {
+      "qty": "0.25",
+      "dayId": "pazar",
+      "updatedAt": 1792329704705
+    },
+    "pz_8": {
+      "qty": "0.25",
+      "dayId": "pazar",
+      "updatedAt": 1792329704705
+    },
+    "pz_10": {
+      "qty": "0.5",
+      "dayId": "pazar",
+      "updatedAt": 1792329704705
+    },
+    "pz_11": {
+      "qty": "2",
+      "dayId": "pazar",
+      "updatedAt": 1792329704705
+    },
+    "pz_12": {
+      "qty": "1",
+      "dayId": "pazar",
+      "updatedAt": 1792329704705
+    },
+    "pz_14": {
+      "qty": "9",
+      "dayId": "pazar",
+      "updatedAt": 1792329704705
+    },
+    "pz_16": {
+      "qty": "1.5",
+      "dayId": "pazar",
+      "updatedAt": 1792329704705
+    },
     "hg_1": {
       "qty": "0",
       "dayId": "hergun",
@@ -1644,11 +2199,6 @@
       "updatedAt": 1792676695991
     },
     "hg_11": {
-      "qty": "0",
-      "dayId": "hergun",
-      "updatedAt": 1792676695991
-    },
-    "hg_12": {
       "qty": "0",
       "dayId": "hergun",
       "updatedAt": 1792676695991
@@ -1743,21 +2293,6 @@
       "dayId": "hergun",
       "updatedAt": 1792676695991
     },
-    "hg_31": {
-      "qty": "0",
-      "dayId": "hergun",
-      "updatedAt": 1792676695991
-    },
-    "pz_3": {
-      "qty": "1",
-      "dayId": "pazar",
-      "updatedAt": 1792329704705
-    },
-    "pz_4": {
-      "qty": "1",
-      "dayId": "pazar",
-      "updatedAt": 1792329704705
-    },
     "sl_2": {
       "qty": "2",
       "dayId": "sali",
@@ -1778,32 +2313,12 @@
       "dayId": "persembe",
       "updatedAt": 1792173530578
     },
-    "pz_1": {
-      "qty": "2.5",
-      "dayId": "pazar",
-      "updatedAt": 1792329704705
-    },
     "pz_2": {
       "qty": "0.5",
       "dayId": "pazar",
       "updatedAt": 1792329704705
     },
-    "pz_5": {
-      "qty": "1",
-      "dayId": "pazar",
-      "updatedAt": 1792329704705
-    },
-    "pz_6": {
-      "qty": "0.25",
-      "dayId": "pazar",
-      "updatedAt": 1792329704705
-    },
     "pz_7": {
-      "qty": "0.25",
-      "dayId": "pazar",
-      "updatedAt": 1792329704705
-    },
-    "pz_8": {
       "qty": "0.25",
       "dayId": "pazar",
       "updatedAt": 1792329704705
@@ -1813,30 +2328,15 @@
       "dayId": "pazar",
       "updatedAt": 1792329704705
     },
-    "pz_10": {
-      "qty": "0.5",
-      "dayId": "pazar",
-      "updatedAt": 1792329704705
+    "hg_12": {
+      "qty": "0",
+      "dayId": "hergun",
+      "updatedAt": 1792676695991
     },
-    "pz_11": {
-      "qty": "2",
-      "dayId": "pazar",
-      "updatedAt": 1792329704705
-    },
-    "pz_12": {
-      "qty": "1",
-      "dayId": "pazar",
-      "updatedAt": 1792329704705
-    },
-    "pz_14": {
-      "qty": "9",
-      "dayId": "pazar",
-      "updatedAt": 1792329704705
-    },
-    "pz_16": {
-      "qty": "1.5",
-      "dayId": "pazar",
-      "updatedAt": 1792329704705
+    "hg_31": {
+      "qty": "0",
+      "dayId": "hergun",
+      "updatedAt": 1792676695991
     }
   },
   "recipeTags": {
