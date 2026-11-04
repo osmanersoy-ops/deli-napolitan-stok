@@ -4049,12 +4049,7 @@
       text-align: left;
       padding: 8px 10px !important;
       box-shadow: 2px 0 5px rgba(0, 0, 0, 0.08);
-      cursor: pointer;
-    }
-
-    .shift-td-emp:hover {
-      background: #F1F5F9;
-      color: var(--primary);
+      cursor: default;
     }
 
     .shift-td-total {
@@ -4088,121 +4083,113 @@
       background: #EF2323 !important;
       color: #FFFFFF !important;
       font-weight: 800 !important;
-      cursor: pointer;
-      transition: filter 0.12s ease;
     }
 
     /* Çalışma Saat Hücreleri (PDF Gün Renkleri) */
-    .shift-cell-time-pazartesi { background: #22C55E; color: #052E16; font-weight: 700; cursor: pointer; }
-    .shift-cell-dur-pazartesi  { background: #10B981; color: #FFFFFF; font-weight: 800; cursor: pointer; }
+    .shift-cell-time-pazartesi { background: #22C55E; color: #052E16; font-weight: 700; }
+    .shift-cell-dur-pazartesi  { background: #10B981; color: #FFFFFF; font-weight: 800; }
 
-    .shift-cell-time-sali      { background: #2563EB; color: #FFFFFF; font-weight: 700; cursor: pointer; }
-    .shift-cell-dur-sali       { background: #1D4ED8; color: #FFFFFF; font-weight: 800; cursor: pointer; }
+    .shift-cell-time-sali      { background: #2563EB; color: #FFFFFF; font-weight: 700; }
+    .shift-cell-dur-sali       { background: #1D4ED8; color: #FFFFFF; font-weight: 800; }
 
-    .shift-cell-time-carsamba  { background: #16A34A; color: #052E16; font-weight: 700; cursor: pointer; }
-    .shift-cell-dur-carsamba   { background: #15803D; color: #FFFFFF; font-weight: 800; cursor: pointer; }
+    .shift-cell-time-carsamba  { background: #16A34A; color: #052E16; font-weight: 700; }
+    .shift-cell-dur-carsamba   { background: #15803D; color: #FFFFFF; font-weight: 800; }
 
-    .shift-cell-time-persembe  { background: #2DD4BF; color: #0F172A; font-weight: 700; cursor: pointer; }
-    .shift-cell-dur-persembe   { background: #06B6D4; color: #FFFFFF; font-weight: 800; cursor: pointer; }
+    .shift-cell-time-persembe  { background: #2DD4BF; color: #0F172A; font-weight: 700; }
+    .shift-cell-dur-persembe   { background: #06B6D4; color: #FFFFFF; font-weight: 800; }
 
-    .shift-cell-time-cuma      { background: #FDBA74; color: #1E293B; font-weight: 700; cursor: pointer; }
-    .shift-cell-dur-cuma       { background: #F59E0B; color: #FFFFFF; font-weight: 800; cursor: pointer; }
+    .shift-cell-time-cuma      { background: #FDBA74; color: #1E293B; font-weight: 700; }
+    .shift-cell-dur-cuma       { background: #F59E0B; color: #FFFFFF; font-weight: 800; }
 
-    .shift-cell-time-cumartesi { background: #7DD3FC; color: #0F172A; font-weight: 700; cursor: pointer; }
-    .shift-cell-dur-cumartesi  { background: #29B6F6; color: #FFFFFF; font-weight: 800; cursor: pointer; }
+    .shift-cell-time-cumartesi { background: #7DD3FC; color: #0F172A; font-weight: 700; }
+    .shift-cell-dur-cumartesi  { background: #29B6F6; color: #FFFFFF; font-weight: 800; }
 
-    .shift-cell-time-pazar     { background: #F9A8D4; color: #1E293B; font-weight: 700; cursor: pointer; }
-    .shift-cell-dur-pazar      { background: #EC4899; color: #FFFFFF; font-weight: 800; cursor: pointer; }
+    .shift-cell-time-pazar     { background: #F9A8D4; color: #1E293B; font-weight: 700; }
+    .shift-cell-dur-pazar      { background: #EC4899; color: #FFFFFF; font-weight: 800; }
 
-    .shift-pdf-table tbody td:hover {
-      filter: brightness(0.93);
+    /* DİNAMİK EDİTLENEBİLİR TABLO HÜCRE SEÇİCİLERİ */
+    .shift-editable-table th,
+    .shift-editable-table td {
+      padding: 4px 3px;
     }
 
-    /* Mobil & Düzenleme Sekmeleri */
-    .shift-mode-tabs {
+    .shift-inline-select {
+      width: 100%;
+      min-width: 62px;
+      height: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.92);
+      color: #0F172A;
+      font-weight: 800;
+      font-size: 0.78rem;
+      text-align: center;
+      text-align-last: center;
+      padding: 0 2px;
+      cursor: pointer;
+      outline: none;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    }
+
+    .shift-cell-off .shift-inline-select {
+      background: #DC2626;
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.55);
+    }
+
+    .shift-inline-select option {
+      background: #FFFFFF;
+      color: #0F172A;
+      font-weight: 700;
+    }
+
+    .shift-emp-edit-cell {
       display: flex;
-      gap: 8px;
-      background: #F1F5F9;
-      padding: 6px;
-      border-radius: 14px;
-      margin-bottom: 16px;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      min-width: 145px;
     }
 
-    .shift-mode-tab {
-      flex: 1;
-      min-width: 120px;
-      padding: 11px 14px;
-      border-radius: 10px;
-      border: none;
-      background: transparent;
-      color: #475569;
-      font-size: 0.88rem;
+    .shift-emp-name-input {
+      width: 95px;
+      height: 30px;
+      padding: 0 6px;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #0F172A;
+      background: #F8FAFC;
+    }
+
+    .shift-emp-name-input:focus {
+      background: #FFFFFF;
+      border-color: var(--primary);
+      outline: none;
+    }
+
+    .shift-emp-mini-btn {
+      width: 24px;
+      height: 24px;
+      border-radius: 5px;
+      border: 1px solid #FCA5A5;
+      background: #FEE2E2;
+      color: #DC2626;
+      font-size: 0.72rem;
       font-weight: 800;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      white-space: nowrap;
-      transition: all 0.15s ease;
-    }
-
-    .shift-mode-tab.active {
-      background: #FFFFFF;
-      color: var(--primary);
-      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
-    }
-
-    .shift-selector-bar {
-      display: flex;
-      gap: 8px;
-      overflow-x: auto;
-      padding: 4px 2px 10px 2px;
-      margin-bottom: 14px;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .shift-selector-pill {
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1.5px solid var(--border);
-      background: #FFFFFF;
-      color: var(--text-dark);
-      font-size: 0.88rem;
-      font-weight: 800;
-      cursor: pointer;
-      white-space: nowrap;
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      transition: all 0.15s ease;
+      padding: 0;
       flex-shrink: 0;
     }
 
-    .shift-selector-pill.active {
-      background: var(--primary);
-      border-color: var(--primary);
-      color: #FFFFFF;
-      box-shadow: 0 4px 12px rgba(153, 27, 27, 0.25);
+    .shift-emp-mini-btn:hover {
+      background: #FECACA;
     }
 
-    .shift-pill-hours {
-      font-size: 0.75rem;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: #DCFCE7;
-      color: #166534;
-      font-weight: 800;
-    }
-
-    .shift-selector-pill.active .shift-pill-hours {
-      background: rgba(255, 255, 255, 0.22);
-      color: #FFFFFF;
-    }
-
-    /* Mobil Vardiya Düzenleme Satır Kartları */
     .shift-edit-card {
       background: #FFFFFF;
       border: 1.5px solid var(--border);
@@ -4210,86 +4197,6 @@
       padding: 16px;
       margin-bottom: 16px;
       box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
-    }
-
-    .shift-day-edit-row {
-      background: #F8FAFC;
-      border: 1.5px solid var(--border);
-      border-radius: 14px;
-      padding: 14px;
-      margin-bottom: 12px;
-      transition: all 0.15s ease;
-    }
-
-    .shift-day-edit-row.is-off {
-      background: #FEF2F2;
-      border-color: #FCA5A5;
-    }
-
-    .shift-day-edit-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 12px;
-      flex-wrap: wrap;
-    }
-
-    .shift-day-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.96rem;
-      font-weight: 800;
-      color: var(--text-dark);
-    }
-
-    .shift-day-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      display: inline-block;
-      flex-shrink: 0;
-    }
-
-    .shift-status-switch {
-      display: inline-flex;
-      background: #E2E8F0;
-      padding: 3px;
-      border-radius: 10px;
-      gap: 3px;
-    }
-
-    .shift-status-btn {
-      border: none;
-      padding: 7px 14px;
-      border-radius: 8px;
-      font-size: 0.82rem;
-      font-weight: 800;
-      cursor: pointer;
-      background: transparent;
-      color: #475569;
-      transition: all 0.15s ease;
-      min-height: 36px;
-    }
-
-    .shift-status-btn.active-work {
-      background: #16A34A;
-      color: #FFFFFF;
-      box-shadow: 0 2px 6px rgba(22, 163, 74, 0.3);
-    }
-
-    .shift-status-btn.active-off {
-      background: #DC2626;
-      color: #FFFFFF;
-      box-shadow: 0 2px 6px rgba(220, 38, 38, 0.3);
-    }
-
-    .shift-time-inputs-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr auto;
-      gap: 10px;
-      align-items: end;
     }
 
     .shift-time-select {
@@ -4305,47 +4212,28 @@
       cursor: pointer;
     }
 
-    .shift-dur-pill {
-      height: 44px;
-      padding: 0 14px;
-      border-radius: 10px;
-      background: #DCFCE7;
-      border: 1.5px solid #86EFAC;
-      color: #166534;
-      font-weight: 800;
-      font-size: 0.92rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      white-space: nowrap;
+    /* PIN MODAL STİLLERİ */
+    .shift-pin-input {
+      width: 100%;
+      max-width: 220px;
+      height: 54px;
+      font-size: 1.65rem;
+      font-weight: 900;
+      letter-spacing: 12px;
+      text-align: center;
+      border: 2px solid #CBD5E1;
+      border-radius: 12px;
+      background: #F8FAFC;
+      color: #0F172A;
+      margin: 0 auto 14px auto;
+      display: block;
     }
 
-    .shift-presets-wrap {
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px dashed #E2E8F0;
-    }
-
-    .shift-preset-chip {
-      padding: 6px 10px;
-      border-radius: 8px;
-      border: 1px solid #CBD5E1;
+    .shift-pin-input:focus {
+      border-color: var(--primary);
       background: #FFFFFF;
-      color: #334155;
-      font-size: 0.76rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.12s ease;
-    }
-
-    .shift-preset-chip:hover,
-    .shift-preset-chip.active {
-      background: #EFF6FF;
-      border-color: #3B82F6;
-      color: #1D4ED8;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(153, 27, 27, 0.15);
     }
 
     @media (max-width: 640px) {
@@ -4354,13 +4242,6 @@
       }
       .shift-edit-card {
         padding: 12px;
-      }
-      .shift-time-inputs-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .shift-dur-pill {
-        grid-column: 1 / -1;
-        height: 38px;
       }
     }
   </style>
@@ -7278,10 +7159,10 @@
               </svg>
               ← Ana Sayfaya Dön
             </button>
-            <button type="button" class="btn-primary" onclick="openShiftEditView()" style="display: inline-flex; align-items: center; gap: 7px; background: var(--primary); color: #FFFFFF; font-weight: 800; border: none; padding: 10px 16px; border-radius: 10px; cursor: pointer;">
+            <button type="button" class="btn-primary" onclick="requestOpenShiftEditView()" style="display: inline-flex; align-items: center; gap: 7px; background: var(--primary); color: #FFFFFF; font-weight: 800; border: none; padding: 10px 16px; border-radius: 10px; cursor: pointer;">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
               </svg>
               Shift Hazırla / Düzenle
             </button>
@@ -7317,19 +7198,19 @@
         </div>
       </section>
 
-      <!-- PDF FORMATINDA HAFTALIK VARDİYA PLANI TABLOSU -->
+      <!-- PDF FORMATINDA STATİK HAFTALIK VARDİYA PLANI TABLOSU -->
       <section class="shift-pdf-card">
         <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; flex-wrap: wrap;">
-          <div style="font-size: 0.85rem; font-weight: 800; color: var(--text-dark); display: flex; align-items: center; gap: 6px;">
+          <div style="font-size: 0.88rem; font-weight: 800; color: var(--text-dark); display: flex; align-items: center; gap: 6px;">
             <span>📊</span> Haftalık Vardiya Tablosu
           </div>
           <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600;">
-            💡 Hücreye dokunarak o günü hızlıca düzenleyebilirsiniz · Tabloyu yana kaydırabilirsiniz →
+            Tabloyu yana kaydırabilirsiniz →
           </div>
         </div>
 
         <div class="shift-pdf-scroll-wrap" id="shiftPdfTableScrollContainer">
-          <!-- JS ile renderShiftReadOnlyView() tarafından doldurulur -->
+          <!-- JS ile renderShiftReadOnlyView() tarafından statik olarak doldurulur -->
         </div>
       </section>
 
@@ -7356,12 +7237,12 @@
 
       <!-- Alt Aksiyon Butonları -->
       <div style="margin-top: 16px; margin-bottom: 24px; display: flex; flex-direction: column; gap: 10px; width: 100%;">
-        <button type="button" class="btn-menu-prepare" onclick="openShiftEditView()">
+        <button type="button" class="btn-menu-prepare" onclick="requestOpenShiftEditView()">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
           </svg>
-          Shift Hazırla / Güncelle
+          Shift Hazırla / Düzenle
         </button>
         <button type="button" class="btn-bottom-back" onclick="returnToDashboard()" style="background: #FFFFFF; font-weight: 700; border: 1.5px solid var(--border); width: 100%; justify-content: center; padding: 12px;">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -7387,8 +7268,8 @@
       <header class="count-view-header">
         <div class="count-header-info">
           <div class="count-title-group">
-            <span class="count-badge-tag">Mobil Uyumlu Vardiya Planlayıcı</span>
-            <h1 class="count-main-title">Haftalık Shift Hazırla</h1>
+            <span class="count-badge-tag">Tablo Üzerinden Canlı Vardiya Düzenleme</span>
+            <h1 class="count-main-title">Haftalık Shift Hazırla / Düzenle</h1>
           </div>
           <div class="count-meta-card">
             <span class="meta-label">Haftalık Toplam</span>
@@ -7418,30 +7299,50 @@
         </div>
       </header>
 
-      <!-- 2 Satır Kullanım Özeti -->
-      <div style="background: #FFFBEB; border: 1.5px solid #FDE68A; border-radius: 12px; padding: 10px 14px; margin-bottom: 14px; font-size: 0.82rem; color: #92400E; line-height: 1.45;">
-        <strong>💡 Hızlı Kullanım:</strong> Yukarıdan çalışan veya gün seçip çalışma saatlerini ya da <strong>İZİN</strong> durumunu tek dokunuşla belirleyin.<br>
-        Saat seçildiğinde günlük ve haftalık toplam mesai (<strong>sa</strong>) otomatik hesaplanır ve tüm cihazlarda anında güncellenir.
-      </div>
+      <!-- YENİ ÇALIŞAN EKLE KARTI (EKLENİNCE DİREKT TABLOYA EKLENİR) -->
+      <section class="shift-pdf-card" style="margin-bottom: 16px;">
+        <div style="font-size: 0.95rem; font-weight: 900; color: var(--text-dark); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+          <span>➕</span> Yeni Çalışan Ekle <span style="font-size: 0.78rem; font-weight: 600; color: var(--text-muted);">(Eklenince doğrudan aşağıdaki tabloya satır olarak eklenir)</span>
+        </div>
+        <form onsubmit="handleAddShiftEmployee(event)" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end;">
+          <div style="flex: 2; min-width: 180px;">
+            <label style="display: block; font-size: 0.74rem; font-weight: 800; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase;">Çalışan Adı</label>
+            <input type="text" id="newShiftEmpNameInput" class="form-input" placeholder="Örn: Ali, Ayşe..." required style="width: 100%;">
+          </div>
+          <div style="flex: 1; min-width: 120px;">
+            <label style="display: block; font-size: 0.74rem; font-weight: 800; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase;">Varsayılan Başlangıç</label>
+            <select id="newShiftEmpStartSelect" class="shift-time-select"></select>
+          </div>
+          <div style="flex: 1; min-width: 120px;">
+            <label style="display: block; font-size: 0.74rem; font-weight: 800; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase;">Varsayılan Bitiş</label>
+            <select id="newShiftEmpEndSelect" class="shift-time-select"></select>
+          </div>
+          <button type="submit" style="background: var(--primary); color: #FFFFFF; border: none; padding: 11px 18px; border-radius: 10px; font-weight: 800; font-size: 0.88rem; cursor: pointer; white-space: nowrap; height: 42px;">
+            + Tabloya Ekle
+          </button>
+        </form>
+      </section>
 
-      <!-- Düzenleme Modu Sekmeleri: Çalışana Göre | Güne Göre | Çalışan Yönetimi -->
-      <div class="shift-mode-tabs">
-        <button type="button" class="shift-mode-tab active" id="shiftTabBtn-emp" onclick="setShiftEditMode('emp')">
-          👤 Çalışana Göre
-        </button>
-        <button type="button" class="shift-mode-tab" id="shiftTabBtn-day" onclick="setShiftEditMode('day')">
-          📅 Güne Göre
-        </button>
-        <button type="button" class="shift-mode-tab" id="shiftTabBtn-staff" onclick="setShiftEditMode('staff')">
-          👥 Çalışan Ekle / Yönet
-        </button>
-      </div>
+      <!-- DİNAMİK EDİTLENEBİLİR HAFTALIK VARDİYA TABLOSU -->
+      <section class="shift-pdf-card">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; flex-wrap: wrap;">
+          <div style="font-size: 0.92rem; font-weight: 900; color: var(--text-dark); display: flex; align-items: center; gap: 6px;">
+            <span>📊</span> Haftalık Vardiya Tablosu (Dinamik Düzenlenebilir)
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <span style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600;">
+              💡 Saatleri veya <strong>İZİN</strong> durumunu doğrudan tablo hücrelerinden değiştirin · Tabloyu yana kaydırabilirsiniz →
+            </span>
+            <button type="button" onclick="resetShiftToPdfDefaults()" style="border: 1.5px solid #CBD5E1; background: #FFFFFF; color: #475569; padding: 5px 10px; border-radius: 8px; font-size: 0.74rem; font-weight: 800; cursor: pointer;">
+              ↺ Varsayılan PDF Tablosuna Sıfırla
+            </button>
+          </div>
+        </div>
 
-      <!-- Dinamik Seçici Bar (Çalışan Hapları veya Gün Hapları) -->
-      <div class="shift-selector-bar" id="shiftEditSelectorBar"></div>
-
-      <!-- Dinamik Düzenleme İçerik Alanı -->
-      <div id="shiftEditContentContainer"></div>
+        <div class="shift-pdf-scroll-wrap" id="shiftEditableTableContainer">
+          <!-- JS ile renderShiftEditView() tarafından doldurulur -->
+        </div>
+      </section>
 
       <!-- Alt Bar: Kaydet & Vardiya Tablosuna Dön -->
       <footer class="count-view-footer" style="margin-top: 24px;">
@@ -7468,15 +7369,48 @@
     </main>
 
     <!-- ============================================== -->
-    <!-- MODAL: HIZLI VARDİYA DÜZENLE (TABLO HÜCRESİ)   -->
+    <!-- MODAL: SHIFT DÜZENLEME 4 HANELİ PIN KİLİDİ     -->
     <!-- ============================================== -->
-    <div class="modal-overlay" id="shiftQuickEditModal">
-      <div class="modal-card" style="max-width: 440px;">
+    <div class="modal-overlay" id="shiftPinModal">
+      <div class="modal-card" style="max-width: 360px;">
         <div class="modal-header">
-          <h3 class="modal-title" id="shiftQuickModalTitle">Vardiya Düzenle</h3>
-          <button type="button" class="modal-close-btn" onclick="closeShiftQuickEditModal()">&times;</button>
+          <h3 class="modal-title" style="display: flex; align-items: center; gap: 8px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            Shift Düzenleme PIN
+          </h3>
+          <button type="button" class="modal-close-btn" onclick="closeShiftPinModal()">&times;</button>
         </div>
-        <div id="shiftQuickModalBody"></div>
+        <form onsubmit="handleVerifyShiftPin(event)" style="padding: 18px 20px 20px;">
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0 0 14px; text-align: center; font-weight: 600;">
+            Vardiya tablosunu düzenlemek için 4 haneli PIN kodunu girin:
+          </p>
+          <input
+            type="password"
+            id="shiftPinInput"
+            class="shift-pin-input"
+            inputmode="numeric"
+            pattern="[0-9]*"
+            maxlength="4"
+            placeholder="••••"
+            autocomplete="off"
+            oninput="handleShiftPinInput(this.value)"
+            required
+          >
+          <div id="shiftPinError" style="display: none; margin-top: 10px; color: #DC2626; font-size: 0.82rem; font-weight: 800; text-align: center;">
+            ⚠️ Hatalı PIN kodu! Lütfen tekrar deneyin.
+          </div>
+          <div style="display: flex; gap: 8px; margin-top: 16px;">
+            <button type="button" onclick="closeShiftPinModal()" style="flex: 1; padding: 11px; border-radius: 10px; border: 1.5px solid var(--border); background: #FFFFFF; font-weight: 800; color: var(--text-muted); cursor: pointer;">
+              İptal
+            </button>
+            <button type="submit" style="flex: 1; padding: 11px; border-radius: 10px; border: none; background: var(--primary); font-weight: 800; color: #FFFFFF; cursor: pointer;">
+              Giriş Yap
+            </button>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -8898,27 +8832,12 @@
       pazar:     '#6A1B9A'
     };
 
-    const SHIFT_QUICK_PRESETS = [
-      { label: '10:30 - 22:30 (12s)', start: '10:30', end: '22:30' },
-      { label: '11:30 - 22:30 (11s)', start: '11:30', end: '22:30' },
-      { label: '11:00 - 21:00 (10s)', start: '11:00', end: '21:00' },
-      { label: '12:30 - 22:30 (10s)', start: '12:30', end: '22:30' },
-      { label: '13:30 - 22:30 (9s)',  start: '13:30', end: '22:30' },
-      { label: '11:00 - 20:00 (9s)',  start: '11:00', end: '20:00' },
-      { label: '14:30 - 22:30 (8s)',  start: '14:30', end: '22:30' },
-      { label: '10:30 - 17:30 (7s)',  start: '10:30', end: '17:30' },
-      { label: '11:00 - 18:00 (7s)',  start: '11:00', end: '18:00' },
-      { label: '15:30 - 22:30 (7s)',  start: '15:30', end: '22:30' },
-      { label: '16:30 - 22:30 (6s)',  start: '16:30', end: '22:30' }
-    ];
+    const SHIFT_EDIT_PIN = '8855';
 
     let shiftEmployees = []; // [{ id, name, order }]
     let weeklyShifts = {};   // { [empId]: { [dayId]: { isOff, start, end } } }
     let deletedShiftEmployeeIds = [];
     let localShiftModified = 0;
-    let shiftEditMode = 'emp'; // 'emp' | 'day' | 'staff'
-    let shiftSelectedEmpId = 'emp_baha';
-    let shiftSelectedDayId = 'pazartesi';
     let shiftMobileSummaryMode = 'day'; // 'day' | 'emp'
 
     /* Centralized Supplier Helpers */
@@ -17574,9 +17493,6 @@
       });
 
       localStorage.setItem('delinapolitan_weekly_shifts', JSON.stringify(weeklyShifts));
-      if (shiftEmployees.length > 0 && !shiftEmployees.some(e => e.id === shiftSelectedEmpId)) {
-        shiftSelectedEmpId = shiftEmployees[0].id;
-      }
     }
 
     function getActiveShiftEmployees() {
@@ -17682,7 +17598,19 @@
       return list.map(t => `<option value="${escapeHtml(t)}" ${t === selectedVal ? 'selected' : ''}>${escapeHtml(t)}</option>`).join('');
     }
 
-    /* 1. READ-ONLY & TABLE VIEW: HAFTALIK VARDİYA PLANI */
+    function generateShiftInlineSelectOptionsHtml(selectedTime, isOff) {
+      const list = (selectedTime && !SHIFT_TIME_OPTIONS.includes(selectedTime))
+        ? [selectedTime, ...SHIFT_TIME_OPTIONS]
+        : SHIFT_TIME_OPTIONS;
+      let html = `<option value="OFF" ${isOff ? 'selected' : ''}>İZİN</option>`;
+      list.forEach(t => {
+        const sel = (!isOff && t === selectedTime) ? 'selected' : '';
+        html += `<option value="${escapeHtml(t)}" ${sel}>${escapeHtml(t)}</option>`;
+      });
+      return html;
+    }
+
+    /* 1. STATİK SALT-OKUNUR HAFTALIK VARDİYA PLANI (shiftView) */
     function openShiftView() {
       switchView('shiftView');
       const dtEl = document.getElementById('shiftTodayDateText');
@@ -17724,14 +17652,13 @@
       html += `</tr></thead><tbody>`;
 
       if (emps.length === 0) {
-        html += `<tr><td colspan="23" style="padding: 20px; color: #64748B;">Henüz çalışan eklenmedi. "Shift Hazırla" butonundan çalışan ekleyebilirsiniz.</td></tr>`;
+        html += `<tr><td colspan="23" style="padding: 20px; color: #64748B;">Henüz çalışan eklenmedi. "Shift Hazırla / Düzenle" butonundan çalışan ekleyebilirsiniz.</td></tr>`;
       } else {
         emps.forEach(emp => {
           const totalH = getEmployeeWeeklyTotalHours(emp.id);
-          const empClickAttr = isExport ? '' : `onclick="openShiftEditView('emp', '${escapeHtml(emp.id)}')" title="${escapeHtml(emp.name)} vardiyasını düzenle"`;
           html += `
             <tr>
-              <td class="shift-td-emp" ${isExport ? 'style="position:static; box-shadow:none;"' : ''} ${empClickAttr}>${escapeHtml(emp.name)}</td>
+              <td class="shift-td-emp" ${isExport ? 'style="position:static; box-shadow:none;"' : ''}>${escapeHtml(emp.name)}</td>
               <td class="shift-td-total">${formatShiftHoursTR(totalH)}</td>
           `;
 
@@ -17739,19 +17666,18 @@
             const cell = getShiftCellData(emp.id, day.id);
             const dur = calculateShiftDurationHours(cell.start, cell.end, cell.isOff);
             const durText = formatShiftHoursTR(dur);
-            const clickAttr = isExport ? '' : `onclick="openShiftQuickEditModal('${escapeHtml(emp.id)}', '${day.id}')" title="${escapeHtml(emp.name)} - ${escapeHtml(day.name)} vardiyasını düzenle"`;
 
             if (cell.isOff) {
               html += `
-                <td class="shift-cell-off" ${clickAttr}>İZİN</td>
-                <td class="shift-cell-off" ${clickAttr}>İZİN</td>
-                <td class="shift-cell-off" ${clickAttr}>0,0 sa</td>
+                <td class="shift-cell-off">İZİN</td>
+                <td class="shift-cell-off">İZİN</td>
+                <td class="shift-cell-off">0,0 sa</td>
               `;
             } else {
               html += `
-                <td class="shift-cell-time-${day.id}" ${clickAttr}>${escapeHtml(cell.start)}</td>
-                <td class="shift-cell-time-${day.id}" ${clickAttr}>${escapeHtml(cell.end)}</td>
-                <td class="shift-cell-dur-${day.id}" ${clickAttr}>${durText}</td>
+                <td class="shift-cell-time-${day.id}">${escapeHtml(cell.start)}</td>
+                <td class="shift-cell-time-${day.id}">${escapeHtml(cell.end)}</td>
+                <td class="shift-cell-dur-${day.id}">${durText}</td>
               `;
             }
           });
@@ -17829,7 +17755,7 @@
             const dur = calculateShiftDurationHours(cell.start, cell.end, cell.isOff);
             const isToday = day.id === todayId;
             rowsHtml += `
-              <div class="staff-ro-item" onclick="openShiftQuickEditModal('${escapeHtml(emp.id)}', '${day.id}')" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding: 8px 10px;">
+              <div class="staff-ro-item" style="display:flex; align-items:center; justify-content:space-between; padding: 8px 10px;">
                 <span style="font-weight:700; font-size:0.85rem; color:var(--text-dark); display:inline-flex; align-items:center; gap:6px;">
                   <span class="shift-day-dot" style="background:${SHIFT_DAY_COLORS[day.id] || '#3B82F6'};"></span>
                   ${escapeHtml(day.name)} ${isToday ? '<span style="font-size:0.68rem; background:#DCFCE7; color:#15803D; padding:1px 6px; border-radius:99px;">BUGÜN</span>' : ''}
@@ -17855,11 +17781,8 @@
               <div class="staff-ro-list">
                 ${rowsHtml}
               </div>
-              <div class="staff-card-footer" style="justify-content:space-between;">
+              <div class="staff-card-footer">
                 <span style="font-size:0.74rem; color:var(--text-muted);">${stats.workDays} Gün Çalışma · ${stats.offDays} Gün İzin</span>
-                <button type="button" onclick="openShiftEditView('emp', '${escapeHtml(emp.id)}')" style="border:none; background:#EFF6FF; color:#1D4ED8; font-weight:800; font-size:0.76rem; padding:5px 10px; border-radius:8px; cursor:pointer;">
-                  ✏️ Düzenle
-                </button>
               </div>
             </div>
           `;
@@ -17868,7 +17791,7 @@
         return;
       }
 
-      // Default: Günlere Göre (Bugünden başlayarak sıralı)
+      // Default: Günlere Göre (Bugünden başlayarak sıralı, statik görünüm)
       const orderedDays = getOrderedStaffMealDays();
       let html = '';
       orderedDays.forEach(day => {
@@ -17893,7 +17816,7 @@
           else workingCount++;
 
           rowsHtml += `
-            <div class="staff-ro-item" onclick="openShiftQuickEditModal('${escapeHtml(emp.id)}', '${day.id}')" style="cursor:pointer; display:flex; align-items:center; justify-content:space-between; padding: 8px 10px;">
+            <div class="staff-ro-item" style="display:flex; align-items:center; justify-content:space-between; padding: 8px 10px;">
               <span style="font-weight:800; font-size:0.88rem; color:var(--text-dark);">${escapeHtml(emp.name)}</span>
               ${cell.isOff
                 ? `<span style="background:#EF2323; color:#FFFFFF; font-weight:800; font-size:0.76rem; padding:3px 10px; border-radius:6px;">İZİN · 0,0 sa</span>`
@@ -17916,11 +17839,8 @@
             <div class="staff-ro-list">
               ${rowsHtml}
             </div>
-            <div class="staff-card-footer" style="justify-content:space-between;">
+            <div class="staff-card-footer">
               <span style="font-size:0.74rem; color:var(--text-muted);">${workingCount} Çalışıyor · ${offCount} İzinli</span>
-              <button type="button" onclick="openShiftEditView('day', null, '${day.id}')" style="border:none; background:#EFF6FF; color:#1D4ED8; font-weight:800; font-size:0.76rem; padding:5px 10px; border-radius:8px; cursor:pointer;">
-                ✏️ Günü Düzenle
-              </button>
             </div>
           </div>
         `;
@@ -17929,509 +17849,241 @@
       container.innerHTML = html;
     }
 
-    /* 2. HIZLI HÜCRE DÜZENLEME MODALI (TABLODAN TEK TIKLA) */
-    let currentQuickShiftEmpId = null;
-    let currentQuickShiftDayId = null;
-
-    function openShiftQuickEditModal(empId, dayId) {
-      currentQuickShiftEmpId = empId;
-      currentQuickShiftDayId = dayId;
-      const emp = getActiveShiftEmployees().find(e => e.id === empId);
-      const day = STAFF_MEAL_DAYS.find(d => d.id === dayId);
-      if (!emp || !day) return;
-
-      const modal = document.getElementById('shiftQuickEditModal');
-      const titleEl = document.getElementById('shiftQuickModalTitle');
-      const bodyEl = document.getElementById('shiftQuickModalBody');
-      if (!modal || !bodyEl) return;
-
-      if (titleEl) {
-        titleEl.textContent = `${emp.name} — ${day.name} Vardiyası`;
+    /* 2. 4 HANELİ PIN KİLİDİ (8855) İLE SHIFT DÜZENLEMEYE GİRİŞ */
+    function requestOpenShiftEditView() {
+      const modal = document.getElementById('shiftPinModal');
+      const input = document.getElementById('shiftPinInput');
+      const errEl = document.getElementById('shiftPinError');
+      if (!modal) {
+        openShiftEditView();
+        return;
       }
-
-      renderShiftQuickEditModalBody();
+      if (input) input.value = '';
+      if (errEl) errEl.style.display = 'none';
       modal.classList.add('active');
+      setTimeout(() => {
+        if (input) input.focus();
+      }, 60);
     }
 
-    function renderShiftQuickEditModalBody() {
-      const empId = currentQuickShiftEmpId;
-      const dayId = currentQuickShiftDayId;
-      const bodyEl = document.getElementById('shiftQuickModalBody');
-      if (!bodyEl || !empId || !dayId) return;
-
-      const cell = getShiftCellData(empId, dayId);
-      const dur = calculateShiftDurationHours(cell.start, cell.end, cell.isOff);
-      const presetsHtml = SHIFT_QUICK_PRESETS.map(p => {
-        const isActive = !cell.isOff && cell.start === p.start && cell.end === p.end;
-        return `<button type="button" class="shift-preset-chip ${isActive ? 'active' : ''}" onclick="applyQuickModalShiftPreset('${p.start}', '${p.end}')">${escapeHtml(p.label)}</button>`;
-      }).join('');
-
-      bodyEl.innerHTML = `
-        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; gap:8px; flex-wrap:wrap;">
-          <div class="shift-status-switch">
-            <button type="button" class="shift-status-btn ${!cell.isOff ? 'active-work' : ''}" onclick="setQuickModalShiftOff(false)">
-              ✓ Çalışıyor
-            </button>
-            <button type="button" class="shift-status-btn ${cell.isOff ? 'active-off' : ''}" onclick="setQuickModalShiftOff(true)">
-              🏖️ İZİN
-            </button>
-          </div>
-          <div class="shift-dur-pill" style="${cell.isOff ? 'background:#FEE2E2; border-color:#FCA5A5; color:#DC2626;' : ''}">
-            ${cell.isOff ? 'İZİN · 0,0 sa' : formatShiftHoursTR(dur)}
-          </div>
-        </div>
-
-        ${cell.isOff ? `
-          <div style="background:#FEF2F2; border:1.5px solid #FCA5A5; color:#991B1B; padding:14px; border-radius:12px; text-align:center; font-weight:800; margin-bottom:14px;">
-            🏖️ Bu gün İZİNLİ (0,0 sa) olarak işaretlendi.
-          </div>
-        ` : `
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:12px;">
-            <div>
-              <label style="display:block; font-size:0.78rem; font-weight:700; color:var(--text-muted); margin-bottom:4px;">Başlangıç Saati</label>
-              <select class="shift-time-select" onchange="updateQuickModalShiftTime('start', this.value)">
-                ${generateShiftTimeOptionsHtml(cell.start)}
-              </select>
-            </div>
-            <div>
-              <label style="display:block; font-size:0.78rem; font-weight:700; color:var(--text-muted); margin-bottom:4px;">Bitiş Saati</label>
-              <select class="shift-time-select" onchange="updateQuickModalShiftTime('end', this.value)">
-                ${generateShiftTimeOptionsHtml(cell.end)}
-              </select>
-            </div>
-          </div>
-
-          <div style="margin-bottom:14px;">
-            <div style="font-size:0.75rem; font-weight:700; color:var(--text-muted); margin-bottom:6px;">⚡ Hızlı Saat Şablonları:</div>
-            <div style="display:flex; gap:6px; flex-wrap:wrap;">
-              ${presetsHtml}
-            </div>
-          </div>
-        `}
-
-        <div style="display:flex; justify-content:space-between; gap:8px; margin-top:16px; pt:12px; border-top:1px solid var(--border); flex-wrap:wrap;">
-          <button type="button" onclick="closeShiftQuickEditModal(); openShiftEditView('emp', '${escapeHtml(empId)}');" style="border:1.5px solid var(--border); background:#F8FAFC; color:#334155; font-weight:700; padding:10px 14px; border-radius:10px; cursor:pointer; font-size:0.84rem;">
-            Tüm Haftasını Düzenle →
-          </button>
-          <button type="button" onclick="closeShiftQuickEditModal()" style="border:none; background:var(--primary); color:#FFFFFF; font-weight:800; padding:10px 22px; border-radius:10px; cursor:pointer; font-size:0.9rem;">
-            ✓ Tamam
-          </button>
-        </div>
-      `;
-    }
-
-    function setQuickModalShiftOff(isOff) {
-      if (!currentQuickShiftEmpId || !currentQuickShiftDayId) return;
-      handleShiftCellUpdate(currentQuickShiftEmpId, currentQuickShiftDayId, { isOff: !!isOff });
-      renderShiftQuickEditModalBody();
-    }
-
-    function updateQuickModalShiftTime(field, value) {
-      if (!currentQuickShiftEmpId || !currentQuickShiftDayId) return;
-      handleShiftCellUpdate(currentQuickShiftEmpId, currentQuickShiftDayId, { isOff: false, [field]: value });
-      renderShiftQuickEditModalBody();
-    }
-
-    function applyQuickModalShiftPreset(start, end) {
-      if (!currentQuickShiftEmpId || !currentQuickShiftDayId) return;
-      handleShiftCellUpdate(currentQuickShiftEmpId, currentQuickShiftDayId, { isOff: false, start, end });
-      renderShiftQuickEditModalBody();
-    }
-
-    function closeShiftQuickEditModal() {
-      const modal = document.getElementById('shiftQuickEditModal');
+    function closeShiftPinModal() {
+      const modal = document.getElementById('shiftPinModal');
       if (modal) modal.classList.remove('active');
     }
 
-    /* 3. FULL MOBILE-FIRST SHIFT PREPARATION VIEW: HAFTALIK SHIFT HAZIRLA */
-    function openShiftEditView(mode, targetEmpId, targetDayId) {
-      if (mode && ['emp', 'day', 'staff'].includes(mode)) {
-        shiftEditMode = mode;
+    function handleShiftPinInput(val) {
+      const input = document.getElementById('shiftPinInput');
+      const errEl = document.getElementById('shiftPinError');
+      const clean = String(val || '').replace(/[^0-9]/g, '').slice(0, 4);
+      if (input && input.value !== clean) {
+        input.value = clean;
       }
-      const emps = getActiveShiftEmployees();
-      if (targetEmpId && emps.some(e => e.id === targetEmpId)) {
-        shiftSelectedEmpId = targetEmpId;
-      } else if (emps.length > 0 && !emps.some(e => e.id === shiftSelectedEmpId)) {
-        shiftSelectedEmpId = emps[0].id;
+      if (errEl) errEl.style.display = 'none';
+      if (clean.length === 4) {
+        if (clean === SHIFT_EDIT_PIN) {
+          closeShiftPinModal();
+          openShiftEditView();
+        } else {
+          if (errEl) errEl.style.display = 'block';
+        }
       }
-      if (targetDayId && STAFF_MEAL_DAYS.some(d => d.id === targetDayId)) {
-        shiftSelectedDayId = targetDayId;
-      }
+    }
 
+    function handleVerifyShiftPin(e) {
+      if (e) e.preventDefault();
+      const input = document.getElementById('shiftPinInput');
+      const errEl = document.getElementById('shiftPinError');
+      const pin = input ? String(input.value || '').trim() : '';
+      if (pin === SHIFT_EDIT_PIN) {
+        closeShiftPinModal();
+        openShiftEditView();
+      } else {
+        if (errEl) errEl.style.display = 'block';
+        if (input) {
+          input.value = '';
+          input.focus();
+        }
+      }
+    }
+
+    /* 3. DİNAMİK EDİTLENEBİLİR HAFTALIK VARDİYA TABLOSU (shiftEditView) */
+    function openShiftEditView() {
       switchView('shiftEditView');
+      populateNewShiftEmployeeTimeSelects();
       renderShiftEditView();
       if (typeof fetchAppStateFromCloud === 'function') {
         fetchAppStateFromCloud({ showFeedback: false });
       }
     }
 
-    function setShiftEditMode(mode) {
-      shiftEditMode = ['emp', 'day', 'staff'].includes(mode) ? mode : 'emp';
-      renderShiftEditView();
-    }
-
-    function selectShiftEditEmployee(empId) {
-      shiftSelectedEmpId = empId;
-      renderShiftEditView();
-    }
-
-    function selectShiftEditDay(dayId) {
-      shiftSelectedDayId = dayId;
-      renderShiftEditView();
-    }
-
-    function handleShiftCellUpdate(empId, dayId, patch) {
-      const cell = getShiftCellData(empId, dayId);
-      if (patch.isOff !== undefined) cell.isOff = !!patch.isOff;
-      if (patch.start) cell.start = patch.start;
-      if (patch.end) cell.end = patch.end;
-
-      const slotKey = 'shf_' + empId + '_' + dayId;
-      saveShiftStateToStorage(['shf', slotKey]);
-      scheduleAutoCloudSync(200);
-
-      const shiftViewEl = document.getElementById('shiftView');
-      if (shiftViewEl && shiftViewEl.style.display !== 'none') {
-        renderShiftReadOnlyView();
+    function populateNewShiftEmployeeTimeSelects() {
+      const startSel = document.getElementById('newShiftEmpStartSelect');
+      const endSel = document.getElementById('newShiftEmpEndSelect');
+      if (startSel && !startSel.innerHTML.trim()) {
+        startSel.innerHTML = generateShiftTimeOptionsHtml('11:00');
       }
-      const shiftEditViewEl = document.getElementById('shiftEditView');
-      if (shiftEditViewEl && shiftEditViewEl.style.display !== 'none') {
-        renderShiftEditView();
+      if (endSel && !endSel.innerHTML.trim()) {
+        endSel.innerHTML = generateShiftTimeOptionsHtml('21:00');
       }
     }
 
-    function applyShiftPresetToAllWorkDays(empId, start, end) {
-      const emp = getActiveShiftEmployees().find(e => e.id === empId);
-      if (!emp) return;
-      const touched = ['shf'];
-      STAFF_MEAL_DAYS.forEach(d => {
-        const cell = getShiftCellData(empId, d.id);
-        if (!cell.isOff) {
-          cell.start = start;
-          cell.end = end;
-          touched.push('shf_' + empId + '_' + d.id);
-        }
+    function buildShiftEditableTableHtml() {
+      const emps = getActiveShiftEmployees();
+      let html = `<table class="shift-pdf-table shift-editable-table">`;
+
+      html += `
+        <thead>
+          <tr class="shift-pdf-title-row">
+            <th colspan="23">Haftalık Vardiya Planı (Düzenleme Modu)</th>
+          </tr>
+          <tr>
+            <th rowspan="2" class="shift-th-emp">Çalışan</th>
+            <th rowspan="2" class="shift-th-total">Toplam<br>Saat</th>
+      `;
+
+      STAFF_MEAL_DAYS.forEach(day => {
+        html += `<th colspan="3" class="shift-day-th-${day.id}">${escapeHtml(day.name)}</th>`;
       });
-      saveShiftStateToStorage(touched);
-      scheduleAutoCloudSync(200);
-      renderShiftEditView();
-      showToast(`✓ ${emp.name} için tüm çalışma günleri ${start} - ${end} yapıldı.`);
+
+      html += `</tr><tr>`;
+      STAFF_MEAL_DAYS.forEach(day => {
+        html += `
+          <th class="shift-sub-th-${day.id}">Başlangıç</th>
+          <th class="shift-sub-th-${day.id}">Bitiş</th>
+          <th class="shift-sub-th-${day.id}">Saat</th>
+        `;
+      });
+      html += `</tr></thead><tbody>`;
+
+      if (emps.length === 0) {
+        html += `<tr><td colspan="23" style="padding: 24px; color: #64748B;">Henüz çalışan bulunmuyor. Yukarıdaki "Yeni Çalışan Ekle" alanından tabloya çalışan ekleyebilirsiniz.</td></tr>`;
+      } else {
+        emps.forEach((emp, idx) => {
+          const totalH = getEmployeeWeeklyTotalHours(emp.id);
+          html += `
+            <tr>
+              <td class="shift-td-emp">
+                <div class="shift-emp-edit-cell">
+                  <input
+                    type="text"
+                    class="shift-emp-name-input"
+                    value="${escapeHtml(emp.name)}"
+                    onchange="handleRenameShiftEmployee('${escapeHtml(emp.id)}', this.value)"
+                    title="Çalışan adını düzenle"
+                  >
+                  <button type="button" class="shift-emp-mini-btn" onclick="handleMoveShiftEmployee('${escapeHtml(emp.id)}', -1)" ${idx === 0 ? 'disabled' : ''} title="Yukarı Taşı">↑</button>
+                  <button type="button" class="shift-emp-mini-btn" onclick="handleMoveShiftEmployee('${escapeHtml(emp.id)}', 1)" ${idx === emps.length - 1 ? 'disabled' : ''} title="Aşağı Taşı">↓</button>
+                  <button type="button" class="shift-emp-mini-btn del" onclick="handleDeleteShiftEmployee('${escapeHtml(emp.id)}')" title="Çalışanı Sil">✕</button>
+                </div>
+              </td>
+              <td class="shift-td-total" id="shiftEditTotalCell-${escapeHtml(emp.id)}">${formatShiftHoursTR(totalH)}</td>
+          `;
+
+          STAFF_MEAL_DAYS.forEach(day => {
+            const cell = getShiftCellData(emp.id, day.id);
+            const dur = calculateShiftDurationHours(cell.start, cell.end, cell.isOff);
+            const durText = formatShiftHoursTR(dur);
+
+            if (cell.isOff) {
+              html += `
+                <td class="shift-cell-off">
+                  <select class="shift-inline-select" onchange="handleTableShiftSelectChange('${escapeHtml(emp.id)}', '${day.id}', 'start', this.value)" title="${escapeHtml(emp.name)} - ${escapeHtml(day.name)} Başlangıç / İzin">
+                    ${generateShiftInlineSelectOptionsHtml(cell.start, true)}
+                  </select>
+                </td>
+                <td class="shift-cell-off">
+                  <select class="shift-inline-select" onchange="handleTableShiftSelectChange('${escapeHtml(emp.id)}', '${day.id}', 'end', this.value)" title="${escapeHtml(emp.name)} - ${escapeHtml(day.name)} Bitiş / İzin">
+                    ${generateShiftInlineSelectOptionsHtml(cell.end, true)}
+                  </select>
+                </td>
+                <td class="shift-cell-off" onclick="toggleTableShiftOff('${escapeHtml(emp.id)}', '${day.id}')" style="cursor:pointer;" title="Çalışıyor olarak değiştirmek için dokunun">0,0 sa</td>
+              `;
+            } else {
+              html += `
+                <td class="shift-cell-time-${day.id}">
+                  <select class="shift-inline-select" onchange="handleTableShiftSelectChange('${escapeHtml(emp.id)}', '${day.id}', 'start', this.value)" title="${escapeHtml(emp.name)} - ${escapeHtml(day.name)} Başlangıç">
+                    ${generateShiftInlineSelectOptionsHtml(cell.start, false)}
+                  </select>
+                </td>
+                <td class="shift-cell-time-${day.id}">
+                  <select class="shift-inline-select" onchange="handleTableShiftSelectChange('${escapeHtml(emp.id)}', '${day.id}', 'end', this.value)" title="${escapeHtml(emp.name)} - ${escapeHtml(day.name)} Bitiş">
+                    ${generateShiftInlineSelectOptionsHtml(cell.end, false)}
+                  </select>
+                </td>
+                <td class="shift-cell-dur-${day.id}" onclick="toggleTableShiftOff('${escapeHtml(emp.id)}', '${day.id}')" style="cursor:pointer;" title="İZİN yapmak için dokunun">${durText}</td>
+              `;
+            }
+          });
+
+          html += `</tr>`;
+        });
+      }
+
+      html += `</tbody></table>`;
+      return html;
     }
 
     function renderShiftEditView() {
-      const emps = getActiveShiftEmployees();
+      populateNewShiftEmployeeTimeSelects();
+
       const totalHeaderEl = document.getElementById('shiftEditTotalHoursHeaderText');
       if (totalHeaderEl) {
         totalHeaderEl.textContent = formatShiftHoursTR(getAllEmployeesWeeklyTotalHours());
       }
 
-      ['emp', 'day', 'staff'].forEach(m => {
-        const btn = document.getElementById(`shiftTabBtn-${m}`);
-        if (btn) {
-          if (m === shiftEditMode) btn.classList.add('active');
-          else btn.classList.remove('active');
-        }
+      const container = document.getElementById('shiftEditableTableContainer');
+      if (!container) return;
+
+      const prevScrollLeft = container.scrollLeft;
+      container.innerHTML = buildShiftEditableTableHtml();
+      container.scrollLeft = prevScrollLeft;
+    }
+
+    function handleTableShiftSelectChange(empId, dayId, field, value) {
+      const cell = getShiftCellData(empId, dayId);
+      if (value === 'OFF') {
+        cell.isOff = true;
+      } else {
+        cell.isOff = false;
+        if (!cell.start) cell.start = '11:00';
+        if (!cell.end) cell.end = '21:00';
+        cell[field] = value;
+      }
+
+      const slotKey = 'shf_' + empId + '_' + dayId;
+      saveShiftStateToStorage(['shf', slotKey]);
+      scheduleAutoCloudSync(200);
+      renderShiftEditView();
+    }
+
+    function toggleTableShiftOff(empId, dayId) {
+      const cell = getShiftCellData(empId, dayId);
+      cell.isOff = !cell.isOff;
+      if (!cell.isOff) {
+        if (!cell.start) cell.start = '11:00';
+        if (!cell.end) cell.end = '21:00';
+      }
+      const slotKey = 'shf_' + empId + '_' + dayId;
+      saveShiftStateToStorage(['shf', slotKey]);
+      scheduleAutoCloudSync(200);
+      renderShiftEditView();
+    }
+
+    function resetShiftToPdfDefaults() {
+      if (!confirm('Haftalık vardiya tablosunu varsayılan PDF verilerine sıfırlamak istediğinize emin misiniz?')) return;
+      deletedShiftEmployeeIds = [];
+      shiftEmployees = DEFAULT_SHIFT_EMPLOYEES.map(e => ({ ...e }));
+      weeklyShifts = JSON.parse(JSON.stringify(DEFAULT_WEEKLY_SHIFTS));
+      const touched = ['shf'];
+      shiftEmployees.forEach(emp => {
+        STAFF_MEAL_DAYS.forEach(d => {
+          touched.push('shf_' + emp.id + '_' + d.id);
+        });
       });
-
-      const selectorBar = document.getElementById('shiftEditSelectorBar');
-      const contentContainer = document.getElementById('shiftEditContentContainer');
-      if (!selectorBar || !contentContainer) return;
-
-      // MOD 1: ÇALIŞANA GÖRE DÜZENLE
-      if (shiftEditMode === 'emp') {
-        if (emps.length === 0) {
-          selectorBar.innerHTML = '';
-          contentContainer.innerHTML = `
-            <div class="shift-edit-card" style="text-align:center; padding:24px;">
-              <p style="color:var(--text-muted); margin-bottom:12px;">Henüz çalışan bulunmuyor.</p>
-              <button type="button" class="btn-primary" onclick="setShiftEditMode('staff')" style="padding:10px 18px; border-radius:10px;">
-                + Yeni Çalışan Ekle
-              </button>
-            </div>
-          `;
-          return;
-        }
-
-        if (!emps.some(e => e.id === shiftSelectedEmpId)) {
-          shiftSelectedEmpId = emps[0].id;
-        }
-
-        selectorBar.innerHTML = emps.map(emp => {
-          const isAct = emp.id === shiftSelectedEmpId;
-          const empHours = getEmployeeWeeklyTotalHours(emp.id);
-          return `
-            <button type="button" class="shift-selector-pill ${isAct ? 'active' : ''}" onclick="selectShiftEditEmployee('${escapeHtml(emp.id)}')">
-              <span>${escapeHtml(emp.name)}</span>
-              <span class="shift-pill-hours">${formatShiftHoursTR(empHours)}</span>
-            </button>
-          `;
-        }).join('');
-
-        const selectedEmp = emps.find(e => e.id === shiftSelectedEmpId) || emps[0];
-        const empStats = getEmployeeWeeklyStats(selectedEmp.id);
-
-        let bulkPresetsHtml = SHIFT_QUICK_PRESETS.slice(0, 6).map(p => `
-          <button type="button" class="shift-preset-chip" onclick="applyShiftPresetToAllWorkDays('${escapeHtml(selectedEmp.id)}', '${p.start}', '${p.end}')">
-            ${escapeHtml(p.label)}
-          </button>
-        `).join('');
-
-        let daysRowsHtml = '';
-        STAFF_MEAL_DAYS.forEach(day => {
-          const cell = getShiftCellData(selectedEmp.id, day.id);
-          const dur = calculateShiftDurationHours(cell.start, cell.end, cell.isOff);
-          const dayPresetsHtml = SHIFT_QUICK_PRESETS.map(p => {
-            const isAct = !cell.isOff && cell.start === p.start && cell.end === p.end;
-            return `<button type="button" class="shift-preset-chip ${isAct ? 'active' : ''}" onclick="handleShiftCellUpdate('${escapeHtml(selectedEmp.id)}', '${day.id}', { isOff: false, start: '${p.start}', end: '${p.end}' })">${escapeHtml(p.label)}</button>`;
-          }).join('');
-
-          daysRowsHtml += `
-            <div class="shift-day-edit-row ${cell.isOff ? 'is-off' : ''}">
-              <div class="shift-day-edit-top">
-                <div class="shift-day-tag">
-                  <span class="shift-day-dot" style="background:${SHIFT_DAY_COLORS[day.id] || '#3B82F6'};"></span>
-                  <span>${escapeHtml(day.name)}</span>
-                </div>
-
-                <div style="display:flex; align-items:center; gap:8px;">
-                  <div class="shift-status-switch">
-                    <button type="button" class="shift-status-btn ${!cell.isOff ? 'active-work' : ''}" onclick="handleShiftCellUpdate('${escapeHtml(selectedEmp.id)}', '${day.id}', { isOff: false })">
-                      ✓ Çalışıyor
-                    </button>
-                    <button type="button" class="shift-status-btn ${cell.isOff ? 'active-off' : ''}" onclick="handleShiftCellUpdate('${escapeHtml(selectedEmp.id)}', '${day.id}', { isOff: true })">
-                      🏖️ İZİN
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              ${cell.isOff ? `
-                <div style="display:flex; align-items:center; justify-content:space-between; background:#FEE2E2; color:#B91C1C; padding:10px 14px; border-radius:10px; font-weight:800; font-size:0.86rem;">
-                  <span>🏖️ İZİNLİ GÜN</span>
-                  <span>0,0 sa</span>
-                </div>
-              ` : `
-                <div class="shift-time-inputs-grid">
-                  <div>
-                    <label style="display:block; font-size:0.74rem; font-weight:700; color:var(--text-muted); margin-bottom:4px;">Başlangıç</label>
-                    <select class="shift-time-select" onchange="handleShiftCellUpdate('${escapeHtml(selectedEmp.id)}', '${day.id}', { isOff: false, start: this.value })">
-                      ${generateShiftTimeOptionsHtml(cell.start)}
-                    </select>
-                  </div>
-                  <div>
-                    <label style="display:block; font-size:0.74rem; font-weight:700; color:var(--text-muted); margin-bottom:4px;">Bitiş</label>
-                    <select class="shift-time-select" onchange="handleShiftCellUpdate('${escapeHtml(selectedEmp.id)}', '${day.id}', { isOff: false, end: this.value })">
-                      ${generateShiftTimeOptionsHtml(cell.end)}
-                    </select>
-                  </div>
-                  <div class="shift-dur-pill">
-                    ⏱️ ${formatShiftHoursTR(dur)}
-                  </div>
-                </div>
-
-                <div class="shift-presets-wrap">
-                  ${dayPresetsHtml}
-                </div>
-              `}
-            </div>
-          `;
-        });
-
-        contentContainer.innerHTML = `
-          <div class="shift-edit-card">
-            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-bottom:14px; padding-bottom:12px; border-bottom:1.5px solid var(--border);">
-              <div>
-                <h2 style="font-size:1.15rem; font-weight:800; color:var(--text-dark); margin:0;">
-                  👤 ${escapeHtml(selectedEmp.name)} — Haftalık Vardiya Planı
-                </h2>
-                <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">
-                  ${empStats.workDays} Gün Çalışma · ${empStats.offDays} Gün İzin
-                </div>
-              </div>
-              <div style="background:#DCFCE7; border:1.5px solid #86EFAC; color:#065F46; font-weight:800; font-size:1rem; padding:8px 16px; border-radius:12px;">
-                Toplam: ${formatShiftHoursTR(empStats.totalHours)}
-              </div>
-            </div>
-
-            <!-- Tüm Çalışma Günlerine Hızlı Saat Uygula -->
-            <div style="background:#F8FAFC; border:1px dashed #CBD5E1; border-radius:12px; padding:10px 12px; margin-bottom:16px;">
-              <div style="font-size:0.76rem; font-weight:800; color:#475569; margin-bottom:6px;">
-                ⚡ ${escapeHtml(selectedEmp.name)} İçin Tüm Çalışma Günlerine Tek Tıkla Saat Uygula:
-              </div>
-              <div style="display:flex; gap:6px; flex-wrap:wrap;">
-                ${bulkPresetsHtml}
-              </div>
-            </div>
-
-            ${daysRowsHtml}
-          </div>
-        `;
-        return;
-      }
-
-      // MOD 2: GÜNE GÖRE DÜZENLE
-      if (shiftEditMode === 'day') {
-        selectorBar.innerHTML = STAFF_MEAL_DAYS.map(day => {
-          const isAct = day.id === shiftSelectedDayId;
-          return `
-            <button type="button" class="shift-selector-pill ${isAct ? 'active' : ''}" onclick="selectShiftEditDay('${day.id}')">
-              <span class="shift-day-dot" style="background:${ isAct ? '#FFFFFF' : (SHIFT_DAY_COLORS[day.id] || '#3B82F6') };"></span>
-              <span>${escapeHtml(day.name)}</span>
-            </button>
-          `;
-        }).join('');
-
-        const selectedDay = STAFF_MEAL_DAYS.find(d => d.id === shiftSelectedDayId) || STAFF_MEAL_DAYS[0];
-        let workCount = 0;
-        let offCount = 0;
-        let dayTotalHours = 0;
-
-        let empRowsHtml = '';
-        emps.forEach(emp => {
-          const cell = getShiftCellData(emp.id, selectedDay.id);
-          const dur = calculateShiftDurationHours(cell.start, cell.end, cell.isOff);
-          if (cell.isOff) offCount++;
-          else {
-            workCount++;
-            dayTotalHours += dur;
-          }
-
-          const presetsHtml = SHIFT_QUICK_PRESETS.map(p => {
-            const isAct = !cell.isOff && cell.start === p.start && cell.end === p.end;
-            return `<button type="button" class="shift-preset-chip ${isAct ? 'active' : ''}" onclick="handleShiftCellUpdate('${escapeHtml(emp.id)}', '${selectedDay.id}', { isOff: false, start: '${p.start}', end: '${p.end}' })">${escapeHtml(p.label)}</button>`;
-          }).join('');
-
-          empRowsHtml += `
-            <div class="shift-day-edit-row ${cell.isOff ? 'is-off' : ''}">
-              <div class="shift-day-edit-top">
-                <div class="shift-day-tag">
-                  <span>👤 ${escapeHtml(emp.name)}</span>
-                  <span style="font-size:0.75rem; font-weight:700; color:var(--text-muted);">(Haftalık: ${formatShiftHoursTR(getEmployeeWeeklyTotalHours(emp.id))})</span>
-                </div>
-
-                <div class="shift-status-switch">
-                  <button type="button" class="shift-status-btn ${!cell.isOff ? 'active-work' : ''}" onclick="handleShiftCellUpdate('${escapeHtml(emp.id)}', '${selectedDay.id}', { isOff: false })">
-                    ✓ Çalışıyor
-                  </button>
-                  <button type="button" class="shift-status-btn ${cell.isOff ? 'active-off' : ''}" onclick="handleShiftCellUpdate('${escapeHtml(emp.id)}', '${selectedDay.id}', { isOff: true })">
-                    🏖️ İZİN
-                  </button>
-                </div>
-              </div>
-
-              ${cell.isOff ? `
-                <div style="display:flex; align-items:center; justify-content:space-between; background:#FEE2E2; color:#B91C1C; padding:10px 14px; border-radius:10px; font-weight:800; font-size:0.86rem;">
-                  <span>🏖️ İZİNLİ</span>
-                  <span>0,0 sa</span>
-                </div>
-              ` : `
-                <div class="shift-time-inputs-grid">
-                  <div>
-                    <label style="display:block; font-size:0.74rem; font-weight:700; color:var(--text-muted); margin-bottom:4px;">Başlangıç</label>
-                    <select class="shift-time-select" onchange="handleShiftCellUpdate('${escapeHtml(emp.id)}', '${selectedDay.id}', { isOff: false, start: this.value })">
-                      ${generateShiftTimeOptionsHtml(cell.start)}
-                    </select>
-                  </div>
-                  <div>
-                    <label style="display:block; font-size:0.74rem; font-weight:700; color:var(--text-muted); margin-bottom:4px;">Bitiş</label>
-                    <select class="shift-time-select" onchange="handleShiftCellUpdate('${escapeHtml(emp.id)}', '${selectedDay.id}', { isOff: false, end: this.value })">
-                      ${generateShiftTimeOptionsHtml(cell.end)}
-                    </select>
-                  </div>
-                  <div class="shift-dur-pill">
-                    ⏱️ ${formatShiftHoursTR(dur)}
-                  </div>
-                </div>
-                <div class="shift-presets-wrap">
-                  ${presetsHtml}
-                </div>
-              `}
-            </div>
-          `;
-        });
-
-        contentContainer.innerHTML = `
-          <div class="shift-edit-card">
-            <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-bottom:14px; padding-bottom:12px; border-bottom:1.5px solid var(--border);">
-              <div>
-                <h2 style="font-size:1.15rem; font-weight:800; color:var(--text-dark); margin:0; display:flex; align-items:center; gap:8px;">
-                  <span class="shift-day-dot" style="background:${SHIFT_DAY_COLORS[selectedDay.id] || '#3B82F6'};"></span>
-                  ${escapeHtml(selectedDay.name)} Günü Vardiyaları
-                </h2>
-                <div style="font-size:0.8rem; color:var(--text-muted); margin-top:2px;">
-                  ${workCount} Kişi Çalışıyor · ${offCount} Kişi İzinli
-                </div>
-              </div>
-              <div style="background:#EFF6FF; border:1.5px solid #93C5FD; color:#1D4ED8; font-weight:800; font-size:0.95rem; padding:8px 14px; border-radius:12px;">
-                Gün Toplamı: ${formatShiftHoursTR(dayTotalHours)}
-              </div>
-            </div>
-            ${empRowsHtml}
-          </div>
-        `;
-        return;
-      }
-
-      // MOD 3: ÇALIŞAN EKLE / YÖNET
-      selectorBar.innerHTML = '';
-      let staffRowsHtml = emps.map((emp, idx) => {
-        const stats = getEmployeeWeeklyStats(emp.id);
-        return `
-          <div class="staff-dish-row-item" style="margin-bottom:8px;">
-            <div style="display:flex; align-items:center; gap:10px; flex:1; flex-wrap:wrap;">
-              <span style="width:28px; height:28px; border-radius:50%; background:#E2E8F0; color:#334155; font-weight:800; font-size:0.8rem; display:inline-flex; align-items:center; justify-content:center;">
-                ${idx + 1}
-              </span>
-              <input type="text" value="${escapeHtml(emp.name)}" onchange="handleRenameShiftEmployee('${escapeHtml(emp.id)}', this.value)" style="height:40px; padding:0 12px; border:1.5px solid #CBD5E1; border-radius:8px; font-weight:800; font-size:0.95rem; color:var(--text-dark); max-width:200px;">
-              <span style="background:#DCFCE7; color:#166534; font-weight:800; font-size:0.8rem; padding:4px 10px; border-radius:999px;">
-                ${formatShiftHoursTR(stats.totalHours)} (${stats.workDays} gün)
-              </span>
-            </div>
-            <div class="staff-dish-row-actions" style="display:flex; gap:6px;">
-              <button type="button" onclick="handleMoveShiftEmployee('${escapeHtml(emp.id)}', -1)" ${idx === 0 ? 'disabled' : ''} style="border:1px solid #CBD5E1; background:#FFFFFF; padding:7px 10px; border-radius:8px; cursor:pointer; font-weight:800;" title="Yukarı Taşı">↑</button>
-              <button type="button" onclick="handleMoveShiftEmployee('${escapeHtml(emp.id)}', 1)" ${idx === emps.length - 1 ? 'disabled' : ''} style="border:1px solid #CBD5E1; background:#FFFFFF; padding:7px 10px; border-radius:8px; cursor:pointer; font-weight:800;" title="Aşağı Taşı">↓</button>
-              <button type="button" onclick="openShiftEditView('emp', '${escapeHtml(emp.id)}')" style="border:1px solid #93C5FD; background:#EFF6FF; color:#1D4ED8; padding:7px 12px; border-radius:8px; cursor:pointer; font-weight:800; font-size:0.82rem;">Saatleri</button>
-              <button type="button" onclick="handleDeleteShiftEmployee('${escapeHtml(emp.id)}')" style="border:1px solid #FCA5A5; background:#FEE2E2; color:#DC2626; padding:7px 12px; border-radius:8px; cursor:pointer; font-weight:800; font-size:0.82rem;">Sil</button>
-            </div>
-          </div>
-        `;
-      }).join('');
-
-      contentContainer.innerHTML = `
-        <div class="shift-edit-card">
-          <h2 style="font-size:1.05rem; font-weight:800; color:var(--text-dark); margin:0 0 12px 0;">
-            ➕ Yeni Çalışan Ekle
-          </h2>
-          <form onsubmit="handleAddShiftEmployee(event)" style="display:grid; grid-template-columns:1fr auto auto auto; gap:10px; align-items:end; flex-wrap:wrap;">
-            <div>
-              <label style="display:block; font-size:0.78rem; font-weight:700; color:var(--text-muted); margin-bottom:4px;">Çalışan Adı *</label>
-              <input type="text" id="newShiftEmpNameInput" class="form-input" placeholder="Örn: Ahmet, Zeynep..." required style="height:44px; font-size:0.95rem;">
-            </div>
-            <div>
-              <label style="display:block; font-size:0.78rem; font-weight:700; color:var(--text-muted); margin-bottom:4px;">Varsayılan Başlangıç</label>
-              <select id="newShiftEmpStartSelect" class="shift-time-select">
-                ${generateShiftTimeOptionsHtml('11:00')}
-              </select>
-            </div>
-            <div>
-              <label style="display:block; font-size:0.78rem; font-weight:700; color:var(--text-muted); margin-bottom:4px;">Varsayılan Bitiş</label>
-              <select id="newShiftEmpEndSelect" class="shift-time-select">
-                ${generateShiftTimeOptionsHtml('21:00')}
-              </select>
-            </div>
-            <button type="submit" class="btn-confirm-primary" style="height:44px; padding:0 20px; border-radius:10px; background:var(--primary); color:#FFFFFF; font-weight:800; border:none; cursor:pointer;">
-              + Çalışan Ekle
-            </button>
-          </form>
-        </div>
-
-        <div class="shift-edit-card">
-          <h2 style="font-size:1.05rem; font-weight:800; color:var(--text-dark); margin:0 0 12px 0;">
-            👥 Kayıtlı Çalışanlar (${emps.length})
-          </h2>
-          ${staffRowsHtml || '<div style="color:var(--text-muted); padding:16px; text-align:center;">Kayıtlı çalışan yok.</div>'}
-        </div>
-      `;
+      saveShiftStateToStorage(touched);
+      scheduleAutoCloudSync(150);
+      renderShiftEditView();
+      showToast('✓ Vardiya tablosu varsayılan PDF verilerine sıfırlandı.');
     }
 
     function handleAddShiftEmployee(e) {
@@ -18472,11 +18124,11 @@
         touched.push('shf_' + idCandidate + '_' + d.id);
       });
 
-      shiftSelectedEmpId = idCandidate;
+      if (nameInp) nameInp.value = '';
       saveShiftStateToStorage(touched);
       scheduleAutoCloudSync(150);
       renderShiftEditView();
-      showToast(`✓ "${name}" vardiya tablosuna eklendi.`);
+      showToast(`✓ "${name}" doğrudan vardiya tablosuna eklendi.`);
     }
 
     function handleRenameShiftEmployee(empId, newName) {
@@ -18519,7 +18171,7 @@
     function handleDeleteShiftEmployee(empId) {
       const emp = shiftEmployees.find(e => e.id === empId);
       const empName = emp ? emp.name : 'Bu çalışan';
-      if (!confirm(`"${empName}" çalışanını vardiya planından silmek istediğinize emin misiniz?`)) return;
+      if (!confirm(`"${empName}" çalışanını vardiya tablosundan silmek istediğinize emin misiniz?`)) return;
 
       if (!deletedShiftEmployeeIds.includes(empId)) {
         deletedShiftEmployeeIds.push(empId);
@@ -18527,15 +18179,10 @@
       shiftEmployees = shiftEmployees.filter(e => e.id !== empId);
       delete weeklyShifts[empId];
 
-      const remaining = getActiveShiftEmployees();
-      if (remaining.length > 0 && shiftSelectedEmpId === empId) {
-        shiftSelectedEmpId = remaining[0].id;
-      }
-
       saveShiftStateToStorage(['shf']);
       scheduleAutoCloudSync(150);
       renderShiftEditView();
-      showToast(`✓ "${empName}" vardiya listesinden silindi.`);
+      showToast(`✓ "${empName}" vardiya tablosundan silindi.`);
     }
 
     function exitShiftEditToReadOnly() {
