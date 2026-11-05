@@ -1,11 +1,11 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-05T11:59:35.969Z",
-  "timestamp": 1793879973522,
+  "exportedAt": "2026-11-05T11:59:40.531Z",
+  "timestamp": 1793879979567,
   "deviceId": "dev_5yxsqly_mvle6qpu",
   "moduleTimestamps": {
-    "cnt_hergun": 1793879972026,
+    "cnt_hergun": 1793879978350,
     "rst_hergun": 1793709463632,
     "rst_pazar": 1793557180407,
     "cnt_pazar": 1793557710420,
@@ -1648,19 +1648,19 @@
         "notes": "Donuk ve yıkanmiş 3 demet var"
       },
       "hg_13": {
-        "qty": 1,
-        "notes": "Yarım "
+        "qty": "1",
+        "notes": "Yarım"
       },
       "hg_14": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "hg_15": {
-        "qty": 9,
+        "qty": "9",
         "notes": ""
       },
       "hg_16": {
-        "qty": 14,
+        "qty": "14",
         "notes": ""
       },
       "hg_17": {
@@ -1668,11 +1668,11 @@
         "notes": ""
       },
       "hg_18": {
-        "qty": 3,
+        "qty": "3",
         "notes": ""
       },
       "cust_kabak": {
-        "qty": 2,
+        "qty": "2",
         "notes": ""
       },
       "cust_lime": {
@@ -1696,12 +1696,12 @@
         "notes": ""
       },
       "hg_22": {
-        "qty": 2,
+        "qty": "2",
         "notes": ""
       },
       "hg_23": {
-        "qty": "1",
-        "notes": "Yapilacak"
+        "qty": "2",
+        "notes": ""
       },
       "hg_24": {
         "qty": "0.5",
@@ -1736,7 +1736,7 @@
         "notes": ""
       },
       "cust_sili_biber": {
-        "qty": 1.5,
+        "qty": "1.5",
         "notes": ""
       },
       "cust_tiramisu": {
