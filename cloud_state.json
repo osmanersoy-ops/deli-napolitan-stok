@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-05T11:12:11.289Z",
-  "timestamp": 1793877129480,
+  "exportedAt": "2026-11-05T11:12:15.780Z",
+  "timestamp": 1793877135628,
   "deviceId": "dev_5yxsqly_mvle6qpu",
   "moduleTimestamps": {
     "cnt_hergun": 1793800275281,
@@ -136,7 +136,7 @@
     "cat": 1793816784580,
     "rst_sali": 1793811787129,
     "cnt_sali": 1793811787129,
-    "shf": 1793877129478,
+    "shf": 1793877135627,
     "shf_emp_osman_pazartesi": 1793819754184,
     "shf_emp_selim_pazartesi": 1793819771751,
     "shf_emp_baha_pazartesi": 1793820260701,
@@ -153,7 +153,14 @@
     "shf_emp_ali_persembe": 1793877129478,
     "shf_emp_ali_cuma": 1793877129478,
     "shf_emp_ali_cumartesi": 1793877129478,
-    "shf_emp_ali_pazar": 1793877129478
+    "shf_emp_ali_pazar": 1793877129478,
+    "shf_emp_ozge_pazartesi": 1793877135627,
+    "shf_emp_ozge_sali": 1793877135627,
+    "shf_emp_ozge_carsamba": 1793877135627,
+    "shf_emp_ozge_persembe": 1793877135627,
+    "shf_emp_ozge_cuma": 1793877135627,
+    "shf_emp_ozge_cumartesi": 1793877135627,
+    "shf_emp_ozge_pazar": 1793877135627
   },
   "suppliers": [
     {
@@ -2702,6 +2709,11 @@
       "id": "emp_ali",
       "name": "Ali",
       "order": 8
+    },
+    {
+      "id": "emp_ozge",
+      "name": "Özge",
+      "order": 9
     }
   ],
   "weeklyShifts": {
@@ -3000,8 +3012,45 @@
         "start": "11:00",
         "end": "21:00"
       }
+    },
+    "emp_ozge": {
+      "pazartesi": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      },
+      "sali": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      },
+      "carsamba": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      },
+      "persembe": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      },
+      "cuma": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      },
+      "cumartesi": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      },
+      "pazar": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      }
     }
   },
   "deletedShiftEmployeeIds": [],
-  "shiftTimestamp": 1793877129478
+  "shiftTimestamp": 1793877135627
 }
