@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-05T18:48:39.248Z",
-  "timestamp": 1793904518691,
+  "exportedAt": "2026-11-05T18:48:42.329Z",
+  "timestamp": 1793904521727,
   "deviceId": "dev_5yxsqly_mvle6qpu",
   "moduleTimestamps": {
     "cnt_hergun": 1793880039618,
@@ -2723,9 +2723,9 @@
       "position": "mutfak"
     },
     {
-      "id": "emp_ali",
-      "name": "Ali",
-      "order": 12,
+      "id": "emp_alican",
+      "name": "Alican",
+      "order": 10,
       "position": "servis"
     },
     {
@@ -2735,9 +2735,9 @@
       "position": "servis"
     },
     {
-      "id": "emp_alican",
-      "name": "Alican",
-      "order": 10,
+      "id": "emp_ali",
+      "name": "Ali",
+      "order": 12,
       "position": "servis"
     }
   ],
