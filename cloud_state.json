@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-05T11:12:05.291Z",
-  "timestamp": 1793877123447,
+  "exportedAt": "2026-11-05T11:12:09.632Z",
+  "timestamp": 1793877129480,
   "deviceId": "dev_5yxsqly_mvle6qpu",
   "moduleTimestamps": {
     "cnt_hergun": 1793800275281,
@@ -136,7 +136,7 @@
     "cat": 1793816784580,
     "rst_sali": 1793811787129,
     "cnt_sali": 1793811787129,
-    "shf": 1793877123446,
+    "shf": 1793877129478,
     "shf_emp_osman_pazartesi": 1793819754184,
     "shf_emp_selim_pazartesi": 1793819771751,
     "shf_emp_baha_pazartesi": 1793820260701,
@@ -146,7 +146,14 @@
     "shf_emp_alican_persembe": 1793877123446,
     "shf_emp_alican_cuma": 1793877123446,
     "shf_emp_alican_cumartesi": 1793877123446,
-    "shf_emp_alican_pazar": 1793877123446
+    "shf_emp_alican_pazar": 1793877123446,
+    "shf_emp_ali_pazartesi": 1793877129478,
+    "shf_emp_ali_sali": 1793877129478,
+    "shf_emp_ali_carsamba": 1793877129478,
+    "shf_emp_ali_persembe": 1793877129478,
+    "shf_emp_ali_cuma": 1793877129478,
+    "shf_emp_ali_cumartesi": 1793877129478,
+    "shf_emp_ali_pazar": 1793877129478
   },
   "suppliers": [
     {
@@ -2690,6 +2697,11 @@
       "id": "emp_alican",
       "name": "Alican",
       "order": 7
+    },
+    {
+      "id": "emp_ali",
+      "name": "Ali",
+      "order": 8
     }
   ],
   "weeklyShifts": {
@@ -2951,8 +2963,45 @@
         "start": "11:00",
         "end": "21:00"
       }
+    },
+    "emp_ali": {
+      "pazartesi": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      },
+      "sali": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      },
+      "carsamba": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      },
+      "persembe": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      },
+      "cuma": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      },
+      "cumartesi": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      },
+      "pazar": {
+        "isOff": false,
+        "start": "11:00",
+        "end": "21:00"
+      }
     }
   },
   "deletedShiftEmployeeIds": [],
-  "shiftTimestamp": 1793877123446
+  "shiftTimestamp": 1793877129478
 }
