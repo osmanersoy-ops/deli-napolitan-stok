@@ -4107,6 +4107,19 @@
     .shift-cell-time-pazar     { background: #F9A8D4; color: #1E293B; font-weight: 700; }
     .shift-cell-dur-pazar      { background: #EC4899; color: #FFFFFF; font-weight: 800; }
 
+    /* MUTFAK - SERVİS ARASI İNCE SİYAH AYIRICI SATIR */
+    .shift-pdf-table tr.shift-group-divider-row td,
+    .shift-pdf-table tr.shift-group-divider-row td.shift-td-emp {
+      background: #0F172A !important;
+      height: 7px !important;
+      min-height: 7px !important;
+      max-height: 7px !important;
+      padding: 0 !important;
+      border-color: #0F172A !important;
+      font-size: 0 !important;
+      line-height: 0 !important;
+    }
+
     /* DİNAMİK EDİTLENEBİLİR TABLO HÜCRE SEÇİCİLERİ */
     .shift-editable-table th,
     .shift-editable-table td {
@@ -7391,17 +7404,24 @@
           <span>➕</span> Yeni Çalışan Ekle
         </h2>
         <form onsubmit="handleAddShiftEmployee(event)" style="display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end;">
-          <div style="flex: 2; min-width: 180px;">
+          <div style="flex: 2; min-width: 170px;">
             <label style="display: block; font-size: 0.78rem; font-weight: 800; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase;">Çalışan Adı *</label>
             <input type="text" id="newShiftEmpNameInput" class="form-input" placeholder="Örn: Ali, Ayşe..." required style="width: 100%; height: 42px;">
           </div>
-          <div style="flex: 1; min-width: 125px;">
-            <label style="display: block; font-size: 0.78rem; font-weight: 800; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase;">Varsayılan Başlangıç</label>
-            <select id="newShiftEmpStartSelect" class="shift-time-select"></select>
+          <div style="flex: 1; min-width: 135px;">
+            <label style="display: block; font-size: 0.78rem; font-weight: 800; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase;">Pozisyon *</label>
+            <select id="newShiftEmpPositionSelect" class="shift-time-select" style="height: 42px;">
+              <option value="mutfak">👨‍🍳 Mutfak</option>
+              <option value="servis">🍽️ Servis</option>
+            </select>
           </div>
-          <div style="flex: 1; min-width: 125px;">
+          <div style="flex: 1; min-width: 120px;">
+            <label style="display: block; font-size: 0.78rem; font-weight: 800; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase;">Varsayılan Başlangıç</label>
+            <select id="newShiftEmpStartSelect" class="shift-time-select" style="height: 42px;"></select>
+          </div>
+          <div style="flex: 1; min-width: 120px;">
             <label style="display: block; font-size: 0.78rem; font-weight: 800; color: var(--text-muted); margin-bottom: 4px; text-transform: uppercase;">Varsayılan Bitiş</label>
-            <select id="newShiftEmpEndSelect" class="shift-time-select"></select>
+            <select id="newShiftEmpEndSelect" class="shift-time-select" style="height: 42px;"></select>
           </div>
           <button type="submit" style="background: var(--primary); color: #FFFFFF; border: none; padding: 11px 20px; border-radius: 10px; font-weight: 800; font-size: 0.9rem; cursor: pointer; white-space: nowrap; height: 42px;">
             + Çalışan Ekle
@@ -7409,14 +7429,14 @@
         </form>
       </section>
 
-      <!-- KART 2: KAYITLI ÇALIŞANLAR LİSTESİ (YUKARI / AŞAĞI / SİL) -->
+      <!-- KART 2: KAYITLI ÇALIŞANLAR LİSTESİ (POZİSYON / YUKARI / AŞAĞI / SİL) -->
       <section class="staff-dish-page-card">
         <div style="margin-bottom: 14px;">
           <h2 style="font-size: 1.05rem; font-weight: 800; color: var(--text-dark); margin: 0;">
             👥 Kayıtlı Çalışanlar (<span id="shiftEmployeesCountText">6</span>)
           </h2>
           <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 3px;">
-            Çalışanların tablodaki sırasını yukarı/aşağı butonlarıyla değiştirebilir veya çalışan silebilirsiniz.
+            Mevcut çalışanların pozisyonunu (<strong>Mutfak</strong> / <strong>Servis</strong>) seçebilir, grup içindeki sırasını yukarı/aşağı taşıyabilir veya çalışan silebilirsiniz. Vardiya tablosunda üstte <strong>Mutfak</strong>, ince siyah çizginin altında <strong>Servis</strong> personeli listelenir.
           </div>
         </div>
 
@@ -8836,12 +8856,12 @@
        SHIFT (HAFTALIK VARDİYA PLANI) STATE & DEFAULTS (PDF BAZLI)
        ========================================================= */
     const DEFAULT_SHIFT_EMPLOYEES = [
-      { id: 'emp_baha',   name: 'Baha',   order: 1 },
-      { id: 'emp_mehmet', name: 'Mehmet', order: 2 },
-      { id: 'emp_osman',  name: 'Osman',  order: 3 },
-      { id: 'emp_selim',  name: 'Selim',  order: 4 },
-      { id: 'emp_kemal',  name: 'Kemal',  order: 5 },
-      { id: 'emp_begum',  name: 'Begüm',  order: 6 }
+      { id: 'emp_baha',   name: 'Baha',   order: 1, position: 'mutfak' },
+      { id: 'emp_mehmet', name: 'Mehmet', order: 2, position: 'mutfak' },
+      { id: 'emp_osman',  name: 'Osman',  order: 3, position: 'mutfak' },
+      { id: 'emp_selim',  name: 'Selim',  order: 4, position: 'mutfak' },
+      { id: 'emp_kemal',  name: 'Kemal',  order: 5, position: 'mutfak' },
+      { id: 'emp_begum',  name: 'Begüm',  order: 6, position: 'mutfak' }
     ];
 
     const DEFAULT_WEEKLY_SHIFTS = {
@@ -11475,7 +11495,7 @@
           rt: data.recipeTags || {},
           crec: (data.customRecipes || []).map(r => [r.id, r.name, r.tag, r.desc, r.instructions || '', r.updatedAt || 0, JSON.stringify(r.baseIngredient || {}), JSON.stringify(r.ingredients || [])]),
           delCrec: (data.deletedCustomRecipeIds || []).slice().sort(),
-          she: (data.shiftEmployees || []).map(e => [e.id, e.name, e.order || 0]),
+          she: (data.shiftEmployees || []).map(e => [e.id, e.name, e.order || 0, e.position || 'mutfak']),
           wsh: data.weeklyShifts || {},
           delShe: (data.deletedShiftEmployeeIds || []).slice().sort(),
           sht: data.shiftTimestamp || 0
@@ -11740,7 +11760,7 @@
       }
 
       if (Array.isArray(data.shiftEmployees) && data.shiftEmployees.length > 0) {
-        min.she = data.shiftEmployees.map(e => [e.id || '', e.name || '', e.order || 0]);
+        min.she = data.shiftEmployees.map(e => [e.id || '', e.name || '', e.order || 0, e.position === 'servis' ? 'servis' : 'mutfak']);
       }
       if (data.weeklyShifts && typeof data.weeklyShifts === 'object' && Object.keys(data.weeklyShifts).length > 0) {
         min.wsh = data.weeklyShifts;
@@ -11800,7 +11820,8 @@
             full.shiftEmployees.push({
               id: arr[0] || '',
               name: arr[1] || '',
-              order: Number(arr[2]) || (idx + 1)
+              order: Number(arr[2]) || (idx + 1),
+              position: arr[3] === 'servis' ? 'servis' : 'mutfak'
             });
           }
         });
@@ -12704,10 +12725,11 @@
         data.shiftEmployees.forEach(e => {
           if (!e || !e.id || deletedShiftEmployeeIds.includes(e.id)) return;
           if (!empMap[e.id]) {
-            empMap[e.id] = { ...e };
+            empMap[e.id] = { ...e, position: e.position === 'servis' ? 'servis' : 'mutfak' };
           } else if (isShfRemoteNewer) {
             if (e.name) empMap[e.id].name = e.name;
             if (e.order !== undefined) empMap[e.id].order = e.order;
+            if (e.position) empMap[e.id].position = e.position === 'servis' ? 'servis' : 'mutfak';
           }
         });
         shiftEmployees = Object.values(empMap).sort((a, b) => (a.order || 999) - (b.order || 999));
@@ -17522,7 +17544,7 @@
       const empMap = {};
       DEFAULT_SHIFT_EMPLOYEES.forEach(e => {
         if (!deletedShiftEmployeeIds.includes(e.id)) {
-          empMap[e.id] = { ...e };
+          empMap[e.id] = { ...e, position: e.position === 'servis' ? 'servis' : 'mutfak' };
         }
       });
       if (savedEmps) {
@@ -17531,13 +17553,23 @@
           if (Array.isArray(parsedEmps)) {
             parsedEmps.forEach(e => {
               if (e && e.id && !deletedShiftEmployeeIds.includes(e.id)) {
-                empMap[e.id] = { ...(empMap[e.id] || {}), ...e };
+                const prev = empMap[e.id] || {};
+                empMap[e.id] = {
+                  ...prev,
+                  ...e,
+                  position: (e.position || prev.position) === 'servis' ? 'servis' : 'mutfak'
+                };
               }
             });
           }
         } catch (err) {}
       }
-      shiftEmployees = Object.values(empMap).sort((a, b) => (a.order || 999) - (b.order || 999));
+      shiftEmployees = Object.values(empMap).sort((a, b) => {
+        const posA = a.position === 'servis' ? 1 : 0;
+        const posB = b.position === 'servis' ? 1 : 0;
+        if (posA !== posB) return posA - posB;
+        return (a.order || 999) - (b.order || 999);
+      });
       localStorage.setItem('delinapolitan_shift_employees', JSON.stringify(shiftEmployees));
 
       localShiftModified = parseInt(localStorage.getItem('delinapolitan_shift_last_modified') || '0', 10);
@@ -17579,12 +17611,29 @@
       localStorage.setItem('delinapolitan_weekly_shifts', JSON.stringify(weeklyShifts));
     }
 
+    function normalizeShiftPosition(pos) {
+      return pos === 'servis' ? 'servis' : 'mutfak';
+    }
+
     function getActiveShiftEmployees() {
       if (!Array.isArray(shiftEmployees)) return [];
       return shiftEmployees
         .filter(e => e && e.id && !(deletedShiftEmployeeIds || []).includes(e.id))
-        .slice()
-        .sort((a, b) => (a.order || 999) - (b.order || 999));
+        .map(e => ({ ...e, position: normalizeShiftPosition(e.position) }))
+        .sort((a, b) => {
+          const posA = a.position === 'servis' ? 1 : 0;
+          const posB = b.position === 'servis' ? 1 : 0;
+          if (posA !== posB) return posA - posB;
+          return (a.order || 999) - (b.order || 999);
+        });
+    }
+
+    function getGroupedShiftEmployees() {
+      const all = getActiveShiftEmployees();
+      return {
+        mutfak: all.filter(e => e.position !== 'servis'),
+        servis: all.filter(e => e.position === 'servis')
+      };
     }
 
     function getShiftCellData(empId, dayId) {
@@ -17706,8 +17755,41 @@
       }
     }
 
+    function buildShiftReadOnlyRowHtml(emp, isExport = false) {
+      const totalH = getEmployeeWeeklyTotalHours(emp.id);
+      let rowHtml = `
+        <tr>
+          <td class="shift-td-emp" ${isExport ? 'style="position:static; box-shadow:none;"' : ''}>${escapeHtml(emp.name)}</td>
+          <td class="shift-td-total">${formatShiftHoursTR(totalH)}</td>
+      `;
+
+      STAFF_MEAL_DAYS.forEach(day => {
+        const cell = getShiftCellData(emp.id, day.id);
+        const dur = calculateShiftDurationHours(cell.start, cell.end, cell.isOff);
+        const durText = formatShiftHoursTR(dur);
+
+        if (cell.isOff) {
+          rowHtml += `
+            <td class="shift-cell-off">İZİN</td>
+            <td class="shift-cell-off">İZİN</td>
+            <td class="shift-cell-off">0,0 sa</td>
+          `;
+        } else {
+          rowHtml += `
+            <td class="shift-cell-time-${day.id}">${escapeHtml(cell.start)}</td>
+            <td class="shift-cell-time-${day.id}">${escapeHtml(cell.end)}</td>
+            <td class="shift-cell-dur-${day.id}">${durText}</td>
+          `;
+        }
+      });
+
+      rowHtml += `</tr>`;
+      return rowHtml;
+    }
+
     function buildShiftPdfTableHtml(isExport = false) {
       const emps = getActiveShiftEmployees();
+      const { mutfak, servis } = getGroupedShiftEmployees();
       let html = `<table class="shift-pdf-table">`;
 
       // Üst Siyah Başlık: Haftalık Vardiya Planı
@@ -17738,35 +17820,22 @@
       if (emps.length === 0) {
         html += `<tr><td colspan="23" style="padding: 20px; color: #64748B;">Henüz çalışan eklenmedi. "Shift Hazırla / Düzenle" butonundan çalışan ekleyebilirsiniz.</td></tr>`;
       } else {
-        emps.forEach(emp => {
-          const totalH = getEmployeeWeeklyTotalHours(emp.id);
-          html += `
-            <tr>
-              <td class="shift-td-emp" ${isExport ? 'style="position:static; box-shadow:none;"' : ''}>${escapeHtml(emp.name)}</td>
-              <td class="shift-td-total">${formatShiftHoursTR(totalH)}</td>
-          `;
+        // 1. Üst Grup: Mutfak Personeli
+        mutfak.forEach(emp => {
+          html += buildShiftReadOnlyRowHtml(emp, isExport);
+        });
 
-          STAFF_MEAL_DAYS.forEach(day => {
-            const cell = getShiftCellData(emp.id, day.id);
-            const dur = calculateShiftDurationHours(cell.start, cell.end, cell.isOff);
-            const durText = formatShiftHoursTR(dur);
+        // 2. Arada İnce Siyah Ayırıcı Satır
+        html += `
+          <tr class="shift-group-divider-row">
+            <td class="shift-td-emp" ${isExport ? 'style="position:static; box-shadow:none;"' : ''}></td>
+            <td colspan="22"></td>
+          </tr>
+        `;
 
-            if (cell.isOff) {
-              html += `
-                <td class="shift-cell-off">İZİN</td>
-                <td class="shift-cell-off">İZİN</td>
-                <td class="shift-cell-off">0,0 sa</td>
-              `;
-            } else {
-              html += `
-                <td class="shift-cell-time-${day.id}">${escapeHtml(cell.start)}</td>
-                <td class="shift-cell-time-${day.id}">${escapeHtml(cell.end)}</td>
-                <td class="shift-cell-dur-${day.id}">${durText}</td>
-              `;
-            }
-          });
-
-          html += `</tr>`;
+        // 3. Alt Grup: Servis Personeli
+        servis.forEach(emp => {
+          html += buildShiftReadOnlyRowHtml(emp, isExport);
         });
       }
 
@@ -17833,6 +17902,9 @@
         let html = '';
         emps.forEach(emp => {
           const stats = getEmployeeWeeklyStats(emp.id);
+          const posBadge = emp.position === 'servis'
+            ? `<span style="font-size:0.7rem; background:#EFF6FF; color:#1D4ED8; padding:2px 8px; border-radius:99px; font-weight:800;">Servis</span>`
+            : `<span style="font-size:0.7rem; background:#FEF3C7; color:#92400E; padding:2px 8px; border-radius:99px; font-weight:800;">Mutfak</span>`;
           let rowsHtml = '';
           STAFF_MEAL_DAYS.forEach(day => {
             const cell = getShiftCellData(emp.id, day.id);
@@ -17855,8 +17927,9 @@
           html += `
             <div class="staff-day-card">
               <div class="staff-card-header">
-                <div class="staff-card-day-name">
+                <div class="staff-card-day-name" style="display:flex; align-items:center; gap:6px;">
                   <span>👤 ${escapeHtml(emp.name)}</span>
+                  ${posBadge}
                 </div>
                 <span style="background:#DCFCE7; color:#065F46; font-weight:800; font-size:0.82rem; padding:4px 10px; border-radius:999px;">
                   Toplam: ${formatShiftHoursTR(stats.totalHours)}
@@ -18019,9 +18092,64 @@
       }
     }
 
+    function buildShiftEmployeeManageRowHtml(emp, idx, groupLength) {
+      const stats = getEmployeeWeeklyStats(emp.id);
+      const pos = normalizeShiftPosition(emp.position);
+      return `
+        <div class="staff-dish-row-item" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 12px; background: #FFFFFF;">
+          <div style="display: flex; align-items: center; gap: 10px; flex: 1; min-width: 220px; flex-wrap: wrap;">
+            <span style="width: 28px; height: 28px; border-radius: 50%; background: #E2E8F0; color: #334155; font-weight: 800; font-size: 0.82rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              ${idx + 1}
+            </span>
+            <input
+              type="text"
+              value="${escapeHtml(emp.name)}"
+              onchange="handleRenameShiftEmployee('${escapeHtml(emp.id)}', this.value)"
+              style="height: 38px; padding: 0 12px; border: 1.5px solid #CBD5E1; border-radius: 8px; font-weight: 800; font-size: 0.94rem; color: var(--text-dark); max-width: 175px;"
+              title="Çalışan adını düzenle"
+            >
+            <select
+              onchange="handleChangeShiftEmployeePosition('${escapeHtml(emp.id)}', this.value)"
+              style="height: 38px; padding: 0 10px; border: 1.5px solid ${pos === 'servis' ? '#93C5FD' : '#FCD34D'}; border-radius: 8px; background: ${pos === 'servis' ? '#EFF6FF' : '#FFFBEB'}; color: ${pos === 'servis' ? '#1D4ED8' : '#92400E'}; font-weight: 800; font-size: 0.86rem; cursor: pointer;"
+              title="Çalışan pozisyonu (Mutfak / Servis)"
+            >
+              <option value="mutfak" ${pos === 'mutfak' ? 'selected' : ''}>👨‍🍳 Mutfak</option>
+              <option value="servis" ${pos === 'servis' ? 'selected' : ''}>🍽️ Servis</option>
+            </select>
+            <span style="background: #DCFCE7; color: #166534; font-weight: 800; font-size: 0.78rem; padding: 4px 10px; border-radius: 999px;">
+              ${formatShiftHoursTR(stats.totalHours)} (${stats.workDays} gün çalışma · ${stats.offDays} gün izin)
+            </span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <button
+              type="button"
+              onclick="handleMoveShiftEmployee('${escapeHtml(emp.id)}', -1)"
+              ${idx === 0 ? 'disabled' : ''}
+              style="border: 1.5px solid #CBD5E1; background: ${idx === 0 ? '#F1F5F9' : '#FFFFFF'}; color: ${idx === 0 ? '#94A3B8' : '#0F172A'}; padding: 7px 11px; border-radius: 8px; cursor: ${idx === 0 ? 'default' : 'pointer'}; font-weight: 800; font-size: 0.86rem;"
+              title="Grup İçinde Yukarı Taşı"
+            >↑</button>
+            <button
+              type="button"
+              onclick="handleMoveShiftEmployee('${escapeHtml(emp.id)}', 1)"
+              ${idx === groupLength - 1 ? 'disabled' : ''}
+              style="border: 1.5px solid #CBD5E1; background: ${idx === groupLength - 1 ? '#F1F5F9' : '#FFFFFF'}; color: ${idx === groupLength - 1 ? '#94A3B8' : '#0F172A'}; padding: 7px 11px; border-radius: 8px; cursor: ${idx === groupLength - 1 ? 'default' : 'pointer'}; font-weight: 800; font-size: 0.86rem;"
+              title="Grup İçinde Aşağı Taşı"
+            >↓</button>
+            <button
+              type="button"
+              onclick="handleDeleteShiftEmployee('${escapeHtml(emp.id)}')"
+              style="border: 1.5px solid #FCA5A5; background: #FEE2E2; color: #DC2626; padding: 7px 12px; border-radius: 8px; cursor: pointer; font-weight: 800; font-size: 0.82rem;"
+              title="Çalışanı Sil"
+            >🗑️ Sil</button>
+          </div>
+        </div>
+      `;
+    }
+
     function renderShiftEmployeesManageView() {
       populateNewShiftEmployeeTimeSelects();
       const emps = getActiveShiftEmployees();
+      const { mutfak, servis } = getGroupedShiftEmployees();
 
       const countEl = document.getElementById('shiftEmployeesCountText');
       if (countEl) countEl.textContent = String(emps.length);
@@ -18034,54 +18162,86 @@
         return;
       }
 
-      listContainer.innerHTML = emps.map((emp, idx) => {
-        const stats = getEmployeeWeeklyStats(emp.id);
-        return `
-          <div class="staff-dish-row-item" style="display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 12px; background: #FFFFFF;">
-            <div style="display: flex; align-items: center; gap: 10px; flex: 1; min-width: 200px; flex-wrap: wrap;">
-              <span style="width: 28px; height: 28px; border-radius: 50%; background: #E2E8F0; color: #334155; font-weight: 800; font-size: 0.82rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                ${idx + 1}
-              </span>
-              <input
-                type="text"
-                value="${escapeHtml(emp.name)}"
-                onchange="handleRenameShiftEmployee('${escapeHtml(emp.id)}', this.value)"
-                style="height: 38px; padding: 0 12px; border: 1.5px solid #CBD5E1; border-radius: 8px; font-weight: 800; font-size: 0.94rem; color: var(--text-dark); max-width: 190px;"
-                title="Çalışan adını düzenle"
-              >
-              <span style="background: #DCFCE7; color: #166534; font-weight: 800; font-size: 0.78rem; padding: 4px 10px; border-radius: 999px;">
-                ${formatShiftHoursTR(stats.totalHours)} (${stats.workDays} gün çalışma · ${stats.offDays} gün izin)
-              </span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 6px;">
-              <button
-                type="button"
-                onclick="handleMoveShiftEmployee('${escapeHtml(emp.id)}', -1)"
-                ${idx === 0 ? 'disabled' : ''}
-                style="border: 1.5px solid #CBD5E1; background: ${idx === 0 ? '#F1F5F9' : '#FFFFFF'}; color: ${idx === 0 ? '#94A3B8' : '#0F172A'}; padding: 7px 11px; border-radius: 8px; cursor: ${idx === 0 ? 'default' : 'pointer'}; font-weight: 800; font-size: 0.86rem;"
-                title="Yukarı Taşı"
-              >↑</button>
-              <button
-                type="button"
-                onclick="handleMoveShiftEmployee('${escapeHtml(emp.id)}', 1)"
-                ${idx === emps.length - 1 ? 'disabled' : ''}
-                style="border: 1.5px solid #CBD5E1; background: ${idx === emps.length - 1 ? '#F1F5F9' : '#FFFFFF'}; color: ${idx === emps.length - 1 ? '#94A3B8' : '#0F172A'}; padding: 7px 11px; border-radius: 8px; cursor: ${idx === emps.length - 1 ? 'default' : 'pointer'}; font-weight: 800; font-size: 0.86rem;"
-                title="Aşağı Taşı"
-              >↓</button>
-              <button
-                type="button"
-                onclick="handleDeleteShiftEmployee('${escapeHtml(emp.id)}')"
-                style="border: 1.5px solid #FCA5A5; background: #FEE2E2; color: #DC2626; padding: 7px 12px; border-radius: 8px; cursor: pointer; font-weight: 800; font-size: 0.82rem;"
-                title="Çalışanı Sil"
-              >🗑️ Sil</button>
-            </div>
-          </div>
-        `;
-      }).join('');
+      let html = `
+        <div style="font-size: 0.86rem; font-weight: 900; color: #92400E; background: #FFFBEB; border: 1.5px solid #FDE68A; padding: 8px 12px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between;">
+          <span>👨‍🍳 Mutfak Personeli (${mutfak.length})</span>
+          <span style="font-size: 0.74rem; font-weight: 700;">Tablonun üst bölümünde listelenir</span>
+        </div>
+      `;
+      if (mutfak.length === 0) {
+        html += `<div style="padding: 12px; text-align: center; color: var(--text-muted); font-size: 0.82rem; border: 1px dashed #CBD5E1; border-radius: 10px;">Mutfak grubunda çalışan yok.</div>`;
+      } else {
+        html += mutfak.map((emp, idx) => buildShiftEmployeeManageRowHtml(emp, idx, mutfak.length)).join('');
+      }
+
+      html += `<div style="height: 6px; background: #0F172A; border-radius: 99px; margin: 8px 0;"></div>`;
+
+      html += `
+        <div style="font-size: 0.86rem; font-weight: 900; color: #1D4ED8; background: #EFF6FF; border: 1.5px solid #BFDBFE; padding: 8px 12px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between;">
+          <span>🍽️ Servis Personeli (${servis.length})</span>
+          <span style="font-size: 0.74rem; font-weight: 700;">Siyah çizginin altında listelenir</span>
+        </div>
+      `;
+      if (servis.length === 0) {
+        html += `<div style="padding: 12px; text-align: center; color: var(--text-muted); font-size: 0.82rem; border: 1px dashed #CBD5E1; border-radius: 10px;">Servis grubunda çalışan yok. Yukarıdan yeni çalışan ekleyebilir veya mevcut çalışanın pozisyonunu "Servis" yapabilirsiniz.</div>`;
+      } else {
+        html += servis.map((emp, idx) => buildShiftEmployeeManageRowHtml(emp, idx, servis.length)).join('');
+      }
+
+      listContainer.innerHTML = html;
+    }
+
+    function buildShiftEditableRowHtml(emp) {
+      const totalH = getEmployeeWeeklyTotalHours(emp.id);
+      let rowHtml = `
+        <tr>
+          <td class="shift-td-emp">${escapeHtml(emp.name)}</td>
+          <td class="shift-td-total" id="shiftEditTotalCell-${escapeHtml(emp.id)}">${formatShiftHoursTR(totalH)}</td>
+      `;
+
+      STAFF_MEAL_DAYS.forEach(day => {
+        const cell = getShiftCellData(emp.id, day.id);
+        const dur = calculateShiftDurationHours(cell.start, cell.end, cell.isOff);
+        const durText = formatShiftHoursTR(dur);
+
+        if (cell.isOff) {
+          rowHtml += `
+            <td class="shift-cell-off">
+              <select class="shift-inline-select" onchange="handleTableShiftSelectChange('${escapeHtml(emp.id)}', '${day.id}', 'start', this.value)" title="${escapeHtml(emp.name)} - ${escapeHtml(day.name)} Başlangıç / İzin">
+                ${generateShiftInlineSelectOptionsHtml(cell.start, true)}
+              </select>
+            </td>
+            <td class="shift-cell-off">
+              <select class="shift-inline-select" onchange="handleTableShiftSelectChange('${escapeHtml(emp.id)}', '${day.id}', 'end', this.value)" title="${escapeHtml(emp.name)} - ${escapeHtml(day.name)} Bitiş / İzin">
+                ${generateShiftInlineSelectOptionsHtml(cell.end, true)}
+              </select>
+            </td>
+            <td class="shift-cell-off" onclick="toggleTableShiftOff('${escapeHtml(emp.id)}', '${day.id}')" style="cursor:pointer;" title="Çalışıyor olarak değiştirmek için dokunun">0,0 sa</td>
+          `;
+        } else {
+          rowHtml += `
+            <td class="shift-cell-time-${day.id}">
+              <select class="shift-inline-select" onchange="handleTableShiftSelectChange('${escapeHtml(emp.id)}', '${day.id}', 'start', this.value)" title="${escapeHtml(emp.name)} - ${escapeHtml(day.name)} Başlangıç">
+                ${generateShiftInlineSelectOptionsHtml(cell.start, false)}
+              </select>
+            </td>
+            <td class="shift-cell-time-${day.id}">
+              <select class="shift-inline-select" onchange="handleTableShiftSelectChange('${escapeHtml(emp.id)}', '${day.id}', 'end', this.value)" title="${escapeHtml(emp.name)} - ${escapeHtml(day.name)} Bitiş">
+                ${generateShiftInlineSelectOptionsHtml(cell.end, false)}
+              </select>
+            </td>
+            <td class="shift-cell-dur-${day.id}" onclick="toggleTableShiftOff('${escapeHtml(emp.id)}', '${day.id}')" style="cursor:pointer;" title="İZİN yapmak için dokunun">${durText}</td>
+          `;
+        }
+      });
+
+      rowHtml += `</tr>`;
+      return rowHtml;
     }
 
     function buildShiftEditableTableHtml() {
       const emps = getActiveShiftEmployees();
+      const { mutfak, servis } = getGroupedShiftEmployees();
       let html = `<table class="shift-pdf-table shift-editable-table">`;
 
       html += `
@@ -18111,51 +18271,22 @@
       if (emps.length === 0) {
         html += `<tr><td colspan="23" style="padding: 24px; color: #64748B;">Henüz çalışan bulunmuyor. Yukarıdaki "Yeni Çalışan Ekle / Yönet" butonundan çalışan ekleyebilirsiniz.</td></tr>`;
       } else {
-        emps.forEach(emp => {
-          const totalH = getEmployeeWeeklyTotalHours(emp.id);
-          html += `
-            <tr>
-              <td class="shift-td-emp">${escapeHtml(emp.name)}</td>
-              <td class="shift-td-total" id="shiftEditTotalCell-${escapeHtml(emp.id)}">${formatShiftHoursTR(totalH)}</td>
-          `;
+        // 1. Üst Grup: Mutfak Personeli
+        mutfak.forEach(emp => {
+          html += buildShiftEditableRowHtml(emp);
+        });
 
-          STAFF_MEAL_DAYS.forEach(day => {
-            const cell = getShiftCellData(emp.id, day.id);
-            const dur = calculateShiftDurationHours(cell.start, cell.end, cell.isOff);
-            const durText = formatShiftHoursTR(dur);
+        // 2. Arada İnce Siyah Ayırıcı Satır
+        html += `
+          <tr class="shift-group-divider-row">
+            <td class="shift-td-emp"></td>
+            <td colspan="22"></td>
+          </tr>
+        `;
 
-            if (cell.isOff) {
-              html += `
-                <td class="shift-cell-off">
-                  <select class="shift-inline-select" onchange="handleTableShiftSelectChange('${escapeHtml(emp.id)}', '${day.id}', 'start', this.value)" title="${escapeHtml(emp.name)} - ${escapeHtml(day.name)} Başlangıç / İzin">
-                    ${generateShiftInlineSelectOptionsHtml(cell.start, true)}
-                  </select>
-                </td>
-                <td class="shift-cell-off">
-                  <select class="shift-inline-select" onchange="handleTableShiftSelectChange('${escapeHtml(emp.id)}', '${day.id}', 'end', this.value)" title="${escapeHtml(emp.name)} - ${escapeHtml(day.name)} Bitiş / İzin">
-                    ${generateShiftInlineSelectOptionsHtml(cell.end, true)}
-                  </select>
-                </td>
-                <td class="shift-cell-off" onclick="toggleTableShiftOff('${escapeHtml(emp.id)}', '${day.id}')" style="cursor:pointer;" title="Çalışıyor olarak değiştirmek için dokunun">0,0 sa</td>
-              `;
-            } else {
-              html += `
-                <td class="shift-cell-time-${day.id}">
-                  <select class="shift-inline-select" onchange="handleTableShiftSelectChange('${escapeHtml(emp.id)}', '${day.id}', 'start', this.value)" title="${escapeHtml(emp.name)} - ${escapeHtml(day.name)} Başlangıç">
-                    ${generateShiftInlineSelectOptionsHtml(cell.start, false)}
-                  </select>
-                </td>
-                <td class="shift-cell-time-${day.id}">
-                  <select class="shift-inline-select" onchange="handleTableShiftSelectChange('${escapeHtml(emp.id)}', '${day.id}', 'end', this.value)" title="${escapeHtml(emp.name)} - ${escapeHtml(day.name)} Bitiş">
-                    ${generateShiftInlineSelectOptionsHtml(cell.end, false)}
-                  </select>
-                </td>
-                <td class="shift-cell-dur-${day.id}" onclick="toggleTableShiftOff('${escapeHtml(emp.id)}', '${day.id}')" style="cursor:pointer;" title="İZİN yapmak için dokunun">${durText}</td>
-              `;
-            }
-          });
-
-          html += `</tr>`;
+        // 3. Alt Grup: Servis Personeli
+        servis.forEach(emp => {
+          html += buildShiftEditableRowHtml(emp);
         });
       }
 
@@ -18228,6 +18359,7 @@
     function handleAddShiftEmployee(e) {
       if (e) e.preventDefault();
       const nameInp = document.getElementById('newShiftEmpNameInput');
+      const posSel = document.getElementById('newShiftEmpPositionSelect');
       const startSel = document.getElementById('newShiftEmpStartSelect');
       const endSel = document.getElementById('newShiftEmpEndSelect');
       const name = nameInp ? nameInp.value.trim() : '';
@@ -18235,6 +18367,7 @@
         alert('Lütfen çalışan adını girin.');
         return;
       }
+      const position = normalizeShiftPosition(posSel ? posSel.value : 'mutfak');
       const start = startSel ? startSel.value : '11:00';
       const end = endSel ? endSel.value : '21:00';
 
@@ -18247,11 +18380,13 @@
       const existingIdx = shiftEmployees.findIndex(x => x.id === idCandidate);
       if (existingIdx !== -1) {
         shiftEmployees[existingIdx].name = name;
+        shiftEmployees[existingIdx].position = position;
         shiftEmployees[existingIdx].order = maxOrder + 1;
       } else {
         shiftEmployees.push({
           id: idCandidate,
           name,
+          position,
           order: maxOrder + 1
         });
       }
@@ -18268,7 +18403,22 @@
       scheduleAutoCloudSync(150);
       renderShiftEmployeesManageView();
       renderShiftEditView();
-      showToast(`✓ "${name}" çalışan listesine ve vardiya tablosuna eklendi.`);
+      showToast(`✓ "${name}" (${position === 'servis' ? 'Servis' : 'Mutfak'}) vardiya tablosuna eklendi.`);
+    }
+
+    function handleChangeShiftEmployeePosition(empId, newPosition) {
+      const pos = normalizeShiftPosition(newPosition);
+      const emp = shiftEmployees.find(e => e.id === empId);
+      if (!emp) return;
+      emp.position = pos;
+      const maxOrder = shiftEmployees.reduce((m, x) => Math.max(m, x.order || 0), 0);
+      emp.order = maxOrder + 1;
+
+      saveShiftStateToStorage(['shf']);
+      scheduleAutoCloudSync(150);
+      renderShiftEmployeesManageView();
+      renderShiftEditView();
+      showToast(`✓ "${emp.name}" pozisyonu ${pos === 'servis' ? 'Servis' : 'Mutfak'} olarak güncellendi.`);
     }
 
     function handleRenameShiftEmployee(empId, newName) {
@@ -18290,21 +18440,38 @@
     }
 
     function handleMoveShiftEmployee(empId, dir) {
-      const emps = getActiveShiftEmployees();
-      const idx = emps.findIndex(e => e.id === empId);
+      const targetEmp = shiftEmployees.find(e => e.id === empId);
+      if (!targetEmp) return;
+      const pos = normalizeShiftPosition(targetEmp.position);
+      const grouped = getGroupedShiftEmployees();
+      const groupList = pos === 'servis' ? grouped.servis : grouped.mutfak;
+
+      const idx = groupList.findIndex(e => e.id === empId);
       if (idx === -1) return;
       const targetIdx = idx + dir;
-      if (targetIdx < 0 || targetIdx >= emps.length) return;
+      if (targetIdx < 0 || targetIdx >= groupList.length) return;
 
-      const temp = emps[idx];
-      emps[idx] = emps[targetIdx];
-      emps[targetIdx] = temp;
+      const temp = groupList[idx];
+      groupList[idx] = groupList[targetIdx];
+      groupList[targetIdx] = temp;
 
-      emps.forEach((e, i) => {
+      const combined = pos === 'servis'
+        ? [...grouped.mutfak, ...groupList]
+        : [...groupList, ...grouped.servis];
+
+      combined.forEach((e, i) => {
         const ref = shiftEmployees.find(x => x.id === e.id);
-        if (ref) ref.order = i + 1;
+        if (ref) {
+          ref.order = i + 1;
+          ref.position = normalizeShiftPosition(ref.position);
+        }
       });
-      shiftEmployees.sort((a, b) => (a.order || 999) - (b.order || 999));
+      shiftEmployees.sort((a, b) => {
+        const posA = a.position === 'servis' ? 1 : 0;
+        const posB = b.position === 'servis' ? 1 : 0;
+        if (posA !== posB) return posA - posB;
+        return (a.order || 999) - (b.order || 999);
+      });
 
       saveShiftStateToStorage(['shf']);
       scheduleAutoCloudSync(150);
