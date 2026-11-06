@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-06T13:26:10.730Z",
-  "timestamp": 1793971570376,
+  "exportedAt": "2026-11-06T13:26:16.568Z",
+  "timestamp": 1793971575965,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1793971570375,
@@ -1687,11 +1687,11 @@
         "notes": "Donuk ve yıkanmiş 3 demet var"
       },
       "hg_13": {
-        "qty": 1,
+        "qty": "1",
         "notes": "Yarım"
       },
       "hg_14": {
-        "qty": 1.5,
+        "qty": "1.5",
         "notes": ""
       },
       "hg_15": {
