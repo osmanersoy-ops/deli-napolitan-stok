@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-08T13:13:51.249Z",
-  "timestamp": 1794143626720,
+  "exportedAt": "2026-11-08T13:13:57.086Z",
+  "timestamp": 1794143636729,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1793972585142,
@@ -200,7 +200,7 @@
     "shf_emp_ozge_cuma": 1793877135627,
     "shf_emp_ozge_cumartesi": 1793877135627,
     "shf_emp_ozge_pazar": 1793877135627,
-    "cnt_metro": 1794143626719
+    "cnt_metro": 1794143636728
   },
   "suppliers": [
     {
@@ -1972,7 +1972,11 @@
         "notes": "Büyük paket 400 gram"
       },
       "sl_17": {
-        "qty": 0,
+        "qty": "0",
+        "notes": ""
+      },
+      "sl_19": {
+        "qty": 0.25,
         "notes": ""
       }
     }
