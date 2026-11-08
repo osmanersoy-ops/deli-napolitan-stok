@@ -1,12 +1,12 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-08T17:41:29.024Z",
-  "timestamp": 1794159688668,
+  "exportedAt": "2026-11-08T17:41:43.067Z",
+  "timestamp": 1794159702713,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1794146583581,
-    "cnt_pazar": 1794159688667,
+    "cnt_pazar": 1794159702713,
     "rst_hergun": 1794144128904,
     "rst_pazar": 1793557180407,
     "wsm_pazartesi": 1792967245661,
@@ -1826,7 +1826,7 @@
         "notes": ""
       },
       "pz_8": {
-        "qty": 0,
+        "qty": "0",
         "notes": "1 çeyrek"
       },
       "pz_10": {
@@ -1842,7 +1842,7 @@
         "notes": ""
       },
       "pz_6": {
-        "qty": 1,
+        "qty": "1",
         "notes": ""
       },
       "cust_hopla_sivi_santi_bitkisel_krema": {
@@ -1882,7 +1882,7 @@
         "notes": ""
       },
       "cust_strec_film": {
-        "qty": "4",
+        "qty": 1,
         "notes": ""
       },
       "cust_buzdolabi_poseti": {
