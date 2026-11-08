@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-08T13:25:30.858Z",
-  "timestamp": 1794144330503,
+  "exportedAt": "2026-11-08T13:25:33.285Z",
+  "timestamp": 1794144332930,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1794144312996,
@@ -200,7 +200,7 @@
     "shf_emp_ozge_cuma": 1793877135627,
     "shf_emp_ozge_cumartesi": 1793877135627,
     "shf_emp_ozge_pazar": 1793877135627,
-    "cnt_metro": 1794144330503
+    "cnt_metro": 1794144332929
   },
   "suppliers": [
     {
@@ -1949,7 +1949,7 @@
       },
       "cust_taze_kekik": {
         "qty": 2,
-        "notes": "Dil sote"
+        "notes": "Dil sotelenecek"
       }
     }
   },
