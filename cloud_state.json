@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-08T23:17:53.775Z",
-  "timestamp": 1794179873175,
+  "exportedAt": "2026-11-08T23:18:29.586Z",
+  "timestamp": 1794179909583,
   "deviceId": "dev_99uzb4t_mvpnpi3a",
   "moduleTimestamps": {
     "cnt_hergun": 1794146583581,
@@ -103,7 +103,7 @@
     "prod_sl_30": 1792968801259,
     "prod_sl_31": 1792970300896,
     "prod_sl_33": 1792970300896,
-    "prod_sl_35": 1792970300896,
+    "prod_sl_35": 1794179909579,
     "prod_pr_8": 1792970300896,
     "prod_pz_1": 1792970300896,
     "prod_pz_3": 1792970300896,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794179864373,
+    "prod": 1794179909579,
     "cat": 1794179864373,
     "rst_sali": 1793811787129,
     "cnt_sali": 1793811787129,
@@ -1238,18 +1238,6 @@
         "sali"
       ]
     },
-    "sl_35": {
-      "category": "Ana Stok",
-      "supplierId": "sup_1791988183271",
-      "supplierIds": [
-        "sup_1791988183271"
-      ],
-      "unit": "Paket",
-      "name": "Sosis",
-      "days": [
-        "sali"
-      ]
-    },
     "pr_8": {
       "category": "Çarşı ve Diğer",
       "supplierId": "sup_1791988183271",
@@ -1628,7 +1616,10 @@
     "cust_baby_karides",
     "baby_karides",
     "cust_sote_baby_karides",
-    "sote_baby_karides"
+    "sote_baby_karides",
+    "sl_35",
+    "sosis",
+    "cust_sosis"
   ],
   "deletedCategories": [
     "baharatlar"
@@ -2061,10 +2052,6 @@
       },
       "cust_cubuk_vanilya": {
         "qty": "1",
-        "notes": ""
-      },
-      "sl_35": {
-        "qty": "0",
         "notes": ""
       },
       "cust_taze_kekik": {
@@ -3215,11 +3202,6 @@
     },
     "sl_29": {
       "qty": "6",
-      "dayId": "metro",
-      "updatedAt": 1794144391783
-    },
-    "sl_35": {
-      "qty": "0",
       "dayId": "metro",
       "updatedAt": 1794144391783
     },
