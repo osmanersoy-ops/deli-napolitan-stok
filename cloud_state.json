@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-08T13:35:01.544Z",
-  "timestamp": 1794144901414,
+  "exportedAt": "2026-11-08T13:35:07.874Z",
+  "timestamp": 1794144907270,
   "deviceId": "dev_9hg13jx_mw7v2jf7",
   "moduleTimestamps": {
     "cnt_hergun": 1794144901414,
@@ -1992,11 +1992,11 @@
         "notes": ""
       },
       "cust_taze_kekik": {
-        "qty": 2,
+        "qty": "2",
         "notes": "Dil sotelenecek"
       },
       "cust_tarhun": {
-        "qty": 1,
+        "qty": "1",
         "notes": "Frenk soğanı ve maydanoz 2 paket var"
       }
     }
@@ -2416,11 +2416,11 @@
         "notes": ""
       },
       "cust_taze_kekik": {
-        "qty": 2,
+        "qty": "2",
         "notes": "Dil sotelenecek"
       },
       "cust_tarhun": {
-        "qty": 1,
+        "qty": "1",
         "notes": "Frenk soğanı ve maydanoz 2 paket var"
       }
     }
@@ -3153,12 +3153,12 @@
       "updatedAt": 1794144391783
     },
     "cust_taze_kekik": {
-      "qty": 2,
+      "qty": "2",
       "dayId": "metro",
       "updatedAt": 1794144391783
     },
     "cust_tarhun": {
-      "qty": 1,
+      "qty": "1",
       "dayId": "metro",
       "updatedAt": 1794144391783
     }
