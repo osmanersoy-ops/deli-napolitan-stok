@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-08T23:16:37.680Z",
-  "timestamp": 1794179797077,
+  "exportedAt": "2026-11-08T23:17:44.544Z",
+  "timestamp": 1794179864391,
   "deviceId": "dev_99uzb4t_mvpnpi3a",
   "moduleTimestamps": {
     "cnt_hergun": 1794146583581,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794179785320,
-    "cat": 1793816784580,
+    "prod": 1794179864373,
+    "cat": 1794179864373,
     "rst_sali": 1793811787129,
     "cnt_sali": 1793811787129,
     "shf_emp_baha_pazartesi": 1793820260701,
@@ -200,7 +200,8 @@
     "shf_emp_ozge_cumartesi": 1793877135627,
     "shf_emp_ozge_pazar": 1793877135627,
     "shf": 1794179562902,
-    "cnt_metro": 1794144391783
+    "cnt_metro": 1794144391783,
+    "prod_cust_i_likli_kemik_stok_suyu": 1794179864373
   },
   "suppliers": [
     {
@@ -659,6 +660,20 @@
         "sup_meyfresh"
       ],
       "supplierId": "sup_meyfresh"
+    },
+    {
+      "id": "cust_i_likli_kemik_stok_suyu",
+      "name": "İlikli Kemik Stok Suyu",
+      "unit": "Litre",
+      "category": "Ana Stok",
+      "days": [
+        "sali"
+      ],
+      "supplierIds": [
+        "sup_1791988183271",
+        "sup_carsi_ve_migros"
+      ],
+      "supplierId": "sup_1791988183271"
     }
   ],
   "productOverrides": {
