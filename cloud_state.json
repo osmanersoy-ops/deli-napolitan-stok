@@ -1,14 +1,15 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-08T23:17:50.472Z",
-  "timestamp": 1794179869870,
-  "deviceId": "dev_uxetyvk_mvtzuqrz",
+  "exportedAt": "2026-11-08T23:17:53.775Z",
+  "timestamp": 1794179873175,
+  "deviceId": "dev_99uzb4t_mvpnpi3a",
   "moduleTimestamps": {
     "cnt_hergun": 1794146583581,
-    "cnt_pazar": 1794159762511,
     "rst_hergun": 1794144128904,
     "rst_pazar": 1793557180407,
+    "cnt_pazar": 1794159762511,
+    "sd": 1792967388152,
     "wsm_pazartesi": 1792967245661,
     "wsm_sali": 1792967395559,
     "wsm_carsamba": 1792967410608,
@@ -17,7 +18,6 @@
     "wsm_cumartesi": 1792967445208,
     "wsm_pazar": 1792967460558,
     "wsm": 1792967462680,
-    "sd": 1792967388152,
     "sup": 1793816759076,
     "prod_cust_kabak": 1792969316562,
     "prod_cust_sili_biber": 1792967808268,
@@ -136,7 +136,6 @@
     "cat": 1794179864373,
     "rst_sali": 1793811787129,
     "cnt_sali": 1793811787129,
-    "cnt_metro": 1794144391783,
     "shf_emp_baha_pazartesi": 1793820260701,
     "shf_emp_baha_sali": 1793904518689,
     "shf_emp_baha_carsamba": 1793904518689,
@@ -201,6 +200,7 @@
     "shf_emp_ozge_cumartesi": 1793877135627,
     "shf_emp_ozge_pazar": 1793877135627,
     "shf": 1794179562902,
+    "cnt_metro": 1794144391783,
     "prod_cust_i_likli_kemik_stok_suyu": 1794179864373
   },
   "suppliers": [
@@ -1779,10 +1779,6 @@
         "qty": "0",
         "notes": ""
       },
-      "cust_sote_baby_karides": {
-        "qty": "0",
-        "notes": ""
-      },
       "cust_sote_jumbo_karides": {
         "qty": "4",
         "notes": ""
@@ -1793,6 +1789,22 @@
       },
       "cust_izgaralanmis_kabak": {
         "qty": "2",
+        "notes": ""
+      }
+    },
+    "sali": {
+      "sl_2": {
+        "qty": "2",
+        "notes": ""
+      }
+    },
+    "persembe": {
+      "pr_1": {
+        "qty": "0",
+        "notes": ""
+      },
+      "pr_13": {
+        "qty": "7",
         "notes": ""
       }
     },
@@ -1891,22 +1903,6 @@
       },
       "cust_sikma_torbasi_krema_torbasi": {
         "qty": "1",
-        "notes": ""
-      }
-    },
-    "sali": {
-      "sl_2": {
-        "qty": "2",
-        "notes": ""
-      }
-    },
-    "persembe": {
-      "pr_1": {
-        "qty": "0",
-        "notes": ""
-      },
-      "pr_13": {
-        "qty": "7",
         "notes": ""
       }
     },
@@ -2722,61 +2718,6 @@
     "metro": 1794144391783
   },
   "lastProductCounts": {
-    "pz_1": {
-      "qty": "2",
-      "dayId": "pazar",
-      "updatedAt": 1794159762511
-    },
-    "pz_3": {
-      "qty": "1",
-      "dayId": "pazar",
-      "updatedAt": 1794159762511
-    },
-    "pz_4": {
-      "qty": "4",
-      "dayId": "pazar",
-      "updatedAt": 1794159762511
-    },
-    "pz_5": {
-      "qty": "2",
-      "dayId": "pazar",
-      "updatedAt": 1794159762511
-    },
-    "pz_6": {
-      "qty": "1",
-      "dayId": "pazar",
-      "updatedAt": 1794159762511
-    },
-    "pz_8": {
-      "qty": "0",
-      "dayId": "pazar",
-      "updatedAt": 1794159762511
-    },
-    "pz_10": {
-      "qty": "0.5",
-      "dayId": "pazar",
-      "updatedAt": 1794159762511
-    },
-    "pz_11": {
-      "qty": "1.5",
-      "dayId": "pazar",
-      "updatedAt": 1794159762511
-    },
-    "pz_12": {
-      "qty": "0.25",
-      "dayId": "pazar",
-      "updatedAt": 1794159762511
-    },
-    "pz_14": {
-      "qty": "6",
-      "dayId": "pazar",
-      "updatedAt": 1794159762511
-    },
-    "pz_16": {
-      "qty": "1",
-      "dayId": "pazar",
-      "updatedAt": 1794159762511
-    },
     "hg_1": {
       "qty": "5",
       "dayId": "hergun",
@@ -2922,6 +2863,16 @@
       "dayId": "hergun",
       "updatedAt": 1794146583581
     },
+    "pz_3": {
+      "qty": "1",
+      "dayId": "pazar",
+      "updatedAt": 1794159762511
+    },
+    "pz_4": {
+      "qty": "4",
+      "dayId": "pazar",
+      "updatedAt": 1794159762511
+    },
     "sl_2": {
       "qty": "1.5",
       "dayId": "metro",
@@ -2941,6 +2892,51 @@
       "qty": 0.25,
       "dayId": "persembe",
       "updatedAt": 1792173530578
+    },
+    "pz_1": {
+      "qty": "2",
+      "dayId": "pazar",
+      "updatedAt": 1794159762511
+    },
+    "pz_5": {
+      "qty": "2",
+      "dayId": "pazar",
+      "updatedAt": 1794159762511
+    },
+    "pz_6": {
+      "qty": "1",
+      "dayId": "pazar",
+      "updatedAt": 1794159762511
+    },
+    "pz_8": {
+      "qty": "0",
+      "dayId": "pazar",
+      "updatedAt": 1794159762511
+    },
+    "pz_10": {
+      "qty": "0.5",
+      "dayId": "pazar",
+      "updatedAt": 1794159762511
+    },
+    "pz_11": {
+      "qty": "1.5",
+      "dayId": "pazar",
+      "updatedAt": 1794159762511
+    },
+    "pz_12": {
+      "qty": "0.25",
+      "dayId": "pazar",
+      "updatedAt": 1794159762511
+    },
+    "pz_14": {
+      "qty": "6",
+      "dayId": "pazar",
+      "updatedAt": 1794159762511
+    },
+    "pz_16": {
+      "qty": "1",
+      "dayId": "pazar",
+      "updatedAt": 1794159762511
     },
     "cust_kabak": {
       "qty": "0",
