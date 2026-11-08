@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-08T23:15:41.171Z",
-  "timestamp": 1794179740568,
+  "exportedAt": "2026-11-08T23:16:25.324Z",
+  "timestamp": 1794179785322,
   "deviceId": "dev_99uzb4t_mvpnpi3a",
   "moduleTimestamps": {
     "cnt_hergun": 1794146583581,
@@ -27,7 +27,7 @@
     "prod_cust_dana_brisket_fume": 1792968037845,
     "prod_cust_dana_dil_fume": 1792968059064,
     "prod_cust_tiramisu": 1792968396282,
-    "prod_cust_sote_baby_karides": 1792968387760,
+    "prod_cust_sote_baby_karides": 1794179785320,
     "prod_cust_sote_jumbo_karides": 1792968378187,
     "prod_cust_pismis_dil_fume": 1792968261195,
     "prod_cust_izgaralanmis_kabak": 1792968441598,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1793816784580,
+    "prod": 1794179785320,
     "cat": 1793816784580,
     "rst_sali": 1793811787129,
     "cnt_sali": 1793811787129,
@@ -368,17 +368,6 @@
     {
       "id": "cust_tiramisu",
       "name": "Tiramisu",
-      "unit": "Porsiyon",
-      "category": "Mise en Place",
-      "days": [
-        "hergun"
-      ],
-      "supplierIds": [],
-      "supplierId": ""
-    },
-    {
-      "id": "cust_sote_baby_karides",
-      "name": "Sote Baby Karides",
       "unit": "Porsiyon",
       "category": "Mise en Place",
       "days": [
@@ -1521,16 +1510,6 @@
       ],
       "supplierId": ""
     },
-    "cust_sote_baby_karides": {
-      "category": "Mise en Place",
-      "supplierIds": [],
-      "unit": "Porsiyon",
-      "name": "Sote Baby Karides",
-      "days": [
-        "hergun"
-      ],
-      "supplierId": ""
-    },
     "cust_tiramisu": {
       "category": "Mise en Place",
       "supplierIds": [],
@@ -1632,7 +1611,9 @@
     "cust_i_c_midye",
     "i_c_midye",
     "cust_baby_karides",
-    "baby_karides"
+    "baby_karides",
+    "cust_sote_baby_karides",
+    "sote_baby_karides"
   ],
   "deletedCategories": [
     "baharatlar"
@@ -1780,10 +1761,6 @@
         "notes": ""
       },
       "cust_tiramisu": {
-        "qty": "0",
-        "notes": ""
-      },
-      "cust_sote_baby_karides": {
         "qty": "0",
         "notes": ""
       },
@@ -2967,11 +2944,6 @@
       "updatedAt": 1794146583581
     },
     "cust_tiramisu": {
-      "qty": "0",
-      "dayId": "hergun",
-      "updatedAt": 1794146583581
-    },
-    "cust_sote_baby_karides": {
       "qty": "0",
       "dayId": "hergun",
       "updatedAt": 1794146583581
