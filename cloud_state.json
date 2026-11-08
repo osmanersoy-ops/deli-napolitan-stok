@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-08T13:26:14.291Z",
-  "timestamp": 1794144373938,
+  "exportedAt": "2026-11-08T13:26:31.791Z",
+  "timestamp": 1794144391783,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1794144336528,
@@ -200,7 +200,7 @@
     "shf_emp_ozge_cuma": 1793877135627,
     "shf_emp_ozge_cumartesi": 1793877135627,
     "shf_emp_ozge_pazar": 1793877135627,
-    "cnt_metro": 1794144373938
+    "cnt_metro": 1794144391783
   },
   "suppliers": [
     {
@@ -1957,7 +1957,7 @@
       },
       "cust_tarhun": {
         "qty": 1,
-        "notes": "Frenk soğanı ve maydanoz 2 paket"
+        "notes": "Frenk soğanı ve maydanoz 2 paket var"
       }
     }
   },
@@ -2213,6 +2213,176 @@
         "qty": "1",
         "notes": ""
       }
+    },
+    "metro": {
+      "sl_1": {
+        "qty": "1.5",
+        "notes": ""
+      },
+      "sl_2": {
+        "qty": "1.5",
+        "notes": "1.5 paket"
+      },
+      "sl_3": {
+        "qty": "1",
+        "notes": ""
+      },
+      "sl_4": {
+        "qty": "0.5",
+        "notes": "Yarıdan az"
+      },
+      "sl_5": {
+        "qty": "0",
+        "notes": ""
+      },
+      "sl_6": {
+        "qty": "0.25",
+        "notes": "İki paket"
+      },
+      "sl_9": {
+        "qty": "1",
+        "notes": ""
+      },
+      "sl_11": {
+        "qty": "0.5",
+        "notes": "Yarıdan az"
+      },
+      "sl_12": {
+        "qty": "1.5",
+        "notes": ""
+      },
+      "sl_8": {
+        "qty": "4",
+        "notes": ""
+      },
+      "sl_10": {
+        "qty": "3",
+        "notes": ""
+      },
+      "sl_13": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "sl_14": {
+        "qty": "4",
+        "notes": ""
+      },
+      "sl_16": {
+        "qty": "1",
+        "notes": "Büyük paket 400 gram"
+      },
+      "sl_17": {
+        "qty": "0",
+        "notes": ""
+      },
+      "sl_19": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "sl_20": {
+        "qty": "0.25",
+        "notes": ""
+      },
+      "sl_21": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "sl_18": {
+        "qty": "1.5",
+        "notes": ""
+      },
+      "sl_24": {
+        "qty": "2",
+        "notes": ""
+      },
+      "sl_23": {
+        "qty": "5",
+        "notes": ""
+      },
+      "sl_25": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "sl_26": {
+        "qty": "0",
+        "notes": ""
+      },
+      "sl_27": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "sl_28": {
+        "qty": "4",
+        "notes": ""
+      },
+      "sl_32": {
+        "qty": "5",
+        "notes": ""
+      },
+      "sl_33": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "sl_31": {
+        "qty": "4",
+        "notes": "Habenero bitmek üzere büyük tabasko yarım"
+      },
+      "cust_beyaz_sarimsak_puresi": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "cust_donmus_yaban_mersini": {
+        "qty": "0",
+        "notes": ""
+      },
+      "cust_kedi_dili": {
+        "qty": "0",
+        "notes": ""
+      },
+      "cust_yaprak_jelatin": {
+        "qty": "4",
+        "notes": ""
+      },
+      "pr_8": {
+        "qty": "0",
+        "notes": ""
+      },
+      "cust_beyaz_sarap_pirinc_sirkesi": {
+        "qty": "1",
+        "notes": ""
+      },
+      "cust_jumbo_karides": {
+        "qty": "3",
+        "notes": ""
+      },
+      "sl_30": {
+        "qty": "1",
+        "notes": ""
+      },
+      "sl_29": {
+        "qty": "6",
+        "notes": ""
+      },
+      "cust_sikma_torbasi_krema_torbasi": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "cust_cubuk_vanilya": {
+        "qty": "1",
+        "notes": ""
+      },
+      "sl_35": {
+        "qty": "0",
+        "notes": ""
+      },
+      "cust_taze_kekik": {
+        "qty": 2,
+        "notes": "Dil sotelenecek"
+      },
+      "cust_tarhun": {
+        "qty": 1,
+        "notes": "Frenk soğanı ve maydanoz 2 paket var"
+      }
     }
   },
   "staffDishes": [
@@ -2428,7 +2598,8 @@
   ],
   "dayCountTimestamps": {
     "hergun": 1793972585142,
-    "pazar": 1793557710420
+    "pazar": 1793557710420,
+    "metro": 1794144391783
   },
   "lastProductCounts": {
     "pz_1": {
@@ -2632,9 +2803,9 @@
       "updatedAt": 1793972585142
     },
     "sl_2": {
-      "qty": "2",
-      "dayId": "sali",
-      "updatedAt": 1792173224475
+      "qty": "1.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
     },
     "pr_1": {
       "qty": 0.25,
@@ -2712,14 +2883,14 @@
       "updatedAt": 1793557710420
     },
     "cust_yaprak_jelatin": {
-      "qty": "0",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
+      "qty": "4",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
     },
     "cust_cubuk_vanilya": {
-      "qty": "7",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
+      "qty": "1",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
     },
     "cust_bulasik_makinesi_konsantre_deterjan": {
       "qty": "0",
@@ -2757,9 +2928,199 @@
       "updatedAt": 1793557710420
     },
     "cust_sikma_torbasi_krema_torbasi": {
+      "qty": "0.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_1": {
+      "qty": "1.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_3": {
       "qty": "1",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_4": {
+      "qty": "0.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_5": {
+      "qty": "0",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_6": {
+      "qty": "0.25",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_9": {
+      "qty": "1",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_11": {
+      "qty": "0.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_12": {
+      "qty": "1.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_8": {
+      "qty": "4",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_10": {
+      "qty": "3",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_13": {
+      "qty": "0.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_14": {
+      "qty": "4",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_16": {
+      "qty": "1",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_17": {
+      "qty": "0",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_19": {
+      "qty": "0.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_20": {
+      "qty": "0.25",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_21": {
+      "qty": "0.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_18": {
+      "qty": "1.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_24": {
+      "qty": "2",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_23": {
+      "qty": "5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_25": {
+      "qty": "0.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_26": {
+      "qty": "0",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_27": {
+      "qty": "0.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_28": {
+      "qty": "4",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_32": {
+      "qty": "5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_33": {
+      "qty": "0.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_31": {
+      "qty": "4",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "cust_beyaz_sarimsak_puresi": {
+      "qty": "0.5",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "cust_donmus_yaban_mersini": {
+      "qty": "0",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "cust_kedi_dili": {
+      "qty": "0",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "pr_8": {
+      "qty": "0",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "cust_beyaz_sarap_pirinc_sirkesi": {
+      "qty": "1",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "cust_jumbo_karides": {
+      "qty": "3",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_30": {
+      "qty": "1",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_29": {
+      "qty": "6",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "sl_35": {
+      "qty": "0",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "cust_taze_kekik": {
+      "qty": 2,
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "cust_tarhun": {
+      "qty": 1,
+      "dayId": "metro",
+      "updatedAt": 1794144391783
     }
   },
   "recipeTags": {
