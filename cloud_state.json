@@ -1,14 +1,15 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-08T17:42:14.311Z",
-  "timestamp": 1794159733930,
-  "deviceId": "dev_hfy98gs_mvtnpxbq",
+  "exportedAt": "2026-11-08T17:42:19.154Z",
+  "timestamp": 1794159736615,
+  "deviceId": "dev_99uzb4t_mvpnpi3a",
   "moduleTimestamps": {
     "cnt_hergun": 1794146583581,
-    "cnt_pazar": 1794159733929,
     "rst_hergun": 1794144128904,
     "rst_pazar": 1793557180407,
+    "cnt_pazar": 1794159733929,
+    "sd": 1792967388152,
     "wsm_pazartesi": 1792967245661,
     "wsm_sali": 1792967395559,
     "wsm_carsamba": 1792967410608,
@@ -17,7 +18,6 @@
     "wsm_cumartesi": 1792967445208,
     "wsm_pazar": 1792967460558,
     "wsm": 1792967462680,
-    "sd": 1792967388152,
     "sup": 1793816759076,
     "prod_cust_kabak": 1792969316562,
     "prod_cust_sili_biber": 1792967808268,
@@ -178,7 +178,6 @@
     "shf_emp_begum_cuma": 1793904518689,
     "shf_emp_begum_cumartesi": 1793904518689,
     "shf_emp_begum_pazar": 1793904518689,
-    "shf": 1793904518689,
     "shf_emp_alican_pazartesi": 1793877123446,
     "shf_emp_alican_sali": 1793877123446,
     "shf_emp_alican_carsamba": 1793877123446,
@@ -200,6 +199,7 @@
     "shf_emp_ozge_cuma": 1793877135627,
     "shf_emp_ozge_cumartesi": 1793877135627,
     "shf_emp_ozge_pazar": 1793877135627,
+    "shf": 1793904518689,
     "cnt_metro": 1794144391783
   },
   "suppliers": [
@@ -1800,6 +1800,22 @@
         "notes": ""
       }
     },
+    "sali": {
+      "sl_2": {
+        "qty": "2",
+        "notes": ""
+      }
+    },
+    "persembe": {
+      "pr_1": {
+        "qty": "0",
+        "notes": ""
+      },
+      "pr_13": {
+        "qty": "7",
+        "notes": ""
+      }
+    },
     "pazar": {
       "cust_dana_brisket_fume": {
         "qty": "1",
@@ -1895,22 +1911,6 @@
       },
       "cust_sikma_torbasi_krema_torbasi": {
         "qty": "1",
-        "notes": ""
-      }
-    },
-    "sali": {
-      "sl_2": {
-        "qty": "2",
-        "notes": ""
-      }
-    },
-    "persembe": {
-      "pr_1": {
-        "qty": "0",
-        "notes": ""
-      },
-      "pr_13": {
-        "qty": "7",
         "notes": ""
       }
     },
@@ -2726,61 +2726,6 @@
     "metro": 1794144391783
   },
   "lastProductCounts": {
-    "pz_1": {
-      "qty": "0",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
-    },
-    "pz_3": {
-      "qty": "0.5",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
-    },
-    "pz_4": {
-      "qty": "3",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
-    },
-    "pz_5": {
-      "qty": "2",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
-    },
-    "pz_6": {
-      "qty": "0.5",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
-    },
-    "pz_8": {
-      "qty": "0.5",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
-    },
-    "pz_10": {
-      "qty": "0.25",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
-    },
-    "pz_11": {
-      "qty": "1.5",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
-    },
-    "pz_12": {
-      "qty": "0.25",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
-    },
-    "pz_14": {
-      "qty": "0.5",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
-    },
-    "pz_16": {
-      "qty": "1.5",
-      "dayId": "pazar",
-      "updatedAt": 1793557710420
-    },
     "hg_1": {
       "qty": "5",
       "dayId": "hergun",
@@ -2926,6 +2871,16 @@
       "dayId": "hergun",
       "updatedAt": 1794146583581
     },
+    "pz_3": {
+      "qty": "0.5",
+      "dayId": "pazar",
+      "updatedAt": 1793557710420
+    },
+    "pz_4": {
+      "qty": "3",
+      "dayId": "pazar",
+      "updatedAt": 1793557710420
+    },
     "sl_2": {
       "qty": "1.5",
       "dayId": "metro",
@@ -2945,6 +2900,51 @@
       "qty": 0.25,
       "dayId": "persembe",
       "updatedAt": 1792173530578
+    },
+    "pz_1": {
+      "qty": "0",
+      "dayId": "pazar",
+      "updatedAt": 1793557710420
+    },
+    "pz_5": {
+      "qty": "2",
+      "dayId": "pazar",
+      "updatedAt": 1793557710420
+    },
+    "pz_6": {
+      "qty": "0.5",
+      "dayId": "pazar",
+      "updatedAt": 1793557710420
+    },
+    "pz_8": {
+      "qty": "0.5",
+      "dayId": "pazar",
+      "updatedAt": 1793557710420
+    },
+    "pz_10": {
+      "qty": "0.25",
+      "dayId": "pazar",
+      "updatedAt": 1793557710420
+    },
+    "pz_11": {
+      "qty": "1.5",
+      "dayId": "pazar",
+      "updatedAt": 1793557710420
+    },
+    "pz_12": {
+      "qty": "0.25",
+      "dayId": "pazar",
+      "updatedAt": 1793557710420
+    },
+    "pz_14": {
+      "qty": "0.5",
+      "dayId": "pazar",
+      "updatedAt": 1793557710420
+    },
+    "pz_16": {
+      "qty": "1.5",
+      "dayId": "pazar",
+      "updatedAt": 1793557710420
     },
     "cust_kabak": {
       "qty": "0",
