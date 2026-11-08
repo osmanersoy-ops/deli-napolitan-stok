@@ -1,11 +1,11 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-08T14:02:13.473Z",
-  "timestamp": 1794146533117,
+  "exportedAt": "2026-11-08T14:02:19.875Z",
+  "timestamp": 1794146539638,
   "deviceId": "dev_9hg13jx_mw7v2jf7",
   "moduleTimestamps": {
-    "cnt_hergun": 1794146533117,
+    "cnt_hergun": 1794146539638,
     "cnt_pazar": 1794144894273,
     "rst_hergun": 1794144128904,
     "rst_pazar": 1793557180407,
@@ -1780,6 +1780,10 @@
         "notes": ""
       },
       "cust_tiramisu": {
+        "qty": 0,
+        "notes": ""
+      },
+      "cust_sote_baby_karides": {
         "qty": 0,
         "notes": ""
       }
