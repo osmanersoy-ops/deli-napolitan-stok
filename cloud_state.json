@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-08T23:12:11.171Z",
-  "timestamp": 1794179530969,
+  "exportedAt": "2026-11-08T23:12:18.068Z",
+  "timestamp": 1794179537865,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794146583581,
@@ -177,7 +177,7 @@
     "shf_emp_begum_carsamba": 1793904518689,
     "shf_emp_begum_persembe": 1794179530965,
     "shf_emp_begum_cuma": 1793904518689,
-    "shf_emp_begum_cumartesi": 1793904518689,
+    "shf_emp_begum_cumartesi": 1794179537864,
     "shf_emp_begum_pazar": 1793904518689,
     "shf_emp_alican_pazartesi": 1793877123446,
     "shf_emp_alican_sali": 1793877123446,
@@ -200,7 +200,7 @@
     "shf_emp_ozge_cuma": 1793877135627,
     "shf_emp_ozge_cumartesi": 1793877135627,
     "shf_emp_ozge_pazar": 1793877135627,
-    "shf": 1794179530965
+    "shf": 1794179537864
   },
   "suppliers": [
     {
@@ -3524,7 +3524,7 @@
         "end": "22:30"
       },
       "cumartesi": {
-        "isOff": false,
+        "isOff": true,
         "start": "12:30",
         "end": "22:30"
       },
@@ -3647,5 +3647,5 @@
     }
   },
   "deletedShiftEmployeeIds": [],
-  "shiftTimestamp": 1794179530965
+  "shiftTimestamp": 1794179537864
 }
