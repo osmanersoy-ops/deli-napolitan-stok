@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-10T14:45:18.130Z",
-  "timestamp": 1794321917524,
+  "exportedAt": "2026-11-10T14:45:20.367Z",
+  "timestamp": 1794321920010,
   "deviceId": "dev_irn623d_mw0oagq7",
   "moduleTimestamps": {
     "cnt_hergun": 1794146583581,
@@ -136,7 +136,7 @@
     "cat": 1794179864373,
     "prod_cust_i_likli_kemik_stok_suyu": 1794179864373,
     "rst_sali": 1793811787129,
-    "cnt_sali": 1794321917502,
+    "cnt_sali": 1794321920010,
     "cnt_metro": 1794144391783,
     "shf_emp_baha_pazartesi": 1793820260701,
     "shf_emp_baha_sali": 1793904518689,
@@ -1991,7 +1991,7 @@
         "notes": ""
       },
       "sl_32": {
-        "qty": 12,
+        "qty": 10,
         "notes": ""
       }
     },
