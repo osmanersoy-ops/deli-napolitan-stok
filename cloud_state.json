@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-10T14:51:34.577Z",
-  "timestamp": 1794322294574,
+  "exportedAt": "2026-11-10T14:51:38.255Z",
+  "timestamp": 1794322297649,
   "deviceId": "dev_irn623d_mw0oagq7",
   "moduleTimestamps": {
     "cnt_hergun": 1794146583581,
@@ -3526,16 +3526,6 @@
       "dayId": "sali",
       "updatedAt": 1794322294574
     },
-    "sl_35": {
-      "qty": "0",
-      "dayId": "metro",
-      "updatedAt": 1794144391783
-    },
-    "cust_sote_baby_karides": {
-      "qty": "0",
-      "dayId": "hergun",
-      "updatedAt": 1794146583581
-    },
     "sl_7": {
       "qty": "5",
       "dayId": "sali",
@@ -3560,6 +3550,16 @@
       "qty": "1",
       "dayId": "sali",
       "updatedAt": 1794322294574
+    },
+    "sl_35": {
+      "qty": "0",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
+    },
+    "cust_sote_baby_karides": {
+      "qty": "0",
+      "dayId": "hergun",
+      "updatedAt": 1794146583581
     }
   },
   "recipeTags": {
