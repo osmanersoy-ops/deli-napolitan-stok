@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T01:02:56.541Z",
-  "timestamp": 1794358974697,
+  "exportedAt": "2026-11-11T01:03:00.200Z",
+  "timestamp": 1794358980048,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -70,7 +70,7 @@
     "prod_sl_1": 1794358957206,
     "prod_sl_2": 1794358966730,
     "prod_sl_3": 1794358974693,
-    "prod_sl_4": 1792970300896,
+    "prod_sl_4": 1794358980044,
     "prod_sl_5": 1794358269188,
     "prod_sl_6": 1792970300896,
     "prod_sl_7": 1794358287487,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794358974693,
-    "cat": 1794358974693,
+    "prod": 1794358980044,
+    "cat": 1794358980044,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -887,13 +887,16 @@
       "supplierId": "sup_1791988183271"
     },
     "sl_4": {
-      "category": "Ana Stok",
-      "supplierId": "sup_1791988183271",
+      "name": "Danish Blue",
+      "unit": "Paket",
+      "category": "Peynir Grubu",
+      "days": [
+        "sali"
+      ],
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "unit": "Paket",
-      "name": "Danish Blue"
+      "supplierId": "sup_1791988183271"
     },
     "sl_5": {
       "name": "Scamorza",
