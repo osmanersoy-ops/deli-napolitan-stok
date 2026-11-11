@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T00:58:54.578Z",
-  "timestamp": 1794358732579,
+  "exportedAt": "2026-11-11T00:58:59.696Z",
+  "timestamp": 1794358739692,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -59,7 +59,7 @@
     "prod_hg_6": 1792970300896,
     "prod_hg_7": 1792970300896,
     "prod_hg_8": 1792970300896,
-    "prod_hg_9": 1792970300896,
+    "prod_hg_9": 1794358739689,
     "prod_hg_10": 1792970300896,
     "prod_hg_11": 1792970300896,
     "prod_hg_13": 1792970300896,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794358724406,
+    "prod": 1794358739689,
     "cat": 1794358598989,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -771,15 +771,6 @@
       ],
       "unit": "Baş Adet",
       "name": "Bağ Sarımsak"
-    },
-    "hg_9": {
-      "category": "Manav",
-      "supplierId": "sup_meyfresh",
-      "supplierIds": [
-        "sup_meyfresh"
-      ],
-      "unit": "Adet",
-      "name": "Patates"
     },
     "hg_10": {
       "category": "Manav",
@@ -1643,7 +1634,10 @@
     "cust_sote_kuskonmaz",
     "hg_21",
     "yikanmis_feslegen",
-    "cust_yikanmis_feslegen"
+    "cust_yikanmis_feslegen",
+    "hg_9",
+    "patates",
+    "cust_patates"
   ],
   "deletedCategories": [
     "baharatlar"
@@ -1688,10 +1682,6 @@
       },
       "hg_8": {
         "qty": "1",
-        "notes": ""
-      },
-      "hg_9": {
-        "qty": "5",
         "notes": ""
       },
       "hg_10": {
@@ -3124,11 +3114,6 @@
     },
     "hg_8": {
       "qty": "1",
-      "dayId": "hergun",
-      "updatedAt": 1794329719266
-    },
-    "hg_9": {
-      "qty": "5",
       "dayId": "hergun",
       "updatedAt": 1794329719266
     },
