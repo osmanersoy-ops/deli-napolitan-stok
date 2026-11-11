@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T02:43:00.305Z",
-  "timestamp": 1794364979809,
+  "exportedAt": "2026-11-11T02:43:10.405Z",
+  "timestamp": 1794364990253,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -73,7 +73,7 @@
     "prod_sl_4": 1794358980044,
     "prod_sl_5": 1794358985130,
     "prod_sl_6": 1794358991667,
-    "prod_sl_7": 1794358287487,
+    "prod_sl_7": 1794364990251,
     "prod_sl_9": 1794359007125,
     "prod_sl_8": 1794358998899,
     "prod_sl_32": 1794359161134,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794359199028,
-    "cat": 1794359199028,
+    "prod": 1794364990251,
+    "cat": 1794364990251,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -927,7 +927,7 @@
     "sl_7": {
       "name": "Straccitaella",
       "unit": "KG",
-      "category": "Ana Stok",
+      "category": "Peynir Grubu",
       "days": [
         "sali"
       ],
