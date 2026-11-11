@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T00:51:29.270Z",
-  "timestamp": 1794358287497,
+  "exportedAt": "2026-11-11T00:52:09.841Z",
+  "timestamp": 1794358329689,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -88,7 +88,7 @@
     "prod_sl_13": 1792970300896,
     "prod_sl_14": 1792970300896,
     "prod_pz_8": 1792970300896,
-    "prod_sl_10": 1792970300896,
+    "prod_sl_10": 1794358329681,
     "prod_sl_16": 1792970300896,
     "prod_sl_17": 1792970300896,
     "prod_sl_18": 1792970300896,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794358287487,
-    "cat": 1794358287487,
+    "prod": 1794358329681,
+    "cat": 1794358329681,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -1063,16 +1063,16 @@
       ]
     },
     "sl_10": {
+      "name": "Tam Yağlı Krema (Tikveşli)",
+      "unit": "Paket",
       "category": "Ana Stok",
-      "supplierId": "sup_1791988183271",
+      "days": [
+        "sali"
+      ],
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "unit": "Paket",
-      "name": "Tam Yağlı Krema",
-      "days": [
-        "sali"
-      ]
+      "supplierId": "sup_1791988183271"
     },
     "sl_16": {
       "category": "Ana Stok",
