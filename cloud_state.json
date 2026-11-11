@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T01:05:53.648Z",
-  "timestamp": 1794359153495,
+  "exportedAt": "2026-11-11T01:06:01.289Z",
+  "timestamp": 1794359161138,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -76,7 +76,7 @@
     "prod_sl_7": 1794358287487,
     "prod_sl_9": 1794359007125,
     "prod_sl_8": 1794358998899,
-    "prod_sl_32": 1792970300896,
+    "prod_sl_32": 1794359161134,
     "prod_sl_23": 1794359101120,
     "prod_sl_24": 1794359110017,
     "prod_sl_34": 1792970300896,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794359153491,
-    "cat": 1794359153491,
+    "prod": 1794359161134,
+    "cat": 1794359161134,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -958,16 +958,16 @@
       "supplierId": "sup_sutas"
     },
     "sl_32": {
-      "category": "Ana Stok",
-      "supplierId": "sup_1791988183271",
+      "name": "Komili Zeytinyağ",
+      "unit": "Litre",
+      "category": "Sos & Yağ",
+      "days": [
+        "sali"
+      ],
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "unit": "Litre",
-      "name": "Komili Zeytinyağ",
-      "days": [
-        "sali"
-      ]
+      "supplierId": "sup_1791988183271"
     },
     "sl_23": {
       "name": "Değirmenlik Tuz",
