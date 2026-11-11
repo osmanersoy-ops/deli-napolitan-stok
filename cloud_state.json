@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T02:33:55.478Z",
-  "timestamp": 1794364435325,
+  "exportedAt": "2026-11-11T02:42:43.809Z",
+  "timestamp": 1794364963656,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "prod_cust_patates": 1794358779227,
-    "crec": 1794364435324,
-    "rtag": 1794364435325
+    "crec": 1794364963655,
+    "rtag": 1794364963656
   },
   "suppliers": [
     {
@@ -3624,7 +3624,8 @@
     "crec_domates_krema_9182": "Taban Sos",
     "crec_muskat_krema_8998": "Taban Sos",
     "crec_ispanak_krema_5967": "Taban Sos",
-    "crec_humus_5324": "Sote ve Pişirme"
+    "crec_humus_5324": "Sote ve Pişirme",
+    "crec_aci_biber_receli_3655": "Sote ve Pişirme"
   },
   "customRecipes": [
     {
@@ -4263,6 +4264,37 @@
       ],
       "updatedAt": 1794364435324,
       "createdAt": 1794364435324
+    },
+    {
+      "id": "crec_aci_biber_receli_3655",
+      "name": "Acı Biber Reçeli",
+      "tag": "Sote ve Pişirme",
+      "desc": "",
+      "instructions": "Simmerda pişen reçel süzgeçte bekletilerek suyu saldırılacak ve lime suyu o sirada eklenecek ardından fişeklenecek. (Reçeller oda sıcaklığında kalmalı.)",
+      "baseIngredient": {
+        "name": "Doğranmış Şili Biber",
+        "baseQty": 2000,
+        "unit": "g",
+        "note": "Ana malzeme (tüm oranların bazı)"
+      },
+      "ingredients": [
+        {
+          "id": "ing_2_655",
+          "name": "Şeker",
+          "baseQty": 1500,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_3_655",
+          "name": "Lime",
+          "baseQty": 3,
+          "unit": "adet",
+          "note": ""
+        }
+      ],
+      "updatedAt": 1794364963655,
+      "createdAt": 1794364963655
     }
   ],
   "deletedCustomRecipeIds": [],
