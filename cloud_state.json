@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T02:15:02.590Z",
-  "timestamp": 1794363301988,
+  "exportedAt": "2026-11-11T02:21:15.499Z",
+  "timestamp": 1794363675347,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "prod_cust_patates": 1794358779227,
-    "crec": 1794363301925,
-    "rtag": 1794363301926
+    "crec": 1794363675346,
+    "rtag": 1794363675347
   },
   "suppliers": [
     {
@@ -3618,7 +3618,8 @@
     "crec_antep_pesto_7797": "Topping Sos",
     "crec_domates_taban_6697": "Taban Sos",
     "crec_jumbo_karides_5071": "Sote ve Pişirme",
-    "crec_straganoff_sos_1925": "Topping Sos"
+    "crec_straganoff_sos_1925": "Topping Sos",
+    "crec_kremali_mantar_corbasi_5346": "Çorba"
   },
   "customRecipes": [
     {
@@ -3973,6 +3974,79 @@
       ],
       "updatedAt": 1794363301925,
       "createdAt": 1794363301925
+    },
+    {
+      "id": "crec_kremali_mantar_corbasi_5346",
+      "name": "Kremalı Mantar Çorbası",
+      "tag": "Çorba",
+      "desc": "",
+      "instructions": "Soğan ve sarımsağı hafif kavur ardından mantarları ekle. Mantarlar suyunu saldıktan sonra çektiğinde un ekle ve kokusu çıkana kadar kavur. Suyu ekle 15 dk pişir. Ocaktan alınan çorba karışımına kremasını ekle ve PÜRÜZSÜZleşene kadar blender ile çektir.",
+      "baseIngredient": {
+        "name": "Kültür Mantarı",
+        "baseQty": 1200,
+        "unit": "g",
+        "note": "Ana malzeme (tüm oranların bazı)"
+      },
+      "ingredients": [
+        {
+          "id": "ing_2_346",
+          "name": "Zeytinyağı",
+          "baseQty": 90,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_3_346",
+          "name": "Soğan",
+          "baseQty": 3,
+          "unit": "adet",
+          "note": "Orta boy"
+        },
+        {
+          "id": "ing_4_346",
+          "name": "Diş Sarımsak",
+          "baseQty": 5,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_5_346",
+          "name": "Un",
+          "baseQty": 60,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_6_346",
+          "name": "Tane Karabiber",
+          "baseQty": 5,
+          "unit": "çevrim",
+          "note": ""
+        },
+        {
+          "id": "ing_7_346",
+          "name": "Su",
+          "baseQty": 3000,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_8_346",
+          "name": "Sütaş Krema",
+          "baseQty": 700,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_9_346",
+          "name": "Tuz",
+          "baseQty": 24,
+          "unit": "g",
+          "note": ""
+        }
+      ],
+      "updatedAt": 1794363675346,
+      "createdAt": 1794363675346
     }
   ],
   "deletedCustomRecipeIds": [],
