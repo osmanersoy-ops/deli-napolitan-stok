@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T02:27:19.152Z",
-  "timestamp": 1794364039000,
+  "exportedAt": "2026-11-11T02:29:26.120Z",
+  "timestamp": 1794364165968,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "prod_cust_patates": 1794358779227,
-    "crec": 1794364038999,
-    "rtag": 1794364039000
+    "crec": 1794364165967,
+    "rtag": 1794364165968
   },
   "suppliers": [
     {
@@ -3622,7 +3622,8 @@
     "crec_kremali_mantar_corbasi_5346": "Çorba",
     "crec_truf_krema_5030": "Taban Sos",
     "crec_domates_krema_9182": "Taban Sos",
-    "crec_muskat_krema_8998": "Taban Sos"
+    "crec_muskat_krema_8998": "Taban Sos",
+    "crec_ispanak_krema_5967": "Taban Sos"
   },
   "customRecipes": [
     {
@@ -4157,6 +4158,37 @@
       ],
       "updatedAt": 1794364038998,
       "createdAt": 1794364038998
+    },
+    {
+      "id": "crec_ispanak_krema_5967",
+      "name": "Ispanak Krema",
+      "tag": "Taban Sos",
+      "desc": "",
+      "instructions": "",
+      "baseIngredient": {
+        "name": "Sütaş Krema",
+        "baseQty": 300,
+        "unit": "g",
+        "note": "Ana malzeme (tüm oranların bazı)"
+      },
+      "ingredients": [
+        {
+          "id": "ing_2_967",
+          "name": "Şifonat Ispanak",
+          "baseQty": 70,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_3_967",
+          "name": "Tuz",
+          "baseQty": 3,
+          "unit": "g",
+          "note": ""
+        }
+      ],
+      "updatedAt": 1794364165967,
+      "createdAt": 1794364165967
     }
   ],
   "deletedCustomRecipeIds": [],
