@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T02:06:42.010Z",
-  "timestamp": 1794362801857,
+  "exportedAt": "2026-11-11T02:10:58.107Z",
+  "timestamp": 1794362896162,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "prod_cust_patates": 1794358779227,
-    "crec": 1794362801856,
-    "rtag": 1794362801857
+    "crec": 1794362827972,
+    "rtag": 1794362827973
   },
   "suppliers": [
     {
@@ -3867,7 +3867,7 @@
       "name": "Jumbo Karides",
       "tag": "Sote ve Pişirme",
       "desc": "",
-      "instructions": "İlk olarak -18den çıkardığımız donuk karidesleri musluk suyu altında süzgeç yardımı ile çözdürerek üzerindeki glazeden arındırıyoruz ve kurutuyoruz. Ardından yağları ve sarımsağı ısıttıktan sonra karidesleri ekliyoruz. Karidesler tam C şekli almadan tuz ve karabiberini ekledikten sonra pişkinliğini tadarak kontrol ediyoruz. Ocaktan aldığımız karideslere choplanmış tarhunu ekleyerek karıştırdıktan sonra. boxlayarak dinlenmeye alıyoruz.",
+      "instructions": "İlk olarak -18den çıkardığımız donuk karidesleri musluk suyu altında süzgeç yardımı ile çözdürerek üzerindeki glazeden arındırıyoruz ve kurutuyoruz. Ardından yağları ve sarımsağı ısıttıktan sonra karidesleri tavaya ekliyoruz. Karidesler tam C şekli almadan tuz ve karabiberini ekledikten sonra pişkinliğini tadarak kontrol ediyoruz. Ocaktan aldığımız karideslere choplanmış tarhunu ekleyerek karıştırdıktan sonra. boxlayarak dinlenmeye alıyoruz.",
       "baseIngredient": {
         "name": "Jumbo Karides",
         "baseQty": 1000,
@@ -3876,49 +3876,49 @@
       },
       "ingredients": [
         {
-          "id": "ing_2_856",
+          "id": "ing_2_972",
           "name": "Zeytinyağı",
           "baseQty": 20,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_3_856",
+          "id": "ing_3_972",
           "name": "Tereyağı",
           "baseQty": 50,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_4_856",
+          "id": "ing_4_972",
           "name": "Beyaz Sarımsak Püresi",
           "baseQty": 20,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_5_856",
+          "id": "ing_5_972",
           "name": "Tuz",
           "baseQty": 1.5,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_6_856",
+          "id": "ing_6_972",
           "name": "Tane Karabiber",
           "baseQty": 6,
           "unit": "çevrim",
           "note": ""
         },
         {
-          "id": "ing_7_856",
+          "id": "ing_7_972",
           "name": "Tarhun",
           "baseQty": 2,
           "unit": "g",
           "note": "Choplanmış"
         }
       ],
-      "updatedAt": 1794362801856,
+      "updatedAt": 1794362827972,
       "createdAt": 1794362685071
     }
   ],
