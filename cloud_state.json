@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T00:59:39.380Z",
-  "timestamp": 1794358779229,
+  "exportedAt": "2026-11-11T01:02:37.362Z",
+  "timestamp": 1794358957210,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -67,7 +67,7 @@
     "prod_hg_15": 1792970300896,
     "prod_hg_16": 1792970300896,
     "prod_hg_17": 1792970300896,
-    "prod_sl_1": 1793816784580,
+    "prod_sl_1": 1794358957206,
     "prod_sl_2": 1792970300896,
     "prod_sl_3": 1792970300896,
     "prod_sl_4": 1792970300896,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794358779227,
-    "cat": 1794358779227,
+    "prod": 1794358957206,
+    "cat": 1794358957206,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -850,17 +850,17 @@
       "name": "Çilek"
     },
     "sl_1": {
-      "category": "Ana Stok",
-      "supplierId": "sup_1791988183271",
+      "name": "Mozzarella Kaanlar 3,5KG",
+      "unit": "Paket",
+      "category": "Peynir Grubu",
+      "days": [
+        "sali"
+      ],
       "supplierIds": [
         "sup_1791988183271",
         "sup_santral_gida"
       ],
-      "unit": "Paket",
-      "name": "Mozzarella Kaanlar 3,5KG",
-      "days": [
-        "sali"
-      ]
+      "supplierId": "sup_1791988183271"
     },
     "sl_2": {
       "category": "Ana Stok",
@@ -1657,7 +1657,8 @@
   "customCategories": [
     "Baharatlar ve Taze Otlar",
     "-18 Stoğu",
-    "Sarf Malzemeleri"
+    "Sarf Malzemeleri",
+    "Peynir Grubu"
   ],
   "categoryRenames": {
     "Baharatlar": "Baharatlar ve Taze Otlar"
