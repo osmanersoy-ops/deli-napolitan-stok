@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T01:05:38.523Z",
-  "timestamp": 1794359135755,
+  "exportedAt": "2026-11-11T01:05:43.923Z",
+  "timestamp": 1794359143771,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -99,7 +99,7 @@
     "prod_sl_25": 1792970300896,
     "prod_sl_26": 1794359117275,
     "prod_sl_27": 1794359135751,
-    "prod_sl_28": 1792970300896,
+    "prod_sl_28": 1794359143767,
     "prod_sl_30": 1792968801259,
     "prod_sl_31": 1792970300896,
     "prod_sl_33": 1792970300896,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794359135751,
-    "cat": 1794359135751,
+    "prod": 1794359143767,
+    "cat": 1794359143767,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -1229,16 +1229,16 @@
       "supplierId": "sup_1791988183271"
     },
     "sl_28": {
-      "category": "Ana Stok",
-      "supplierId": "sup_1791988183271",
+      "name": "Domates Passata",
+      "unit": "Şişe",
+      "category": "Sos & Yağ",
+      "days": [
+        "sali"
+      ],
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "unit": "Şişe",
-      "name": "Domates Passata",
-      "days": [
-        "sali"
-      ]
+      "supplierId": "sup_1791988183271"
     },
     "sl_30": {
       "category": "-18 Stoğu",
