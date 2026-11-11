@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T01:37:47.634Z",
-  "timestamp": 1794361067481,
+  "exportedAt": "2026-11-11T01:40:53.984Z",
+  "timestamp": 1794361253832,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "prod_cust_patates": 1794358779227,
-    "crec": 1794361067480,
-    "rtag": 1794361067481
+    "crec": 1794361253830,
+    "rtag": 1794361253831
   },
   "suppliers": [
     {
@@ -3613,7 +3613,8 @@
     "pesto": "Topping Sos",
     "crec_panna_cotta_4940": "Tatlı",
     "crec_yaban_mersini_sosu_1685": "Topping Sos",
-    "crec_cilek_sos_7480": "Topping Sos"
+    "crec_cilek_sos_7480": "Topping Sos",
+    "crec_roka_pesto_3830": "Topping Sos"
   },
   "customRecipes": [
     {
@@ -3722,6 +3723,58 @@
       ],
       "updatedAt": 1794361067480,
       "createdAt": 1794361067480
+    },
+    {
+      "id": "crec_roka_pesto_3830",
+      "name": "Roka Pesto",
+      "tag": "Topping Sos",
+      "desc": "",
+      "instructions": "Tüm ürünleri ekleyerek blenderdan geçir, peste pürüssüzleşmeye yaklaştığında sıkma torbasına al.",
+      "baseIngredient": {
+        "name": "Fesleğen",
+        "baseQty": 120,
+        "unit": "g",
+        "note": "Ana malzeme (tüm oranların bazı)"
+      },
+      "ingredients": [
+        {
+          "id": "ing_2_830",
+          "name": "Roka",
+          "baseQty": 120,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_3_830",
+          "name": "Fındık İçi",
+          "baseQty": 150,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_4_830",
+          "name": "Toz Parmesan",
+          "baseQty": 150,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_5_830",
+          "name": "Zeytinyağı",
+          "baseQty": 200,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_6_830",
+          "name": "Diş Sarımsak",
+          "baseQty": 3,
+          "unit": "adet",
+          "note": ""
+        }
+      ],
+      "updatedAt": 1794361253830,
+      "createdAt": 1794361253830
     }
   ],
   "deletedCustomRecipeIds": [],
