@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T02:49:18.336Z",
-  "timestamp": 1794365358049,
+  "exportedAt": "2026-11-11T02:49:38.454Z",
+  "timestamp": 1794365377851,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -852,148 +852,148 @@
       "name": "Çilek"
     },
     "sl_1": {
-      "name": "Mozzarella Kaanlar 3,5KG",
-      "unit": "Paket",
       "category": "Peynir Grubu",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271",
         "sup_santral_gida"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Paket",
+      "name": "Mozzarella Kaanlar 3,5KG",
+      "days": [
+        "sali"
+      ]
     },
     "sl_2": {
-      "name": "Parmesan Blok",
-      "unit": "KG",
       "category": "Peynir Grubu",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "KG",
+      "name": "Parmesan Blok",
+      "days": [
+        "sali"
+      ]
     },
     "sl_3": {
-      "name": "Parmesan Toz",
-      "unit": "KG",
       "category": "Peynir Grubu",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "KG",
+      "name": "Parmesan Toz",
+      "days": [
+        "sali"
+      ]
     },
     "sl_4": {
-      "name": "Danish Blue",
-      "unit": "Paket",
       "category": "Peynir Grubu",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Paket",
+      "name": "Danish Blue",
+      "days": [
+        "sali"
+      ]
     },
     "sl_5": {
-      "name": "Scamorza",
-      "unit": "Paket",
       "category": "Peynir Grubu",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Paket",
+      "name": "Scamorza",
+      "days": [
+        "sali"
+      ]
     },
     "sl_6": {
-      "name": "Ricotto",
-      "unit": "KG",
       "category": "Peynir Grubu",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "KG",
+      "name": "Ricotto",
+      "days": [
+        "sali"
+      ]
     },
     "sl_7": {
-      "name": "Straccitaella",
-      "unit": "KG",
       "category": "Peynir Grubu",
+      "supplierIds": [],
+      "unit": "KG",
+      "name": "Straccitaella",
       "days": [
         "sali"
       ],
-      "supplierIds": [],
       "supplierId": ""
     },
     "sl_9": {
-      "name": "Ekşi Krema",
-      "unit": "Paket",
       "category": "Sos & Yağ",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
-    },
-    "sl_8": {
-      "name": "Sütaş Krema",
       "unit": "Paket",
-      "category": "Sos & Yağ",
+      "name": "Ekşi Krema",
       "days": [
         "sali"
-      ],
+      ]
+    },
+    "sl_8": {
+      "category": "Sos & Yağ",
+      "supplierId": "sup_sutas",
       "supplierIds": [
         "sup_sutas",
         "sup_1791988183271"
       ],
-      "supplierId": "sup_sutas"
+      "unit": "Paket",
+      "name": "Sütaş Krema",
+      "days": [
+        "sali"
+      ]
     },
     "sl_32": {
-      "name": "Komili Zeytinyağ",
-      "unit": "Litre",
       "category": "Sos & Yağ",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Litre",
+      "name": "Komili Zeytinyağ",
+      "days": [
+        "sali"
+      ]
     },
     "sl_23": {
-      "name": "Değirmenlik Tuz",
-      "unit": "Paket",
       "category": "Kuru Depo",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Paket",
+      "name": "Değirmenlik Tuz",
+      "days": [
+        "sali"
+      ]
     },
     "sl_24": {
-      "name": "Pizza Tuzu",
-      "unit": "Paket",
       "category": "Kuru Depo",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Paket",
+      "name": "Pizza Tuzu",
+      "days": [
+        "sali"
+      ]
     },
     "sl_34": {
       "category": "Ana Stok",
@@ -1039,28 +1039,28 @@
       ]
     },
     "sl_11": {
-      "name": "Mayonez",
-      "unit": "Paket",
       "category": "Sos & Yağ",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Paket",
+      "name": "Mayonez",
+      "days": [
+        "sali"
+      ]
     },
     "sl_12": {
-      "name": "Hardal",
-      "unit": "Paket",
       "category": "Sos & Yağ",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Paket",
+      "name": "Hardal",
+      "days": [
+        "sali"
+      ]
     },
     "sl_13": {
       "category": "Ana Stok",
@@ -1075,16 +1075,16 @@
       ]
     },
     "sl_14": {
-      "name": "Tahin",
-      "unit": "KG",
       "category": "Sos & Yağ",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "KG",
+      "name": "Tahin",
+      "days": [
+        "sali"
+      ]
     },
     "pz_8": {
       "category": "Akçalar Şarküteri",
@@ -1099,16 +1099,16 @@
       ]
     },
     "sl_10": {
-      "name": "Tam Yağlı Krema (Tikveşli)",
-      "unit": "Paket",
       "category": "Sos & Yağ",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Paket",
+      "name": "Tam Yağlı Krema (Tikveşli)",
+      "days": [
+        "sali"
+      ]
     },
     "sl_16": {
       "category": "Ana Stok",
@@ -1123,16 +1123,16 @@
       ]
     },
     "sl_17": {
-      "name": "Balzemik Sirke",
-      "unit": "Paket",
       "category": "Sos & Yağ",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Paket",
+      "name": "Balzemik Sirke",
+      "days": [
+        "sali"
+      ]
     },
     "sl_18": {
       "category": "Ana Stok",
@@ -1147,40 +1147,40 @@
       ]
     },
     "sl_19": {
-      "name": "Toz Fındık",
-      "unit": "KG",
       "category": "Kuru Depo",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "KG",
+      "name": "Toz Fındık",
+      "days": [
+        "sali"
+      ]
     },
     "sl_20": {
-      "name": "Antep Fıstığı",
-      "unit": "KG",
       "category": "Kuru Depo",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "KG",
+      "name": "Antep Fıstığı",
+      "days": [
+        "sali"
+      ]
     },
     "sl_21": {
-      "name": "File Antep Fıstığı",
-      "unit": "KG",
       "category": "Kuru Depo",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "KG",
+      "name": "File Antep Fıstığı",
+      "days": [
+        "sali"
+      ]
     },
     "sl_22": {
       "category": "Ana Stok",
@@ -1207,40 +1207,40 @@
       ]
     },
     "sl_26": {
-      "name": "Kimyon",
-      "unit": "Paket",
       "category": "Baharatlar ve Taze Otlar",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Paket",
+      "name": "Kimyon",
+      "days": [
+        "sali"
+      ]
     },
     "sl_27": {
-      "name": "Toz Şeker",
-      "unit": "KG",
       "category": "Kuru Depo",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "KG",
+      "name": "Toz Şeker",
+      "days": [
+        "sali"
+      ]
     },
     "sl_28": {
-      "name": "Domates Passata",
-      "unit": "Şişe",
       "category": "Sos & Yağ",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Şişe",
+      "name": "Domates Passata",
+      "days": [
+        "sali"
+      ]
     },
     "sl_30": {
       "category": "-18 Stoğu",
@@ -1255,16 +1255,16 @@
       ]
     },
     "sl_31": {
-      "name": "Tabasco(lar)",
-      "unit": "Adet",
       "category": "Sos & Yağ",
-      "days": [
-        "sali"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Adet",
+      "name": "Tabasco(lar)",
+      "days": [
+        "sali"
+      ]
     },
     "sl_33": {
       "category": "Ana Stok",
@@ -1279,16 +1279,16 @@
       ]
     },
     "pr_8": {
-      "name": "Zahter",
-      "unit": "KG",
       "category": "Baharatlar ve Taze Otlar",
-      "days": [
-        "persembe"
-      ],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "KG",
+      "name": "Zahter",
+      "days": [
+        "persembe"
+      ]
     },
     "pz_1": {
       "category": "Et Şarküteri",
