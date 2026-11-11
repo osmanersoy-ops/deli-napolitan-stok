@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T02:45:42.320Z",
-  "timestamp": 1794365141758,
+  "exportedAt": "2026-11-11T02:47:22.541Z",
+  "timestamp": 1794365242388,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "prod_cust_patates": 1794358779227,
-    "crec": 1794364963655,
-    "rtag": 1794364963656
+    "crec": 1794365242386,
+    "rtag": 1794365242387
   },
   "suppliers": [
     {
@@ -3625,7 +3625,8 @@
     "crec_muskat_krema_8998": "Taban Sos",
     "crec_ispanak_krema_5967": "Taban Sos",
     "crec_humus_5324": "Sote ve Pişirme",
-    "crec_aci_biber_receli_3655": "Sote ve Pişirme"
+    "crec_aci_biber_receli_3655": "Sote ve Pişirme",
+    "crec_straccitaella_2386": "Topping Sos"
   },
   "customRecipes": [
     {
@@ -4295,6 +4296,30 @@
       ],
       "updatedAt": 1794364963655,
       "createdAt": 1794364963655
+    },
+    {
+      "id": "crec_straccitaella_2386",
+      "name": "Straccitaella",
+      "tag": "Topping Sos",
+      "desc": "",
+      "instructions": "Tiftiklenen mozzarella ile krema karıştırılarak +4 dolapta 3 saat dinlendirilecek.",
+      "baseIngredient": {
+        "name": "Tiftik Mozzarella",
+        "baseQty": 1000,
+        "unit": "g",
+        "note": "Ana malzeme (tüm oranların bazı)"
+      },
+      "ingredients": [
+        {
+          "id": "ing_2_386",
+          "name": "Tam Yağlı Krema (Tikveşli)",
+          "baseQty": 1000,
+          "unit": "g",
+          "note": ""
+        }
+      ],
+      "updatedAt": 1794365242386,
+      "createdAt": 1794365242386
     }
   ],
   "deletedCustomRecipeIds": [],
