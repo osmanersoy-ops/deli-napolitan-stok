@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T09:03:19.377Z",
-  "timestamp": 1794387798772,
+  "exportedAt": "2026-11-11T09:05:05.006Z",
+  "timestamp": 1794387904854,
   "deviceId": "dev_99uzb4t_mvpnpi3a",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_cust_patates": 1794358779227,
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
-    "rtag": 1794365242387,
-    "crec": 1794365242386
+    "rtag": 1794387904854,
+    "crec": 1794387904853
   },
   "suppliers": [
     {
@@ -4215,63 +4215,63 @@
       },
       "ingredients": [
         {
-          "id": "ing_2_324",
+          "id": "ing_2_852",
           "name": "Limon Suyu",
           "baseQty": 220,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_3_324",
+          "id": "ing_3_852",
           "name": "Zeytinyağı",
           "baseQty": 300,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_4_324",
+          "id": "ing_4_852",
           "name": "Buz",
           "baseQty": 380,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_5_324",
+          "id": "ing_5_852",
           "name": "Diş Sarımsak",
-          "baseQty": 47,
+          "baseQty": 45,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_6_324",
+          "id": "ing_6_852",
           "name": "Kimyon",
-          "baseQty": 18,
+          "baseQty": 15,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_7_324",
+          "id": "ing_7_852",
           "name": "Toz Kırmızı Biber",
           "baseQty": 10,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_8_324",
+          "id": "ing_8_852",
           "name": "Tuz",
-          "baseQty": 28,
+          "baseQty": 25,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_9_324",
+          "id": "ing_9_852",
           "name": "Tahin",
           "baseQty": 715,
           "unit": "g",
           "note": ""
         }
       ],
-      "updatedAt": 1794364435324,
+      "updatedAt": 1794387904852,
       "createdAt": 1794364435324
     },
     {
