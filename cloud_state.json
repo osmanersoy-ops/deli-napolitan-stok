@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T02:30:12.267Z",
-  "timestamp": 1794364211737,
+  "exportedAt": "2026-11-11T02:33:55.478Z",
+  "timestamp": 1794364435325,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "prod_cust_patates": 1794358779227,
-    "crec": 1794364165967,
-    "rtag": 1794364165968
+    "crec": 1794364435324,
+    "rtag": 1794364435325
   },
   "suppliers": [
     {
@@ -3623,7 +3623,8 @@
     "crec_truf_krema_5030": "Taban Sos",
     "crec_domates_krema_9182": "Taban Sos",
     "crec_muskat_krema_8998": "Taban Sos",
-    "crec_ispanak_krema_5967": "Taban Sos"
+    "crec_ispanak_krema_5967": "Taban Sos",
+    "crec_humus_5324": "Sote ve Pişirme"
   },
   "customRecipes": [
     {
@@ -4189,6 +4190,79 @@
       ],
       "updatedAt": 1794364165967,
       "createdAt": 1794364165967
+    },
+    {
+      "id": "crec_humus_5324",
+      "name": "Humus",
+      "tag": "Sote ve Pişirme",
+      "desc": "",
+      "instructions": "Tahin hariç tüm malzemeleri pürüzsüzleşene kadar blender ile çektir. Ardından tahin ekle ve homojen olana kadar tekrar çektir.",
+      "baseIngredient": {
+        "name": "Haşlanmış Nohut",
+        "baseQty": 1500,
+        "unit": "g",
+        "note": "Ana malzeme (tüm oranların bazı)"
+      },
+      "ingredients": [
+        {
+          "id": "ing_2_324",
+          "name": "Limon Suyu",
+          "baseQty": 220,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_3_324",
+          "name": "Zeytinyağı",
+          "baseQty": 300,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_4_324",
+          "name": "Buz",
+          "baseQty": 380,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_5_324",
+          "name": "Diş Sarımsak",
+          "baseQty": 47,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_6_324",
+          "name": "Kimyon",
+          "baseQty": 18,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_7_324",
+          "name": "Toz Kırmızı Biber",
+          "baseQty": 10,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_8_324",
+          "name": "Tuz",
+          "baseQty": 28,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_9_324",
+          "name": "Tahin",
+          "baseQty": 715,
+          "unit": "g",
+          "note": ""
+        }
+      ],
+      "updatedAt": 1794364435324,
+      "createdAt": 1794364435324
     }
   ],
   "deletedCustomRecipeIds": [],
