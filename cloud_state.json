@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T01:40:53.984Z",
-  "timestamp": 1794361253832,
+  "exportedAt": "2026-11-11T01:44:32.489Z",
+  "timestamp": 1794361471887,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "prod_cust_patates": 1794358779227,
-    "crec": 1794361253830,
-    "rtag": 1794361253831
+    "crec": 1794361471764,
+    "rtag": 1794361471765
   },
   "suppliers": [
     {
@@ -3729,7 +3729,7 @@
       "name": "Roka Pesto",
       "tag": "Topping Sos",
       "desc": "",
-      "instructions": "Tüm ürünleri ekleyerek blenderdan geçir, peste pürüssüzleşmeye yaklaştığında sıkma torbasına al.",
+      "instructions": "Tüm ürünleri ekleyerek blenderdan geçir, pesto pürüssüzleşmeye yaklaştığında sıkma torbasına al.",
       "baseIngredient": {
         "name": "Fesleğen",
         "baseQty": 120,
@@ -3738,42 +3738,42 @@
       },
       "ingredients": [
         {
-          "id": "ing_2_830",
+          "id": "ing_2_764",
           "name": "Roka",
           "baseQty": 120,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_3_830",
+          "id": "ing_3_764",
           "name": "Fındık İçi",
           "baseQty": 150,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_4_830",
+          "id": "ing_4_764",
           "name": "Toz Parmesan",
           "baseQty": 150,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_5_830",
+          "id": "ing_5_764",
           "name": "Zeytinyağı",
           "baseQty": 200,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_6_830",
+          "id": "ing_6_764",
           "name": "Diş Sarımsak",
           "baseQty": 3,
           "unit": "adet",
           "note": ""
         }
       ],
-      "updatedAt": 1794361253830,
+      "updatedAt": 1794361471764,
       "createdAt": 1794361253830
     }
   ],
