@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T01:06:39.184Z",
-  "timestamp": 1794359199032,
+  "exportedAt": "2026-11-11T01:30:35.093Z",
+  "timestamp": 1794360634941,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -204,7 +204,9 @@
     "prod_cust_i_likli_kemik_stok_suyu": 1794359199028,
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
-    "prod_cust_patates": 1794358779227
+    "prod_cust_patates": 1794358779227,
+    "crec": 1794360634940,
+    "rtag": 1794360634941
   },
   "suppliers": [
     {
@@ -3608,9 +3610,56 @@
     "bolonez": "Sote ve Pişirme",
     "mercimek": "Çorba",
     "pomodoro": "Taban Sos",
-    "pesto": "Topping Sos"
+    "pesto": "Topping Sos",
+    "crec_panna_cotta_4940": "Tatlı"
   },
-  "customRecipes": [],
+  "customRecipes": [
+    {
+      "id": "crec_panna_cotta_4940",
+      "name": "Panna Cotta",
+      "tag": "Tatlı",
+      "desc": "",
+      "instructions": "",
+      "baseIngredient": {
+        "name": "Hopla Bitkisel Krema",
+        "baseQty": 930,
+        "unit": "g",
+        "note": "Ana malzeme (tüm oranların bazı)"
+      },
+      "ingredients": [
+        {
+          "id": "ing_2_940",
+          "name": "Süt",
+          "baseQty": 480,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_3_940",
+          "name": "Şeker",
+          "baseQty": 135,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_4_940",
+          "name": "Vanilya Çubuğu",
+          "baseQty": 3,
+          "unit": "adet",
+          "note": "Tohumlarını çıkarmakla beraber çubuk da karışımda infuse edilmeli."
+        },
+        {
+          "id": "ing_5_940",
+          "name": "Yaprak Jelatin",
+          "baseQty": 7.5,
+          "unit": "g",
+          "note": ""
+        }
+      ],
+      "updatedAt": 1794360634940,
+      "createdAt": 1794360634940
+    }
+  ],
   "deletedCustomRecipeIds": [],
   "shiftEmployees": [
     {
