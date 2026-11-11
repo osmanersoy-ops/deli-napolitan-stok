@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T01:47:07.950Z",
-  "timestamp": 1794361627798,
+  "exportedAt": "2026-11-11T01:49:06.791Z",
+  "timestamp": 1794361746698,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "prod_cust_patates": 1794358779227,
-    "crec": 1794361627797,
-    "rtag": 1794361627798
+    "crec": 1794361746697,
+    "rtag": 1794361746698
   },
   "suppliers": [
     {
@@ -3615,7 +3615,8 @@
     "crec_yaban_mersini_sosu_1685": "Topping Sos",
     "crec_cilek_sos_7480": "Topping Sos",
     "crec_roka_pesto_3830": "Topping Sos",
-    "crec_antep_pesto_7797": "Topping Sos"
+    "crec_antep_pesto_7797": "Topping Sos",
+    "crec_domates_taban_6697": "Taban Sos"
   },
   "customRecipes": [
     {
@@ -3828,6 +3829,37 @@
       ],
       "updatedAt": 1794361627797,
       "createdAt": 1794361627797
+    },
+    {
+      "id": "crec_domates_taban_6697",
+      "name": "Domates Taban",
+      "tag": "Taban Sos",
+      "desc": "",
+      "instructions": "",
+      "baseIngredient": {
+        "name": "San Marzano Püresi",
+        "baseQty": 4200,
+        "unit": "g",
+        "note": "Ana malzeme (tüm oranların bazı)"
+      },
+      "ingredients": [
+        {
+          "id": "ing_2_697",
+          "name": "Tuz",
+          "baseQty": 32,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_3_697",
+          "name": "Su",
+          "baseQty": 700,
+          "unit": "g",
+          "note": ""
+        }
+      ],
+      "updatedAt": 1794361746697,
+      "createdAt": 1794361746697
     }
   ],
   "deletedCustomRecipeIds": [],
