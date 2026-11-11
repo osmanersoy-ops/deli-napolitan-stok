@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T01:04:55.915Z",
-  "timestamp": 1794359095763,
+  "exportedAt": "2026-11-11T01:05:01.275Z",
+  "timestamp": 1794359101124,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -77,7 +77,7 @@
     "prod_sl_9": 1794359007125,
     "prod_sl_8": 1794358998899,
     "prod_sl_32": 1792970300896,
-    "prod_sl_23": 1792970300896,
+    "prod_sl_23": 1794359101120,
     "prod_sl_24": 1792970300896,
     "prod_sl_34": 1792970300896,
     "prod_pr_11": 1792970300896,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794359095758,
-    "cat": 1794359095758,
+    "prod": 1794359101120,
+    "cat": 1794359101120,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -970,16 +970,16 @@
       ]
     },
     "sl_23": {
-      "category": "Ana Stok",
-      "supplierId": "sup_1791988183271",
+      "name": "Değirmenlik Tuz",
+      "unit": "Paket",
+      "category": "Kuru Depo",
+      "days": [
+        "sali"
+      ],
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "unit": "Paket",
-      "name": "Değirmenlik Tuz",
-      "days": [
-        "sali"
-      ]
+      "supplierId": "sup_1791988183271"
     },
     "sl_24": {
       "category": "Ana Stok",
