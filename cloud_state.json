@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T00:50:00.760Z",
-  "timestamp": 1794358200157,
+  "exportedAt": "2026-11-11T00:51:09.347Z",
+  "timestamp": 1794358269196,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -71,7 +71,7 @@
     "prod_sl_2": 1792970300896,
     "prod_sl_3": 1792970300896,
     "prod_sl_4": 1792970300896,
-    "prod_sl_5": 1792970300896,
+    "prod_sl_5": 1794358269188,
     "prod_sl_6": 1792970300896,
     "prod_sl_7": 1792970300896,
     "prod_sl_9": 1792970300896,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794358192908,
-    "cat": 1794179864373,
+    "prod": 1794358269188,
+    "cat": 1794358269188,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -875,13 +875,16 @@
       "name": "Danish Blue"
     },
     "sl_5": {
+      "name": "Scamorza",
+      "unit": "Paket",
       "category": "Ana Stok",
-      "supplierId": "sup_1791988183271",
+      "days": [
+        "sali"
+      ],
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "unit": "Paket",
-      "name": "Scarmoza"
+      "supplierId": "sup_1791988183271"
     },
     "sl_6": {
       "category": "Ana Stok",
