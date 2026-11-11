@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T02:26:09.336Z",
-  "timestamp": 1794363969183,
+  "exportedAt": "2026-11-11T02:27:19.152Z",
+  "timestamp": 1794364039000,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "prod_cust_patates": 1794358779227,
-    "crec": 1794363969182,
-    "rtag": 1794363969183
+    "crec": 1794364038999,
+    "rtag": 1794364039000
   },
   "suppliers": [
     {
@@ -3621,7 +3621,8 @@
     "crec_straganoff_sos_1925": "Topping Sos",
     "crec_kremali_mantar_corbasi_5346": "Çorba",
     "crec_truf_krema_5030": "Taban Sos",
-    "crec_domates_krema_9182": "Taban Sos"
+    "crec_domates_krema_9182": "Taban Sos",
+    "crec_muskat_krema_8998": "Taban Sos"
   },
   "customRecipes": [
     {
@@ -4118,6 +4119,44 @@
       ],
       "updatedAt": 1794363969182,
       "createdAt": 1794363969182
+    },
+    {
+      "id": "crec_muskat_krema_8998",
+      "name": "Muskat Krema",
+      "tag": "Taban Sos",
+      "desc": "",
+      "instructions": "",
+      "baseIngredient": {
+        "name": "Sütaş Krema",
+        "baseQty": 600,
+        "unit": "g",
+        "note": "Ana malzeme (tüm oranların bazı)"
+      },
+      "ingredients": [
+        {
+          "id": "ing_2_998",
+          "name": "Tane Karabiber",
+          "baseQty": 8,
+          "unit": "çevrim",
+          "note": ""
+        },
+        {
+          "id": "ing_3_998",
+          "name": "Muskat",
+          "baseQty": 10,
+          "unit": "çevrim",
+          "note": ""
+        },
+        {
+          "id": "ing_4_998",
+          "name": "Tuz",
+          "baseQty": 4,
+          "unit": "g",
+          "note": ""
+        }
+      ],
+      "updatedAt": 1794364038998,
+      "createdAt": 1794364038998
     }
   ],
   "deletedCustomRecipeIds": [],
