@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T00:59:21.036Z",
-  "timestamp": 1794358758583,
+  "exportedAt": "2026-11-11T00:59:39.380Z",
+  "timestamp": 1794358779229,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794358739689,
-    "cat": 1794358598989,
+    "prod": 1794358779227,
+    "cat": 1794358779227,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -203,7 +203,8 @@
     "shf": 1794179562902,
     "prod_cust_i_likli_kemik_stok_suyu": 1794179864373,
     "prod_hg_26": 1794358192908,
-    "prod_hg_21": 1794358724406
+    "prod_hg_21": 1794358724406,
+    "prod_cust_patates": 1794358779227
   },
   "suppliers": [
     {
@@ -685,6 +686,19 @@
         "sup_carsi_ve_migros"
       ],
       "supplierId": "sup_1791988183271"
+    },
+    {
+      "id": "cust_patates",
+      "name": "Patates",
+      "unit": "Adet",
+      "category": "Manav",
+      "days": [
+        "hergun"
+      ],
+      "supplierIds": [
+        "sup_meyfresh"
+      ],
+      "supplierId": "sup_meyfresh"
     }
   ],
   "productOverrides": {
@@ -1635,9 +1649,7 @@
     "hg_21",
     "yikanmis_feslegen",
     "cust_yikanmis_feslegen",
-    "hg_9",
-    "patates",
-    "cust_patates"
+    "hg_9"
   ],
   "deletedCategories": [
     "baharatlar"
