@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T01:04:40.357Z",
-  "timestamp": 1794359080206,
+  "exportedAt": "2026-11-11T01:04:48.295Z",
+  "timestamp": 1794359088143,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -93,7 +93,7 @@
     "prod_sl_17": 1794359062208,
     "prod_sl_18": 1792970300896,
     "prod_sl_19": 1794359080202,
-    "prod_sl_20": 1792970300896,
+    "prod_sl_20": 1794359088139,
     "prod_sl_21": 1792970300896,
     "prod_sl_22": 1792970300896,
     "prod_sl_25": 1792970300896,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794359080202,
-    "cat": 1794359080202,
+    "prod": 1794359088139,
+    "cat": 1794359088139,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -1157,16 +1157,16 @@
       "supplierId": "sup_1791988183271"
     },
     "sl_20": {
-      "category": "Ana Stok",
-      "supplierId": "sup_1791988183271",
+      "name": "Antep Fıstığı",
+      "unit": "KG",
+      "category": "Kuru Depo",
+      "days": [
+        "sali"
+      ],
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "unit": "KG",
-      "name": "Antep Fıstığı",
-      "days": [
-        "sali"
-      ]
+      "supplierId": "sup_1791988183271"
     },
     "sl_21": {
       "category": "Ana Stok",
