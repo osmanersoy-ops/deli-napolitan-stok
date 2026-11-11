@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T00:52:09.841Z",
-  "timestamp": 1794358329689,
+  "exportedAt": "2026-11-11T00:56:05.249Z",
+  "timestamp": 1794358565096,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -18,7 +18,7 @@
     "wsm_pazar": 1792967460558,
     "wsm": 1792967462680,
     "sd": 1792967388152,
-    "sup": 1793816759076,
+    "sup": 1794358565096,
     "prod_cust_kabak": 1792969316562,
     "prod_cust_sili_biber": 1792967808268,
     "prod_cust_jumbo_karides": 1792968827915,
@@ -289,6 +289,15 @@
     {
       "id": "sup_santral_gida",
       "name": "Santral Gıda",
+      "contactPerson": "",
+      "phone": "",
+      "whatsapp": "",
+      "email": "",
+      "notes": ""
+    },
+    {
+      "id": "sup_sutas",
+      "name": "Sütaş",
       "contactPerson": "",
       "phone": "",
       "whatsapp": "",
