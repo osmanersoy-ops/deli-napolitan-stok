@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T13:28:04.121Z",
-  "timestamp": 1794403684117,
+  "exportedAt": "2026-11-11T13:28:07.816Z",
+  "timestamp": 1794403687211,
   "deviceId": "dev_9hg13jx_mw7v2jf7",
   "moduleTimestamps": {
     "cnt_hergun": 1794403684117,
@@ -3581,30 +3581,15 @@
       "dayId": "sali",
       "updatedAt": 1794322294574
     },
-    "sl_35": {
-      "qty": "0",
-      "dayId": "metro",
-      "updatedAt": 1794144391783
-    },
-    "hg_9": {
-      "qty": "5",
-      "dayId": "hergun",
-      "updatedAt": 1794329719266
-    },
-    "hg_21": {
-      "qty": "0.5",
-      "dayId": "hergun",
-      "updatedAt": 1794329719266
-    },
-    "hg_26": {
-      "qty": "0",
-      "dayId": "hergun",
-      "updatedAt": 1794329719266
-    },
     "cust_patates": {
       "qty": 5,
       "dayId": "hergun",
       "updatedAt": 1794403684117
+    },
+    "sl_35": {
+      "qty": "0",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
     }
   },
   "recipeTags": {
