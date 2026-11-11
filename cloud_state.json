@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T01:03:58.873Z",
-  "timestamp": 1794359038722,
+  "exportedAt": "2026-11-11T01:04:11.517Z",
+  "timestamp": 1794359051365,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -86,7 +86,7 @@
     "prod_sl_11": 1794359030828,
     "prod_sl_12": 1794359038713,
     "prod_sl_13": 1792970300896,
-    "prod_sl_14": 1792970300896,
+    "prod_sl_14": 1794359051360,
     "prod_pz_8": 1792970300896,
     "prod_sl_10": 1794359017375,
     "prod_sl_16": 1792970300896,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794359038713,
-    "cat": 1794359038713,
+    "prod": 1794359051360,
+    "cat": 1794359051360,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -1073,16 +1073,16 @@
       ]
     },
     "sl_14": {
-      "category": "Ana Stok",
-      "supplierId": "sup_1791988183271",
+      "name": "Tahin",
+      "unit": "KG",
+      "category": "Sos & Yağ",
+      "days": [
+        "sali"
+      ],
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "unit": "KG",
-      "name": "Tahin",
-      "days": [
-        "sali"
-      ]
+      "supplierId": "sup_1791988183271"
     },
     "pz_8": {
       "category": "Akçalar Şarküteri",
