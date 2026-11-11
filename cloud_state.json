@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T19:36:32.642Z",
-  "timestamp": 1794425792038,
+  "exportedAt": "2026-11-11T19:40:43.695Z",
+  "timestamp": 1794426043543,
   "deviceId": "dev_99uzb4t_mvpnpi3a",
   "moduleTimestamps": {
     "cnt_hergun": 1794403870344,
@@ -205,8 +205,8 @@
     "prod_cust_patates": 1794358779227,
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
-    "rtag": 1794387904854,
-    "crec": 1794387904853
+    "rtag": 1794426043543,
+    "crec": 1794426043542
   },
   "suppliers": [
     {
@@ -3608,7 +3608,8 @@
     "crec_ispanak_krema_5967": "Taban Sos",
     "crec_humus_5324": "Sote ve Pişirme",
     "crec_aci_biber_receli_3655": "Sote ve Pişirme",
-    "crec_straccitaella_2386": "Topping Sos"
+    "crec_straccitaella_2386": "Topping Sos",
+    "crec_balsamic_vinegret_3541": "Topping Sos"
   },
   "customRecipes": [
     {
@@ -4302,6 +4303,44 @@
       ],
       "updatedAt": 1794365242386,
       "createdAt": 1794365242386
+    },
+    {
+      "id": "crec_balsamic_vinegret_3541",
+      "name": "Balsamic Vinegret",
+      "tag": "Topping Sos",
+      "desc": "",
+      "instructions": "",
+      "baseIngredient": {
+        "name": "Zeytinyağı (Özgün)",
+        "baseQty": 300,
+        "unit": "g",
+        "note": "Ana malzeme (tüm oranların bazı)"
+      },
+      "ingredients": [
+        {
+          "id": "ing_2_539",
+          "name": "Balsamic Sirke",
+          "baseQty": 100,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_3_541",
+          "name": "Değirmen Tuz",
+          "baseQty": 4,
+          "unit": "çevrim",
+          "note": ""
+        },
+        {
+          "id": "ing_4_541",
+          "name": "Tane Karabiber",
+          "baseQty": 4,
+          "unit": "çevrim",
+          "note": ""
+        }
+      ],
+      "updatedAt": 1794426043541,
+      "createdAt": 1794426043541
     }
   ],
   "deletedCustomRecipeIds": [],
