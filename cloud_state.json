@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T02:04:46.847Z",
-  "timestamp": 1794362685072,
+  "exportedAt": "2026-11-11T02:05:12.726Z",
+  "timestamp": 1794362712573,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "prod_cust_patates": 1794358779227,
-    "crec": 1794362685071,
-    "rtag": 1794362685072
+    "crec": 1794362712572,
+    "rtag": 1794362712573
   },
   "suppliers": [
     {
@@ -3867,7 +3867,7 @@
       "name": "Jumbo Karides",
       "tag": "Sote ve Pişirme",
       "desc": "",
-      "instructions": "Yağları ve sarımsağı ısıttıktan sonra karidesleri ekliyoruz. Tam C şekli almadan tuz ve karabiberini ekledikten sonra pişkinliğini tadarak kontrol ediyoruz. Ocaktan aldığımız karideslere choplanmış tarhunu ekleyerek karıştırdıktan sonra. boxlayarak dinlenmeye alıyoruz.",
+      "instructions": "Yağları ve sarımsağı ısıttıktan sonra karidesleri ekliyoruz. Karidesler tam C şekli almadan tuz ve karabiberini ekledikten sonra pişkinliğini tadarak kontrol ediyoruz. Ocaktan aldığımız karideslere choplanmış tarhunu ekleyerek karıştırdıktan sonra. boxlayarak dinlenmeye alıyoruz.",
       "baseIngredient": {
         "name": "Jumbo Karides",
         "baseQty": 1000,
@@ -3876,49 +3876,49 @@
       },
       "ingredients": [
         {
-          "id": "ing_2_071",
+          "id": "ing_2_571",
           "name": "Zeytinyağı",
           "baseQty": 20,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_3_071",
+          "id": "ing_3_572",
           "name": "Tereyağı",
           "baseQty": 50,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_4_071",
+          "id": "ing_4_572",
           "name": "Beyaz Sarımsak Püresi",
           "baseQty": 20,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_5_071",
+          "id": "ing_5_572",
           "name": "Tuz",
           "baseQty": 1.5,
           "unit": "g",
           "note": ""
         },
         {
-          "id": "ing_6_071",
+          "id": "ing_6_572",
           "name": "Tane Karabiber",
           "baseQty": 6,
           "unit": "çevrim",
           "note": ""
         },
         {
-          "id": "ing_7_071",
+          "id": "ing_7_572",
           "name": "Tarhun",
           "baseQty": 2,
           "unit": "g",
           "note": "Choplanmış"
         }
       ],
-      "updatedAt": 1794362685071,
+      "updatedAt": 1794362712572,
       "createdAt": 1794362685071
     }
   ],
