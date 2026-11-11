@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T01:03:11.823Z",
-  "timestamp": 1794358991671,
+  "exportedAt": "2026-11-11T01:03:19.056Z",
+  "timestamp": 1794358998904,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -75,7 +75,7 @@
     "prod_sl_6": 1794358991667,
     "prod_sl_7": 1794358287487,
     "prod_sl_9": 1792970300896,
-    "prod_sl_8": 1794358598989,
+    "prod_sl_8": 1794358998899,
     "prod_sl_32": 1792970300896,
     "prod_sl_23": 1792970300896,
     "prod_sl_24": 1792970300896,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794358991667,
-    "cat": 1794358991667,
+    "prod": 1794358998899,
+    "cat": 1794358998899,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -944,7 +944,7 @@
     "sl_8": {
       "name": "Sütaş Krema",
       "unit": "Paket",
-      "category": "Ana Stok",
+      "category": "Sos & Yağ",
       "days": [
         "sali"
       ],
