@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T19:36:26.657Z",
-  "timestamp": 1794425786055,
+  "exportedAt": "2026-11-11T19:36:32.642Z",
+  "timestamp": 1794425792038,
   "deviceId": "dev_99uzb4t_mvpnpi3a",
   "moduleTimestamps": {
     "cnt_hergun": 1794403870344,
@@ -1704,7 +1704,7 @@
         "notes": ""
       },
       "hg_3": {
-        "qty": 1,
+        "qty": "1",
         "notes": ""
       },
       "hg_4": {
@@ -1712,15 +1712,15 @@
         "notes": ""
       },
       "hg_5": {
-        "qty": 2.5,
+        "qty": "2.5",
         "notes": ""
       },
       "hg_6": {
-        "qty": 11,
+        "qty": "11",
         "notes": ""
       },
       "hg_7": {
-        "qty": 2,
+        "qty": "2",
         "notes": ""
       },
       "hg_8": {
@@ -1728,19 +1728,19 @@
         "notes": ""
       },
       "hg_10": {
-        "qty": 6,
+        "qty": "6",
         "notes": ""
       },
       "hg_11": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "hg_13": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "hg_14": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "hg_15": {
@@ -1752,7 +1752,7 @@
         "notes": ""
       },
       "hg_17": {
-        "qty": 8,
+        "qty": "8",
         "notes": ""
       },
       "hg_16": {
@@ -1764,7 +1764,7 @@
         "notes": ""
       },
       "cust_sili_biber": {
-        "qty": 2,
+        "qty": "2",
         "notes": ""
       },
       "cust_lime": {
@@ -1776,23 +1776,23 @@
         "notes": ""
       },
       "hg_20": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "hg_19": {
-        "qty": 1,
+        "qty": "1",
         "notes": ""
       },
       "hg_22": {
-        "qty": 1.5,
+        "qty": "1.5",
         "notes": ""
       },
       "hg_23": {
-        "qty": 2,
+        "qty": "2",
         "notes": ""
       },
       "hg_24": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": "0.75"
       },
       "hg_25": {
@@ -1800,19 +1800,19 @@
         "notes": ""
       },
       "hg_28": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "hg_27": {
-        "qty": 6,
+        "qty": "6",
         "notes": ""
       },
       "hg_29": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "hg_30": {
-        "qty": 11,
+        "qty": "11",
         "notes": ""
       },
       "cust_tiramisu": {
@@ -1820,19 +1820,19 @@
         "notes": ""
       },
       "cust_sote_jumbo_karides": {
-        "qty": 3,
+        "qty": "3",
         "notes": ""
       },
       "cust_pismis_dil_fume": {
-        "qty": 6,
+        "qty": "6",
         "notes": ""
       },
       "cust_izgaralanmis_kabak": {
-        "qty": 0.25,
+        "qty": "0.25",
         "notes": ""
       },
       "cust_patates": {
-        "qty": 5,
+        "qty": "5",
         "notes": ""
       }
     },
@@ -2280,7 +2280,7 @@
         "notes": ""
       },
       "hg_3": {
-        "qty": 1,
+        "qty": "1",
         "notes": ""
       },
       "hg_4": {
@@ -2288,15 +2288,15 @@
         "notes": ""
       },
       "hg_5": {
-        "qty": 2.5,
+        "qty": "2.5",
         "notes": ""
       },
       "hg_6": {
-        "qty": 11,
+        "qty": "11",
         "notes": ""
       },
       "hg_7": {
-        "qty": 2,
+        "qty": "2",
         "notes": ""
       },
       "hg_8": {
@@ -2304,19 +2304,19 @@
         "notes": ""
       },
       "hg_10": {
-        "qty": 6,
+        "qty": "6",
         "notes": ""
       },
       "hg_11": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "hg_13": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "hg_14": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "hg_15": {
@@ -2328,7 +2328,7 @@
         "notes": ""
       },
       "hg_17": {
-        "qty": 8,
+        "qty": "8",
         "notes": ""
       },
       "hg_16": {
@@ -2340,7 +2340,7 @@
         "notes": ""
       },
       "cust_sili_biber": {
-        "qty": 2,
+        "qty": "2",
         "notes": ""
       },
       "cust_lime": {
@@ -2352,23 +2352,23 @@
         "notes": ""
       },
       "hg_20": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "hg_19": {
-        "qty": 1,
+        "qty": "1",
         "notes": ""
       },
       "hg_22": {
-        "qty": 1.5,
+        "qty": "1.5",
         "notes": ""
       },
       "hg_23": {
-        "qty": 2,
+        "qty": "2",
         "notes": ""
       },
       "hg_24": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": "0.75"
       },
       "hg_25": {
@@ -2376,19 +2376,19 @@
         "notes": ""
       },
       "hg_28": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "hg_27": {
-        "qty": 6,
+        "qty": "6",
         "notes": ""
       },
       "hg_29": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "hg_30": {
-        "qty": 11,
+        "qty": "11",
         "notes": ""
       },
       "cust_tiramisu": {
@@ -2396,19 +2396,19 @@
         "notes": ""
       },
       "cust_sote_jumbo_karides": {
-        "qty": 3,
+        "qty": "3",
         "notes": ""
       },
       "cust_pismis_dil_fume": {
-        "qty": 6,
+        "qty": "6",
         "notes": ""
       },
       "cust_izgaralanmis_kabak": {
-        "qty": 0.25,
+        "qty": "0.25",
         "notes": ""
       },
       "cust_patates": {
-        "qty": 5,
+        "qty": "5",
         "notes": ""
       }
     },
@@ -3068,7 +3068,7 @@
       "updatedAt": 1794403870344
     },
     "hg_3": {
-      "qty": 1,
+      "qty": "1",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
@@ -3078,17 +3078,17 @@
       "updatedAt": 1794403870344
     },
     "hg_5": {
-      "qty": 2.5,
+      "qty": "2.5",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "hg_6": {
-      "qty": 11,
+      "qty": "11",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "hg_7": {
-      "qty": 2,
+      "qty": "2",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
@@ -3098,22 +3098,22 @@
       "updatedAt": 1794403870344
     },
     "hg_10": {
-      "qty": 6,
+      "qty": "6",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "hg_11": {
-      "qty": 0,
+      "qty": "0",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "hg_13": {
-      "qty": 0,
+      "qty": "0",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "hg_14": {
-      "qty": 0.5,
+      "qty": "0.5",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
@@ -3128,7 +3128,7 @@
       "updatedAt": 1794403870344
     },
     "hg_17": {
-      "qty": 8,
+      "qty": "8",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
@@ -3138,27 +3138,27 @@
       "updatedAt": 1794403870344
     },
     "hg_19": {
-      "qty": 1,
+      "qty": "1",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "hg_20": {
-      "qty": 0.5,
+      "qty": "0.5",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "hg_22": {
-      "qty": 1.5,
+      "qty": "1.5",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "hg_23": {
-      "qty": 2,
+      "qty": "2",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "hg_24": {
-      "qty": 0.5,
+      "qty": "0.5",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
@@ -3168,22 +3168,22 @@
       "updatedAt": 1794403870344
     },
     "hg_27": {
-      "qty": 6,
+      "qty": "6",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "hg_28": {
-      "qty": 0.5,
+      "qty": "0.5",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "hg_29": {
-      "qty": 0,
+      "qty": "0",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "hg_30": {
-      "qty": 11,
+      "qty": "11",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
@@ -3268,7 +3268,7 @@
       "updatedAt": 1794403870344
     },
     "cust_sili_biber": {
-      "qty": 2,
+      "qty": "2",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
@@ -3288,17 +3288,17 @@
       "updatedAt": 1794403870344
     },
     "cust_pismis_dil_fume": {
-      "qty": 6,
+      "qty": "6",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "cust_sote_jumbo_karides": {
-      "qty": 3,
+      "qty": "3",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
     "cust_izgaralanmis_kabak": {
-      "qty": 0.25,
+      "qty": "0.25",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
@@ -3578,7 +3578,7 @@
       "updatedAt": 1794322294574
     },
     "cust_patates": {
-      "qty": 5,
+      "qty": "5",
       "dayId": "hergun",
       "updatedAt": 1794403870344
     },
