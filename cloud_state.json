@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T01:05:17.432Z",
-  "timestamp": 1794359117279,
+  "exportedAt": "2026-11-11T01:05:35.906Z",
+  "timestamp": 1794359135755,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -98,7 +98,7 @@
     "prod_sl_22": 1792970300896,
     "prod_sl_25": 1792970300896,
     "prod_sl_26": 1794359117275,
-    "prod_sl_27": 1792970300896,
+    "prod_sl_27": 1794359135751,
     "prod_sl_28": 1792970300896,
     "prod_sl_30": 1792968801259,
     "prod_sl_31": 1792970300896,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794359117275,
-    "cat": 1794359117275,
+    "prod": 1794359135751,
+    "cat": 1794359135751,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -1217,16 +1217,16 @@
       "supplierId": "sup_1791988183271"
     },
     "sl_27": {
-      "category": "Ana Stok",
-      "supplierId": "sup_1791988183271",
+      "name": "Toz Şeker",
+      "unit": "KG",
+      "category": "Kuru Depo",
+      "days": [
+        "sali"
+      ],
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "unit": "KG",
-      "name": "Toz Şeker",
-      "days": [
-        "sali"
-      ]
+      "supplierId": "sup_1791988183271"
     },
     "sl_28": {
       "category": "Ana Stok",
