@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T01:31:32.490Z",
-  "timestamp": 1794360692073,
+  "exportedAt": "2026-11-11T01:35:31.839Z",
+  "timestamp": 1794360931686,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "prod_cust_patates": 1794358779227,
-    "crec": 1794360634940,
-    "rtag": 1794360634941
+    "crec": 1794360931686,
+    "rtag": 1794360931686
   },
   "suppliers": [
     {
@@ -3611,7 +3611,8 @@
     "mercimek": "Çorba",
     "pomodoro": "Taban Sos",
     "pesto": "Topping Sos",
-    "crec_panna_cotta_4940": "Tatlı"
+    "crec_panna_cotta_4940": "Tatlı",
+    "crec_yaban_mersini_sosu_1685": "Topping Sos"
   },
   "customRecipes": [
     {
@@ -3658,6 +3659,37 @@
       ],
       "updatedAt": 1794360634940,
       "createdAt": 1794360634940
+    },
+    {
+      "id": "crec_yaban_mersini_sosu_1685",
+      "name": "Yaban Mersini Sosu",
+      "tag": "Topping Sos",
+      "desc": "",
+      "instructions": "Donuk yaban mersini ile şekeri simmerda ocakta ara ara karıştırarak reçel kıvamına gelmeden ocaktan al. Ocaktan alınan karışıma 1/2 lime suyu ekle ve karıştır.",
+      "baseIngredient": {
+        "name": "Donuk Yaban Mersini",
+        "baseQty": 450,
+        "unit": "g",
+        "note": "Ana malzeme (tüm oranların bazı)"
+      },
+      "ingredients": [
+        {
+          "id": "ing_2_685",
+          "name": "Şeker",
+          "baseQty": 75,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_3_685",
+          "name": "Lime",
+          "baseQty": 0.5,
+          "unit": "adet",
+          "note": ""
+        }
+      ],
+      "updatedAt": 1794360931685,
+      "createdAt": 1794360931685
     }
   ],
   "deletedCustomRecipeIds": [],
