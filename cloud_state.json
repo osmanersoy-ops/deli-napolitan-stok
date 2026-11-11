@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T02:10:58.107Z",
-  "timestamp": 1794362896162,
+  "exportedAt": "2026-11-11T02:15:02.590Z",
+  "timestamp": 1794363301988,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1794329719266,
@@ -205,8 +205,8 @@
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "prod_cust_patates": 1794358779227,
-    "crec": 1794362827972,
-    "rtag": 1794362827973
+    "crec": 1794363301925,
+    "rtag": 1794363301926
   },
   "suppliers": [
     {
@@ -3617,7 +3617,8 @@
     "crec_roka_pesto_3830": "Topping Sos",
     "crec_antep_pesto_7797": "Topping Sos",
     "crec_domates_taban_6697": "Taban Sos",
-    "crec_jumbo_karides_5071": "Sote ve Pişirme"
+    "crec_jumbo_karides_5071": "Sote ve Pişirme",
+    "crec_straganoff_sos_1925": "Topping Sos"
   },
   "customRecipes": [
     {
@@ -3920,6 +3921,58 @@
       ],
       "updatedAt": 1794362827972,
       "createdAt": 1794362685071
+    },
+    {
+      "id": "crec_straganoff_sos_1925",
+      "name": "Straganoff Sos",
+      "tag": "Topping Sos",
+      "desc": "",
+      "instructions": "",
+      "baseIngredient": {
+        "name": "Mayonez",
+        "baseQty": 700,
+        "unit": "g",
+        "note": "Ana malzeme (tüm oranların bazı)"
+      },
+      "ingredients": [
+        {
+          "id": "ing_2_925",
+          "name": "Ekşi Krema",
+          "baseQty": 260,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_3_925",
+          "name": "Hardal",
+          "baseQty": 26,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_4_925",
+          "name": "Soğan Tozu",
+          "baseQty": 4,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_5_925",
+          "name": "Sarımsak Tozu",
+          "baseQty": 4,
+          "unit": "g",
+          "note": ""
+        },
+        {
+          "id": "ing_6_925",
+          "name": "Tuz",
+          "baseQty": 6,
+          "unit": "g",
+          "note": ""
+        }
+      ],
+      "updatedAt": 1794363301925,
+      "createdAt": 1794363301925
     }
   ],
   "deletedCustomRecipeIds": [],
