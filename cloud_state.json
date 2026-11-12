@@ -1,9 +1,9 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-11T21:03:53.789Z",
-  "timestamp": 1794431033618,
-  "deviceId": "dev_9hg13jx_mw7v2jf7",
+  "exportedAt": "2026-11-12T11:20:27.303Z",
+  "timestamp": 1794482426694,
+  "deviceId": "dev_irn623d_mw0oagq7",
   "moduleTimestamps": {
     "cnt_hergun": 1794403870344,
     "cnt_pazar": 1794159762511,
@@ -22,6 +22,8 @@
     "prod_cust_kabak": 1792969316562,
     "prod_cust_sili_biber": 1792967808268,
     "prod_cust_jumbo_karides": 1792968827915,
+    "prod_cust_baby_karides": 1793811910712,
+    "prod_cust_i_c_midye": 1793811902261,
     "prod_cust_dana_brisket_fume": 1792968037845,
     "prod_cust_dana_dil_fume": 1792968059064,
     "prod_cust_tiramisu": 1792968396282,
@@ -125,8 +127,6 @@
     "prod_pr_12": 1792970300896,
     "prod_pz_16": 1792969462468,
     "prod_pz_14": 1792969469433,
-    "prod_cust_baby_karides": 1793811910712,
-    "prod_cust_i_c_midye": 1793811902261,
     "prod_pz_7": 1792969243614,
     "prod_pz_2": 1792969249064,
     "prod_pz_9": 1792969253280,
@@ -134,6 +134,7 @@
     "prod_hg_31": 1792969299230,
     "prod": 1794364990251,
     "cat": 1794364990251,
+    "prod_cust_i_likli_kemik_stok_suyu": 1794359199028,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -201,7 +202,6 @@
     "shf_emp_ozge_cumartesi": 1793877135627,
     "shf_emp_ozge_pazar": 1793877135627,
     "shf": 1794179562902,
-    "prod_cust_i_likli_kemik_stok_suyu": 1794359199028,
     "prod_cust_patates": 1794358779227,
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
@@ -2257,10 +2257,6 @@
       },
       "cust_cubuk_vanilya": {
         "qty": "1",
-        "notes": ""
-      },
-      "sl_35": {
-        "qty": "0",
         "notes": ""
       },
       "cust_taze_kekik": {
