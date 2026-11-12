@@ -7129,18 +7129,18 @@
             <div class="dt-input-box">
               <div class="dt-input-label-row">
                 <span class="dt-input-label">🎯 2. Hedef Hamur Çıkış Sıcaklığı</span>
-                <span class="dt-input-hint">Önerilen: 21.8 – 22.0°C</span>
+                <span class="dt-input-hint">Varsayılan: 22.0°C (±0,5°C)</span>
               </div>
               <div class="dt-stepper-row">
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('targetDoughTemp', -0.2)">−</button>
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('targetDoughTemp', -0.5)">−</button>
                 <div class="dt-input-field-wrap">
-                  <input type="number" id="dtInputTargetDoughTemp" class="dt-number-input" value="22.0" min="15" max="30" step="0.1" inputmode="decimal" oninput="handleDoughTempInputChange()">
+                  <input type="number" id="dtInputTargetDoughTemp" class="dt-number-input" value="22.0" min="15" max="30" step="0.5" inputmode="decimal" oninput="handleDoughTempInputChange()">
                   <span class="dt-input-unit">°C</span>
                 </div>
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('targetDoughTemp', 0.2)">+</button>
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('targetDoughTemp', 0.5)">+</button>
               </div>
               <div class="dt-preset-pills">
-                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputTargetDoughTemp', 21.8)">21.8°C (Test)</button>
+                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputTargetDoughTemp', 21.5)">21.5°C</button>
                 <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputTargetDoughTemp', 22.0)">22.0°C (Varsayılan)</button>
                 <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputTargetDoughTemp', 22.5)">22.5°C (Sınır)</button>
               </div>
@@ -7150,18 +7150,18 @@
             <div class="dt-input-box">
               <div class="dt-input-label-row">
                 <span class="dt-input-label">📦 3. Biga Sıcaklığı</span>
-                <span class="dt-input-hint">Özgül Isı: c = 0.613</span>
+                <span class="dt-input-hint">Varsayılan: 12.0°C (±0,1°C)</span>
               </div>
               <div class="dt-stepper-row">
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('bigaTemp', -0.5)">−</button>
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('bigaTemp', -0.1)">−</button>
                 <div class="dt-input-field-wrap">
-                  <input type="number" id="dtInputBigaTemp" class="dt-number-input" value="9.0" min="0" max="30" step="0.1" inputmode="decimal" oninput="handleDoughTempInputChange()">
+                  <input type="number" id="dtInputBigaTemp" class="dt-number-input" value="12.0" min="0" max="30" step="0.1" inputmode="decimal" oninput="handleDoughTempInputChange()">
                   <span class="dt-input-unit">°C</span>
                 </div>
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('bigaTemp', 0.5)">+</button>
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('bigaTemp', 0.1)">+</button>
               </div>
               <div style="font-size:0.73rem; color:var(--dt-text-muted); font-weight:600;">
-                Dolaptan çıkan Biga V2 iç sıcaklığı (Örn: 9.0°C)
+                Dolaptan çıkan Biga V2 iç sıcaklığı (Özgül Isı: c = 0.613)
               </div>
             </div>
 
@@ -7169,18 +7169,18 @@
             <div class="dt-input-box">
               <div class="dt-input-label-row">
                 <span class="dt-input-label">🌾 4. Un Sıcaklığı</span>
-                <span class="dt-input-hint">Özgül Isı: c = 0.42</span>
+                <span class="dt-input-hint">Varsayılan: 20.0°C (±0,5°C)</span>
               </div>
               <div class="dt-stepper-row">
                 <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('flourTemp', -0.5)">−</button>
                 <div class="dt-input-field-wrap">
-                  <input type="number" id="dtInputFlourTemp" class="dt-number-input" value="16.7" min="0" max="40" step="0.1" inputmode="decimal" oninput="handleDoughTempInputChange()">
+                  <input type="number" id="dtInputFlourTemp" class="dt-number-input" value="20.0" min="0" max="40" step="0.5" inputmode="decimal" oninput="handleDoughTempInputChange()">
                   <span class="dt-input-unit">°C</span>
                 </div>
                 <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('flourTemp', 0.5)">+</button>
               </div>
               <div style="font-size:0.73rem; color:var(--dt-text-muted); font-weight:600;">
-                Çuvaldaki final kuru un sıcaklığı (Örn: 16.7°C)
+                Çuvaldaki final kuru un sıcaklığı (Özgül Isı: c = 0.42)
               </div>
             </div>
 
@@ -19508,8 +19508,8 @@
     const DOUGH_TEMP_DEFAULTS = {
       finalFlourKg: 10,
       targetDoughTemp: 22.0,
-      bigaTemp: 9.0,
-      flourTemp: 16.7,
+      bigaTemp: 12.0,
+      flourTemp: 20.0,
       roomTemp: 27.0,
       mixDuration: 21,
       yeastWaterMode: 'scaled', // 'scaled' (62.5 g/kg) veya 'fixed' (625 g sabit)
@@ -19520,7 +19520,7 @@
 
     function loadDoughTempState() {
       try {
-        const saved = localStorage.getItem('delinapolitan_dough_temp_calc');
+        const saved = localStorage.getItem('delinapolitan_dough_temp_calc_v2');
         if (saved) {
           const parsed = JSON.parse(saved);
           if (parsed && typeof parsed === 'object') {
@@ -19530,7 +19530,7 @@
               bigaTemp: !isNaN(Number(parsed.bigaTemp)) ? Number(parsed.bigaTemp) : DOUGH_TEMP_DEFAULTS.bigaTemp,
               flourTemp: !isNaN(Number(parsed.flourTemp)) ? Number(parsed.flourTemp) : DOUGH_TEMP_DEFAULTS.flourTemp,
               roomTemp: !isNaN(Number(parsed.roomTemp)) ? Number(parsed.roomTemp) : DOUGH_TEMP_DEFAULTS.roomTemp,
-              mixDuration: Number(parsed.mixDuration) > 0 ? Number(parsed.mixDuration) : DOUGH_TEMP_DEFAULTS.mixDuration,
+              mixDuration: 21,
               yeastWaterMode: parsed.yeastWaterMode === 'fixed' ? 'fixed' : 'scaled',
               darkMode: !!parsed.darkMode
             };
@@ -19541,7 +19541,7 @@
 
     function saveDoughTempState() {
       try {
-        localStorage.setItem('delinapolitan_dough_temp_calc', JSON.stringify(doughTempState));
+        localStorage.setItem('delinapolitan_dough_temp_calc_v2', JSON.stringify(doughTempState));
       } catch (e) {}
     }
 
@@ -19563,7 +19563,6 @@
       setVal('dtInputBigaTemp', doughTempState.bigaTemp.toFixed(1));
       setVal('dtInputFlourTemp', doughTempState.flourTemp.toFixed(1));
       setVal('dtInputRoomTemp', doughTempState.roomTemp.toFixed(1));
-      setVal('dtInputMixDuration', doughTempState.mixDuration);
     }
 
     function toggleDoughTempDarkMode() {
@@ -19627,8 +19626,7 @@
         targetDoughTemp: { id: 'dtInputTargetDoughTemp', min: 15, max: 30, decimals: 1 },
         bigaTemp: { id: 'dtInputBigaTemp', min: 0, max: 30, decimals: 1 },
         flourTemp: { id: 'dtInputFlourTemp', min: 0, max: 40, decimals: 1 },
-        roomTemp: { id: 'dtInputRoomTemp', min: 5, max: 45, decimals: 1 },
-        mixDuration: { id: 'dtInputMixDuration', min: 5, max: 45, decimals: 0 }
+        roomTemp: { id: 'dtInputRoomTemp', min: 5, max: 45, decimals: 1 }
       };
       const cfg = map[field];
       if (!cfg) return;
@@ -19641,7 +19639,7 @@
       if (next < cfg.min) next = cfg.min;
       if (next > cfg.max) next = cfg.max;
 
-      el.value = cfg.decimals === 0 ? Math.round(next) : (Math.round(next * 10) / 10);
+      el.value = cfg.decimals === 0 ? Math.round(next) : (Math.round(next * 10) / 10).toFixed(1);
       handleDoughTempInputChange();
     }
 
@@ -19651,7 +19649,7 @@
       saveDoughTempState();
       syncDoughTempInputsFromState();
       calculateDoughMixTemp();
-      showToast('✓ Saha testi referans değerlerine (10 kg Final Un, 22°C Hedef, 9°C Biga, 16.7°C Un, 27°C Ortam) sıfırlandı.');
+      showToast('✓ Varsayılan değerlere (10 kg Final Un, 22°C Hedef, 12°C Biga, 20°C Un, 27°C Ortam) sıfırlandı.');
     }
 
     function handleDoughTempInputChange() {
@@ -19664,8 +19662,8 @@
 
       doughTempState.finalFlourKg = Math.max(0.5, readNum('dtInputFinalFlourKg', 10));
       doughTempState.targetDoughTemp = readNum('dtInputTargetDoughTemp', 22.0);
-      doughTempState.bigaTemp = readNum('dtInputBigaTemp', 9.0);
-      doughTempState.flourTemp = readNum('dtInputFlourTemp', 16.7);
+      doughTempState.bigaTemp = readNum('dtInputBigaTemp', 12.0);
+      doughTempState.flourTemp = readNum('dtInputFlourTemp', 20.0);
       doughTempState.roomTemp = readNum('dtInputRoomTemp', 27.0);
       doughTempState.mixDuration = 21;
 
