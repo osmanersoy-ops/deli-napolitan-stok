@@ -7202,25 +7202,6 @@
                 ΔT_ortam = (T_ortam − 27) × 0.15
               </div>
             </div>
-
-            <!-- Input 6: Planlanan Miks Süresi (Dakika) -->
-            <div class="dt-input-box">
-              <div class="dt-input-label-row">
-                <span class="dt-input-label">⏱️ 6. Planlanan Miks Süresi</span>
-                <span class="dt-input-hint">Ref: 21 dk (±0.45/dk)</span>
-              </div>
-              <div class="dt-stepper-row">
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('mixDuration', -1)">−</button>
-                <div class="dt-input-field-wrap">
-                  <input type="number" id="dtInputMixDuration" class="dt-number-input" value="21" min="5" max="40" step="1" inputmode="numeric" oninput="handleDoughTempInputChange()">
-                  <span class="dt-input-unit">dk</span>
-                </div>
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('mixDuration', 1)">+</button>
-              </div>
-              <div style="font-size:0.73rem; color:var(--dt-text-muted); font-weight:600;">
-                ΔT_süre = (Süre_dk − 21) × 0.45
-              </div>
-            </div>
           </div>
         </section>
 
@@ -7246,6 +7227,10 @@
               <div class="dt-hero-primary-sub" id="dtMainWaterWeightSub">
                 Soğutulacak Ana Su (Tuzlu su dahil): <strong>8.575 gr</strong>
               </div>
+              <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.16); font-size: 0.86rem; font-weight: 800; color: #BAE6FD; display: flex; align-items: center; gap: 6px;">
+                <span>⏱️</span>
+                <span id="dtEstimatedMixTimeDisplay">Tahmini Miks Süresi: ~21 Dakika (13 dk 1. Vites + 8 dk 2. Vites)</span>
+              </div>
             </div>
 
             <!-- Sağ Sütun: Maya Suyu & Ağırlıklı Ortalama & Termal Denge -->
@@ -7268,10 +7253,10 @@
 
               <div class="dt-hero-stat-row">
                 <div>
-                  <div class="dt-hero-stat-label">🔥 Miks Isı Artışı (ΔT) &amp; Başlangıç</div>
-                  <div style="font-size:0.73rem; color:#94A3B8; margin-top:2px;" id="dtDeltaTBreakdownText">Baz 11.4°C + Ortam 0.0°C + Süre 0.0°C</div>
+                  <div class="dt-hero-stat-label">⏱️ Tahmini Miks Süresi &amp; Isı Artışı (ΔT)</div>
+                  <div style="font-size:0.73rem; color:#94A3B8; margin-top:2px;" id="dtDeltaTBreakdownText">Tahmini Süre: 21 dk • Baz 11.4°C + Ortam 0.0°C</div>
                 </div>
-                <div class="dt-hero-stat-val" style="font-size:1.02rem;" id="dtStartAndDeltaDisplay">+11.4 °C → Başlangıç: 10.6 °C</div>
+                <div class="dt-hero-stat-val" style="font-size:1.02rem;" id="dtStartAndDeltaDisplay">~21 dk (+11.4 °C)</div>
               </div>
             </div>
           </div>
@@ -19666,7 +19651,7 @@
       saveDoughTempState();
       syncDoughTempInputsFromState();
       calculateDoughMixTemp();
-      showToast('✓ Saha testi referans değerlerine (10 kg Final Un, 22°C Hedef, 9°C Biga, 16.7°C Un, 27°C Ortam, 21 dk) sıfırlandı.');
+      showToast('✓ Saha testi referans değerlerine (10 kg Final Un, 22°C Hedef, 9°C Biga, 16.7°C Un, 27°C Ortam) sıfırlandı.');
     }
 
     function handleDoughTempInputChange() {
@@ -19682,7 +19667,7 @@
       doughTempState.bigaTemp = readNum('dtInputBigaTemp', 9.0);
       doughTempState.flourTemp = readNum('dtInputFlourTemp', 16.7);
       doughTempState.roomTemp = readNum('dtInputRoomTemp', 27.0);
-      doughTempState.mixDuration = Math.max(1, readNum('dtInputMixDuration', 21));
+      doughTempState.mixDuration = 21;
 
       saveDoughTempState();
       calculateDoughMixTemp();
@@ -19702,7 +19687,7 @@
       const T_biga = doughTempState.bigaTemp;
       const T_un = doughTempState.flourTemp;
       const T_ortam = doughTempState.roomTemp;
-      const Sure_dk = doughTempState.mixDuration;
+      const Sure_dk = 21;
 
       // 1. Reçete Ölçekleme (10 kg Final Un bazlı sabit oranlar)
       const M_un = finalFlourKg * 1000; // Final kuru un (gr)
@@ -19738,8 +19723,7 @@
       // Sürtünme ve Ortam Isı Kazancı (ΔT_miks)
       const dT_baz = 11.4;
       const dT_ortam = (T_ortam - 27.0) * 0.15;
-      const dT_sure = (Sure_dk - 21.0) * 0.45;
-      const dT_toplam = dT_baz + dT_ortam + dT_sure;
+      const dT_toplam = dT_baz + dT_ortam;
 
       // Hedeflenen Başlangıç Karışım Sıcaklığı (T_baslangic)
       const T_baslangic = T_hedef - dT_toplam;
@@ -19826,11 +19810,10 @@
       }
       if (deltaBreakdownEl) {
         const signOrtam = dT_ortam >= 0 ? '+' : '';
-        const signSure = dT_sure >= 0 ? '+' : '';
-        deltaBreakdownEl.textContent = `Baz 11.4°C ${signOrtam}${formatTempTR(dT_ortam)}°C (Ortam) ${signSure}${formatTempTR(dT_sure)}°C (Süre)`;
+        deltaBreakdownEl.textContent = `Tahmini Süre: ~${Sure_dk} dk • Baz 11.4°C ${signOrtam}${formatTempTR(dT_ortam)}°C (Ortam) • Başlangıç: ${formatTempTR(T_baslangic)}°C`;
       }
       if (startAndDeltaEl) {
-        startAndDeltaEl.textContent = `+${formatTempTR(dT_toplam)} °C → Başlangıç: ${formatTempTR(T_baslangic)} °C`;
+        startAndDeltaEl.textContent = `~${Sure_dk} dk (+${formatTempTR(dT_toplam)} °C)`;
       }
 
       // Buz Uyarı Banner'ı
@@ -19992,7 +19975,7 @@
               <strong>Toplam Final Hamur Ağırlığı:</strong> ${formatGramsTR(M_toplam_hamur)} gr (${(M_toplam_hamur / 1000).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kg)
             </td>
             <td colspan="3" style="color:#0284C7;">
-              <strong>Tahmini Beze Adedi (260 gr/beze):</strong> ~${bezeAdedi} Adet • <strong>Toplam Hidrasyon:</strong> %71 (${formatGramsTR(M_biga_su + M_su)} gr su / ${formatGramsTR(M_toplam_un)} gr un)
+              <strong>Tahmini Beze Adedi (260 gr/beze):</strong> ~${bezeAdedi} Adet • <strong>Tahmini Miks Süresi:</strong> ~${Sure_dk} Dakika • <strong>Toplam Hidrasyon:</strong> %71
             </td>
           </tr>
         `;
@@ -20010,10 +19993,9 @@
               • Final Su: ${formatGramsTR(M_su)}g × 1.00 = <strong>${Math.round(C_su).toLocaleString('tr-TR')}</strong> cal/°C
             </div>
             <div style="background:var(--dt-bg-soft); border:1px solid var(--dt-border); padding:10px 12px; border-radius:10px;">
-              <strong style="color:var(--dt-text-main); display:block; margin-bottom:3px;">2. Miks Isı Kazancı (ΔT_toplam)</strong>
+              <strong style="color:var(--dt-text-main); display:block; margin-bottom:3px;">2. Miks Isı Kazancı (Tahmini ~21 dk)</strong>
               • ΔT_baz (21 dk @ 27°C): <strong>+11.4 °C</strong><br>
               • ΔT_ortam: (${formatTempTR(T_ortam)} − 27) × 0.15 = <strong>${dT_ortam >= 0 ? '+' : ''}${formatTempTR(dT_ortam)} °C</strong><br>
-              • ΔT_süre: (${Sure_dk} − 21) × 0.45 = <strong>${dT_sure >= 0 ? '+' : ''}${formatTempTR(dT_sure)} °C</strong><br>
               • Toplam Artış: <strong>+${formatTempTR(dT_toplam)} °C</strong> → T_başlangıç: <strong>${formatTempTR(T_baslangic)} °C</strong>
             </div>
             <div style="background:var(--dt-bg-soft); border:1px solid var(--dt-border); padding:10px 12px; border-radius:10px;">
