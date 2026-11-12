@@ -7103,32 +7103,10 @@
           </div>
 
           <div class="dt-inputs-grid">
-            <!-- Input 1: Final Un Miktarı (kg) -->
-            <div class="dt-input-box dt-input-highlight">
-              <div class="dt-input-label-row">
-                <span class="dt-input-label">🌾 1. Final Un Miktarı</span>
-                <span class="dt-input-hint" id="dtTotalFlourHint">Toplam Parti: 20 kg Un</span>
-              </div>
-              <div class="dt-stepper-row">
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('finalFlourKg', -1)">−</button>
-                <div class="dt-input-field-wrap">
-                  <input type="number" id="dtInputFinalFlourKg" class="dt-number-input" value="10" min="1" max="100" step="0.5" inputmode="decimal" oninput="handleDoughTempInputChange()">
-                  <span class="dt-input-unit">kg</span>
-                </div>
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('finalFlourKg', 1)">+</button>
-              </div>
-              <div class="dt-preset-pills" id="dtFlourPresetsContainer">
-                <button type="button" class="dt-preset-pill" data-flour="5" onclick="setDoughTempFlourPreset(5)">5 kg (1 Biga)</button>
-                <button type="button" class="dt-preset-pill active" data-flour="10" onclick="setDoughTempFlourPreset(10)">10 kg (2 Biga)</button>
-                <button type="button" class="dt-preset-pill" data-flour="15" onclick="setDoughTempFlourPreset(15)">15 kg (3 Biga)</button>
-                <button type="button" class="dt-preset-pill" data-flour="20" onclick="setDoughTempFlourPreset(20)">20 kg (4 Biga)</button>
-              </div>
-            </div>
-
-            <!-- Input 2: Hedef Hamur Çıkış Sıcaklığı (°C) -->
+            <!-- Input 1: Hedef Hamur Çıkış Sıcaklığı (°C) -->
             <div class="dt-input-box">
               <div class="dt-input-label-row">
-                <span class="dt-input-label">🎯 2. Hedef Hamur Çıkış Sıcaklığı</span>
+                <span class="dt-input-label">🎯 1. Hedef Hamur Çıkış Sıcaklığı</span>
                 <span class="dt-input-hint">Varsayılan: 22.0°C (±0,5°C)</span>
               </div>
               <div class="dt-stepper-row">
@@ -7146,10 +7124,10 @@
               </div>
             </div>
 
-            <!-- Input 3: Biga Sıcaklığı (°C) -->
+            <!-- Input 2: Biga Sıcaklığı (°C) -->
             <div class="dt-input-box">
               <div class="dt-input-label-row">
-                <span class="dt-input-label">📦 3. Biga Sıcaklığı</span>
+                <span class="dt-input-label">📦 2. Biga Sıcaklığı</span>
                 <span class="dt-input-hint">Varsayılan: 12.0°C (±0,1°C)</span>
               </div>
               <div class="dt-stepper-row">
@@ -7165,10 +7143,10 @@
               </div>
             </div>
 
-            <!-- Input 4: Un Sıcaklığı (°C) -->
+            <!-- Input 3: Un Sıcaklığı (°C) -->
             <div class="dt-input-box">
               <div class="dt-input-label-row">
-                <span class="dt-input-label">🌾 4. Un Sıcaklığı</span>
+                <span class="dt-input-label">🌾 3. Un Sıcaklığı</span>
                 <span class="dt-input-hint">Varsayılan: 20.0°C (±0,5°C)</span>
               </div>
               <div class="dt-stepper-row">
@@ -7184,10 +7162,10 @@
               </div>
             </div>
 
-            <!-- Input 5: Mutfak Ortam Sıcaklığı (°C) -->
+            <!-- Input 4: Mutfak Ortam Sıcaklığı (°C) -->
             <div class="dt-input-box">
               <div class="dt-input-label-row">
-                <span class="dt-input-label">🏠 5. Mutfak Ortam Sıcaklığı</span>
+                <span class="dt-input-label">🏠 4. Mutfak Ortam Sıcaklığı</span>
                 <span class="dt-input-hint">Ref: 27°C (±0.15/°C)</span>
               </div>
               <div class="dt-stepper-row">
@@ -7227,10 +7205,6 @@
               <div class="dt-hero-primary-sub" id="dtMainWaterWeightSub">
                 Soğutulacak Ana Su (Tuzlu su dahil): <strong>8.575 gr</strong>
               </div>
-              <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(255,255,255,0.16); font-size: 0.86rem; font-weight: 800; color: #BAE6FD; display: flex; align-items: center; gap: 6px;">
-                <span>⏱️</span>
-                <span id="dtEstimatedMixTimeDisplay">Tahmini Miks Süresi: ~21 Dakika (13 dk 1. Vites + 8 dk 2. Vites)</span>
-              </div>
             </div>
 
             <!-- Sağ Sütun: Maya Suyu & Ağırlıklı Ortalama & Termal Denge -->
@@ -7253,10 +7227,10 @@
 
               <div class="dt-hero-stat-row">
                 <div>
-                  <div class="dt-hero-stat-label">⏱️ Tahmini Miks Süresi &amp; Isı Artışı (ΔT)</div>
-                  <div style="font-size:0.73rem; color:#94A3B8; margin-top:2px;" id="dtDeltaTBreakdownText">Tahmini Süre: 21 dk • Baz 11.4°C + Ortam 0.0°C</div>
+                  <div class="dt-hero-stat-label">🔥 Miks Isı Artışı (ΔT) &amp; Başlangıç</div>
+                  <div style="font-size:0.73rem; color:#94A3B8; margin-top:2px;" id="dtDeltaTBreakdownText">Baz 11.4°C + Ortam 0.0°C • Başlangıç: 10.6°C</div>
                 </div>
-                <div class="dt-hero-stat-val" style="font-size:1.02rem;" id="dtStartAndDeltaDisplay">~21 dk (+11.4 °C)</div>
+                <div class="dt-hero-stat-val" style="font-size:1.02rem;" id="dtStartAndDeltaDisplay">+11.4 °C</div>
               </div>
             </div>
           </div>
@@ -7287,19 +7261,14 @@
           </div>
         </section>
 
-        <!-- 3. OTOMATİK ÖLÇEKLENEN MALZEME LİSTESİ TABLOSU -->
+        <!-- 3. MALZEME LİSTESİ TABLOSU -->
         <section class="dt-card">
           <div class="dt-section-title">
             <div style="display:flex; align-items:center; gap:8px;">
               <span>⚖️</span>
-              <span>2. Otomatik Ölçeklenen Reçete &amp; Malzeme Listesi (<span id="dtTableFlourTitle">10</span> kg Final Un)</span>
+              <span>2. Reçete &amp; Malzeme Listesi (<span id="dtTableFlourTitle">10</span> kg Final Un)</span>
             </div>
             <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-              <div style="display:inline-flex; align-items:center; gap:4px; background:var(--dt-bg-soft); border:1px solid var(--dt-border); padding:3px 8px; border-radius:8px; font-size:0.74rem; font-weight:700;">
-                <span>Maya Suyu Modu:</span>
-                <button type="button" id="btnYeastWaterScaled" onclick="setDoughTempYeastWaterMode('scaled')" style="border:none; background:#0284C7; color:#FFFFFF; padding:3px 8px; border-radius:6px; font-size:0.72rem; font-weight:800; cursor:pointer;">Orantılı</button>
-                <button type="button" id="btnYeastWaterFixed" onclick="setDoughTempYeastWaterMode('fixed')" style="border:none; background:transparent; color:var(--dt-text-muted); padding:3px 8px; border-radius:6px; font-size:0.72rem; font-weight:800; cursor:pointer;">Sabit 625 gr</button>
-              </div>
               <span id="dtTotalDoughBadge" style="background:#FEF3C7; color:#92400E; border:1px solid #FDE68A; padding:5px 11px; border-radius:999px; font-size:0.78rem; font-weight:800;">
                 Toplam Hamur: 34.840 gr • ~134 Beze (260 gr)
               </span>
@@ -7326,7 +7295,7 @@
         </section>
 
         <!-- 4. 21 DAKİKALIK MİKS ISI KONTROL ÇİZELGESİ (REFERANS TAKİP) -->
-        <section class="dt-card">
+        <section class="dt-card" style="margin-bottom: 20px;">
           <div class="dt-section-title">
             <div style="display:flex; align-items:center; gap:8px;">
               <span>⏱️</span>
@@ -7393,19 +7362,6 @@
                 • Miksten çıkan hamuru <strong>en geç 22.5 °C</strong>'de <strong>+4 °C</strong> soğuk dolaba kaldırın.
               </div>
             </div>
-          </div>
-        </section>
-
-        <!-- 5. SAHA TEST REFERANSI & TERMODİNAMİK FORMÜL ÖZETİ -->
-        <section class="dt-card" style="margin-bottom: 20px;">
-          <div class="dt-section-title" style="margin-bottom:8px;">
-            <div style="display:flex; align-items:center; gap:8px;">
-              <span>🔬</span>
-              <span>Gerçek Saha Kalibrasyon &amp; Termodinamik Hesaplama Özeti</span>
-            </div>
-          </div>
-          <div style="font-size:0.82rem; color:var(--dt-text-muted); line-height:1.6;" id="dtFormulaSummaryBox">
-            <!-- JS ile canlı formül değerleri gösterilir -->
           </div>
         </section>
 
@@ -19511,8 +19467,6 @@
       bigaTemp: 12.0,
       flourTemp: 20.0,
       roomTemp: 27.0,
-      mixDuration: 21,
-      yeastWaterMode: 'scaled', // 'scaled' (62.5 g/kg) veya 'fixed' (625 g sabit)
       darkMode: false
     };
 
@@ -19525,13 +19479,11 @@
           const parsed = JSON.parse(saved);
           if (parsed && typeof parsed === 'object') {
             doughTempState = {
-              finalFlourKg: Number(parsed.finalFlourKg) > 0 ? Number(parsed.finalFlourKg) : DOUGH_TEMP_DEFAULTS.finalFlourKg,
+              finalFlourKg: 10,
               targetDoughTemp: !isNaN(Number(parsed.targetDoughTemp)) ? Number(parsed.targetDoughTemp) : DOUGH_TEMP_DEFAULTS.targetDoughTemp,
               bigaTemp: !isNaN(Number(parsed.bigaTemp)) ? Number(parsed.bigaTemp) : DOUGH_TEMP_DEFAULTS.bigaTemp,
               flourTemp: !isNaN(Number(parsed.flourTemp)) ? Number(parsed.flourTemp) : DOUGH_TEMP_DEFAULTS.flourTemp,
               roomTemp: !isNaN(Number(parsed.roomTemp)) ? Number(parsed.roomTemp) : DOUGH_TEMP_DEFAULTS.roomTemp,
-              mixDuration: 21,
-              yeastWaterMode: parsed.yeastWaterMode === 'fixed' ? 'fixed' : 'scaled',
               darkMode: !!parsed.darkMode
             };
           }
@@ -19558,7 +19510,6 @@
         const el = document.getElementById(id);
         if (el) el.value = val;
       };
-      setVal('dtInputFinalFlourKg', doughTempState.finalFlourKg);
       setVal('dtInputTargetDoughTemp', doughTempState.targetDoughTemp.toFixed(1));
       setVal('dtInputBigaTemp', doughTempState.bigaTemp.toFixed(1));
       setVal('dtInputFlourTemp', doughTempState.flourTemp.toFixed(1));
@@ -19597,20 +19548,6 @@
       }
     }
 
-    function setDoughTempYeastWaterMode(mode) {
-      doughTempState.yeastWaterMode = (mode === 'fixed') ? 'fixed' : 'scaled';
-      saveDoughTempState();
-      calculateDoughMixTemp();
-    }
-
-    function setDoughTempFlourPreset(kgVal) {
-      doughTempState.finalFlourKg = Number(kgVal) || 10;
-      const el = document.getElementById('dtInputFinalFlourKg');
-      if (el) el.value = doughTempState.finalFlourKg;
-      saveDoughTempState();
-      calculateDoughMixTemp();
-    }
-
     function setDoughTempQuickField(inputId, val) {
       const el = document.getElementById(inputId);
       if (el) {
@@ -19622,7 +19559,6 @@
     function stepDoughTempInput(field, delta) {
       if (navigator.vibrate) { try { navigator.vibrate(10); } catch (e) {} }
       const map = {
-        finalFlourKg: { id: 'dtInputFinalFlourKg', min: 0.5, max: 100, decimals: 1 },
         targetDoughTemp: { id: 'dtInputTargetDoughTemp', min: 15, max: 30, decimals: 1 },
         bigaTemp: { id: 'dtInputBigaTemp', min: 0, max: 30, decimals: 1 },
         flourTemp: { id: 'dtInputFlourTemp', min: 0, max: 40, decimals: 1 },
@@ -19649,7 +19585,7 @@
       saveDoughTempState();
       syncDoughTempInputsFromState();
       calculateDoughMixTemp();
-      showToast('✓ Varsayılan değerlere (10 kg Final Un, 22°C Hedef, 12°C Biga, 20°C Un, 27°C Ortam) sıfırlandı.');
+      showToast('✓ Varsayılan değerlere (22°C Hedef, 12°C Biga, 20°C Un, 27°C Ortam) sıfırlandı.');
     }
 
     function handleDoughTempInputChange() {
@@ -19660,12 +19596,11 @@
         return isNaN(v) ? fallback : v;
       };
 
-      doughTempState.finalFlourKg = Math.max(0.5, readNum('dtInputFinalFlourKg', 10));
+      doughTempState.finalFlourKg = 10;
       doughTempState.targetDoughTemp = readNum('dtInputTargetDoughTemp', 22.0);
       doughTempState.bigaTemp = readNum('dtInputBigaTemp', 12.0);
       doughTempState.flourTemp = readNum('dtInputFlourTemp', 20.0);
       doughTempState.roomTemp = readNum('dtInputRoomTemp', 27.0);
-      doughTempState.mixDuration = 21;
 
       saveDoughTempState();
       calculateDoughMixTemp();
@@ -19680,31 +19615,28 @@
     }
 
     function calculateDoughMixTemp() {
-      const finalFlourKg = doughTempState.finalFlourKg;
+      const finalFlourKg = 10;
       const T_hedef = doughTempState.targetDoughTemp;
       const T_biga = doughTempState.bigaTemp;
       const T_un = doughTempState.flourTemp;
       const T_ortam = doughTempState.roomTemp;
-      const Sure_dk = 21;
 
-      // 1. Reçete Ölçekleme (10 kg Final Un bazlı sabit oranlar)
-      const M_un = finalFlourKg * 1000; // Final kuru un (gr)
-      const M_biga_un = M_un; // Biga içindeki un (gr)
-      const M_biga_su = M_un * 0.5; // Biga içindeki su (gr)
-      const M_biga_maya = M_un * 0.003; // Biga içindeki maya (gr)
-      const M_biga = M_un * 1.503; // Hazır Biga V2 (15.030 gr @ 10kg)
+      // 1. Reçete Sabit Oranları (10 kg Final Un bazlı)
+      const M_un = finalFlourKg * 1000; // Final kuru un (10.000 gr)
+      const M_biga_un = M_un; // Biga içindeki un (10.000 gr)
+      const M_biga_su = M_un * 0.5; // Biga içindeki su (5.000 gr)
+      const M_biga_maya = M_un * 0.003; // Biga içindeki maya (30 gr)
+      const M_biga = M_un * 1.503; // Hazır Biga V2 (15.030 gr)
 
-      const M_su = M_un * 0.92; // Toplam Final Su (9.200 gr @ 10kg -> %71 toplam hidrasyon)
-      const M_maya_su = doughTempState.yeastWaterMode === 'fixed'
-        ? Math.min(625, M_su * 0.5)
-        : (M_un * 0.0625); // Maya Suyu @ 22.0°C (625 gr @ 10kg)
-      const M_ana_su = Math.max(1, M_su - M_maya_su); // Soğutulacak Ana Su (8.575 gr @ 10kg)
+      const M_su = M_un * 0.92; // Toplam Final Su (9.200 gr -> %71 toplam hidrasyon)
+      const M_maya_su = 625; // Maya Suyu @ 22.0°C (Sabit 625 gr)
+      const M_ana_su = M_su - M_maya_su; // Soğutulacak Ana Su (8.575 gr)
 
-      const M_tuz = M_un * 0.06; // Tuz (600 gr @ 10kg, toplam unun %3'ü)
-      const M_maya = M_un * 0.001; // Final İnstant Maya (10 gr @ 10kg, toplam unun %0.05'i)
+      const M_tuz = M_un * 0.06; // Tuz (600 gr, toplam unun %3'ü)
+      const M_maya = M_un * 0.001; // Final İnstant Maya (10 gr, toplam unun %0.05'i)
 
-      const M_toplam_un = M_un + M_biga_un; // 20.000 gr @ 10kg
-      const M_toplam_hamur = M_biga + M_un + M_su + M_tuz + M_maya; // 34.840 gr @ 10kg
+      const M_toplam_un = M_un + M_biga_un; // 20.000 gr
+      const M_toplam_hamur = M_biga + M_un + M_su + M_tuz + M_maya; // 34.840 gr
       const bezeAdedi = Math.round(M_toplam_hamur / 260); // 260 gr/beze (~134 adet)
 
       // 2. Gerçek Saha Verisine Dayalı Termal Hesaplama Motoru
@@ -19744,38 +19676,6 @@
       }
 
       // 3. UI Güncellemeleri
-      // Un Preset Butonları Aktiflik Durumu
-      document.querySelectorAll('#dtFlourPresetsContainer .dt-preset-pill').forEach(btn => {
-        const val = parseFloat(btn.getAttribute('data-flour') || '0');
-        if (Math.abs(val - finalFlourKg) < 0.01) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
-        }
-      });
-
-      const totalFlourHintEl = document.getElementById('dtTotalFlourHint');
-      if (totalFlourHintEl) {
-        totalFlourHintEl.textContent = `Toplam Parti: ${(M_toplam_un / 1000).toLocaleString('tr-TR', { maximumFractionDigits: 1 })} kg Un`;
-      }
-
-      // Maya suyu modu butonları
-      const btnScaled = document.getElementById('btnYeastWaterScaled');
-      const btnFixed = document.getElementById('btnYeastWaterFixed');
-      if (btnScaled && btnFixed) {
-        if (doughTempState.yeastWaterMode === 'fixed') {
-          btnFixed.style.background = '#0284C7';
-          btnFixed.style.color = '#FFFFFF';
-          btnScaled.style.background = 'transparent';
-          btnScaled.style.color = 'var(--dt-text-muted)';
-        } else {
-          btnScaled.style.background = '#0284C7';
-          btnScaled.style.color = '#FFFFFF';
-          btnFixed.style.background = 'transparent';
-          btnFixed.style.color = 'var(--dt-text-muted)';
-        }
-      }
-
       // Ana Sonuç Kartı (Çok Büyük Punto)
       const mainWaterTempEl = document.getElementById('dtMainWaterTempDisplay');
       const mainWaterWeightSubEl = document.getElementById('dtMainWaterWeightSub');
@@ -19808,10 +19708,10 @@
       }
       if (deltaBreakdownEl) {
         const signOrtam = dT_ortam >= 0 ? '+' : '';
-        deltaBreakdownEl.textContent = `Tahmini Süre: ~${Sure_dk} dk • Baz 11.4°C ${signOrtam}${formatTempTR(dT_ortam)}°C (Ortam) • Başlangıç: ${formatTempTR(T_baslangic)}°C`;
+        deltaBreakdownEl.textContent = `Baz 11.4°C ${signOrtam}${formatTempTR(dT_ortam)}°C (Ortam) • Başlangıç: ${formatTempTR(T_baslangic)}°C`;
       }
       if (startAndDeltaEl) {
-        startAndDeltaEl.textContent = `~${Sure_dk} dk (+${formatTempTR(dT_toplam)} °C)`;
+        startAndDeltaEl.textContent = `+${formatTempTR(dT_toplam)} °C`;
       }
 
       // Buz Uyarı Banner'ı
@@ -19932,7 +19832,7 @@
               <span class="qty-unit-inline">gr</span>
             </td>
             <td><span class="recipe-ratio-tag" style="background:#FEF3C7; color:#92400E; border-color:#FDE68A; font-weight:800;">🌡️ 22.0 °C (Sabit)</span></td>
-            <td><span class="recipe-ratio-tag">${doughTempState.yeastWaterMode === 'fixed' ? 'Sabit 625 gr' : '62,5 gr / kg Un'}</span></td>
+            <td><span class="recipe-ratio-tag">Sabit 625 gr</span></td>
             <td class="col-note">Her zaman 22.0°C sabit • Toplam Final Su: <strong>${formatGramsTR(M_su)} gr</strong> (Ort: <strong>${formatTempTR(T_su_ort)} °C</strong>)</td>
           </tr>
           <tr>
@@ -19973,36 +19873,9 @@
               <strong>Toplam Final Hamur Ağırlığı:</strong> ${formatGramsTR(M_toplam_hamur)} gr (${(M_toplam_hamur / 1000).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kg)
             </td>
             <td colspan="3" style="color:#0284C7;">
-              <strong>Tahmini Beze Adedi (260 gr/beze):</strong> ~${bezeAdedi} Adet • <strong>Tahmini Miks Süresi:</strong> ~${Sure_dk} Dakika • <strong>Toplam Hidrasyon:</strong> %71
+              <strong>Tahmini Beze Adedi (260 gr/beze):</strong> ~${bezeAdedi} Adet • <strong>Toplam Hidrasyon:</strong> %71
             </td>
           </tr>
-        `;
-      }
-
-      // 5. Termodinamik Formül Özeti Kutusu
-      const formulaBox = document.getElementById('dtFormulaSummaryBox');
-      if (formulaBox) {
-        formulaBox.innerHTML = `
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:10px;">
-            <div style="background:var(--dt-bg-soft); border:1px solid var(--dt-border); padding:10px 12px; border-radius:10px;">
-              <strong style="color:var(--dt-text-main); display:block; margin-bottom:3px;">1. Isı Kapasiteleri (M × c)</strong>
-              • Biga: ${formatGramsTR(M_biga)}g × 0.613 = <strong>${Math.round(C_biga).toLocaleString('tr-TR')}</strong> cal/°C<br>
-              • Kuru Un: ${formatGramsTR(M_un)}g × 0.42 = <strong>${Math.round(C_un).toLocaleString('tr-TR')}</strong> cal/°C<br>
-              • Final Su: ${formatGramsTR(M_su)}g × 1.00 = <strong>${Math.round(C_su).toLocaleString('tr-TR')}</strong> cal/°C
-            </div>
-            <div style="background:var(--dt-bg-soft); border:1px solid var(--dt-border); padding:10px 12px; border-radius:10px;">
-              <strong style="color:var(--dt-text-main); display:block; margin-bottom:3px;">2. Miks Isı Kazancı (Tahmini ~21 dk)</strong>
-              • ΔT_baz (21 dk @ 27°C): <strong>+11.4 °C</strong><br>
-              • ΔT_ortam: (${formatTempTR(T_ortam)} − 27) × 0.15 = <strong>${dT_ortam >= 0 ? '+' : ''}${formatTempTR(dT_ortam)} °C</strong><br>
-              • Toplam Artış: <strong>+${formatTempTR(dT_toplam)} °C</strong> → T_başlangıç: <strong>${formatTempTR(T_baslangic)} °C</strong>
-            </div>
-            <div style="background:var(--dt-bg-soft); border:1px solid var(--dt-border); padding:10px 12px; border-radius:10px;">
-              <strong style="color:var(--dt-text-main); display:block; margin-bottom:3px;">3. Su Sıcaklığı Dağılımı</strong>
-              • Tüm Suların Ortalaması (T_su_ort): <strong>${formatTempTR(T_su_ort)} °C</strong> (${formatGramsTR(M_su)} gr)<br>
-              • Maya Suyu: <strong>22.0 °C</strong> (${formatGramsTR(M_maya_su)} gr)<br>
-              • Soğutulacak Ana Su (T_ana_su): <strong style="color:#0284C7;">${formatTempTR(T_ana_su)} °C</strong> (${formatGramsTR(M_ana_su)} gr)
-            </div>
-          </div>
         `;
       }
     }
