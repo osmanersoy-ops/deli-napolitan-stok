@@ -1,11 +1,11 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-12T11:28:03.073Z",
-  "timestamp": 1794482882719,
+  "exportedAt": "2026-11-12T11:28:10.266Z",
+  "timestamp": 1794482889912,
   "deviceId": "dev_irn623d_mw0oagq7",
   "moduleTimestamps": {
-    "cnt_hergun": 1794482882719,
+    "cnt_hergun": 1794482889912,
     "cnt_pazar": 1794159762511,
     "rst_hergun": 1794144128904,
     "rst_pazar": 1793557180407,
@@ -1824,11 +1824,11 @@
         "notes": ""
       },
       "cust_pismis_dil_fume": {
-        "qty": 5,
+        "qty": 4,
         "notes": ""
       },
       "cust_izgaralanmis_kabak": {
-        "qty": "0.25",
+        "qty": 0.5,
         "notes": ""
       },
       "cust_patates": {
