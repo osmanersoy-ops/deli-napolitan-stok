@@ -4257,6 +4257,332 @@
         padding: 12px;
       }
     }
+
+    /* =========================================================
+       HAMUR MİKS DERECE (BİGA V2 TERMAL HESAPLAYICI) STİLLERİ
+       ========================================================= */
+    .dough-temp-view-wrap {
+      --dt-bg-card: #FFFFFF;
+      --dt-bg-soft: #F8FAFC;
+      --dt-bg-input: #FFFFFF;
+      --dt-border: #E2E8F0;
+      --dt-text-main: #0F172A;
+      --dt-text-muted: #64748B;
+      --dt-accent-blue: #0284C7;
+      --dt-accent-orange: #EA580C;
+      --dt-hero-bg: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      --dt-hero-border: #334155;
+      transition: all 0.2s ease;
+    }
+
+    .dough-temp-view-wrap.dt-dark-mode {
+      --dt-bg-card: #0F172A;
+      --dt-bg-soft: #1E293B;
+      --dt-bg-input: #0B1120;
+      --dt-border: #334155;
+      --dt-text-main: #F8FAFC;
+      --dt-text-muted: #94A3B8;
+      --dt-accent-blue: #38BDF8;
+      --dt-accent-orange: #FB923C;
+      --dt-hero-bg: linear-gradient(135deg, #020617 0%, #0F172A 100%);
+      --dt-hero-border: #0284C7;
+      background: #020617;
+      padding: 12px;
+      border-radius: 20px;
+    }
+
+    .dt-card {
+      background: var(--dt-bg-card);
+      border: 1.5px solid var(--dt-border);
+      border-radius: 18px;
+      padding: 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+      color: var(--dt-text-main);
+    }
+
+    .dt-section-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--dt-text-main);
+      margin: 0 0 14px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* ANA SONUÇ KARTI (ÇOK BÜYÜK PUNTO) */
+    .dt-hero-result-card {
+      background: var(--dt-hero-bg);
+      border: 2px solid var(--dt-hero-border);
+      border-radius: 20px;
+      padding: 22px 20px;
+      margin-bottom: 18px;
+      color: #FFFFFF;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.22);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .dt-hero-main-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .dt-hero-primary-box {
+      background: rgba(14, 165, 233, 0.14);
+      border: 2px solid rgba(56, 189, 248, 0.45);
+      border-radius: 16px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .dt-hero-primary-label {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #7DD3FC;
+      margin-bottom: 6px;
+    }
+
+    .dt-hero-temp-giant {
+      font-size: 3.6rem;
+      font-weight: 900;
+      line-height: 1.05;
+      color: #38BDF8;
+      letter-spacing: -1.5px;
+      font-variant-numeric: tabular-nums;
+      text-shadow: 0 2px 16px rgba(56, 189, 248, 0.25);
+    }
+
+    .dt-hero-primary-sub {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #E2E8F0;
+    }
+
+    .dt-hero-secondary-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: space-between;
+    }
+
+    .dt-hero-stat-row {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 13px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .dt-hero-stat-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #CBD5E1;
+    }
+
+    .dt-hero-stat-val {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: #FFFFFF;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    /* BUZ TAKVİYESİ UYARI KUTUSU */
+    .dt-ice-warning-banner {
+      margin-top: 14px;
+      background: linear-gradient(135deg, #1E3A8A 0%, #0C4A6E 100%);
+      border: 2px solid #38BDF8;
+      border-radius: 14px;
+      padding: 14px 16px;
+      color: #FFFFFF;
+      display: none;
+    }
+
+    .dt-ice-warning-banner.active {
+      display: block;
+    }
+
+    /* GİRİŞ KARTLARI (6 ADET BÜYÜK ENDÜSTRİYEL GİRİŞ) */
+    .dt-inputs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+      gap: 12px;
+    }
+
+    .dt-input-box {
+      background: var(--dt-bg-soft);
+      border: 1.5px solid var(--dt-border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .dt-input-box.dt-input-highlight {
+      border-color: #F59E0B;
+      background: rgba(245, 158, 11, 0.07);
+    }
+
+    .dt-input-label-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+
+    .dt-input-label {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--dt-text-main);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dt-input-hint {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--dt-text-muted);
+    }
+
+    .dt-stepper-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dt-step-btn {
+      width: 44px;
+      height: 46px;
+      border-radius: 10px;
+      border: 1.5px solid var(--dt-border);
+      background: var(--dt-bg-card);
+      color: var(--dt-text-main);
+      font-size: 1.35rem;
+      font-weight: 900;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      user-select: none;
+      transition: all 0.12s ease;
+    }
+
+    .dt-step-btn:active {
+      transform: scale(0.94);
+    }
+
+    .dt-input-field-wrap {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .dt-number-input {
+      width: 100%;
+      height: 46px;
+      border-radius: 10px;
+      border: 1.5px solid var(--dt-border);
+      background: var(--dt-bg-input);
+      color: var(--dt-text-main);
+      font-size: 1.3rem;
+      font-weight: 900;
+      text-align: center;
+      padding: 0 36px 0 10px;
+      font-variant-numeric: tabular-nums;
+      outline: none;
+    }
+
+    .dt-number-input:focus {
+      border-color: var(--dt-accent-blue);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    .dt-input-unit {
+      position: absolute;
+      right: 10px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--dt-text-muted);
+      pointer-events: none;
+    }
+
+    /* HIZLI UN PRESET BUTONLARI */
+    .dt-preset-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .dt-preset-pill {
+      padding: 5px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--dt-border);
+      background: var(--dt-bg-card);
+      color: var(--dt-text-main);
+      font-size: 0.76rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .dt-preset-pill.active {
+      background: #EA580C;
+      color: #FFFFFF;
+      border-color: #EA580C;
+    }
+
+    /* 21 DK MİKS ISI KONTROL ÇİZELGESİ KARTLARI */
+    .dt-mix-schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .dt-mix-stage-card {
+      background: var(--dt-bg-soft);
+      border: 1.5px solid var(--dt-border);
+      border-radius: 14px;
+      padding: 14px;
+      position: relative;
+    }
+
+    .dt-mix-stage-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 720px) {
+      .dt-hero-main-grid {
+        grid-template-columns: 1fr;
+      }
+      .dt-hero-temp-giant {
+        font-size: 2.9rem;
+      }
+    }
   </style>
 </head>
 <body class="view-dashboard">
@@ -4457,6 +4783,16 @@
         <button type="button" class="btn-compact-count" onclick="openBigaDoughView()" title="Biga V2 Reçetesi, Hamur Hesaplayıcı ve Miks Prosedürü">
           <span class="compact-count-icon">🍕</span>
           <span class="compact-count-title">Biga v2 ve Hamur Mix</span>
+          <svg class="compact-count-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+
+        <!-- 2B. Hamur Miks Derece (Biga V2 Final Hamur & Su Sıcaklığı Hesaplayıcı) Butonu -->
+        <button type="button" class="btn-compact-count" onclick="openDoughTempCalcView()" title="Biga V2 Final Hamur & Su Sıcaklığı Hesaplayıcı">
+          <span class="compact-count-icon">🌡️</span>
+          <span class="compact-count-title">Hamur Miks Derece</span>
+          <span class="compact-count-badge" style="background:#EFF6FF; color:#0284C7; border-color:#BAE6FD;">Su °C Hesapla</span>
           <svg class="compact-count-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <polyline points="9 18 15 12 9 6"/>
           </svg>
@@ -6117,9 +6453,9 @@
           </svg>
           Ana Menüye Dön
         </button>
-        <span style="font-size:0.82rem; color:var(--text-light); font-weight:700;">
-          📄 Standart Reçete & Prosedür
-        </span>
+        <button type="button" class="btn-back-dashboard" onclick="openDoughTempCalcView()" style="background:#EFF6FF; color:#0284C7; border-color:#BAE6FD;" title="Biga V2 Final Hamur & Su Sıcaklığı Hesaplayıcı">
+          🌡️ Hamur Miks Derece Hesaplayıcı
+        </button>
       </nav>
 
       <!-- TABLO 1: 1 KUTU BİGA V2 REÇETESİ (STATİK) -->
@@ -6695,6 +7031,406 @@
           <span class="sync-pulse-dot"></span>
           <span class="sync-text">Canlı Senkronize</span>
         </button>
+      </div>
+    </main>
+
+    <!-- ========================================================== -->
+    <!-- VIEW 8B: HAMUR MİKS DERECE (BİGA V2 SU SICAKLIĞI HESABI)   -->
+    <!-- ========================================================== -->
+    <main id="doughTempCalcView" style="display:none;">
+      <div id="doughTempThemeWrap" class="dough-temp-view-wrap">
+        <!-- Üst Başlık Kartı -->
+        <section class="count-header-card" style="margin-bottom: 12px;">
+          <div class="count-header-brand-line">
+            <div class="count-header-logo" onclick="returnToDashboard()" style="cursor:pointer;" title="Ana Sayfaya Dön">
+              <span class="brand-logo-card" style="padding: 4px 10px; border-radius: 8px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+                <img class="app-header-logo-img" alt="Deli Napolitan" style="height: 22px; width: auto; object-fit: contain; vertical-align: middle; display: inline-block;">
+              </span>
+            </div>
+            <div style="font-size:0.75rem; color:#A8A29E; font-weight:600;">Döküman Merkezi • Hamur Miks Derece</div>
+          </div>
+
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+            <div>
+              <h2 class="count-header-main-title" style="margin-bottom:4px;">🌡️ Biga V2 Final Hamur &amp; Su Sıcaklığı Hesaplayıcı</h2>
+              <p style="color:#D6D3D1; font-size:0.86rem; margin:0;">
+                %71 Hidrasyon • Gerçek Saha Kalibrasyonlu Termodinamik Su &amp; Buz Hesaplama Motoru
+              </p>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <span style="background:rgba(56, 189, 248, 0.18); border:1px solid rgba(56, 189, 248, 0.45); color:#BAE6FD; padding:5px 11px; border-radius:20px; font-size:0.75rem; font-weight:800;">
+                🍕 %71 Toplam Hidrasyon
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Üst Navigasyon ve Tema / Sıfırlama Araç Çubuğu -->
+        <nav class="count-nav-bar" style="margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <button type="button" class="btn-back-dashboard" onclick="returnToDashboard()" title="Ana Sayfaya Dön">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6"/>
+              </svg>
+              Ana Menüye Dön
+            </button>
+            <button type="button" class="btn-back-dashboard" onclick="openBigaDoughView()" style="background:#FFF7ED; color:#C2410C; border-color:#FED7AA;" title="Biga V2 Standart Prosedür Sayfasına Git">
+              🍕 Biga V2 Prosedürü
+            </button>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <button type="button" id="btnDoughTempThemeToggle" onclick="toggleDoughTempDarkMode()" style="border:1.5px solid #CBD5E1; background:#0F172A; color:#F8FAFC; padding:8px 13px; border-radius:10px; font-size:0.8rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
+              <span id="doughTempThemeIcon">🌙</span>
+              <span id="doughTempThemeText">Koyu Mod</span>
+            </button>
+            <button type="button" onclick="resetDoughTempDefaults()" style="border:1.5px solid #CBD5E1; background:#FFFFFF; color:#334155; padding:8px 13px; border-radius:10px; font-size:0.8rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:5px;">
+              ↺ Referans Değerlere Sıfırla
+            </button>
+          </div>
+        </nav>
+
+        <!-- 1. KULLANICI GİRİŞ ALANLARI (SABİT & DEĞİŞKEN PARAMETRELER) -->
+        <section class="dt-card">
+          <div class="dt-section-title">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span>🎛️</span>
+              <span>1. Üretim &amp; Sıcaklık Giriş Değerleri</span>
+            </div>
+            <span style="font-size:0.76rem; color:var(--dt-text-muted); font-weight:700;">
+              Değerleri değiştirdiğinizde su sıcaklığı ve gramajlar anında hesaplanır
+            </span>
+          </div>
+
+          <div class="dt-inputs-grid">
+            <!-- Input 1: Final Un Miktarı (kg) -->
+            <div class="dt-input-box dt-input-highlight">
+              <div class="dt-input-label-row">
+                <span class="dt-input-label">🌾 1. Final Un Miktarı</span>
+                <span class="dt-input-hint" id="dtTotalFlourHint">Toplam Parti: 20 kg Un</span>
+              </div>
+              <div class="dt-stepper-row">
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('finalFlourKg', -1)">−</button>
+                <div class="dt-input-field-wrap">
+                  <input type="number" id="dtInputFinalFlourKg" class="dt-number-input" value="10" min="1" max="100" step="0.5" inputmode="decimal" oninput="handleDoughTempInputChange()">
+                  <span class="dt-input-unit">kg</span>
+                </div>
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('finalFlourKg', 1)">+</button>
+              </div>
+              <div class="dt-preset-pills" id="dtFlourPresetsContainer">
+                <button type="button" class="dt-preset-pill" data-flour="5" onclick="setDoughTempFlourPreset(5)">5 kg (1 Biga)</button>
+                <button type="button" class="dt-preset-pill active" data-flour="10" onclick="setDoughTempFlourPreset(10)">10 kg (2 Biga)</button>
+                <button type="button" class="dt-preset-pill" data-flour="15" onclick="setDoughTempFlourPreset(15)">15 kg (3 Biga)</button>
+                <button type="button" class="dt-preset-pill" data-flour="20" onclick="setDoughTempFlourPreset(20)">20 kg (4 Biga)</button>
+              </div>
+            </div>
+
+            <!-- Input 2: Hedef Hamur Çıkış Sıcaklığı (°C) -->
+            <div class="dt-input-box">
+              <div class="dt-input-label-row">
+                <span class="dt-input-label">🎯 2. Hedef Hamur Çıkış Sıcaklığı</span>
+                <span class="dt-input-hint">Önerilen: 21.8 – 22.0°C</span>
+              </div>
+              <div class="dt-stepper-row">
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('targetDoughTemp', -0.2)">−</button>
+                <div class="dt-input-field-wrap">
+                  <input type="number" id="dtInputTargetDoughTemp" class="dt-number-input" value="22.0" min="15" max="30" step="0.1" inputmode="decimal" oninput="handleDoughTempInputChange()">
+                  <span class="dt-input-unit">°C</span>
+                </div>
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('targetDoughTemp', 0.2)">+</button>
+              </div>
+              <div class="dt-preset-pills">
+                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputTargetDoughTemp', 21.8)">21.8°C (Test)</button>
+                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputTargetDoughTemp', 22.0)">22.0°C (Varsayılan)</button>
+                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputTargetDoughTemp', 22.5)">22.5°C (Sınır)</button>
+              </div>
+            </div>
+
+            <!-- Input 3: Biga Sıcaklığı (°C) -->
+            <div class="dt-input-box">
+              <div class="dt-input-label-row">
+                <span class="dt-input-label">📦 3. Biga Sıcaklığı</span>
+                <span class="dt-input-hint">Özgül Isı: c = 0.613</span>
+              </div>
+              <div class="dt-stepper-row">
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('bigaTemp', -0.5)">−</button>
+                <div class="dt-input-field-wrap">
+                  <input type="number" id="dtInputBigaTemp" class="dt-number-input" value="9.0" min="0" max="30" step="0.1" inputmode="decimal" oninput="handleDoughTempInputChange()">
+                  <span class="dt-input-unit">°C</span>
+                </div>
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('bigaTemp', 0.5)">+</button>
+              </div>
+              <div style="font-size:0.73rem; color:var(--dt-text-muted); font-weight:600;">
+                Dolaptan çıkan Biga V2 iç sıcaklığı (Örn: 9.0°C)
+              </div>
+            </div>
+
+            <!-- Input 4: Un Sıcaklığı (°C) -->
+            <div class="dt-input-box">
+              <div class="dt-input-label-row">
+                <span class="dt-input-label">🌾 4. Un Sıcaklığı</span>
+                <span class="dt-input-hint">Özgül Isı: c = 0.42</span>
+              </div>
+              <div class="dt-stepper-row">
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('flourTemp', -0.5)">−</button>
+                <div class="dt-input-field-wrap">
+                  <input type="number" id="dtInputFlourTemp" class="dt-number-input" value="16.7" min="0" max="40" step="0.1" inputmode="decimal" oninput="handleDoughTempInputChange()">
+                  <span class="dt-input-unit">°C</span>
+                </div>
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('flourTemp', 0.5)">+</button>
+              </div>
+              <div style="font-size:0.73rem; color:var(--dt-text-muted); font-weight:600;">
+                Çuvaldaki final kuru un sıcaklığı (Örn: 16.7°C)
+              </div>
+            </div>
+
+            <!-- Input 5: Mutfak Ortam Sıcaklığı (°C) -->
+            <div class="dt-input-box">
+              <div class="dt-input-label-row">
+                <span class="dt-input-label">🏠 5. Mutfak Ortam Sıcaklığı</span>
+                <span class="dt-input-hint">Ref: 27°C (±0.15/°C)</span>
+              </div>
+              <div class="dt-stepper-row">
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('roomTemp', -0.5)">−</button>
+                <div class="dt-input-field-wrap">
+                  <input type="number" id="dtInputRoomTemp" class="dt-number-input" value="27.0" min="5" max="45" step="0.1" inputmode="decimal" oninput="handleDoughTempInputChange()">
+                  <span class="dt-input-unit">°C</span>
+                </div>
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('roomTemp', 0.5)">+</button>
+              </div>
+              <div style="font-size:0.73rem; color:var(--dt-text-muted); font-weight:600;">
+                ΔT_ortam = (T_ortam − 27) × 0.15
+              </div>
+            </div>
+
+            <!-- Input 6: Planlanan Miks Süresi (Dakika) -->
+            <div class="dt-input-box">
+              <div class="dt-input-label-row">
+                <span class="dt-input-label">⏱️ 6. Planlanan Miks Süresi</span>
+                <span class="dt-input-hint">Ref: 21 dk (±0.45/dk)</span>
+              </div>
+              <div class="dt-stepper-row">
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('mixDuration', -1)">−</button>
+                <div class="dt-input-field-wrap">
+                  <input type="number" id="dtInputMixDuration" class="dt-number-input" value="21" min="5" max="40" step="1" inputmode="numeric" oninput="handleDoughTempInputChange()">
+                  <span class="dt-input-unit">dk</span>
+                </div>
+                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('mixDuration', 1)">+</button>
+              </div>
+              <div style="font-size:0.73rem; color:var(--dt-text-muted); font-weight:600;">
+                ΔT_süre = (Süre_dk − 21) × 0.45
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. ANA SONUÇ KARTI (ÇOK BÜYÜK PUNTO) -->
+        <section class="dt-hero-result-card">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:14px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:1.3rem;">❄️</span>
+              <span style="font-size:0.95rem; font-weight:900; text-transform:uppercase; letter-spacing:0.6px; color:#E2E8F0;">
+                Miks Su Sıcaklığı Sonuç Ekranı
+              </span>
+            </div>
+            <span id="dtHeroStatusBadge" style="background:rgba(34, 197, 94, 0.2); border:1px solid rgba(74, 222, 128, 0.45); color:#86EFAC; padding:4px 12px; border-radius:999px; font-size:0.78rem; font-weight:800;">
+              ✓ Doğrudan Soğuk Su İle Miks
+            </span>
+          </div>
+
+          <div class="dt-hero-main-grid">
+            <!-- Sol Büyük Kutu: Kullanman Gereken Ana Su Sıcaklığı -->
+            <div class="dt-hero-primary-box" id="dtHeroPrimaryBox">
+              <div class="dt-hero-primary-label">Kullanman Gereken Ana Su Sıcaklığı</div>
+              <div class="dt-hero-temp-giant" id="dtMainWaterTempDisplay">8.5 °C</div>
+              <div class="dt-hero-primary-sub" id="dtMainWaterWeightSub">
+                Soğutulacak Ana Su (Tuzlu su dahil): <strong>8.575 gr</strong>
+              </div>
+            </div>
+
+            <!-- Sağ Sütun: Maya Suyu & Ağırlıklı Ortalama & Termal Denge -->
+            <div class="dt-hero-secondary-col">
+              <div class="dt-hero-stat-row" style="border-color: rgba(251, 191, 36, 0.4); background: rgba(251, 191, 36, 0.1);">
+                <div>
+                  <div class="dt-hero-stat-label" style="color:#FDE68A;">🧪 Maya Suyu (Sabit 22.0 °C)</div>
+                  <div style="font-size:0.73rem; color:#FEF3C7; margin-top:2px;">0–1:20 dk arasında mayayla çırpılıp eklenir</div>
+                </div>
+                <div class="dt-hero-stat-val" style="color:#FDE047;" id="dtYeastWaterDisplay">625 gr @ 22.0 °C</div>
+              </div>
+
+              <div class="dt-hero-stat-row">
+                <div>
+                  <div class="dt-hero-stat-label">💧 Tüm Suların Ağırlıklı Ortalaması</div>
+                  <div style="font-size:0.73rem; color:#94A3B8; margin-top:2px;" id="dtTotalWaterWeightSub">Toplam Final Su: 9.200 gr (%71 Hidrasyon)</div>
+                </div>
+                <div class="dt-hero-stat-val" style="color:#38BDF8;" id="dtAvgWaterTempDisplay">9.4 °C</div>
+              </div>
+
+              <div class="dt-hero-stat-row">
+                <div>
+                  <div class="dt-hero-stat-label">🔥 Miks Isı Artışı (ΔT) &amp; Başlangıç</div>
+                  <div style="font-size:0.73rem; color:#94A3B8; margin-top:2px;" id="dtDeltaTBreakdownText">Baz 11.4°C + Ortam 0.0°C + Süre 0.0°C</div>
+                </div>
+                <div class="dt-hero-stat-val" style="font-size:1.02rem;" id="dtStartAndDeltaDisplay">+11.4 °C → Başlangıç: 10.6 °C</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Otomatik Buz Takviyesi Uyarısı (T_ana_su < 2°C olduğunda aktifleşir) -->
+          <div id="dtIceWarningBanner" class="dt-ice-warning-banner">
+            <div style="display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+              <div>
+                <div style="font-size:1rem; font-weight:900; color:#7DD3FC; display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                  <span>🧊</span>
+                  <span>BUZ TAKVİYESİ GEREKLİ! (Hesaplanan Ana Su Sıcaklığı 2.0°C'nin Altında)</span>
+                </div>
+                <div style="font-size:0.86rem; color:#E0F2FE; line-height:1.45;">
+                  Hesaplanan ana su sıcaklığı (<strong id="dtIceRawTempText">0.0 °C</strong>) standart dolap suyunun altına indiği için ana suyu <strong>+4.0 °C</strong>'de tutup aşağıdaki miktarda kırık/küp buz kullanın:
+                </div>
+              </div>
+              <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <div style="background:rgba(255,255,255,0.12); border:1.5px solid #7DD3FC; border-radius:12px; padding:10px 14px; text-align:center; min-width:135px;">
+                  <div style="font-size:0.72rem; font-weight:800; color:#BAE6FD; text-transform:uppercase;">Eklenecek Buz (0°C)</div>
+                  <div style="font-size:1.45rem; font-weight:900; color:#FFFFFF;" id="dtIceGramsText">0 gr</div>
+                </div>
+                <div style="background:rgba(255,255,255,0.12); border:1.5px solid #38BDF8; border-radius:12px; padding:10px 14px; text-align:center; min-width:145px;">
+                  <div style="font-size:0.72rem; font-weight:800; color:#BAE6FD; text-transform:uppercase;">+4.0 °C Dolap Suyu</div>
+                  <div style="font-size:1.45rem; font-weight:900; color:#FFFFFF;" id="dtChilledWaterGramsText">0 gr</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. OTOMATİK ÖLÇEKLENEN MALZEME LİSTESİ TABLOSU -->
+        <section class="dt-card">
+          <div class="dt-section-title">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span>⚖️</span>
+              <span>2. Otomatik Ölçeklenen Reçete &amp; Malzeme Listesi (<span id="dtTableFlourTitle">10</span> kg Final Un)</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <div style="display:inline-flex; align-items:center; gap:4px; background:var(--dt-bg-soft); border:1px solid var(--dt-border); padding:3px 8px; border-radius:8px; font-size:0.74rem; font-weight:700;">
+                <span>Maya Suyu Modu:</span>
+                <button type="button" id="btnYeastWaterScaled" onclick="setDoughTempYeastWaterMode('scaled')" style="border:none; background:#0284C7; color:#FFFFFF; padding:3px 8px; border-radius:6px; font-size:0.72rem; font-weight:800; cursor:pointer;">Orantılı</button>
+                <button type="button" id="btnYeastWaterFixed" onclick="setDoughTempYeastWaterMode('fixed')" style="border:none; background:transparent; color:var(--dt-text-muted); padding:3px 8px; border-radius:6px; font-size:0.72rem; font-weight:800; cursor:pointer;">Sabit 625 gr</button>
+              </div>
+              <span id="dtTotalDoughBadge" style="background:#FEF3C7; color:#92400E; border:1px solid #FDE68A; padding:5px 11px; border-radius:999px; font-size:0.78rem; font-weight:800;">
+                Toplam Hamur: 34.840 gr • ~134 Beze (260 gr)
+              </span>
+            </div>
+          </div>
+
+          <div class="table-responsive-wrapper">
+            <table class="recipe-table" style="width:100%;">
+              <thead>
+                <tr>
+                  <th style="width:40px;">#</th>
+                  <th>Malzeme</th>
+                  <th style="text-align:right; width:150px;">Hesaplanan Gramaj</th>
+                  <th style="width:140px;">Sıcaklık / Hedef</th>
+                  <th style="width:155px;">Sabit Oran</th>
+                  <th>Açıklama &amp; İçerik Detayı</th>
+                </tr>
+              </thead>
+              <tbody id="dtIngredientsTableBody">
+                <!-- JS tarafından doldurulur -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 4. 21 DAKİKALIK MİKS ISI KONTROL ÇİZELGESİ (REFERANS TAKİP) -->
+        <section class="dt-card">
+          <div class="dt-section-title">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span>⏱️</span>
+              <span>3. 21 Dakikalık Miks Isı Kontrol Çizelgesi (Referans Takip)</span>
+            </div>
+            <span style="background:#FEE2E2; color:#991B1B; border:1px solid #FCA5A5; padding:4px 10px; border-radius:999px; font-size:0.75rem; font-weight:800;">
+              🚨 18. Dk Sınır: 20°C'yi Geçmeden Yön Değiştir!
+            </span>
+          </div>
+
+          <div class="dt-mix-schedule-grid">
+            <!-- Aşama 1: 0 - 13. Dk -->
+            <div class="dt-mix-stage-card" style="border-left: 5px solid #0284C7;">
+              <div class="dt-mix-stage-badge" style="background:#E0F2FE; color:#0369A1;">
+                ⏱️ 0 – 13. Dakika
+              </div>
+              <div style="font-size:1.05rem; font-weight:900; color:var(--dt-text-main); margin-bottom:6px;">
+                1. Vites • Yön 2
+              </div>
+              <div style="font-size:0.84rem; color:var(--dt-text-muted); line-height:1.5;">
+                • <strong>0–1:20 dk:</strong> 22°C Maya suyu + İnstant maya çırpılıp eklenir.<br>
+                • <strong>8. dk hedef:</strong> <strong style="color:#0284C7;">~15.7 °C</strong><br>
+                • <strong>13. dk hedef:</strong> <strong style="color:#0284C7;">~17.2 °C</strong>
+              </div>
+            </div>
+
+            <!-- Aşama 2: 13 - 18. Dk -->
+            <div class="dt-mix-stage-card" style="border-left: 5px solid #F59E0B;">
+              <div class="dt-mix-stage-badge" style="background:#FEF3C7; color:#B45309;">
+                ⏱️ 13 – 18. Dakika
+              </div>
+              <div style="font-size:1.05rem; font-weight:900; color:var(--dt-text-main); margin-bottom:6px;">
+                2. Vites • Yön 2
+              </div>
+              <div style="font-size:0.84rem; color:var(--dt-text-muted); line-height:1.5;">
+                • <strong>16. dk hedef:</strong> <strong style="color:#D97706;">~19.0 °C</strong><br>
+                • <strong>18. dk kritik sınır:</strong> <strong style="color:#DC2626;">20.0 °C'yi geçmeden yön değiştir!</strong>
+              </div>
+            </div>
+
+            <!-- Aşama 3: 18 - 21. Dk -->
+            <div class="dt-mix-stage-card" style="border-left: 5px solid #16A34A;">
+              <div class="dt-mix-stage-badge" style="background:#DCFCE7; color:#15803D;">
+                ⏱️ 18 – 21. Dakika
+              </div>
+              <div style="font-size:1.05rem; font-weight:900; color:var(--dt-text-main); margin-bottom:6px;">
+                2. Vites • Yön 1
+              </div>
+              <div style="font-size:0.84rem; color:var(--dt-text-muted); line-height:1.5;">
+                • Gluten ağı kilitlenir, "şlap şlap" tokatlama sesi duyulur.<br>
+                • <strong>21. dk bitiş hedefi:</strong> <strong style="color:#16A34A;">21.8 °C – 22.0 °C</strong>
+              </div>
+            </div>
+
+            <!-- Aşama 4: Dolap Giriş Hedefi -->
+            <div class="dt-mix-stage-card" style="border-left: 5px solid #7C3AED;">
+              <div class="dt-mix-stage-badge" style="background:#EDE9FE; color:#6D28D9;">
+                ❄️ Dolap Giriş Hedefi
+              </div>
+              <div style="font-size:1.05rem; font-weight:900; color:var(--dt-text-main); margin-bottom:6px;">
+                En Geç 22.5 °C → +4 °C Dolap
+              </div>
+              <div style="font-size:0.84rem; color:var(--dt-text-muted); line-height:1.5;">
+                • Miksten çıkan hamuru <strong>en geç 22.5 °C</strong>'de <strong>+4 °C</strong> soğuk dolaba kaldırın.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. SAHA TEST REFERANSI & TERMODİNAMİK FORMÜL ÖZETİ -->
+        <section class="dt-card" style="margin-bottom: 20px;">
+          <div class="dt-section-title" style="margin-bottom:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span>🔬</span>
+              <span>Gerçek Saha Kalibrasyon &amp; Termodinamik Hesaplama Özeti</span>
+            </div>
+          </div>
+          <div style="font-size:0.82rem; color:var(--dt-text-muted); line-height:1.6;" id="dtFormulaSummaryBox">
+            <!-- JS ile canlı formül değerleri gösterilir -->
+          </div>
+        </section>
+
+        <!-- Canlı Senkronize Butonu (Sayfa Altı) -->
+        <div class="bottom-sync-wrapper">
+          <button type="button" class="btn-sync-cloud live-sync-pill" onclick="openSyncModal()" title="Canlı Bulut Senkronizasyon Durumu">
+            <span class="sync-pulse-dot"></span>
+            <span class="sync-text">Canlı Senkronize</span>
+          </button>
+        </div>
       </div>
     </main>
 
@@ -9842,7 +10578,7 @@
        3. NAVIGATION: DASHBOARD <-> COUNT VIEW <-> MANAGE VIEW
        ========================================================= */
     function switchView(viewId) {
-      const views = ['dashboardView', 'countView', 'staticCountHistoryView', 'manageProductsView', 'suppliersManageView', 'recipesView', 'recipeBolonezView', 'recipeMercimekView', 'recipeCreateView', 'recipeCustomDetailView', 'bigaDoughView', 'orderSuppliersView', 'supplierOrderView', 'staffMealsView', 'staffMealsEditView', 'staffDishesView', 'shiftView', 'shiftEditView', 'shiftEmployeesView'];
+      const views = ['dashboardView', 'countView', 'staticCountHistoryView', 'manageProductsView', 'suppliersManageView', 'recipesView', 'recipeBolonezView', 'recipeMercimekView', 'recipeCreateView', 'recipeCustomDetailView', 'bigaDoughView', 'doughTempCalcView', 'orderSuppliersView', 'supplierOrderView', 'staffMealsView', 'staffMealsEditView', 'staffDishesView', 'shiftView', 'shiftEditView', 'shiftEmployeesView'];
       const targetId = (viewId && views.includes(viewId)) ? viewId : 'dashboardView';
       let foundTarget = false;
       views.forEach(id => {
@@ -9862,7 +10598,7 @@
         document.body.classList.add('view-dashboard');
       } else if (targetId === 'countView' || targetId === 'staticCountHistoryView' || targetId === 'supplierOrderView' || targetId === 'staffMealsView' || targetId === 'staffMealsEditView' || targetId === 'staffDishesView' || targetId === 'shiftView' || targetId === 'shiftEditView' || targetId === 'shiftEmployeesView') {
         document.body.classList.add('view-count');
-      } else if (targetId === 'recipesView' || targetId === 'recipeBolonezView' || targetId === 'recipeMercimekView' || targetId === 'recipeCreateView' || targetId === 'recipeCustomDetailView' || targetId === 'bigaDoughView') {
+      } else if (targetId === 'recipesView' || targetId === 'recipeBolonezView' || targetId === 'recipeMercimekView' || targetId === 'recipeCreateView' || targetId === 'recipeCustomDetailView' || targetId === 'bigaDoughView' || targetId === 'doughTempCalcView') {
         document.body.classList.add('view-recipes');
       } else {
         document.body.classList.add('view-manage');
@@ -18779,6 +19515,516 @@
     function closePwaInstallModal() {
       const modal = document.getElementById('pwaInstallModal');
       if (modal) modal.classList.remove('active');
+    }
+
+    /* =========================================================
+       HAMUR MİKS DERECE (BİGA V2 FİNAL HAMUR & SU SICAKLIĞI HESAPLAYICI)
+       ========================================================= */
+    const DOUGH_TEMP_DEFAULTS = {
+      finalFlourKg: 10,
+      targetDoughTemp: 22.0,
+      bigaTemp: 9.0,
+      flourTemp: 16.7,
+      roomTemp: 27.0,
+      mixDuration: 21,
+      yeastWaterMode: 'scaled', // 'scaled' (62.5 g/kg) veya 'fixed' (625 g sabit)
+      darkMode: false
+    };
+
+    let doughTempState = { ...DOUGH_TEMP_DEFAULTS };
+
+    function loadDoughTempState() {
+      try {
+        const saved = localStorage.getItem('delinapolitan_dough_temp_calc');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (parsed && typeof parsed === 'object') {
+            doughTempState = {
+              finalFlourKg: Number(parsed.finalFlourKg) > 0 ? Number(parsed.finalFlourKg) : DOUGH_TEMP_DEFAULTS.finalFlourKg,
+              targetDoughTemp: !isNaN(Number(parsed.targetDoughTemp)) ? Number(parsed.targetDoughTemp) : DOUGH_TEMP_DEFAULTS.targetDoughTemp,
+              bigaTemp: !isNaN(Number(parsed.bigaTemp)) ? Number(parsed.bigaTemp) : DOUGH_TEMP_DEFAULTS.bigaTemp,
+              flourTemp: !isNaN(Number(parsed.flourTemp)) ? Number(parsed.flourTemp) : DOUGH_TEMP_DEFAULTS.flourTemp,
+              roomTemp: !isNaN(Number(parsed.roomTemp)) ? Number(parsed.roomTemp) : DOUGH_TEMP_DEFAULTS.roomTemp,
+              mixDuration: Number(parsed.mixDuration) > 0 ? Number(parsed.mixDuration) : DOUGH_TEMP_DEFAULTS.mixDuration,
+              yeastWaterMode: parsed.yeastWaterMode === 'fixed' ? 'fixed' : 'scaled',
+              darkMode: !!parsed.darkMode
+            };
+          }
+        }
+      } catch (e) {}
+    }
+
+    function saveDoughTempState() {
+      try {
+        localStorage.setItem('delinapolitan_dough_temp_calc', JSON.stringify(doughTempState));
+      } catch (e) {}
+    }
+
+    function openDoughTempCalcView() {
+      loadDoughTempState();
+      switchView('doughTempCalcView');
+      syncDoughTempInputsFromState();
+      applyDoughTempThemeUI();
+      calculateDoughMixTemp();
+    }
+
+    function syncDoughTempInputsFromState() {
+      const setVal = (id, val) => {
+        const el = document.getElementById(id);
+        if (el) el.value = val;
+      };
+      setVal('dtInputFinalFlourKg', doughTempState.finalFlourKg);
+      setVal('dtInputTargetDoughTemp', doughTempState.targetDoughTemp.toFixed(1));
+      setVal('dtInputBigaTemp', doughTempState.bigaTemp.toFixed(1));
+      setVal('dtInputFlourTemp', doughTempState.flourTemp.toFixed(1));
+      setVal('dtInputRoomTemp', doughTempState.roomTemp.toFixed(1));
+      setVal('dtInputMixDuration', doughTempState.mixDuration);
+    }
+
+    function toggleDoughTempDarkMode() {
+      doughTempState.darkMode = !doughTempState.darkMode;
+      saveDoughTempState();
+      applyDoughTempThemeUI();
+    }
+
+    function applyDoughTempThemeUI() {
+      const wrap = document.getElementById('doughTempThemeWrap');
+      const btn = document.getElementById('btnDoughTempThemeToggle');
+      const icon = document.getElementById('doughTempThemeIcon');
+      const txt = document.getElementById('doughTempThemeText');
+      if (!wrap) return;
+
+      if (doughTempState.darkMode) {
+        wrap.classList.add('dt-dark-mode');
+        if (icon) icon.textContent = '☀️';
+        if (txt) txt.textContent = 'Aydınlık Mod';
+        if (btn) {
+          btn.style.background = '#F8FAFC';
+          btn.style.color = '#0F172A';
+        }
+      } else {
+        wrap.classList.remove('dt-dark-mode');
+        if (icon) icon.textContent = '🌙';
+        if (txt) txt.textContent = 'Koyu Mod';
+        if (btn) {
+          btn.style.background = '#0F172A';
+          btn.style.color = '#F8FAFC';
+        }
+      }
+    }
+
+    function setDoughTempYeastWaterMode(mode) {
+      doughTempState.yeastWaterMode = (mode === 'fixed') ? 'fixed' : 'scaled';
+      saveDoughTempState();
+      calculateDoughMixTemp();
+    }
+
+    function setDoughTempFlourPreset(kgVal) {
+      doughTempState.finalFlourKg = Number(kgVal) || 10;
+      const el = document.getElementById('dtInputFinalFlourKg');
+      if (el) el.value = doughTempState.finalFlourKg;
+      saveDoughTempState();
+      calculateDoughMixTemp();
+    }
+
+    function setDoughTempQuickField(inputId, val) {
+      const el = document.getElementById(inputId);
+      if (el) {
+        el.value = Number(val).toFixed(1);
+        handleDoughTempInputChange();
+      }
+    }
+
+    function stepDoughTempInput(field, delta) {
+      if (navigator.vibrate) { try { navigator.vibrate(10); } catch (e) {} }
+      const map = {
+        finalFlourKg: { id: 'dtInputFinalFlourKg', min: 0.5, max: 100, decimals: 1 },
+        targetDoughTemp: { id: 'dtInputTargetDoughTemp', min: 15, max: 30, decimals: 1 },
+        bigaTemp: { id: 'dtInputBigaTemp', min: 0, max: 30, decimals: 1 },
+        flourTemp: { id: 'dtInputFlourTemp', min: 0, max: 40, decimals: 1 },
+        roomTemp: { id: 'dtInputRoomTemp', min: 5, max: 45, decimals: 1 },
+        mixDuration: { id: 'dtInputMixDuration', min: 5, max: 45, decimals: 0 }
+      };
+      const cfg = map[field];
+      if (!cfg) return;
+      const el = document.getElementById(cfg.id);
+      if (!el) return;
+
+      let cur = parseFloat(el.value);
+      if (isNaN(cur)) cur = DOUGH_TEMP_DEFAULTS[field];
+      let next = Math.round((cur + delta) * 100) / 100;
+      if (next < cfg.min) next = cfg.min;
+      if (next > cfg.max) next = cfg.max;
+
+      el.value = cfg.decimals === 0 ? Math.round(next) : (Math.round(next * 10) / 10);
+      handleDoughTempInputChange();
+    }
+
+    function resetDoughTempDefaults() {
+      const keepDark = doughTempState.darkMode;
+      doughTempState = { ...DOUGH_TEMP_DEFAULTS, darkMode: keepDark };
+      saveDoughTempState();
+      syncDoughTempInputsFromState();
+      calculateDoughMixTemp();
+      showToast('✓ Saha testi referans değerlerine (10 kg Final Un, 22°C Hedef, 9°C Biga, 16.7°C Un, 27°C Ortam, 21 dk) sıfırlandı.');
+    }
+
+    function handleDoughTempInputChange() {
+      const readNum = (id, fallback) => {
+        const el = document.getElementById(id);
+        if (!el) return fallback;
+        const v = parseFloat(String(el.value).replace(',', '.'));
+        return isNaN(v) ? fallback : v;
+      };
+
+      doughTempState.finalFlourKg = Math.max(0.5, readNum('dtInputFinalFlourKg', 10));
+      doughTempState.targetDoughTemp = readNum('dtInputTargetDoughTemp', 22.0);
+      doughTempState.bigaTemp = readNum('dtInputBigaTemp', 9.0);
+      doughTempState.flourTemp = readNum('dtInputFlourTemp', 16.7);
+      doughTempState.roomTemp = readNum('dtInputRoomTemp', 27.0);
+      doughTempState.mixDuration = Math.max(1, readNum('dtInputMixDuration', 21));
+
+      saveDoughTempState();
+      calculateDoughMixTemp();
+    }
+
+    function formatGramsTR(val) {
+      return Math.round(val).toLocaleString('tr-TR');
+    }
+
+    function formatTempTR(val) {
+      return (Math.round(val * 10) / 10).toFixed(1);
+    }
+
+    function calculateDoughMixTemp() {
+      const finalFlourKg = doughTempState.finalFlourKg;
+      const T_hedef = doughTempState.targetDoughTemp;
+      const T_biga = doughTempState.bigaTemp;
+      const T_un = doughTempState.flourTemp;
+      const T_ortam = doughTempState.roomTemp;
+      const Sure_dk = doughTempState.mixDuration;
+
+      // 1. Reçete Ölçekleme (10 kg Final Un bazlı sabit oranlar)
+      const M_un = finalFlourKg * 1000; // Final kuru un (gr)
+      const M_biga_un = M_un; // Biga içindeki un (gr)
+      const M_biga_su = M_un * 0.5; // Biga içindeki su (gr)
+      const M_biga_maya = M_un * 0.003; // Biga içindeki maya (gr)
+      const M_biga = M_un * 1.503; // Hazır Biga V2 (15.030 gr @ 10kg)
+
+      const M_su = M_un * 0.92; // Toplam Final Su (9.200 gr @ 10kg -> %71 toplam hidrasyon)
+      const M_maya_su = doughTempState.yeastWaterMode === 'fixed'
+        ? Math.min(625, M_su * 0.5)
+        : (M_un * 0.0625); // Maya Suyu @ 22.0°C (625 gr @ 10kg)
+      const M_ana_su = Math.max(1, M_su - M_maya_su); // Soğutulacak Ana Su (8.575 gr @ 10kg)
+
+      const M_tuz = M_un * 0.06; // Tuz (600 gr @ 10kg, toplam unun %3'ü)
+      const M_maya = M_un * 0.001; // Final İnstant Maya (10 gr @ 10kg, toplam unun %0.05'i)
+
+      const M_toplam_un = M_un + M_biga_un; // 20.000 gr @ 10kg
+      const M_toplam_hamur = M_biga + M_un + M_su + M_tuz + M_maya; // 34.840 gr @ 10kg
+      const bezeAdedi = Math.round(M_toplam_hamur / 260); // 260 gr/beze (~134 adet)
+
+      // 2. Gerçek Saha Verisine Dayalı Termal Hesaplama Motoru
+      // Özgül ısı katsayıları: c_biga = 0.613, c_un = 0.42, c_su = 1.00
+      const c_biga = 0.613;
+      const c_un = 0.42;
+      const c_su = 1.00;
+
+      const C_biga = M_biga * c_biga;
+      const C_un = M_un * c_un;
+      const C_su = M_su * c_su;
+      const C_toplam = C_biga + C_un + C_su;
+
+      // Sürtünme ve Ortam Isı Kazancı (ΔT_miks)
+      const dT_baz = 11.4;
+      const dT_ortam = (T_ortam - 27.0) * 0.15;
+      const dT_sure = (Sure_dk - 21.0) * 0.45;
+      const dT_toplam = dT_baz + dT_ortam + dT_sure;
+
+      // Hedeflenen Başlangıç Karışım Sıcaklığı (T_baslangic)
+      const T_baslangic = T_hedef - dT_toplam;
+
+      // Gereken Toplam Su Ortalama Sıcaklığı (T_su_ort)
+      const T_su_ort = (C_toplam * T_baslangic - (C_biga * T_biga + C_un * T_un)) / C_su;
+
+      // Soğutulacak Ana Suyun Sıcaklığı (T_ana_su — 22°C maya suyu hariç)
+      const T_ana_su = ((M_su * T_su_ort) - (M_maya_su * 22.0)) / M_ana_su;
+
+      // Buz Takviyesi Kontrolü (T_ana_su < 2.0°C ise +4.0°C su + 0°C buz hesabı)
+      const needsIce = T_ana_su < 2.0;
+      let iceGrams = 0;
+      let chilledWater4CGrams = Math.round(M_ana_su);
+      if (needsIce) {
+        // +4°C dolap suyu kullanıldığında gereken 0°C buz miktarı (L_buz = 80 cal/g + 4 cal/g = 84 cal/g)
+        const rawIce = (M_ana_su * (4.0 - T_ana_su)) / 84.0;
+        iceGrams = Math.min(Math.round(M_ana_su), Math.max(10, Math.round(rawIce)));
+        chilledWater4CGrams = Math.max(0, Math.round(M_ana_su) - iceGrams);
+      }
+
+      // 3. UI Güncellemeleri
+      // Un Preset Butonları Aktiflik Durumu
+      document.querySelectorAll('#dtFlourPresetsContainer .dt-preset-pill').forEach(btn => {
+        const val = parseFloat(btn.getAttribute('data-flour') || '0');
+        if (Math.abs(val - finalFlourKg) < 0.01) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      const totalFlourHintEl = document.getElementById('dtTotalFlourHint');
+      if (totalFlourHintEl) {
+        totalFlourHintEl.textContent = `Toplam Parti: ${(M_toplam_un / 1000).toLocaleString('tr-TR', { maximumFractionDigits: 1 })} kg Un`;
+      }
+
+      // Maya suyu modu butonları
+      const btnScaled = document.getElementById('btnYeastWaterScaled');
+      const btnFixed = document.getElementById('btnYeastWaterFixed');
+      if (btnScaled && btnFixed) {
+        if (doughTempState.yeastWaterMode === 'fixed') {
+          btnFixed.style.background = '#0284C7';
+          btnFixed.style.color = '#FFFFFF';
+          btnScaled.style.background = 'transparent';
+          btnScaled.style.color = 'var(--dt-text-muted)';
+        } else {
+          btnScaled.style.background = '#0284C7';
+          btnScaled.style.color = '#FFFFFF';
+          btnFixed.style.background = 'transparent';
+          btnFixed.style.color = 'var(--dt-text-muted)';
+        }
+      }
+
+      // Ana Sonuç Kartı (Çok Büyük Punto)
+      const mainWaterTempEl = document.getElementById('dtMainWaterTempDisplay');
+      const mainWaterWeightSubEl = document.getElementById('dtMainWaterWeightSub');
+      const yeastWaterEl = document.getElementById('dtYeastWaterDisplay');
+      const avgWaterTempEl = document.getElementById('dtAvgWaterTempDisplay');
+      const totalWaterSubEl = document.getElementById('dtTotalWaterWeightSub');
+      const deltaBreakdownEl = document.getElementById('dtDeltaTBreakdownText');
+      const startAndDeltaEl = document.getElementById('dtStartAndDeltaDisplay');
+      const statusBadgeEl = document.getElementById('dtHeroStatusBadge');
+      const primaryBoxEl = document.getElementById('dtHeroPrimaryBox');
+
+      if (mainWaterTempEl) {
+        mainWaterTempEl.textContent = `${formatTempTR(T_ana_su)} °C`;
+      }
+      if (mainWaterWeightSubEl) {
+        if (needsIce) {
+          mainWaterWeightSubEl.innerHTML = `Soğutulacak Ana Su: <strong>${formatGramsTR(M_ana_su)} gr</strong> <span style="color:#7DD3FC;">(${formatGramsTR(chilledWater4CGrams)} gr @ +4°C Su + ${formatGramsTR(iceGrams)} gr Buz)</span>`;
+        } else {
+          mainWaterWeightSubEl.innerHTML = `Soğutulacak Ana Su (Tuzlu su dahil): <strong>${formatGramsTR(M_ana_su)} gr</strong>`;
+        }
+      }
+      if (yeastWaterEl) {
+        yeastWaterEl.textContent = `${formatGramsTR(M_maya_su)} gr @ 22.0 °C`;
+      }
+      if (avgWaterTempEl) {
+        avgWaterTempEl.textContent = `${formatTempTR(T_su_ort)} °C`;
+      }
+      if (totalWaterSubEl) {
+        totalWaterSubEl.textContent = `Toplam Final Su: ${formatGramsTR(M_su)} gr (%71 Hidrasyon)`;
+      }
+      if (deltaBreakdownEl) {
+        const signOrtam = dT_ortam >= 0 ? '+' : '';
+        const signSure = dT_sure >= 0 ? '+' : '';
+        deltaBreakdownEl.textContent = `Baz 11.4°C ${signOrtam}${formatTempTR(dT_ortam)}°C (Ortam) ${signSure}${formatTempTR(dT_sure)}°C (Süre)`;
+      }
+      if (startAndDeltaEl) {
+        startAndDeltaEl.textContent = `+${formatTempTR(dT_toplam)} °C → Başlangıç: ${formatTempTR(T_baslangic)} °C`;
+      }
+
+      // Buz Uyarı Banner'ı
+      const iceBanner = document.getElementById('dtIceWarningBanner');
+      if (iceBanner) {
+        if (needsIce) {
+          iceBanner.classList.add('active');
+          const rawTxt = document.getElementById('dtIceRawTempText');
+          const iceGramsTxt = document.getElementById('dtIceGramsText');
+          const chilledWaterTxt = document.getElementById('dtChilledWaterGramsText');
+          if (rawTxt) rawTxt.textContent = `${formatTempTR(T_ana_su)} °C`;
+          if (iceGramsTxt) iceGramsTxt.textContent = `${formatGramsTR(iceGrams)} gr`;
+          if (chilledWaterTxt) chilledWaterTxt.textContent = `${formatGramsTR(chilledWater4CGrams)} gr`;
+
+          if (statusBadgeEl) {
+            statusBadgeEl.style.background = 'rgba(56, 189, 248, 0.25)';
+            statusBadgeEl.style.borderColor = '#38BDF8';
+            statusBadgeEl.style.color = '#E0F2FE';
+            statusBadgeEl.textContent = `🧊 Buz Takviyesi Gerekli (${formatGramsTR(iceGrams)} gr Buz)`;
+          }
+          if (primaryBoxEl) {
+            primaryBoxEl.style.borderColor = '#F59E0B';
+          }
+        } else {
+          iceBanner.classList.remove('active');
+          if (statusBadgeEl) {
+            statusBadgeEl.style.background = 'rgba(34, 197, 94, 0.2)';
+            statusBadgeEl.style.borderColor = 'rgba(74, 222, 128, 0.45)';
+            statusBadgeEl.style.color = '#86EFAC';
+            statusBadgeEl.textContent = '✓ Doğrudan Soğuk Su İle Miks (Buz Gerekmez)';
+          }
+          if (primaryBoxEl) {
+            primaryBoxEl.style.borderColor = 'rgba(56, 189, 248, 0.45)';
+          }
+        }
+      }
+
+      // 4. Otomatik Malzeme Listesi Tablosu
+      const tableFlourTitle = document.getElementById('dtTableFlourTitle');
+      if (tableFlourTitle) {
+        tableFlourTitle.textContent = finalFlourKg.toLocaleString('tr-TR', { maximumFractionDigits: 1 });
+      }
+      const totalDoughBadge = document.getElementById('dtTotalDoughBadge');
+      if (totalDoughBadge) {
+        totalDoughBadge.textContent = `Toplam Hamur: ${formatGramsTR(M_toplam_hamur)} gr • ~${bezeAdedi} Beze (260 gr)`;
+      }
+
+      const tbody = document.getElementById('dtIngredientsTableBody');
+      if (tbody) {
+        const mainWaterNote = needsIce
+          ? `<strong style="color:#0284C7;">🧊 Buzlu Hazırlık:</strong> <strong>${formatGramsTR(chilledWater4CGrams)} gr</strong> (+4°C Dolap Suyu) + <strong>${formatGramsTR(iceGrams)} gr</strong> (Kırık/Küp Buz)`
+          : `Toplam final su eksi maya suyu (Tuzlu su dahil soğutulacak ana su)`;
+
+        const mainWaterTempBadge = needsIce
+          ? `<span class="recipe-ratio-tag" style="background:#DBEAFE; color:#1E40AF; border-color:#93C5FD; font-weight:900;">${formatTempTR(T_ana_su)} °C (+4°C Su + Buz)</span>`
+          : `<span class="recipe-ratio-tag" style="background:#E0F2FE; color:#0369A1; border-color:#7DD3FC; font-weight:900; font-size:0.9rem;">❄️ ${formatTempTR(T_ana_su)} °C</span>`;
+
+        tbody.innerHTML = `
+          <tr>
+            <td class="col-idx" style="font-weight:700;">1</td>
+            <td class="col-name">
+              <div class="ingredient-name-cell">
+                <span class="ingredient-icon">📦</span>
+                <span class="ingredient-title">Hazır Biga V2</span>
+              </div>
+            </td>
+            <td class="col-qty" style="text-align:right;">
+              <span class="ingredient-qty-val">${formatGramsTR(M_biga)}</span>
+              <span class="qty-unit-inline">gr</span>
+            </td>
+            <td><span class="recipe-ratio-tag" style="background:#F1F5F9; color:#334155;">${formatTempTR(T_biga)} °C</span></td>
+            <td><span class="recipe-ratio-tag">1,503x Final Un</span></td>
+            <td class="col-note">${formatGramsTR(M_biga_un)} gr un + ${formatGramsTR(M_biga_su)} gr su + ${formatGramsTR(M_biga_maya)} gr maya</td>
+          </tr>
+          <tr class="row-master-mince">
+            <td class="col-idx" style="font-weight:700;">2</td>
+            <td class="col-name">
+              <div class="ingredient-name-cell">
+                <span class="ingredient-icon">🌾</span>
+                <span class="ingredient-title">Final Un</span>
+                <span class="recipe-badge" style="background:#FEF3C7; color:#92400E; border-color:#FDE68A; font-size:0.68rem; padding:2px 6px;">BAZ</span>
+              </div>
+            </td>
+            <td class="col-qty" style="text-align:right;">
+              <span class="ingredient-qty-val">${formatGramsTR(M_un)}</span>
+              <span class="qty-unit-inline">gr</span>
+            </td>
+            <td><span class="recipe-ratio-tag" style="background:#F1F5F9; color:#334155;">${formatTempTR(T_un)} °C</span></td>
+            <td><span class="recipe-ratio-tag">1,00x (Baz Un)</span></td>
+            <td class="col-note">Toplam parti unu: ${formatGramsTR(M_toplam_un)} gr (${(M_toplam_un / 1000).toLocaleString('tr-TR', { maximumFractionDigits: 1 })} kg)</td>
+          </tr>
+          <tr style="background: rgba(14, 165, 233, 0.08);">
+            <td class="col-idx" style="font-weight:800; color:#0284C7;">3</td>
+            <td class="col-name">
+              <div class="ingredient-name-cell">
+                <span class="ingredient-icon">❄️</span>
+                <span class="ingredient-title" style="color:#0284C7; font-weight:900;">Soğutulacak Ana Su (Tuzlu Su Dahil)</span>
+              </div>
+            </td>
+            <td class="col-qty" style="text-align:right;">
+              <span class="ingredient-qty-val" style="color:#0284C7; font-size:1.15rem;">${formatGramsTR(M_ana_su)}</span>
+              <span class="qty-unit-inline">gr</span>
+            </td>
+            <td>${mainWaterTempBadge}</td>
+            <td><span class="recipe-ratio-tag">Toplam Su − Maya Suyu</span></td>
+            <td class="col-note">${mainWaterNote}</td>
+          </tr>
+          <tr style="background: rgba(245, 158, 11, 0.07);">
+            <td class="col-idx" style="font-weight:800; color:#D97706;">4</td>
+            <td class="col-name">
+              <div class="ingredient-name-cell">
+                <span class="ingredient-icon">🧪</span>
+                <span class="ingredient-title" style="font-weight:800;">Maya Suyu (Sabit 22°C)</span>
+              </div>
+            </td>
+            <td class="col-qty" style="text-align:right;">
+              <span class="ingredient-qty-val">${formatGramsTR(M_maya_su)}</span>
+              <span class="qty-unit-inline">gr</span>
+            </td>
+            <td><span class="recipe-ratio-tag" style="background:#FEF3C7; color:#92400E; border-color:#FDE68A; font-weight:800;">🌡️ 22.0 °C (Sabit)</span></td>
+            <td><span class="recipe-ratio-tag">${doughTempState.yeastWaterMode === 'fixed' ? 'Sabit 625 gr' : '62,5 gr / kg Un'}</span></td>
+            <td class="col-note">Her zaman 22.0°C sabit • Toplam Final Su: <strong>${formatGramsTR(M_su)} gr</strong> (Ort: <strong>${formatTempTR(T_su_ort)} °C</strong>)</td>
+          </tr>
+          <tr>
+            <td class="col-idx" style="font-weight:700;">5</td>
+            <td class="col-name">
+              <div class="ingredient-name-cell">
+                <span class="ingredient-icon">🧂</span>
+                <span class="ingredient-title">Tuz</span>
+              </div>
+            </td>
+            <td class="col-qty" style="text-align:right;">
+              <span class="ingredient-qty-val">${formatGramsTR(M_tuz)}</span>
+              <span class="qty-unit-inline">gr</span>
+            </td>
+            <td><span class="recipe-ratio-tag">—</span></td>
+            <td><span class="recipe-ratio-tag">%3 Toplam Un</span></td>
+            <td class="col-note">Toplam unun %3'ü (Final unun %6'sı) • Ana suyun bir kısmında eritilir</td>
+          </tr>
+          <tr>
+            <td class="col-idx" style="font-weight:700;">6</td>
+            <td class="col-name">
+              <div class="ingredient-name-cell">
+                <span class="ingredient-icon">✨</span>
+                <span class="ingredient-title">Final İnstant Maya</span>
+              </div>
+            </td>
+            <td class="col-qty" style="text-align:right;">
+              <span class="ingredient-qty-val">${ (Math.round(M_maya * 10) / 10).toLocaleString('tr-TR') }</span>
+              <span class="qty-unit-inline">gr</span>
+            </td>
+            <td><span class="recipe-ratio-tag">—</span></td>
+            <td><span class="recipe-ratio-tag">%0,05 Toplam Un</span></td>
+            <td class="col-note">Optimize edilmiş düşük oran • 22°C Maya suyu içinde çırpılarak 0–1:20 dk arasında eklenir</td>
+          </tr>
+          <tr style="background: var(--dt-bg-soft); font-weight:800;">
+            <td class="col-idx" style="color:var(--primary);">Σ</td>
+            <td class="col-name" colspan="2">
+              <strong>Toplam Final Hamur Ağırlığı:</strong> ${formatGramsTR(M_toplam_hamur)} gr (${(M_toplam_hamur / 1000).toLocaleString('tr-TR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kg)
+            </td>
+            <td colspan="3" style="color:#0284C7;">
+              <strong>Tahmini Beze Adedi (260 gr/beze):</strong> ~${bezeAdedi} Adet • <strong>Toplam Hidrasyon:</strong> %71 (${formatGramsTR(M_biga_su + M_su)} gr su / ${formatGramsTR(M_toplam_un)} gr un)
+            </td>
+          </tr>
+        `;
+      }
+
+      // 5. Termodinamik Formül Özeti Kutusu
+      const formulaBox = document.getElementById('dtFormulaSummaryBox');
+      if (formulaBox) {
+        formulaBox.innerHTML = `
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:10px;">
+            <div style="background:var(--dt-bg-soft); border:1px solid var(--dt-border); padding:10px 12px; border-radius:10px;">
+              <strong style="color:var(--dt-text-main); display:block; margin-bottom:3px;">1. Isı Kapasiteleri (M × c)</strong>
+              • Biga: ${formatGramsTR(M_biga)}g × 0.613 = <strong>${Math.round(C_biga).toLocaleString('tr-TR')}</strong> cal/°C<br>
+              • Kuru Un: ${formatGramsTR(M_un)}g × 0.42 = <strong>${Math.round(C_un).toLocaleString('tr-TR')}</strong> cal/°C<br>
+              • Final Su: ${formatGramsTR(M_su)}g × 1.00 = <strong>${Math.round(C_su).toLocaleString('tr-TR')}</strong> cal/°C
+            </div>
+            <div style="background:var(--dt-bg-soft); border:1px solid var(--dt-border); padding:10px 12px; border-radius:10px;">
+              <strong style="color:var(--dt-text-main); display:block; margin-bottom:3px;">2. Miks Isı Kazancı (ΔT_toplam)</strong>
+              • ΔT_baz (21 dk @ 27°C): <strong>+11.4 °C</strong><br>
+              • ΔT_ortam: (${formatTempTR(T_ortam)} − 27) × 0.15 = <strong>${dT_ortam >= 0 ? '+' : ''}${formatTempTR(dT_ortam)} °C</strong><br>
+              • ΔT_süre: (${Sure_dk} − 21) × 0.45 = <strong>${dT_sure >= 0 ? '+' : ''}${formatTempTR(dT_sure)} °C</strong><br>
+              • Toplam Artış: <strong>+${formatTempTR(dT_toplam)} °C</strong> → T_başlangıç: <strong>${formatTempTR(T_baslangic)} °C</strong>
+            </div>
+            <div style="background:var(--dt-bg-soft); border:1px solid var(--dt-border); padding:10px 12px; border-radius:10px;">
+              <strong style="color:var(--dt-text-main); display:block; margin-bottom:3px;">3. Su Sıcaklığı Dağılımı</strong>
+              • Tüm Suların Ortalaması (T_su_ort): <strong>${formatTempTR(T_su_ort)} °C</strong> (${formatGramsTR(M_su)} gr)<br>
+              • Maya Suyu: <strong>22.0 °C</strong> (${formatGramsTR(M_maya_su)} gr)<br>
+              • Soğutulacak Ana Su (T_ana_su): <strong style="color:#0284C7;">${formatTempTR(T_ana_su)} °C</strong> (${formatGramsTR(M_ana_su)} gr)
+            </div>
+          </div>
+        `;
+      }
     }
   </script>
 </body>
