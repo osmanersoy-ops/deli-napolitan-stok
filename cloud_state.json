@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-13T14:35:33.601Z",
-  "timestamp": 1794580532998,
+  "exportedAt": "2026-11-13T14:35:39.040Z",
+  "timestamp": 1794580538436,
   "deviceId": "dev_99uzb4t_mvpnpi3a",
   "moduleTimestamps": {
     "cnt_hergun": 1794575031015,
@@ -1801,19 +1801,19 @@
         "notes": ""
       },
       "hg_28": {
-        "qty": 1,
+        "qty": "1",
         "notes": ""
       },
       "hg_27": {
-        "qty": 3,
+        "qty": "3",
         "notes": ""
       },
       "hg_29": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "hg_30": {
-        "qty": 12,
+        "qty": "12",
         "notes": ""
       },
       "cust_tiramisu": {
@@ -1821,11 +1821,11 @@
         "notes": ""
       },
       "cust_sote_jumbo_karides": {
-        "qty": 8,
+        "qty": "8",
         "notes": ""
       },
       "cust_pismis_dil_fume": {
-        "qty": 10,
+        "qty": "10",
         "notes": ""
       },
       "cust_izgaralanmis_kabak": {
@@ -2393,19 +2393,19 @@
         "notes": ""
       },
       "hg_28": {
-        "qty": 1,
+        "qty": "1",
         "notes": ""
       },
       "hg_27": {
-        "qty": 3,
+        "qty": "3",
         "notes": ""
       },
       "hg_29": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "hg_30": {
-        "qty": 12,
+        "qty": "12",
         "notes": ""
       },
       "cust_tiramisu": {
@@ -2413,11 +2413,11 @@
         "notes": ""
       },
       "cust_sote_jumbo_karides": {
-        "qty": 8,
+        "qty": "8",
         "notes": ""
       },
       "cust_pismis_dil_fume": {
-        "qty": 10,
+        "qty": "10",
         "notes": ""
       },
       "cust_izgaralanmis_kabak": {
@@ -3185,22 +3185,22 @@
       "updatedAt": 1794575031015
     },
     "hg_27": {
-      "qty": 3,
+      "qty": "3",
       "dayId": "hergun",
       "updatedAt": 1794575031015
     },
     "hg_28": {
-      "qty": 1,
+      "qty": "1",
       "dayId": "hergun",
       "updatedAt": 1794575031015
     },
     "hg_29": {
-      "qty": 0,
+      "qty": "0",
       "dayId": "hergun",
       "updatedAt": 1794575031015
     },
     "hg_30": {
-      "qty": 12,
+      "qty": "12",
       "dayId": "hergun",
       "updatedAt": 1794575031015
     },
@@ -3305,12 +3305,12 @@
       "updatedAt": 1794575031015
     },
     "cust_pismis_dil_fume": {
-      "qty": 10,
+      "qty": "10",
       "dayId": "hergun",
       "updatedAt": 1794575031015
     },
     "cust_sote_jumbo_karides": {
-      "qty": 8,
+      "qty": "8",
       "dayId": "hergun",
       "updatedAt": 1794575031015
     },
