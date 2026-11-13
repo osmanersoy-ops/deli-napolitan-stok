@@ -4272,6 +4272,7 @@
       --dt-accent-orange: #EA580C;
       --dt-hero-bg: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
       --dt-hero-border: #334155;
+      touch-action: manipulation;
       transition: all 0.2s ease;
     }
 
@@ -4416,21 +4417,22 @@
       display: block;
     }
 
-    /* GİRİŞ KARTLARI (6 ADET BÜYÜK ENDÜSTRİYEL GİRİŞ) */
+    /* GİRİŞ KARTLARI (ENDÜSTRİYEL DOKUNMATİK STEPPER) */
     .dt-inputs-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
     }
 
     .dt-input-box {
       background: var(--dt-bg-soft);
       border: 1.5px solid var(--dt-border);
-      border-radius: 14px;
-      padding: 12px 14px;
+      border-radius: 16px;
+      padding: 14px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
+      touch-action: manipulation;
     }
 
     .dt-input-box.dt-input-highlight {
@@ -4446,8 +4448,8 @@
     }
 
     .dt-input-label {
-      font-size: 0.82rem;
-      font-weight: 800;
+      font-size: 0.88rem;
+      font-weight: 900;
       color: var(--dt-text-main);
       display: flex;
       align-items: center;
@@ -4462,30 +4464,67 @@
 
     .dt-stepper-row {
       display: flex;
-      align-items: center;
-      gap: 6px;
+      align-items: stretch;
+      gap: 8px;
+      touch-action: manipulation;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     .dt-step-btn {
-      width: 44px;
-      height: 46px;
-      border-radius: 10px;
-      border: 1.5px solid var(--dt-border);
-      background: var(--dt-bg-card);
-      color: var(--dt-text-main);
-      font-size: 1.35rem;
+      min-width: 68px;
+      height: 56px;
+      padding: 0 10px;
+      border-radius: 13px;
+      border: 2px solid #CBD5E1;
+      background: #FFFFFF;
+      color: #0F172A;
+      font-size: 1.15rem;
       font-weight: 900;
       cursor: pointer;
       display: inline-flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      line-height: 1.05;
       flex-shrink: 0;
+      touch-action: manipulation;
       user-select: none;
-      transition: all 0.12s ease;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.07);
+      transition: transform 0.08s ease, background 0.1s ease, border-color 0.1s ease;
+    }
+
+    .dt-step-btn.dt-step-minus {
+      background: #F0F9FF;
+      border-color: #7DD3FC;
+      color: #0369A1;
+    }
+
+    .dt-step-btn.dt-step-plus {
+      background: #FFF7ED;
+      border-color: #FDBA74;
+      color: #C2410C;
+    }
+
+    .dt-step-btn .dt-step-sym {
+      font-size: 1.35rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .dt-step-btn .dt-step-sub {
+      font-size: 0.68rem;
+      font-weight: 800;
+      opacity: 0.85;
+      margin-top: 2px;
     }
 
     .dt-step-btn:active {
-      transform: scale(0.94);
+      transform: scale(0.95);
+      filter: brightness(0.95);
     }
 
     .dt-input-field-wrap {
@@ -4493,21 +4532,23 @@
       position: relative;
       display: flex;
       align-items: center;
+      touch-action: manipulation;
     }
 
     .dt-number-input {
       width: 100%;
-      height: 46px;
-      border-radius: 10px;
-      border: 1.5px solid var(--dt-border);
+      height: 56px;
+      border-radius: 13px;
+      border: 2px solid var(--dt-border);
       background: var(--dt-bg-input);
       color: var(--dt-text-main);
-      font-size: 1.3rem;
+      font-size: 1.45rem;
       font-weight: 900;
       text-align: center;
-      padding: 0 36px 0 10px;
+      padding: 0 34px 0 8px;
       font-variant-numeric: tabular-nums;
       outline: none;
+      touch-action: manipulation;
     }
 
     .dt-number-input:focus {
@@ -4518,7 +4559,7 @@
     .dt-input-unit {
       position: absolute;
       right: 10px;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 800;
       color: var(--dt-text-muted);
       pointer-events: none;
@@ -7065,7 +7106,7 @@
           </div>
         </section>
 
-        <!-- Üst Navigasyon ve Tema / Sıfırlama Araç Çubuğu -->
+        <!-- Üst Navigasyon Araç Çubuğu -->
         <nav class="count-nav-bar" style="margin-bottom: 14px; display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
           <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
             <button type="button" class="btn-back-dashboard" onclick="returnToDashboard()" title="Ana Sayfaya Dön">
@@ -7078,19 +7119,6 @@
               🍕 Biga V2 Prosedürü
             </button>
           </div>
-
-          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-            <button type="button" id="btnDoughTempThemeToggle" onclick="toggleDoughTempDarkMode()" style="border:1.5px solid #CBD5E1; background:#0F172A; color:#F8FAFC; padding:8px 13px; border-radius:10px; font-size:0.8rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
-              <span id="doughTempThemeIcon">🌙</span>
-              <span id="doughTempThemeText">Koyu Mod</span>
-            </button>
-            <button type="button" onclick="loadDoughTempReferenceTest()" style="border:1.5px solid #BAE6FD; background:#F0F9FF; color:#0369A1; padding:8px 13px; border-radius:10px; font-size:0.8rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:5px;" title="13°C Biga, 24.8°C Un, 26.1°C Ortam → 7.3°C Su">
-              🧪 Referans Testi Yükle (7.3°C)
-            </button>
-            <button type="button" onclick="resetDoughTempDefaults()" style="border:1.5px solid #CBD5E1; background:#FFFFFF; color:#334155; padding:8px 13px; border-radius:10px; font-size:0.8rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:5px;">
-              ↺ Varsayılanlara Sıfırla
-            </button>
-          </div>
         </nav>
 
         <!-- 1. KULLANICI GİRİŞ ALANLARI (BİGA, UN VE ORTAM SICAKLIĞI) -->
@@ -7100,8 +7128,8 @@
               <span>🎛️</span>
               <span>1. Sıcaklık Giriş Değerleri (Biga • Un • Ortam)</span>
             </div>
-            <span style="font-size:0.76rem; color:var(--dt-text-muted); font-weight:700;">
-              Referans Çıkış: 22. Dk @ 21.3 °C • Maya Suyu: 625 gr @ 20.0 °C (Sabit)
+            <span style="font-size:0.78rem; color:var(--dt-text-muted); font-weight:800;">
+              21 - 22 derece çıkış derecesi için optimize edilmiştir
             </span>
           </div>
 
@@ -7110,20 +7138,20 @@
             <div class="dt-input-box">
               <div class="dt-input-label-row">
                 <span class="dt-input-label">📦 1. Biga Sıcaklığı</span>
-                <span class="dt-input-hint">Varsayılan: 13.5°C (±0,1°C)</span>
               </div>
               <div class="dt-stepper-row">
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('bigaTemp', -0.1)">−</button>
+                <button type="button" class="dt-step-btn dt-step-minus" onpointerdown="startDoughTempStep(event, 'bigaTemp', -0.1)" onpointerup="stopDoughTempStep()" onpointerleave="stopDoughTempStep()" onpointercancel="stopDoughTempStep()" oncontextmenu="return false;" onclick="if(event.detail===0) stepDoughTempInput('bigaTemp', -0.1)">
+                  <span class="dt-step-sym">−</span>
+                  <span class="dt-step-sub">0,1°</span>
+                </button>
                 <div class="dt-input-field-wrap">
                   <input type="number" id="dtInputBigaTemp" class="dt-number-input" value="13.5" min="0" max="30" step="0.1" inputmode="decimal" oninput="handleDoughTempInputChange()">
                   <span class="dt-input-unit">°C</span>
                 </div>
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('bigaTemp', 0.1)">+</button>
-              </div>
-              <div class="dt-preset-pills">
-                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputBigaTemp', 13.0)">13.0°C (Ref Test)</button>
-                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputBigaTemp', 13.5)">13.5°C (Varsayılan)</button>
-                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputBigaTemp', 14.0)">14.0°C</button>
+                <button type="button" class="dt-step-btn dt-step-plus" onpointerdown="startDoughTempStep(event, 'bigaTemp', 0.1)" onpointerup="stopDoughTempStep()" onpointerleave="stopDoughTempStep()" onpointercancel="stopDoughTempStep()" oncontextmenu="return false;" onclick="if(event.detail===0) stepDoughTempInput('bigaTemp', 0.1)">
+                  <span class="dt-step-sym">+</span>
+                  <span class="dt-step-sub">0,1°</span>
+                </button>
               </div>
             </div>
 
@@ -7131,20 +7159,20 @@
             <div class="dt-input-box">
               <div class="dt-input-label-row">
                 <span class="dt-input-label">🌾 2. Un Sıcaklığı</span>
-                <span class="dt-input-hint">Varsayılan: 20.0°C (±0,5°C)</span>
               </div>
               <div class="dt-stepper-row">
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('flourTemp', -0.5)">−</button>
+                <button type="button" class="dt-step-btn dt-step-minus" onpointerdown="startDoughTempStep(event, 'flourTemp', -0.5)" onpointerup="stopDoughTempStep()" onpointerleave="stopDoughTempStep()" onpointercancel="stopDoughTempStep()" oncontextmenu="return false;" onclick="if(event.detail===0) stepDoughTempInput('flourTemp', -0.5)">
+                  <span class="dt-step-sym">−</span>
+                  <span class="dt-step-sub">0,5°</span>
+                </button>
                 <div class="dt-input-field-wrap">
                   <input type="number" id="dtInputFlourTemp" class="dt-number-input" value="20.0" min="0" max="40" step="0.1" inputmode="decimal" oninput="handleDoughTempInputChange()">
                   <span class="dt-input-unit">°C</span>
                 </div>
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('flourTemp', 0.5)">+</button>
-              </div>
-              <div class="dt-preset-pills">
-                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputFlourTemp', 20.0)">20.0°C (Varsayılan)</button>
-                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputFlourTemp', 22.0)">22.0°C</button>
-                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputFlourTemp', 24.8)">24.8°C (Ref Test)</button>
+                <button type="button" class="dt-step-btn dt-step-plus" onpointerdown="startDoughTempStep(event, 'flourTemp', 0.5)" onpointerup="stopDoughTempStep()" onpointerleave="stopDoughTempStep()" onpointercancel="stopDoughTempStep()" oncontextmenu="return false;" onclick="if(event.detail===0) stepDoughTempInput('flourTemp', 0.5)">
+                  <span class="dt-step-sym">+</span>
+                  <span class="dt-step-sub">0,5°</span>
+                </button>
               </div>
             </div>
 
@@ -7152,20 +7180,20 @@
             <div class="dt-input-box">
               <div class="dt-input-label-row">
                 <span class="dt-input-label">🏠 3. Mutfak Ortam Sıcaklığı</span>
-                <span class="dt-input-hint">Ref: 26.1°C (±0,5°C)</span>
               </div>
               <div class="dt-stepper-row">
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('roomTemp', -0.5)">−</button>
+                <button type="button" class="dt-step-btn dt-step-minus" onpointerdown="startDoughTempStep(event, 'roomTemp', -0.5)" onpointerup="stopDoughTempStep()" onpointerleave="stopDoughTempStep()" onpointercancel="stopDoughTempStep()" oncontextmenu="return false;" onclick="if(event.detail===0) stepDoughTempInput('roomTemp', -0.5)">
+                  <span class="dt-step-sym">−</span>
+                  <span class="dt-step-sub">0,5°</span>
+                </button>
                 <div class="dt-input-field-wrap">
                   <input type="number" id="dtInputRoomTemp" class="dt-number-input" value="26.1" min="5" max="45" step="0.1" inputmode="decimal" oninput="handleDoughTempInputChange()">
                   <span class="dt-input-unit">°C</span>
                 </div>
-                <button type="button" class="dt-step-btn" onclick="stepDoughTempInput('roomTemp', 0.5)">+</button>
-              </div>
-              <div class="dt-preset-pills">
-                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputRoomTemp', 25.0)">25.0°C</button>
-                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputRoomTemp', 26.1)">26.1°C (Ref Test)</button>
-                <button type="button" class="dt-preset-pill" onclick="setDoughTempQuickField('dtInputRoomTemp', 27.0)">27.0°C</button>
+                <button type="button" class="dt-step-btn dt-step-plus" onpointerdown="startDoughTempStep(event, 'roomTemp', 0.5)" onpointerup="stopDoughTempStep()" onpointerleave="stopDoughTempStep()" onpointercancel="stopDoughTempStep()" oncontextmenu="return false;" onclick="if(event.detail===0) stepDoughTempInput('roomTemp', 0.5)">
+                  <span class="dt-step-sym">+</span>
+                  <span class="dt-step-sub">0,5°</span>
+                </button>
               </div>
             </div>
           </div>
@@ -7250,7 +7278,7 @@
         </section>
 
         <!-- 3. MALZEME LİSTESİ TABLOSU -->
-        <section class="dt-card">
+        <section class="dt-card" style="margin-bottom: 20px;">
           <div class="dt-section-title">
             <div style="display:flex; align-items:center; gap:8px;">
               <span>⚖️</span>
@@ -7279,114 +7307,6 @@
                 <!-- JS tarafından doldurulur -->
               </tbody>
             </table>
-          </div>
-        </section>
-
-        <!-- 4. 22 DAKİKALIK MİKS ISI KONTROL ÇİZELGESİ (GERÇEK REFERANS TAKİP) -->
-        <section class="dt-card" style="margin-bottom: 20px;">
-          <div class="dt-section-title">
-            <div style="display:flex; align-items:center; gap:8px;">
-              <span>⏱️</span>
-              <span>3. 22 Dakikalık Miks Isı Kontrol Çizelgesi (Referans Takip)</span>
-            </div>
-            <span style="background:#DCFCE7; color:#166534; border:1px solid #86EFAC; padding:4px 10px; border-radius:999px; font-size:0.75rem; font-weight:800;">
-              🎯 22. Dk Referans Çıkış: 21.3 °C (18. Dk: 19.3 °C)
-            </span>
-          </div>
-
-          <!-- 8 Noktalı Dakika-Derece Referans Çubuğu -->
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(112px, 1fr)); gap:8px; margin-bottom:14px;">
-            <div style="background:var(--dt-bg-soft); border:1.5px solid var(--dt-border); border-radius:10px; padding:10px; text-align:center;">
-              <div style="font-size:0.72rem; font-weight:800; color:var(--dt-text-muted);">2.25. Dakika</div>
-              <div style="font-size:1.2rem; font-weight:900; color:#0284C7; margin-top:2px;">14.4 °C</div>
-            </div>
-            <div style="background:var(--dt-bg-soft); border:1.5px solid var(--dt-border); border-radius:10px; padding:10px; text-align:center;">
-              <div style="font-size:0.72rem; font-weight:800; color:var(--dt-text-muted);">5. Dakika</div>
-              <div style="font-size:1.2rem; font-weight:900; color:#0284C7; margin-top:2px;">14.2 °C</div>
-            </div>
-            <div style="background:var(--dt-bg-soft); border:1.5px solid var(--dt-border); border-radius:10px; padding:10px; text-align:center;">
-              <div style="font-size:0.72rem; font-weight:800; color:var(--dt-text-muted);">7. Dakika</div>
-              <div style="font-size:1.2rem; font-weight:900; color:#0284C7; margin-top:2px;">14.9 °C</div>
-            </div>
-            <div style="background:var(--dt-bg-soft); border:1.5px solid var(--dt-border); border-radius:10px; padding:10px; text-align:center;">
-              <div style="font-size:0.72rem; font-weight:800; color:var(--dt-text-muted);">10. Dakika</div>
-              <div style="font-size:1.2rem; font-weight:900; color:#0284C7; margin-top:2px;">15.5 °C</div>
-            </div>
-            <div style="background:var(--dt-bg-soft); border:1.5px solid var(--dt-border); border-radius:10px; padding:10px; text-align:center;">
-              <div style="font-size:0.72rem; font-weight:800; color:var(--dt-text-muted);">13. Dakika</div>
-              <div style="font-size:1.2rem; font-weight:900; color:#0369A1; margin-top:2px;">16.2 °C</div>
-            </div>
-            <div style="background:var(--dt-bg-soft); border:1.5px solid var(--dt-border); border-radius:10px; padding:10px; text-align:center;">
-              <div style="font-size:0.72rem; font-weight:800; color:var(--dt-text-muted);">15. Dakika</div>
-              <div style="font-size:1.2rem; font-weight:900; color:#D97706; margin-top:2px;">16.8 °C</div>
-            </div>
-            <div style="background:var(--dt-bg-soft); border:1.5px solid #F59E0B; border-radius:10px; padding:10px; text-align:center;">
-              <div style="font-size:0.72rem; font-weight:800; color:#B45309;">18. Dakika</div>
-              <div style="font-size:1.2rem; font-weight:900; color:#D97706; margin-top:2px;">19.3 °C</div>
-            </div>
-            <div style="background:rgba(22, 163, 74, 0.1); border:1.5px solid #16A34A; border-radius:10px; padding:10px; text-align:center;">
-              <div style="font-size:0.72rem; font-weight:800; color:#15803D;">22. Dk (Çıkış)</div>
-              <div style="font-size:1.2rem; font-weight:900; color:#16A34A; margin-top:2px;">21.3 °C</div>
-            </div>
-          </div>
-
-          <div class="dt-mix-schedule-grid">
-            <!-- Aşama 1: 0 - 13. Dk -->
-            <div class="dt-mix-stage-card" style="border-left: 5px solid #0284C7;">
-              <div class="dt-mix-stage-badge" style="background:#E0F2FE; color:#0369A1;">
-                ⏱️ 0 – 13. Dakika
-              </div>
-              <div style="font-size:1.05rem; font-weight:900; color:var(--dt-text-main); margin-bottom:6px;">
-                1. Vites • Yön 2
-              </div>
-              <div style="font-size:0.84rem; color:var(--dt-text-muted); line-height:1.5;">
-                • <strong>2.25. dk:</strong> <strong style="color:#0284C7;">14.4 °C</strong> • <strong>5. dk:</strong> <strong style="color:#0284C7;">14.2 °C</strong><br>
-                • <strong>7. dk:</strong> <strong style="color:#0284C7;">14.9 °C</strong> • <strong>10. dk:</strong> <strong style="color:#0284C7;">15.5 °C</strong><br>
-                • <strong>13. dk:</strong> <strong style="color:#0284C7;">16.2 °C</strong>
-              </div>
-            </div>
-
-            <!-- Aşama 2: 13 - 18. Dk -->
-            <div class="dt-mix-stage-card" style="border-left: 5px solid #F59E0B;">
-              <div class="dt-mix-stage-badge" style="background:#FEF3C7; color:#B45309;">
-                ⏱️ 13 – 18. Dakika
-              </div>
-              <div style="font-size:1.05rem; font-weight:900; color:var(--dt-text-main); margin-bottom:6px;">
-                2. Vites • Yön 2
-              </div>
-              <div style="font-size:0.84rem; color:var(--dt-text-muted); line-height:1.5;">
-                • <strong>15. dk referans:</strong> <strong style="color:#D97706;">16.8 °C</strong><br>
-                • <strong>18. dk referans:</strong> <strong style="color:#DC2626;">19.3 °C</strong> (20°C'yi geçmeden yön değiştir!)
-              </div>
-            </div>
-
-            <!-- Aşama 3: 18 - 22. Dk -->
-            <div class="dt-mix-stage-card" style="border-left: 5px solid #16A34A;">
-              <div class="dt-mix-stage-badge" style="background:#DCFCE7; color:#15803D;">
-                ⏱️ 18 – 22. Dakika
-              </div>
-              <div style="font-size:1.05rem; font-weight:900; color:var(--dt-text-main); margin-bottom:6px;">
-                2. Vites • Yön 1 (Bitiş)
-              </div>
-              <div style="font-size:0.84rem; color:var(--dt-text-muted); line-height:1.5;">
-                • Gluten ağı kilitlenir, "şlap şlap" tokatlama sesi duyulur.<br>
-                • <strong>22. dk miks bitiş ve çıkış sıcaklığı:</strong> <strong style="color:#16A34A;">21.3 °C</strong>
-              </div>
-            </div>
-
-            <!-- Aşama 4: Referans Test Özeti -->
-            <div class="dt-mix-stage-card" style="border-left: 5px solid #7C3AED;">
-              <div class="dt-mix-stage-badge" style="background:#EDE9FE; color:#6D28D9;">
-                🧪 Referans Miks Girişleri
-              </div>
-              <div style="font-size:1.05rem; font-weight:900; color:var(--dt-text-main); margin-bottom:6px;">
-                13°C Biga • 24.8°C Un • 26.1°C Ortam
-              </div>
-              <div style="font-size:0.84rem; color:var(--dt-text-muted); line-height:1.5;">
-                • <strong>Ana Su (8.575 gr):</strong> <strong style="color:#0284C7;">7.3 °C</strong><br>
-                • <strong>Maya Suyu (625 gr):</strong> <strong>20.0 °C (Sabit)</strong> → <strong>22. dk Çıkış: 21.3 °C</strong>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -19496,6 +19416,8 @@
     };
 
     let doughTempState = { ...DOUGH_TEMP_DEFAULTS };
+    let doughTempHoldTimeout = null;
+    let doughTempHoldInterval = null;
 
     function loadDoughTempState() {
       try {
@@ -19509,7 +19431,7 @@
               bigaTemp: !isNaN(Number(parsed.bigaTemp)) ? Number(parsed.bigaTemp) : DOUGH_TEMP_DEFAULTS.bigaTemp,
               flourTemp: !isNaN(Number(parsed.flourTemp)) ? Number(parsed.flourTemp) : DOUGH_TEMP_DEFAULTS.flourTemp,
               roomTemp: !isNaN(Number(parsed.roomTemp)) ? Number(parsed.roomTemp) : DOUGH_TEMP_DEFAULTS.roomTemp,
-              darkMode: !!parsed.darkMode
+              darkMode: false
             };
           }
         }
@@ -19525,8 +19447,9 @@
     function openDoughTempCalcView() {
       loadDoughTempState();
       switchView('doughTempCalcView');
+      const wrap = document.getElementById('doughTempThemeWrap');
+      if (wrap) wrap.classList.remove('dt-dark-mode');
       syncDoughTempInputsFromState();
-      applyDoughTempThemeUI();
       calculateDoughMixTemp();
     }
 
@@ -19540,43 +19463,27 @@
       setVal('dtInputRoomTemp', doughTempState.roomTemp.toFixed(1));
     }
 
-    function toggleDoughTempDarkMode() {
-      doughTempState.darkMode = !doughTempState.darkMode;
-      saveDoughTempState();
-      applyDoughTempThemeUI();
-    }
-
-    function applyDoughTempThemeUI() {
-      const wrap = document.getElementById('doughTempThemeWrap');
-      const btn = document.getElementById('btnDoughTempThemeToggle');
-      const icon = document.getElementById('doughTempThemeIcon');
-      const txt = document.getElementById('doughTempThemeText');
-      if (!wrap) return;
-
-      if (doughTempState.darkMode) {
-        wrap.classList.add('dt-dark-mode');
-        if (icon) icon.textContent = '☀️';
-        if (txt) txt.textContent = 'Aydınlık Mod';
-        if (btn) {
-          btn.style.background = '#F8FAFC';
-          btn.style.color = '#0F172A';
-        }
-      } else {
-        wrap.classList.remove('dt-dark-mode');
-        if (icon) icon.textContent = '🌙';
-        if (txt) txt.textContent = 'Koyu Mod';
-        if (btn) {
-          btn.style.background = '#0F172A';
-          btn.style.color = '#F8FAFC';
-        }
+    function startDoughTempStep(evt, field, delta) {
+      if (evt && typeof evt.preventDefault === 'function') {
+        evt.preventDefault();
       }
+      stopDoughTempStep();
+      stepDoughTempInput(field, delta);
+      doughTempHoldTimeout = setTimeout(() => {
+        doughTempHoldInterval = setInterval(() => {
+          stepDoughTempInput(field, delta);
+        }, 85);
+      }, 340);
     }
 
-    function setDoughTempQuickField(inputId, val) {
-      const el = document.getElementById(inputId);
-      if (el) {
-        el.value = Number(val).toFixed(1);
-        handleDoughTempInputChange();
+    function stopDoughTempStep() {
+      if (doughTempHoldTimeout) {
+        clearTimeout(doughTempHoldTimeout);
+        doughTempHoldTimeout = null;
+      }
+      if (doughTempHoldInterval) {
+        clearInterval(doughTempHoldInterval);
+        doughTempHoldInterval = null;
       }
     }
 
@@ -19600,31 +19507,6 @@
 
       el.value = cfg.decimals === 0 ? Math.round(next) : (Math.round(next * 10) / 10).toFixed(1);
       handleDoughTempInputChange();
-    }
-
-    function loadDoughTempReferenceTest() {
-      const keepDark = doughTempState.darkMode;
-      doughTempState = {
-        finalFlourKg: 10,
-        targetDoughTemp: 21.3,
-        bigaTemp: 13.0,
-        flourTemp: 24.8,
-        roomTemp: 26.1,
-        darkMode: keepDark
-      };
-      saveDoughTempState();
-      syncDoughTempInputsFromState();
-      calculateDoughMixTemp();
-      showToast('✓ Referans test değerleri yüklendi (13,0°C Biga • 24,8°C Un • 26,1°C Ortam → 7,3°C Ana Su).');
-    }
-
-    function resetDoughTempDefaults() {
-      const keepDark = doughTempState.darkMode;
-      doughTempState = { ...DOUGH_TEMP_DEFAULTS, darkMode: keepDark };
-      saveDoughTempState();
-      syncDoughTempInputsFromState();
-      calculateDoughMixTemp();
-      showToast('✓ Varsayılan değerlere (13,5°C Biga • 20,0°C Un • 26,1°C Ortam) sıfırlandı.');
     }
 
     function handleDoughTempInputChange() {
