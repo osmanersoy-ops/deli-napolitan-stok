@@ -1,9 +1,9 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-13T10:37:39.697Z",
-  "timestamp": 1794566259093,
-  "deviceId": "dev_9hg13jx_mw7v2jf7",
+  "exportedAt": "2026-11-13T11:38:07.773Z",
+  "timestamp": 1794569886904,
+  "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1794483213491,
     "cnt_pazar": 1794159762511,
@@ -22,6 +22,8 @@
     "prod_cust_kabak": 1792969316562,
     "prod_cust_sili_biber": 1792967808268,
     "prod_cust_jumbo_karides": 1792968827915,
+    "prod_cust_baby_karides": 1793811910712,
+    "prod_cust_i_c_midye": 1793811902261,
     "prod_cust_dana_brisket_fume": 1792968037845,
     "prod_cust_dana_dil_fume": 1792968059064,
     "prod_cust_tiramisu": 1792968396282,
@@ -125,8 +127,6 @@
     "prod_pr_12": 1792970300896,
     "prod_pz_16": 1792969462468,
     "prod_pz_14": 1792969469433,
-    "prod_cust_baby_karides": 1793811910712,
-    "prod_cust_i_c_midye": 1793811902261,
     "prod_pz_7": 1792969243614,
     "prod_pz_2": 1792969249064,
     "prod_pz_9": 1792969253280,
@@ -136,7 +136,6 @@
     "cat": 1794364990251,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
-    "cnt_metro": 1794144391783,
     "shf_emp_baha_pazartesi": 1793820260701,
     "shf_emp_baha_sali": 1793904518689,
     "shf_emp_baha_carsamba": 1793904518689,
@@ -179,6 +178,7 @@
     "shf_emp_begum_cuma": 1793904518689,
     "shf_emp_begum_cumartesi": 1794179537864,
     "shf_emp_begum_pazar": 1793904518689,
+    "shf": 1794179562902,
     "shf_emp_alican_pazartesi": 1793877123446,
     "shf_emp_alican_sali": 1793877123446,
     "shf_emp_alican_carsamba": 1793877123446,
@@ -200,13 +200,14 @@
     "shf_emp_ozge_cuma": 1793877135627,
     "shf_emp_ozge_cumartesi": 1793877135627,
     "shf_emp_ozge_pazar": 1793877135627,
-    "shf": 1794179562902,
+    "cnt_metro": 1794144391783,
     "prod_cust_i_likli_kemik_stok_suyu": 1794359199028,
     "prod_cust_patates": 1794358779227,
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
     "rtag": 1794426043543,
-    "crec": 1794426043542
+    "crec": 1794426043542,
+    "cnt_persembe": 1794569886904
   },
   "suppliers": [
     {
@@ -2094,7 +2095,7 @@
     },
     "persembe": {
       "pr_1": {
-        "qty": "0",
+        "qty": 0.25,
         "notes": ""
       },
       "pr_13": {
