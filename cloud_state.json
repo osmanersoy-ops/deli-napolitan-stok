@@ -1,11 +1,11 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-15T14:25:04.146Z",
-  "timestamp": 1794752703791,
+  "exportedAt": "2026-11-15T14:25:15.549Z",
+  "timestamp": 1794752714946,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
-    "cnt_hergun": 1794752703790,
+    "cnt_hergun": 1794752714841,
     "cnt_pazar": 1794159762511,
     "rst_hergun": 1794144128904,
     "rst_pazar": 1793557180407,
@@ -1801,7 +1801,7 @@
         "notes": ""
       },
       "hg_28": {
-        "qty": "1",
+        "qty": 0.5,
         "notes": ""
       },
       "hg_27": {
@@ -1809,7 +1809,7 @@
         "notes": ""
       },
       "hg_29": {
-        "qty": 0.5,
+        "qty": 1,
         "notes": ""
       },
       "hg_30": {
