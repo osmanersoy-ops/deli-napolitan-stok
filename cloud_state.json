@@ -1,12 +1,12 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-15T14:32:53.450Z",
-  "timestamp": 1794753173093,
+  "exportedAt": "2026-11-15T14:33:07.202Z",
+  "timestamp": 1794753187192,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1794752797043,
-    "cnt_pazar": 1794753173093,
+    "cnt_pazar": 1794753187192,
     "rst_hergun": 1794144128904,
     "rst_pazar": 1793557180407,
     "wsm_pazartesi": 1792967245661,
@@ -1895,11 +1895,11 @@
         "notes": ""
       },
       "cust_yaprak_jelatin": {
-        "qty": 3,
+        "qty": "3",
         "notes": ""
       },
       "cust_cubuk_vanilya": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "cust_bulasik_makinesi_konsantre_deterjan": {
@@ -2435,23 +2435,23 @@
     },
     "pazar": {
       "cust_dana_brisket_fume": {
-        "qty": "1",
-        "notes": ""
-      },
-      "pz_3": {
-        "qty": "1",
-        "notes": ""
-      },
-      "cust_dana_dil_fume": {
         "qty": "3",
         "notes": ""
       },
+      "pz_3": {
+        "qty": "1.5",
+        "notes": ""
+      },
+      "cust_dana_dil_fume": {
+        "qty": "3.5",
+        "notes": ""
+      },
       "pz_1": {
-        "qty": "2",
+        "qty": "3.5",
         "notes": ""
       },
       "pz_4": {
-        "qty": "4",
+        "qty": "2",
         "notes": ""
       },
       "pz_5": {
@@ -2460,14 +2460,14 @@
       },
       "pz_8": {
         "qty": "0",
-        "notes": "1 çeyrek"
+        "notes": ""
       },
       "pz_10": {
-        "qty": "0.5",
+        "qty": "1",
         "notes": ""
       },
       "pz_11": {
-        "qty": "1.5",
+        "qty": "2.5",
         "notes": ""
       },
       "pz_12": {
@@ -2479,23 +2479,23 @@
         "notes": ""
       },
       "cust_hopla_sivi_santi_bitkisel_krema": {
-        "qty": "2",
+        "qty": "3",
         "notes": ""
       },
       "pz_14": {
-        "qty": "6",
+        "qty": "8",
         "notes": ""
       },
       "pz_16": {
-        "qty": "1",
+        "qty": "2",
         "notes": ""
       },
       "cust_yaprak_jelatin": {
-        "qty": "5",
+        "qty": "3",
         "notes": ""
       },
       "cust_cubuk_vanilya": {
-        "qty": "1",
+        "qty": "0",
         "notes": ""
       },
       "cust_bulasik_makinesi_konsantre_deterjan": {
@@ -3073,65 +3073,65 @@
   ],
   "dayCountTimestamps": {
     "hergun": 1794752797043,
-    "pazar": 1794159762511,
+    "pazar": 1794753187192,
     "metro": 1794144391783,
     "sali": 1794322294574
   },
   "lastProductCounts": {
     "pz_1": {
-      "qty": "2",
+      "qty": "3.5",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "pz_3": {
-      "qty": "1",
+      "qty": "1.5",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "pz_4": {
-      "qty": "4",
+      "qty": "2",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "pz_5": {
       "qty": "2",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "pz_6": {
       "qty": "1",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "pz_8": {
       "qty": "0",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "pz_10": {
-      "qty": "0.5",
+      "qty": "1",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "pz_11": {
-      "qty": "1.5",
+      "qty": "2.5",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "pz_12": {
       "qty": "0.25",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "pz_14": {
-      "qty": "6",
+      "qty": "8",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "pz_16": {
-      "qty": "1",
+      "qty": "2",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "hg_1": {
       "qty": "5",
@@ -3324,69 +3324,69 @@
       "updatedAt": 1794752797043
     },
     "cust_dana_brisket_fume": {
-      "qty": "1",
-      "dayId": "pazar",
-      "updatedAt": 1794159762511
-    },
-    "cust_dana_dil_fume": {
       "qty": "3",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
+    },
+    "cust_dana_dil_fume": {
+      "qty": "3.5",
+      "dayId": "pazar",
+      "updatedAt": 1794753187192
     },
     "cust_hopla_sivi_santi_bitkisel_krema": {
-      "qty": "2",
+      "qty": "3",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "cust_yaprak_jelatin": {
-      "qty": "5",
+      "qty": "3",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "cust_cubuk_vanilya": {
-      "qty": "1",
+      "qty": "0",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "cust_bulasik_makinesi_konsantre_deterjan": {
       "qty": "0",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "cust_bulasik_makinesi_konsantre_parlatici": {
       "qty": "0",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "cust_aluminyum_folyo": {
       "qty": "0",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "cust_firin_kagidi": {
       "qty": "0",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "cust_strec_film": {
       "qty": "0",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "cust_buzdolabi_poseti": {
       "qty": "0.5",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "cust_kagit_havlu_i_cten_cekmeli": {
       "qty": "0",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "cust_sikma_torbasi_krema_torbasi": {
       "qty": "1",
       "dayId": "pazar",
-      "updatedAt": 1794159762511
+      "updatedAt": 1794753187192
     },
     "sl_1": {
       "qty": "14",
