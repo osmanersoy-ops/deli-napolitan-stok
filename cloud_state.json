@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-16T11:13:09.597Z",
-  "timestamp": 1794827586268,
+  "exportedAt": "2026-11-16T11:13:14.698Z",
+  "timestamp": 1794827593233,
   "deviceId": "dev_5yxsqly_mvle6qpu",
   "moduleTimestamps": {
     "cnt_hergun": 1794752797043,
@@ -2063,7 +2063,7 @@
         "notes": ""
       },
       "pz_6": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "cust_hopla_sivi_santi_bitkisel_krema": {
@@ -2075,7 +2075,7 @@
         "notes": ""
       },
       "pz_16": {
-        "qty": 1.5,
+        "qty": "1.5",
         "notes": ""
       },
       "cust_yaprak_jelatin": {
