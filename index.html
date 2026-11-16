@@ -19498,28 +19498,6 @@
       }
     }
 
-    // App Startup (Immediate execution if ready, otherwise on DOMContentLoaded)
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initApp);
-    } else {
-      initApp();
-    }
-
-    // iOS Safari / Mobil Sekme Geri Dönüşü ve bfcache Koruması
-    window.addEventListener('pageshow', (event) => {
-      try {
-        const visibleMain = document.querySelector('main:not([style*="display: none"]):not([style*="display:none"])');
-        if (!visibleMain) {
-          switchView('dashboardView');
-        }
-        updateLiveClock();
-        updateDashboardCounts();
-        updatePwaButtonState();
-      } catch (e) {
-        console.warn('pageshow recover note:', e);
-      }
-    });
-
     /* =========================================================
        PWA & ANA EKRANA KISAYOL EKLEME (IOS & ANDROID)
        ========================================================= */
@@ -20771,6 +20749,28 @@
         scheduleAutoCloudSync(150);
       }
     }
+
+    // App Startup (Immediate execution if ready, otherwise on DOMContentLoaded)
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initApp);
+    } else {
+      initApp();
+    }
+
+    // iOS Safari / Mobil Sekme Geri Dönüşü ve bfcache Koruması
+    window.addEventListener('pageshow', (event) => {
+      try {
+        const visibleMain = document.querySelector('main:not([style*="display: none"]):not([style*="display:none"])');
+        if (!visibleMain) {
+          switchView('dashboardView');
+        }
+        updateLiveClock();
+        updateDashboardCounts();
+        updatePwaButtonState();
+      } catch (e) {
+        console.warn('pageshow recover note:', e);
+      }
+    });
   </script>
 </body>
 </html>
