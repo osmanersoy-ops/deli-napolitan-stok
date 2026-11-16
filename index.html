@@ -13870,7 +13870,7 @@
           const jsonStr = JSON.stringify(currentPayload, null, 2);
           const b64Content = btoa(unescape(encodeURIComponent(jsonStr)));
           const putBody = {
-            message: 'Canlı Bulut Senkronizasyonu (Stok)',
+            message: 'Canlı Bulut Senkronizasyonu (Stok) [skip ci]',
             content: b64Content,
             branch: GITHUB_CLOUD_BRANCH
           };
