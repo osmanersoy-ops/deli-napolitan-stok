@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-16T13:02:00.501Z",
-  "timestamp": 1794834120348,
+  "exportedAt": "2026-11-16T13:02:14.401Z",
+  "timestamp": 1794834134248,
   "deviceId": "dev_5yxsqly_mvle6qpu",
   "moduleTimestamps": {
     "cnt_hergun": 1794828869879,
@@ -107,8 +107,8 @@
     "prod_pr_8": 1794359172098,
     "prod_pz_1": 1792970300896,
     "prod_pz_3": 1792970300896,
-    "prod_pz_4": 1794834120347,
-    "prod_pz_5": 1794834120348,
+    "prod_pz_4": 1794834134248,
+    "prod_pz_5": 1794834134248,
     "prod_pz_6": 1792970300896,
     "prod_pz_10": 1792970300896,
     "prod_pz_11": 1792970300896,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794834120348,
+    "prod": 1794834134248,
     "cat": 1794364990251,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -208,7 +208,7 @@
     "rtag": 1794426043543,
     "crec": 1794426043542,
     "cnt_persembe": 1794569990542,
-    "cl": 1794834120348
+    "cl": 1794834134248
   },
   "suppliers": [
     {
@@ -1325,8 +1325,7 @@
       "unit": "Kangal",
       "name": "Acısız Sucuk",
       "days": [
-        "pazar",
-        "deneme"
+        "pazar"
       ]
     },
     "pz_5": {
@@ -1338,8 +1337,7 @@
       "unit": "Kangal",
       "name": "Acılı Sucuk",
       "days": [
-        "pazar",
-        "deneme"
+        "pazar"
       ]
     },
     "pz_6": {
@@ -4801,17 +4799,9 @@
       "desc": "Bresaola, prosciutto, salam, sosis, füme etler ve şarküteri grubu ürünlerinin detaylı sayımı.",
       "order": 4,
       "isBuiltin": true
-    },
-    {
-      "id": "deneme",
-      "title": "deneme",
-      "badge": "deneme",
-      "badgeClass": "badge-sali",
-      "subtitle": "Stok Sayım Listesi",
-      "desc": "deneme kapsamında stok takibi yapılan ürünler.",
-      "order": 5,
-      "isBuiltin": false
     }
   ],
-  "deletedCountListIds": []
+  "deletedCountListIds": [
+    "deneme"
+  ]
 }
