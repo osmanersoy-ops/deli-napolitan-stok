@@ -8170,182 +8170,140 @@
           <div style="font-size:0.75rem; color:#A8A29E; font-weight:600;">Araçlar • Sayım Düzenleme</div>
         </div>
 
-        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
-          <div>
-            <h2 class="count-header-main-title" style="margin-bottom:4px;">📋 Sayım Düzenleme &amp; Liste Yönetimi</h2>
-            <p style="color:#D6D3D1; font-size:0.86rem; margin:0;">
-              Mevcut sayım listelerini düzenleyin, yeni sayım listesi oluşturun ve listelere stok takibi yapılacak ürünleri ekleyin veya çıkarın.
-            </p>
-          </div>
-          <button type="button" onclick="openCountListModal()" style="background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%); color: #FFFFFF; border: none; padding: 11px 18px; border-radius: 12px; font-size: 0.9rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);">
-            <span style="font-size:1.1rem; line-height:1;">＋</span>
+        <div>
+          <h2 class="count-header-main-title" style="margin-bottom:4px;">📋 Sayım Düzenleme &amp; Liste Yönetimi</h2>
+          <p style="color:#D6D3D1; font-size:0.86rem; margin:0;">
+            Mevcut sayım listelerinin ismini ve ürünlerini düzenleyin veya ürün listesinden seçerek yeni sayım listesi oluşturun.
+          </p>
+        </div>
+      </section>
+
+      <!-- Navigasyon Çubuğu (Sadece Ana Menüye Dön) -->
+      <nav class="count-nav-bar" style="margin-bottom: 16px; display: flex; align-items: center; justify-content: flex-start;">
+        <button type="button" class="btn-back-dashboard" onclick="returnToDashboard()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+          Ana Menüye Dön
+        </button>
+      </nav>
+
+      <!-- 1. BÖLÜM: MEVCUT SAYIM LİSTELERİ (KUTU KUTU + YANINDA DÜZENLE) & ALTINDA YENİ LİSTE OLUŞTUR BUTONU -->
+      <section style="background:#FFFFFF; border:1.5px solid var(--border); border-radius:16px; padding:18px; margin-bottom:16px; box-shadow:var(--shadow-sm);">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:14px;">
+          <h3 style="font-size:1.02rem; font-weight:900; color:var(--text-main); margin:0;">
+            🗂️ Mevcut Sayım Listeleri (<span id="clManageTotalListsCount">4</span>)
+          </h3>
+        </div>
+
+        <!-- Mevcut Sayım Listeleri Kutuları -->
+        <div id="clManageListsSelectorGrid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:12px; margin-bottom:16px;">
+          <!-- JS ile kutu kutu doldurulur -->
+        </div>
+
+        <!-- Altında "Yeni Sayım Listesi Oluştur" Butonu -->
+        <div style="padding-top: 14px; border-top: 1.5px dashed #E2E8F0; display: flex; justify-content: center;">
+          <button
+            type="button"
+            onclick="startCreateNewCountList()"
+            style="width: 100%; max-width: 460px; background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%); color: #FFFFFF; border: none; padding: 13px 20px; border-radius: 12px; font-size: 0.95rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.28); transition: all 0.15s ease;"
+          >
+            <span style="font-size:1.2rem; line-height:1;">＋</span>
             <span>Yeni Sayım Listesi Oluştur</span>
           </button>
         </div>
       </section>
 
-      <!-- Navigasyon Çubuğu -->
-      <nav class="count-nav-bar" style="margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
-        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-          <button type="button" class="btn-back-dashboard" onclick="returnToDashboard()">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="15 18 9 12 15 6"/>
-            </svg>
-            Ana Menüye Dön
-          </button>
-          <button type="button" class="btn-back-dashboard" onclick="openProductsManageView()" style="background:#F8FAFC; color:#334155; border-color:#CBD5E1;">
-            ⚙️ Tüm Ürünler
-          </button>
-        </div>
-
-        <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-          <button type="button" onclick="openCategoriesManageModal()" style="background:#FFFFFF; color:#334155; border:1.5px solid #CBD5E1; padding:8px 13px; border-radius:10px; font-size:0.82rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
-            📂 Kategorileri Yönet
-          </button>
-          <button type="button" onclick="openCountListModal()" style="background:#EFF6FF; color:#1D4ED8; border:1.5px solid #93C5FD; padding:8px 14px; border-radius:10px; font-size:0.82rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
-            <span>➕</span>
-            <span>Yeni Sayım Listesi</span>
-          </button>
-        </div>
-      </nav>
-
-      <!-- 1. BÖLÜM: MEVCUT SAYIM LİSTELERİ SEÇİMİ -->
-      <section style="background:#FFFFFF; border:1.5px solid var(--border); border-radius:16px; padding:16px; margin-bottom:16px; box-shadow:var(--shadow-sm);">
-        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-bottom:12px;">
-          <div>
-            <h3 style="font-size:1rem; font-weight:900; color:var(--text-main); margin:0;">
-              🗂️ 1. Düzenlenecek Sayım Listesini Seçin (<span id="clManageTotalListsCount">4</span> Liste)
-            </h3>
-            <span style="font-size:0.78rem; color:var(--text-muted); font-weight:600;">
-              Bir listeye tıklayarak içerisindeki ürünleri düzenleyebilir, yeni ürün ekleyebilir veya liste bilgilerini güncelleyebilirsiniz.
-            </span>
-          </div>
-        </div>
-
-        <div id="clManageListsSelectorGrid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(230px, 1fr)); gap:10px;">
-          <!-- JS ile doldurulur -->
-        </div>
-      </section>
-
-      <!-- 2. BÖLÜM: SEÇİLİ LİSTE DÜZENLEME & ÜRÜN EKLEME PANELİ -->
-      <section style="background:#FFFFFF; border:1.5px solid var(--border); border-radius:16px; padding:18px; margin-bottom:20px; box-shadow:var(--shadow-sm);">
-        <!-- Seçili Liste Başlığı ve Aksiyonlar -->
-        <div style="display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-bottom:14px; border-bottom:1.5px solid #E2E8F0; margin-bottom:16px;">
-          <div>
-            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:4px;">
-              <span id="clSelectedListBadge" class="card-badge badge-hergun" style="margin:0;">Her Gün</span>
-              <h3 id="clSelectedListTitle" style="font-size:1.25rem; font-weight:900; color:var(--text-main); margin:0;">Hergün Sayımı</h3>
-              <span id="clSelectedListItemCount" style="background:#F1F5F9; color:#334155; border:1px solid #CBD5E1; padding:3px 10px; border-radius:999px; font-size:0.78rem; font-weight:800;">0 Ürün</span>
-            </div>
-            <p id="clSelectedListDesc" style="font-size:0.84rem; color:var(--text-muted); margin:0;">
-              Liste açıklaması
-            </p>
-          </div>
-
+      <!-- 2. BÖLÜM: LİSTE İSMİ & ÜRÜN LİSTESİNDEN SEÇME PANELİ -->
+      <section id="clListEditorSection" style="background:#FFFFFF; border:1.5px solid var(--border); border-radius:16px; padding:18px; margin-bottom:20px; box-shadow:var(--shadow-sm);">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; padding-bottom:14px; border-bottom:1.5px solid #E2E8F0; margin-bottom:16px;">
           <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-            <button type="button" onclick="openCountListModal(selectedManageCountListId)" style="background:#F8FAFC; color:#1E293B; border:1.5px solid #CBD5E1; padding:8px 13px; border-radius:10px; font-size:0.82rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
-              ✎ Liste Adı &amp; Bilgisini Düzenle
+            <span id="clEditorModeBadge" style="background:#DBEAFE; color:#1D4ED8; font-size:0.74rem; font-weight:800; padding:4px 10px; border-radius:999px; text-transform:uppercase;">
+              LİSTE DÜZENLEME
+            </span>
+            <h3 id="clEditorHeaderTitle" style="font-size:1.15rem; font-weight:900; color:var(--text-main); margin:0;">
+              Hergün Sayımı
+            </h3>
+          </div>
+          <div id="clEditorDeleteBtnWrap"></div>
+        </div>
+
+        <!-- Sayım Listesi İsmi Alanı -->
+        <div style="background:#F8FAFC; border:1.5px solid #CBD5E1; border-radius:14px; padding:14px; margin-bottom:16px;">
+          <label for="clEditorListNameInput" style="display:block; font-size:0.84rem; font-weight:800; color:#0F172A; margin-bottom:6px;">
+            Sayım Listesi İsmi *
+          </label>
+          <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+            <input
+              type="text"
+              id="clEditorListNameInput"
+              class="form-input"
+              placeholder="Örn: Cuma Sayımı, Bar & İçecek Sayımı..."
+              style="flex:1; min-width:220px; height:44px; font-size:0.98rem; font-weight:800; background:#FFFFFF;"
+            >
+            <button
+              type="button"
+              id="clEditorSaveBtn"
+              onclick="handleSaveCountListEditor()"
+              style="height:44px; padding:0 22px; border-radius:10px; border:none; background:#16A34A; color:#FFFFFF; font-size:0.9rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:6px; box-shadow:0 3px 10px rgba(22, 163, 74, 0.25); white-space:nowrap;"
+            >
+              <span>✓</span>
+              <span id="clEditorSaveBtnText">Listeyi Kaydet</span>
             </button>
-            <button type="button" onclick="openCountView(selectedManageCountListId)" style="background:#16A34A; color:#FFFFFF; border:none; padding:8px 14px; border-radius:10px; font-size:0.82rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:6px;">
-              ▶ Bu Listeyle Sayımı Başlat
+          </div>
+        </div>
+
+        <!-- Ürün Listesinden Seçme Bölümü -->
+        <div>
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:10px;">
+            <div>
+              <h4 style="font-size:0.98rem; font-weight:900; color:var(--text-main); margin:0; display:flex; align-items:center; gap:8px;">
+                <span>📦 Ürün Listesinden Seçin</span>
+                <span id="clEditorSelectedCountBadge" style="background:#DCFCE7; color:#166534; border:1px solid #86EFAC; padding:2px 10px; border-radius:999px; font-size:0.78rem; font-weight:800;">
+                  0 Ürün Seçili
+                </span>
+              </h4>
+              <p style="font-size:0.78rem; color:var(--text-muted); margin:2px 0 0 0;">
+                Bu sayım listesinde takip edilmesini istediğiniz ürünleri aşağıdaki listeden işaretleyin:
+              </p>
+            </div>
+
+            <div style="flex:1; max-width:320px; min-width:200px;">
+              <input
+                type="text"
+                id="clEditorProductSearchInput"
+                class="form-input"
+                placeholder="Ürün veya kategori ara..."
+                oninput="renderCountListProductSelector()"
+                style="height:38px; font-size:0.85rem;"
+              >
+            </div>
+          </div>
+
+          <!-- Hızlı Filtre Sekmeleri (Tümü / Seçili Olanlar / Kategoriler) -->
+          <div id="clEditorFilterPills" style="display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-bottom:12px;">
+            <!-- JS ile doldurulur -->
+          </div>
+
+          <!-- Ürün Seçim Listesi -->
+          <div
+            id="clEditorProductsListContainer"
+            style="max-height: 460px; overflow-y: auto; border: 1.5px solid var(--border); border-radius: 12px; background: #FFFFFF;"
+          >
+            <!-- JS ile doldurulur -->
+          </div>
+
+          <!-- Alt Kaydet Butonu -->
+          <div style="margin-top: 14px; display: flex; justify-content: flex-end;">
+            <button
+              type="button"
+              onclick="handleSaveCountListEditor()"
+              style="height:44px; padding:0 24px; border-radius:10px; border:none; background:#16A34A; color:#FFFFFF; font-size:0.92rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:8px; box-shadow:0 3px 10px rgba(22, 163, 74, 0.25);"
+            >
+              <span>✓</span>
+              <span id="clEditorBottomSaveBtnText">Değişiklikleri Kaydet</span>
             </button>
           </div>
-        </div>
-
-        <!-- İKİ KOLAY ÜRÜN EKLEME KUTUSU (YENİ ÜRÜN OLUŞTUR & MEVCUT ÜRÜNDEN SEÇ) -->
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(290px, 1fr)); gap:14px; margin-bottom:18px;">
-          <!-- Kutu A: Yeni Stok Ürünü Oluştur ve Bu Listeye Ekle -->
-          <div style="background:#F8FAFC; border:1.5px solid #CBD5E1; border-radius:14px; padding:14px;">
-            <div style="font-size:0.9rem; font-weight:900; color:#0F172A; margin-bottom:4px; display:flex; align-items:center; gap:6px;">
-              <span>➕</span>
-              <span>Yeni Ürün Oluştur &amp; Bu Listeye Ekle</span>
-            </div>
-            <div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:10px;">
-              Sistemde olmayan yeni bir stok kalemi tanımlayıp doğrudan seçili sayım listesine ekleyin:
-            </div>
-
-            <form onsubmit="handleQuickCreateProductForCountList(event)" style="display:flex; flex-direction:column; gap:8px;">
-              <div>
-                <input type="text" id="clQuickNewProdName" class="form-input" placeholder="Yeni ürün adı (Örn: Burrata, Zeytinyağı...)" required style="height:40px; font-size:0.88rem;">
-              </div>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
-                <select id="clQuickNewProdUnit" class="form-select" style="height:40px; font-size:0.86rem;">
-                  <option value="Adet">Birim: Adet</option>
-                  <option value="KG">Birim: Kilo (KG)</option>
-                  <option value="Paket">Birim: Paket</option>
-                  <option value="Box">Birim: Box</option>
-                  <option value="Demet">Birim: Demet</option>
-                  <option value="Teneke">Birim: Teneke</option>
-                  <option value="Çuval">Birim: Çuval</option>
-                  <option value="Litre">Birim: Litre</option>
-                  <option value="Kangal">Birim: Kangal</option>
-                  <option value="Teker">Birim: Teker</option>
-                  <option value="Şişe">Birim: Şişe</option>
-                  <option value="Porsiyon">Birim: Porsiyon</option>
-                  <option value="Gram">Birim: Gram</option>
-                </select>
-                <select id="clQuickNewProdCategory" class="form-select" onchange="handleClQuickCategoryChange()" style="height:40px; font-size:0.86rem;">
-                  <!-- JS ile doldurulur -->
-                </select>
-              </div>
-              <div id="clQuickNewCustomCatWrap" style="display:none;">
-                <input type="text" id="clQuickNewCustomCatInput" class="form-input" placeholder="Yeni kategori adı yazın..." style="height:38px; font-size:0.85rem;">
-              </div>
-              <div style="display:flex; gap:8px; align-items:center;">
-                <select id="clQuickNewProdSupplier" class="form-select" style="flex:1; height:40px; font-size:0.85rem;">
-                  <option value="">-- Tedarikçi (İsteğe Bağlı) --</option>
-                </select>
-                <button type="submit" class="btn-primary" style="height:40px; padding:0 16px; font-size:0.84rem; font-weight:800; white-space:nowrap;">
-                  + Oluştur &amp; Ekle
-                </button>
-              </div>
-            </form>
-          </div>
-
-          <!-- Kutu B: Mevcut Kayıtlı Ürünlerden Bu Listeye Dahil Et -->
-          <div style="background:#F0F9FF; border:1.5px solid #BAE6FD; border-radius:14px; padding:14px; display:flex; flex-direction:column;">
-            <div style="font-size:0.9rem; font-weight:900; color:#0369A1; margin-bottom:4px; display:flex; align-items:center; justify-content:space-between; gap:6px;">
-              <span>📦 Kayıtlı Ürünlerden Bu Listeye Ekle</span>
-              <span id="clAvailableProductsBadge" style="font-size:0.72rem; background:#E0F2FE; color:#0284C7; padding:2px 8px; border-radius:999px; font-weight:800;">0 Ürün</span>
-            </div>
-            <div style="font-size:0.75rem; color:#0C4A6E; margin-bottom:8px;">
-              Diğer sayım listelerinde kayıtlı olan ürünleri arayıp tek tıkla bu listeye de dahil edin:
-            </div>
-            <input type="text" id="clAvailableSearchInput" class="form-input" placeholder="Kayıtlı ürünlerde ara (Ad veya kategori)..." oninput="renderCountListAvailableProducts()" style="height:38px; font-size:0.85rem; margin-bottom:8px; background:#FFFFFF;">
-            <div id="clAvailableProductsList" style="max-height:130px; overflow-y:auto; background:#FFFFFF; border:1px solid #BAE6FD; border-radius:10px; padding:4px;">
-              <!-- JS ile doldurulur -->
-            </div>
-          </div>
-        </div>
-
-        <!-- BU LİSTEDEKİ MEVCUT ÜRÜNLER TABLOSU & ARAMA -->
-        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:12px;">
-          <h4 style="font-size:0.98rem; font-weight:900; color:var(--text-main); margin:0;">
-            📋 Bu Sayım Listesindeki Ürünler
-          </h4>
-          <div style="flex:1; max-width:340px; min-width:200px;">
-            <input type="text" id="clAssignedSearchInput" class="form-input" placeholder="Bu listedeki ürünlerde ara..." oninput="renderSelectedCountListProducts()" style="height:38px; font-size:0.85rem;">
-          </div>
-        </div>
-
-        <div class="table-responsive">
-          <table class="stock-table manage-table">
-            <thead>
-              <tr>
-                <th style="width:44px;" class="th-center">#</th>
-                <th style="min-width:180px;">Ürün Adı &amp; Kategori</th>
-                <th style="width:110px;" class="th-center">Miktar Türü</th>
-                <th style="min-width:140px;" class="th-center">Tedarikçi</th>
-                <th style="min-width:190px;" class="th-center">İşlemler</th>
-              </tr>
-            </thead>
-            <tbody id="clAssignedProductsTableBody">
-              <!-- JS ile doldurulur -->
-            </tbody>
-          </table>
-        </div>
-        <div id="clAssignedEmptyState" style="display:none; text-align:center; padding:32px 16px; color:var(--text-muted); font-weight:700;">
-          Bu sayım listesinde henüz ürün bulunmuyor. Yukarıdaki kutulardan yeni ürün oluşturabilir veya mevcut ürünleri bu listeye ekleyebilirsiniz.
         </div>
       </section>
 
@@ -8359,52 +8317,6 @@
     </main>
 
   </div><!-- /container -->
-
-  <!-- ============================================== -->
-  <!-- MODAL: YENİ SAYIM LİSTESİ OLUŞTUR / DÜZENLE    -->
-  <!-- ============================================== -->
-  <div class="modal-overlay" id="countListModal">
-    <div class="modal-card" style="max-width: 500px;">
-      <div class="modal-header">
-        <h3 class="modal-title" id="countListModalTitle">📋 Yeni Sayım Listesi Oluştur</h3>
-        <button type="button" class="modal-close-btn" onclick="closeCountListModal()">&times;</button>
-      </div>
-      <form id="countListForm" onsubmit="handleSaveCountListModal(event)">
-        <input type="hidden" id="countListEditId" value="">
-
-        <div class="form-group">
-          <label for="countListTitleInput">Sayım Listesi Adı *</label>
-          <input type="text" id="countListTitleInput" class="form-input" placeholder="Örn: Cuma Sayımı, İçecek & Bar Sayımı..." required>
-        </div>
-
-        <div class="form-group">
-          <label for="countListBadgeInput">Periyot / Üst Etiket *</label>
-          <input type="text" id="countListBadgeInput" class="form-input" placeholder="Örn: Cuma Günü, Haftalık, Her Gün, Aylık..." required>
-        </div>
-
-        <div class="form-group">
-          <label for="countListDescInput">Liste Açıklaması</label>
-          <textarea id="countListDescInput" class="form-input" rows="2" placeholder="Örn: Bu listede takip edilecek stok gruplarının kısa açıklaması..."></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="countListThemeSelect">Kart Etiket Rengi</label>
-          <select id="countListThemeSelect" class="form-select">
-            <option value="badge-hergun">🟢 Yeşil (Her Gün Stili)</option>
-            <option value="badge-sali">🔵 Mavi (Salı Stili)</option>
-            <option value="badge-persembe">🟠 Turuncu / Amber (Perşembe Stili)</option>
-            <option value="badge-pazar">🟣 Mor (Pazar Stili)</option>
-            <option value="badge-tools">🔴 Bordo / Koyu (Araçlar Stili)</option>
-          </select>
-        </div>
-
-        <div class="modal-actions">
-          <button type="button" class="btn-secondary" onclick="closeCountListModal()">İptal</button>
-          <button type="submit" class="btn-primary">Listeyi Kaydet</button>
-        </div>
-      </form>
-    </div>
-  </div>
 
   <!-- ============================================== -->
   <!-- MODAL: YENİ ÜRÜN EKLE                          -->
@@ -20201,36 +20113,40 @@
       {
         id: 'hergun',
         title: 'Hergün Sayımı',
-        badge: 'GÜNLÜK RUTİN',
+        badge: 'Her Gün',
+        badgeClass: 'badge-hergun',
         subtitle: 'Manav & Mise en Place',
-        desc: 'Günlük taze sebze-meyve (Manav) ve mutfak ön hazırlık (Mise en Place) stoklarının hızlı kontrolü.',
+        desc: 'Manav tazelik grubu ve mutfak Mise en Place hazırlık ürünleri sayımı.',
         order: 1,
         isBuiltin: true
       },
       {
         id: 'sali',
         title: 'Salı Sayımı',
-        badge: 'HAFTALIK ANA STOK',
+        badge: 'Salı Günü',
+        badgeClass: 'badge-sali',
         subtitle: 'Ana Stok (Un, Peynir, Sos & Kuru Gıda)',
-        desc: 'Peynir çeşitleri, unlar, konserveler, zeytinyağları ve temel İtalyan mutfak ürünlerinin kapsamlı sayımı.',
+        desc: 'Ana stok deposu, peynirler, un, soslar, şarküteri ve konserve ürünleri.',
         order: 2,
         isBuiltin: true
       },
       {
         id: 'persembe',
         title: 'Perşembe Sayımı',
-        badge: 'HAFTALIK DESTEK',
+        badge: 'Perşembe Günü',
+        badgeClass: 'badge-persembe',
         subtitle: 'Ana Stok & Çarşı-Diğer İhtiyaçlar',
-        desc: 'Hafta sonu yoğunluğu öncesi ana stok kontrolü ve çarşı/ambalaj/sarf malzeme eksikleri.',
+        desc: 'Çarşı tedariği, zeytinler, turşular, baharatlar, yumurta ve yağ grubu.',
         order: 3,
         isBuiltin: true
       },
       {
         id: 'pazar',
         title: 'Pazar Sayımı',
-        badge: 'HAFTA SONU KAPANIŞ',
+        badge: 'Pazar Akşamı',
+        badgeClass: 'badge-pazar',
         subtitle: 'Et Şarküteri & Akçalar Şarküteri',
-        desc: 'Bresaola, prosciutto, salam, sosis, füme etler ve şarküteri grubu ürünlerinin detaylı sayımı.',
+        desc: 'Et Şarküteri, Akçalar Şarküteri yerel peynirleri ve haftasonu kapanış stoku.',
         order: 4,
         isBuiltin: true
       }
@@ -20239,6 +20155,9 @@
     let countLists = [];
     let deletedCountListIds = [];
     let selectedManageCountListId = 'hergun';
+    let clEditorIsNewMode = false;
+    let clEditorTempProductIds = new Set();
+    let clEditorActiveCategoryFilter = 'ALL';
 
     function initCountListsFromStorage() {
       try {
@@ -20258,10 +20177,19 @@
             map[item.id] = { ...item };
           }
         });
+        const oldAutoBadges = ['GÜNLÜK RUTİN', 'HAFTALIK ANA STOK', 'HAFTALIK DESTEK', 'HAFTA SONU KAPANIŞ'];
         if (Array.isArray(parsed)) {
           parsed.forEach(item => {
             if (item && item.id && !deletedCountListIds.includes(item.id)) {
-              map[item.id] = { ...(map[item.id] || {}), ...item };
+              const def = DEFAULT_COUNT_LISTS.find(d => d.id === item.id);
+              const merged = { ...(map[item.id] || {}), ...item };
+              if (def && (!merged.badge || oldAutoBadges.includes(merged.badge))) {
+                merged.badge = def.badge;
+              }
+              if (def && !merged.badgeClass) {
+                merged.badgeClass = def.badgeClass;
+              }
+              map[item.id] = merged;
             }
           });
         }
@@ -20307,7 +20235,7 @@
           id: l.id,
           title: l.title || l.id,
           subtitle: l.subtitle || l.desc || 'Stok Sayım Listesi',
-          badge: l.badge || 'SAYIM LİSTESİ'
+          badge: l.badge || 'Sayım Listesi'
         };
       });
     }
@@ -20317,55 +20245,54 @@
       if (!grid) return;
 
       const lists = getActiveCountLists();
+      const badgeClasses = ['badge-hergun', 'badge-sali', 'badge-persembe', 'badge-pazar'];
       let html = '';
+
       lists.forEach((list, idx) => {
         const total = getProductsForDay(list.id).length;
-        const zeroCount = getZeroCountForDay(list.id);
         const lastDate = getLastCountDateForDay(list.id);
-        const dateBadgeText = lastDate ? `🕒 Son: ${formatTurkishShortDate(lastDate)}` : '🕒 Henüz sayılmadı';
-        const zeroPillHtml = zeroCount > 0
-          ? `<span class="zero-alert-pill" id="zeroPill-${escapeHtml(list.id)}">🚨 ${zeroCount} Bitti</span>`
-          : `<span class="zero-alert-pill" id="zeroPill-${escapeHtml(list.id)}" style="display:none;">🚨 0 Bitti</span>`;
-        const descText = list.desc || list.subtitle || 'Bu sayım listesine ait stok takibi yapılan ürünler.';
+        const lastBtnText = lastDate ? `Son Sayım (${formatShortDayMonth(lastDate)})` : 'Son Sayım (Yapılmadı)';
+        const badgeCls = list.badgeClass || badgeClasses[idx % badgeClasses.length] || 'badge-sali';
+        const badgeText = list.badge || list.title;
+        const descText = list.desc || list.subtitle || `${list.title} kapsamında stok takibi yapılan ürünler.`;
 
         html += `
-          <article class="day-card" data-day="${escapeHtml(list.id)}" onclick="openDayCount('${escapeHtml(list.id)}')">
-            <div>
-              <div class="day-card-header">
-                <span class="day-badge">${escapeHtml(list.badge || 'SAYIM LİSTESİ')}</span>
-                <span class="day-index">${String(idx + 1).padStart(2, '0')}</span>
+          <div class="count-card-group">
+            <article class="count-card" onclick="openCountView('${escapeHtml(list.id)}')">
+              <div>
+                <span class="card-badge ${escapeHtml(badgeCls)}">${escapeHtml(badgeText)}</span>
+                <h3 class="card-title">${escapeHtml(list.title)}</h3>
+                <p class="card-desc">${escapeHtml(descText)}</p>
               </div>
-              <h3 class="day-title">${escapeHtml(list.title)}</h3>
-              <p class="day-desc">${escapeHtml(descText)}</p>
-            </div>
-            <div class="day-meta">
-              <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
-                <span class="day-count-pill" id="countPill-${escapeHtml(list.id)}">${total} Ürün</span>
-                <span class="day-last-date-pill" id="lastDatePill-${escapeHtml(list.id)}">${escapeHtml(dateBadgeText)}</span>
-                ${zeroPillHtml}
+              <div class="card-footer">
+                <span class="item-count" id="countBadge-${escapeHtml(list.id)}">${total} Ürün</span>
+                <span style="display:inline-flex; align-items:center; gap:4px;">
+                  Sayımı Başlat
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"/>
+                  </svg>
+                </span>
               </div>
-              <span class="day-action-text">
-                Sayımı Aç
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="9 18 15 12 9 6"/>
-                </svg>
-              </span>
-            </div>
-          </article>
+            </article>
+            <button type="button"
+                    class="btn-subtle-history"
+                    id="lastCountBtn-${escapeHtml(list.id)}"
+                    onclick="openStaticCountHistoryView('${escapeHtml(list.id)}')"
+                    title="Bu sayım periyodunun son kaydedilen statik özetini görüntüleyin">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span id="lastCountBtnText-${escapeHtml(list.id)}">${escapeHtml(lastBtnText)}</span>
+            </button>
+          </div>
         `;
       });
 
       grid.innerHTML = html;
 
-      // Ayrıca Tüm Ürünler sayfasındaki filtre butonlarını da senkronize tut
-      const filterBar = document.querySelector('#manageProductsView .manage-day-filter-bar');
-      if (filterBar) {
-        let pillsHtml = `<button type="button" class="manage-day-pill ${manageDayFilter === 'ALL' ? 'active' : ''}" onclick="setManageDayFilter('ALL')">Tümü</button>`;
-        lists.forEach(l => {
-          const shortTitle = l.title.replace(/\s+Sayımı$/i, '');
-          pillsHtml += `<button type="button" class="manage-day-pill ${manageDayFilter === l.id ? 'active' : ''}" onclick="setManageDayFilter('${escapeHtml(l.id)}')">${escapeHtml(shortTitle)}</button>`;
-        });
-        filterBar.innerHTML = pillsHtml;
+      if (typeof updateManageDayFilterPills === 'function') {
+        updateManageDayFilterPills();
       }
     }
 
@@ -20374,11 +20301,10 @@
       const addGroup = document.getElementById('addProductTargetDaysGroup');
       if (addGroup) {
         addGroup.innerHTML = lists.map(l => {
-          const shortTitle = l.title.replace(/\s+Sayımı$/i, '');
           return `
             <label class="checkbox-label" id="lblDay-${escapeHtml(l.id)}">
               <input type="checkbox" name="targetDays" value="${escapeHtml(l.id)}" checked>
-              ${escapeHtml(shortTitle)}
+              ${escapeHtml(l.title)}
             </label>
           `;
         }).join('');
@@ -20387,14 +20313,29 @@
       const editGroup = document.getElementById('editProductTargetDaysGroup');
       if (editGroup) {
         editGroup.innerHTML = lists.map(l => {
-          const shortTitle = l.title.replace(/\s+Sayımı$/i, '');
           return `
             <label class="checkbox-label" id="lblEditDay-${escapeHtml(l.id)}">
               <input type="checkbox" name="editTargetDays" value="${escapeHtml(l.id)}">
-              ${escapeHtml(shortTitle)}
+              ${escapeHtml(l.title)}
             </label>
           `;
         }).join('');
+      }
+    }
+
+    function loadEditorStateForSelectedList() {
+      clEditorIsNewMode = false;
+      const lists = getActiveCountLists();
+      if (!selectedManageCountListId || !lists.some(l => l.id === selectedManageCountListId)) {
+        selectedManageCountListId = lists[0] ? lists[0].id : 'hergun';
+      }
+      const activeList = lists.find(l => l.id === selectedManageCountListId);
+      const assignedIds = getProductsForDay(selectedManageCountListId).map(p => p.id);
+      clEditorTempProductIds = new Set(assignedIds);
+
+      const nameInp = document.getElementById('clEditorListNameInput');
+      if (nameInp && activeList) {
+        nameInp.value = activeList.title || '';
       }
     }
 
@@ -20412,208 +20353,276 @@
         selectedManageCountListId = lists[0] ? lists[0].id : 'hergun';
       }
 
+      clEditorActiveCategoryFilter = 'ALL';
+      const searchInp = document.getElementById('clEditorProductSearchInput');
+      if (searchInp) searchInp.value = '';
+
+      loadEditorStateForSelectedList();
       switchView('countListsManageView');
-      populateClQuickFormDropdowns();
       renderCountListsManageView();
     }
 
     function selectManageCountList(listId) {
       selectedManageCountListId = listId;
+      clEditorIsNewMode = false;
+      loadEditorStateForSelectedList();
       renderCountListsManageView();
+
+      const editorEl = document.getElementById('clListEditorSection');
+      if (editorEl) {
+        editorEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
     }
 
-    function populateClQuickFormDropdowns() {
-      const listObj = getActiveCountLists().find(l => l.id === selectedManageCountListId);
-      let defaultCat = 'Manav';
-      if (selectedManageCountListId === 'sali') defaultCat = 'Ana Stok';
-      else if (selectedManageCountListId === 'persembe') defaultCat = 'Çarşı ve Diğer';
-      else if (selectedManageCountListId === 'pazar') defaultCat = 'Et Şarküteri';
-      else if (listObj && listObj.subtitle) {
-        const cats = getAllCategoryOptions();
-        const matched = cats.find(c => listObj.subtitle.toLowerCase().includes(c.toLowerCase()));
-        if (matched) defaultCat = matched;
+    function startCreateNewCountList() {
+      clEditorIsNewMode = true;
+      clEditorTempProductIds = new Set();
+      clEditorActiveCategoryFilter = 'ALL';
+
+      const searchInp = document.getElementById('clEditorProductSearchInput');
+      if (searchInp) searchInp.value = '';
+
+      const nameInp = document.getElementById('clEditorListNameInput');
+      if (nameInp) nameInp.value = '';
+
+      renderCountListsManageView();
+
+      const editorEl = document.getElementById('clListEditorSection');
+      if (editorEl) {
+        editorEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-
-      const catSelect = document.getElementById('clQuickProdCategory');
-      if (catSelect) {
-        const cats = getAllCategoryOptions();
-        let html = '';
-        cats.forEach(c => {
-          const isSel = c.toLowerCase() === defaultCat.toLowerCase();
-          html += `<option value="${escapeHtml(c)}" ${isSel ? 'selected' : ''}>${escapeHtml(c)}</option>`;
-        });
-        html += `<option value="__NEW__">+ Yeni Kategori Ekle...</option>`;
-        catSelect.innerHTML = html;
-      }
-
-      const customWrap = document.getElementById('clQuickCustomCategoryWrap');
-      if (customWrap) customWrap.style.display = 'none';
-      const customInp = document.getElementById('clQuickCustomCategoryInput');
-      if (customInp) customInp.value = '';
-
-      populateSupplierSelectOptions('clQuickProdSupplier', '');
-    }
-
-    function handleClQuickCategoryChange() {
-      const catSelect = document.getElementById('clQuickProdCategory');
-      const customWrap = document.getElementById('clQuickCustomCategoryWrap');
-      const customInp = document.getElementById('clQuickCustomCategoryInput');
-      if (!catSelect || !customWrap) return;
-      if (catSelect.value === '__NEW__') {
-        customWrap.style.display = 'block';
-        if (customInp) setTimeout(() => customInp.focus(), 40);
-      } else {
-        customWrap.style.display = 'none';
+      if (nameInp) {
+        setTimeout(() => nameInp.focus(), 80);
       }
     }
 
     function renderCountListsManageView() {
       const lists = getActiveCountLists();
-      if (!selectedManageCountListId || !lists.some(l => l.id === selectedManageCountListId)) {
-        selectedManageCountListId = lists[0] ? lists[0].id : '';
-      }
 
-      const grid = document.getElementById('countListsCardsGrid');
-      const countBadge = document.getElementById('countListsTotalBadge');
-      if (countBadge) countBadge.textContent = `${lists.length} Liste`;
+      const totalCountEl = document.getElementById('clManageTotalListsCount');
+      if (totalCountEl) totalCountEl.textContent = String(lists.length);
 
+      // 1. Üstteki Mevcut Sayım Listesi Kutuları (Yanında Düzenle Butonu)
+      const grid = document.getElementById('clManageListsSelectorGrid');
       if (grid) {
-        grid.innerHTML = lists.map((l, idx) => {
-          const isSelected = l.id === selectedManageCountListId;
+        grid.innerHTML = lists.map(l => {
+          const isEditingThis = (!clEditorIsNewMode && l.id === selectedManageCountListId);
           const prodCount = getProductsForDay(l.id).length;
           return `
             <div
               onclick="selectManageCountList('${escapeHtml(l.id)}')"
-              style="cursor: pointer; border-radius: 14px; padding: 14px 16px; border: 2px solid ${isSelected ? '#2563EB' : 'var(--border)'}; background: ${isSelected ? '#EFF6FF' : '#FFFFFF'}; box-shadow: ${isSelected ? '0 8px 20px rgba(37, 99, 235, 0.12)' : 'var(--shadow-sm)'}; display: flex; flex-direction: column; justify-content: space-between; gap: 10px; transition: all 0.15s ease;"
+              style="cursor: pointer; border-radius: 14px; padding: 14px 16px; border: 2px solid ${isEditingThis ? '#2563EB' : 'var(--border)'}; background: ${isEditingThis ? '#EFF6FF' : '#FFFFFF'}; box-shadow: ${isEditingThis ? '0 6px 16px rgba(37, 99, 235, 0.14)' : 'var(--shadow-sm)'}; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: all 0.15s ease;"
             >
-              <div>
-                <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 6px;">
-                  <span style="font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; padding: 3px 8px; border-radius: 999px; background: ${isSelected ? '#DBEAFE' : '#F1F5F9'}; color: ${isSelected ? '#1D4ED8' : '#475569'};">
-                    ${escapeHtml(l.badge || 'SAYIM LİSTESİ')}
-                  </span>
-                  <div style="display: flex; align-items: center; gap: 4px;" onclick="event.stopPropagation();">
-                    <button type="button" onclick="moveCountListOrder('${escapeHtml(l.id)}', -1, event)" ${idx === 0 ? 'disabled' : ''} style="border: 1px solid #CBD5E1; background: #FFF; color: ${idx === 0 ? '#CBD5E1' : '#334155'}; border-radius: 6px; padding: 2px 6px; font-size: 0.72rem; font-weight: 800; cursor: ${idx === 0 ? 'default' : 'pointer'};" title="Sırayı sola/yukarı taşı">◀</button>
-                    <button type="button" onclick="moveCountListOrder('${escapeHtml(l.id)}', 1, event)" ${idx === lists.length - 1 ? 'disabled' : ''} style="border: 1px solid #CBD5E1; background: #FFF; color: ${idx === lists.length - 1 ? '#CBD5E1' : '#334155'}; border-radius: 6px; padding: 2px 6px; font-size: 0.72rem; font-weight: 800; cursor: ${idx === lists.length - 1 ? 'default' : 'pointer'};" title="Sırayı sağa/aşağı taşı">▶</button>
-                    <button type="button" onclick="openCountListModal('${escapeHtml(l.id)}')" style="border: 1px solid #93C5FD; background: #EFF6FF; color: #1D4ED8; border-radius: 6px; padding: 2px 8px; font-size: 0.73rem; font-weight: 800; cursor: pointer;" title="Liste adını ve bilgilerini düzenle">✏️ Düzenle</button>
-                    ${lists.length > 1 ? `<button type="button" onclick="handleDeleteCountList('${escapeHtml(l.id)}', event)" style="border: 1px solid #FCA5A5; background: #FEF2F2; color: #DC2626; border-radius: 6px; padding: 2px 7px; font-size: 0.73rem; font-weight: 800; cursor: pointer;" title="Listeyi sil">🗑️</button>` : ''}
-                  </div>
+              <div style="min-width: 0; flex: 1;">
+                <div style="font-family: var(--font-serif); font-size: 1.05rem; font-weight: 800; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  ${escapeHtml(l.title)}
                 </div>
-                <div style="font-family: var(--font-serif); font-size: 1.08rem; font-weight: 700; color: var(--text-main); display: flex; align-items: center; gap: 6px;">
-                  ${isSelected ? '<span style="color:#2563EB;">●</span>' : ''}
-                  <span>${escapeHtml(l.title)}</span>
-                </div>
-                <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; line-height: 1.35;">
-                  ${escapeHtml(l.desc || l.subtitle || '')}
-                </div>
-              </div>
-              <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-top: 8px; border-top: 1px solid ${isSelected ? '#BFDBFE' : '#F1F5F9'};">
-                <span style="font-size: 0.78rem; font-weight: 800; color: ${isSelected ? '#1D4ED8' : '#334155'}; background: ${isSelected ? '#DBEAFE' : '#F8FAFC'}; padding: 3px 9px; border-radius: 999px;">
+                <div style="font-size: 0.78rem; font-weight: 700; color: ${isEditingThis ? '#1D4ED8' : 'var(--text-muted)'}; margin-top: 3px;">
                   📦 ${prodCount} Ürün
-                </span>
-                <span style="font-size: 0.76rem; font-weight: 800; color: ${isSelected ? '#1D4ED8' : '#64748B'};">
-                  ${isSelected ? '✓ Düzenleniyor' : 'Ürünleri Yönet ➔'}
-                </span>
+                </div>
               </div>
+              <button
+                type="button"
+                onclick="event.stopPropagation(); selectManageCountList('${escapeHtml(l.id)}')"
+                style="border: 1.5px solid ${isEditingThis ? '#2563EB' : '#93C5FD'}; background: ${isEditingThis ? '#2563EB' : '#EFF6FF'}; color: ${isEditingThis ? '#FFFFFF' : '#1D4ED8'}; border-radius: 10px; padding: 8px 14px; font-size: 0.82rem; font-weight: 800; cursor: pointer; white-space: nowrap; flex-shrink: 0;"
+              >
+                ✏️ Düzenle
+              </button>
             </div>
           `;
         }).join('');
       }
 
-      const activeList = lists.find(l => l.id === selectedManageCountListId);
-      const editorSection = document.getElementById('selectedCountListEditorSection');
-      if (!activeList) {
-        if (editorSection) editorSection.style.display = 'none';
+      // 2. Düzenleme / Yeni Oluşturma Paneli Başlıkları
+      const modeBadge = document.getElementById('clEditorModeBadge');
+      const headerTitle = document.getElementById('clEditorHeaderTitle');
+      const saveBtnText = document.getElementById('clEditorSaveBtnText');
+      const bottomSaveBtnText = document.getElementById('clEditorBottomSaveBtnText');
+      const deleteBtnWrap = document.getElementById('clEditorDeleteBtnWrap');
+      const nameInp = document.getElementById('clEditorListNameInput');
+
+      if (clEditorIsNewMode) {
+        if (modeBadge) {
+          modeBadge.textContent = 'YENİ LİSTE OLUŞTUR';
+          modeBadge.style.background = '#DCFCE7';
+          modeBadge.style.color = '#166534';
+        }
+        if (headerTitle) headerTitle.textContent = 'Yeni Sayım Listesi Oluştur';
+        if (saveBtnText) saveBtnText.textContent = 'Yeni Listeyi Oluştur';
+        if (bottomSaveBtnText) bottomSaveBtnText.textContent = 'Yeni Sayım Listesini Kaydet';
+        if (deleteBtnWrap) deleteBtnWrap.innerHTML = '';
+      } else {
+        const activeList = lists.find(l => l.id === selectedManageCountListId) || lists[0];
+        if (activeList) {
+          if (modeBadge) {
+            modeBadge.textContent = 'LİSTE DÜZENLEME';
+            modeBadge.style.background = '#DBEAFE';
+            modeBadge.style.color = '#1D4ED8';
+          }
+          if (headerTitle) headerTitle.textContent = activeList.title;
+          if (saveBtnText) saveBtnText.textContent = 'Listeyi Güncelle';
+          if (bottomSaveBtnText) bottomSaveBtnText.textContent = 'Değişiklikleri Kaydet';
+          if (nameInp && document.activeElement !== nameInp) {
+            nameInp.value = activeList.title || '';
+          }
+          if (deleteBtnWrap) {
+            if (lists.length > 1) {
+              deleteBtnWrap.innerHTML = `
+                <button
+                  type="button"
+                  onclick="handleDeleteCountList('${escapeHtml(activeList.id)}', event)"
+                  style="border: 1.5px solid #FCA5A5; background: #FEF2F2; color: #DC2626; border-radius: 10px; padding: 7px 12px; font-size: 0.8rem; font-weight: 800; cursor: pointer;"
+                >🗑️ Bu Listeyi Sil</button>
+              `;
+            } else {
+              deleteBtnWrap.innerHTML = '';
+            }
+          }
+        }
+      }
+
+      renderCountListProductSelector();
+    }
+
+    function setCountListEditorCategoryFilter(filter) {
+      clEditorActiveCategoryFilter = filter;
+      renderCountListProductSelector();
+    }
+
+    function renderCountListProductSelector() {
+      const pillsEl = document.getElementById('clEditorFilterPills');
+      const listEl = document.getElementById('clEditorProductsListContainer');
+      const selectedBadge = document.getElementById('clEditorSelectedCountBadge');
+      if (!listEl) return;
+
+      const allProds = getAllProducts().slice().sort((a, b) => (a.name || '').localeCompare(b.name || '', 'tr'));
+      const selectedCount = allProds.filter(p => clEditorTempProductIds.has(p.id)).length;
+      if (selectedBadge) {
+        selectedBadge.textContent = `${selectedCount} Ürün Seçili`;
+      }
+
+      const categories = Array.from(new Set(allProds.map(p => p.category || 'Diğer'))).sort((a, b) => a.localeCompare(b, 'tr'));
+
+      if (pillsEl) {
+        let pillsHtml = `
+          <button type="button" class="manage-day-pill ${clEditorActiveCategoryFilter === 'ALL' ? 'active' : ''}" onclick="setCountListEditorCategoryFilter('ALL')">
+            Tümü (${allProds.length})
+          </button>
+          <button type="button" class="manage-day-pill ${clEditorActiveCategoryFilter === '__SELECTED__' ? 'active' : ''}" onclick="setCountListEditorCategoryFilter('__SELECTED__')">
+            ✓ Seçili Ürünler (${selectedCount})
+          </button>
+        `;
+        categories.forEach(cat => {
+          const cnt = allProds.filter(p => (p.category || 'Diğer') === cat).length;
+          const isAct = clEditorActiveCategoryFilter === cat ? 'active' : '';
+          pillsHtml += `
+            <button type="button" class="manage-day-pill ${isAct}" onclick="setCountListEditorCategoryFilter('${escapeHtml(cat)}')">
+              ${escapeHtml(cat)} (${cnt})
+            </button>
+          `;
+        });
+        pillsEl.innerHTML = pillsHtml;
+      }
+
+      const query = (document.getElementById('clEditorProductSearchInput')?.value || '').trim().toLowerCase();
+      let filtered = allProds;
+      if (clEditorActiveCategoryFilter === '__SELECTED__') {
+        filtered = filtered.filter(p => clEditorTempProductIds.has(p.id));
+      } else if (clEditorActiveCategoryFilter !== 'ALL') {
+        filtered = filtered.filter(p => (p.category || 'Diğer') === clEditorActiveCategoryFilter);
+      }
+
+      if (query) {
+        filtered = filtered.filter(p =>
+          (p.name && p.name.toLowerCase().includes(query)) ||
+          (p.category && p.category.toLowerCase().includes(query)) ||
+          (p.unit && p.unit.toLowerCase().includes(query))
+        );
+      }
+
+      if (filtered.length === 0) {
+        listEl.innerHTML = `
+          <div style="padding: 28px 16px; text-align: center; color: var(--text-muted); font-size: 0.88rem; font-weight: 700;">
+            Bu filtreye uygun ürün bulunamadı.
+          </div>
+        `;
         return;
       }
-      if (editorSection) editorSection.style.display = 'block';
 
-      const badgeEl = document.getElementById('selectedCountListBadge');
-      const titleEl = document.getElementById('selectedCountListTitle');
-      const descEl = document.getElementById('selectedCountListDesc');
-      const countStatEl = document.getElementById('selectedCountListProdStat');
-      const btnOpenCount = document.getElementById('btnOpenSelectedCountListNow');
-      const btnEditMeta = document.getElementById('btnEditSelectedCountListMeta');
-
-      const assignedProds = getProductsForDay(activeList.id);
-      if (badgeEl) badgeEl.textContent = activeList.badge || 'SAYIM LİSTESİ';
-      if (titleEl) titleEl.textContent = activeList.title;
-      if (descEl) descEl.textContent = activeList.desc || activeList.subtitle || '';
-      if (countStatEl) countStatEl.textContent = `${assignedProds.length} Ürün`;
-      if (btnOpenCount) {
-        btnOpenCount.onclick = function() { openDayCount(activeList.id); };
-      }
-      if (btnEditMeta) {
-        btnEditMeta.onclick = function() { openCountListModal(activeList.id); };
-      }
-
-      populateClQuickFormDropdowns();
-      renderCountListAvailableProducts();
-      renderSelectedCountListProducts();
+      listEl.innerHTML = filtered.map(p => {
+        const isChecked = clEditorTempProductIds.has(p.id);
+        return `
+          <div
+            onclick="toggleCountListEditorProduct('${escapeHtml(p.id)}')"
+            style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 14px; border-bottom: 1px solid #F1F5F9; background: ${isChecked ? '#F0FDF4' : '#FFFFFF'}; transition: background 0.12s ease;"
+          >
+            <div style="display: flex; align-items: center; gap: 12px; min-width: 0; flex: 1;">
+              <input
+                type="checkbox"
+                ${isChecked ? 'checked' : ''}
+                onclick="event.stopPropagation(); toggleCountListEditorProduct('${escapeHtml(p.id)}')"
+                style="width: 20px; height: 20px; accent-color: #16A34A; cursor: pointer; flex-shrink: 0;"
+              >
+              <div style="min-width: 0; flex: 1;">
+                <div style="font-weight: 800; font-size: 0.92rem; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                  ${escapeHtml(p.name)}
+                </div>
+                <div style="font-size: 0.76rem; color: var(--text-muted); margin-top: 1px;">
+                  ${escapeHtml(p.category || 'Genel')} • Birim: <strong>${escapeHtml(p.unit)}</strong>
+                </div>
+              </div>
+            </div>
+            <span style="font-size: 0.76rem; font-weight: 800; padding: 4px 10px; border-radius: 999px; background: ${isChecked ? '#DCFCE7' : '#F1F5F9'}; color: ${isChecked ? '#166534' : '#64748B'}; border: 1px solid ${isChecked ? '#86EFAC' : '#E2E8F0'}; white-space: nowrap;">
+              ${isChecked ? '✓ Listede' : '+ Seç'}
+            </span>
+          </div>
+        `;
+      }).join('');
     }
 
-    function openCountListModal(editListId = null) {
-      const modal = document.getElementById('countListModal');
-      const titleHeader = document.getElementById('countListModalTitle');
-      const editIdInp = document.getElementById('countListEditId');
-      const titleInp = document.getElementById('countListTitleInput');
-      const badgeInp = document.getElementById('countListBadgeInput');
-      const descInp = document.getElementById('countListDescInput');
-      if (!modal) return;
-
-      const existing = editListId ? getActiveCountLists().find(l => l.id === editListId) : null;
-      if (existing) {
-        if (titleHeader) titleHeader.textContent = `Sayım Listesini Düzenle: ${existing.title}`;
-        if (editIdInp) editIdInp.value = existing.id;
-        if (titleInp) titleInp.value = existing.title || '';
-        if (badgeInp) badgeInp.value = existing.badge || '';
-        if (descInp) descInp.value = existing.desc || existing.subtitle || '';
+    function toggleCountListEditorProduct(productId) {
+      if (clEditorTempProductIds.has(productId)) {
+        clEditorTempProductIds.delete(productId);
       } else {
-        if (titleHeader) titleHeader.textContent = 'Yeni Sayım Listesi Oluştur';
-        if (editIdInp) editIdInp.value = '';
-        if (titleInp) titleInp.value = '';
-        if (badgeInp) badgeInp.value = 'ÖZEL SAYIM LİSTESİ';
-        if (descInp) descInp.value = '';
+        clEditorTempProductIds.add(productId);
       }
 
-      modal.classList.add('active');
-      if (titleInp) setTimeout(() => titleInp.focus(), 50);
+      // Mevcut bir liste düzenleniyorsa ürün seçimini anında kaydet
+      if (!clEditorIsNewMode && selectedManageCountListId) {
+        const prod = getAllProducts().find(p => p.id === productId);
+        if (prod) {
+          const curDays = Array.isArray(prod.days) ? prod.days : [];
+          const nextDays = clEditorTempProductIds.has(productId)
+            ? Array.from(new Set([...curDays, selectedManageCountListId]))
+            : curDays.filter(d => d !== selectedManageCountListId);
+          setProductDaysList(productId, nextDays, false);
+          updateDashboardCounts();
+          renderManageProductsList();
+          scheduleAutoCloudSync(150);
+        }
+      }
+
+      renderCountListsManageView();
     }
 
-    function closeCountListModal() {
-      const modal = document.getElementById('countListModal');
-      if (modal) modal.classList.remove('active');
-    }
-
-    function handleSaveCountListModal(e) {
-      if (e) e.preventDefault();
-      const editId = (document.getElementById('countListEditId')?.value || '').trim();
-      const title = (document.getElementById('countListTitleInput')?.value || '').trim();
-      const badge = (document.getElementById('countListBadgeInput')?.value || '').trim() || 'SAYIM LİSTESİ';
-      const desc = (document.getElementById('countListDescInput')?.value || '').trim();
-
+    function handleSaveCountListEditor() {
+      const nameInp = document.getElementById('clEditorListNameInput');
+      const title = (nameInp?.value || '').trim();
       if (!title) {
-        alert('Lütfen sayım listesi adını girin.');
+        alert('Lütfen sayım listesinin ismini girin.');
+        if (nameInp) nameInp.focus();
         return;
       }
 
       const lists = getActiveCountLists();
-      const duplicate = lists.find(l => l.id !== editId && l.title.trim().toLowerCase() === title.toLowerCase());
-      if (duplicate) {
-        alert(`"${title}" adında bir sayım listesi zaten mevcut.`);
-        return;
-      }
 
-      if (editId) {
-        const idx = countLists.findIndex(l => l && l.id === editId);
-        if (idx !== -1) {
-          countLists[idx].title = title;
-          countLists[idx].badge = badge;
-          countLists[idx].desc = desc || countLists[idx].subtitle || 'Stok Sayım Listesi';
-          countLists[idx].subtitle = desc || countLists[idx].subtitle || title;
+      if (clEditorIsNewMode) {
+        const duplicate = lists.find(l => l.title.trim().toLowerCase() === title.toLowerCase());
+        if (duplicate) {
+          alert(`"${title}" adında bir sayım listesi zaten mevcut.`);
+          return;
         }
-        selectedManageCountListId = editId;
-        showToast(`✓ "${title}" sayım listesi güncellendi!`);
-      } else {
+
         let baseSlug = slugifyProductName(title.replace(/\s+say[ıi]m[ıi]$/i, '')) || ('liste_' + Date.now());
         if (['metro', 'mise_en_place', 'all'].includes(baseSlug)) {
           baseSlug = 'liste_' + baseSlug;
@@ -20628,21 +20637,66 @@
         const newList = {
           id: newId,
           title: title,
-          badge: badge,
-          subtitle: desc || 'Stok Sayım Listesi',
-          desc: desc || 'Bu sayım listesine eklenen stok takip ürünleri.',
+          badge: title,
+          badgeClass: 'badge-sali',
+          subtitle: 'Stok Sayım Listesi',
+          desc: `${title} kapsamında stok takibi yapılan ürünler.`,
           order: maxOrder + 1,
           isBuiltin: false
         };
         countLists.push(newList);
-        selectedManageCountListId = newId;
-        showToast(`✓ "${title}" oluşturuldu! Şimdi listeye ürün ekleyebilirsiniz.`);
-      }
 
-      saveCountListsToStorage();
-      closeCountListModal();
-      updateDashboardCounts();
-      renderCountListsManageView();
+        // Seçilen ürünleri yeni listeye ata
+        getAllProducts().forEach(p => {
+          if (clEditorTempProductIds.has(p.id)) {
+            const curDays = Array.isArray(p.days) ? p.days : [];
+            if (!curDays.includes(newId)) {
+              setProductDaysList(p.id, [...curDays, newId], false);
+            }
+          }
+        });
+
+        selectedManageCountListId = newId;
+        clEditorIsNewMode = false;
+        saveCountListsToStorage();
+        updateDashboardCounts();
+        renderManageProductsList();
+        renderCountListsManageView();
+        showToast(`✓ "${title}" sayım listesi oluşturuldu (${clEditorTempProductIds.size} ürün)!`);
+      } else {
+        const targetId = selectedManageCountListId;
+        const duplicate = lists.find(l => l.id !== targetId && l.title.trim().toLowerCase() === title.toLowerCase());
+        if (duplicate) {
+          alert(`"${title}" adında başka bir sayım listesi zaten mevcut.`);
+          return;
+        }
+
+        const idx = countLists.findIndex(l => l && l.id === targetId);
+        if (idx !== -1) {
+          countLists[idx].title = title;
+          if (!countLists[idx].isBuiltin) {
+            countLists[idx].badge = title;
+          }
+        }
+
+        // Seçili ürün listesini senkronize et
+        getAllProducts().forEach(p => {
+          const curDays = Array.isArray(p.days) ? p.days : [];
+          const shouldHave = clEditorTempProductIds.has(p.id);
+          const currentlyHas = curDays.includes(targetId);
+          if (shouldHave && !currentlyHas) {
+            setProductDaysList(p.id, [...curDays, targetId], false);
+          } else if (!shouldHave && currentlyHas) {
+            setProductDaysList(p.id, curDays.filter(d => d !== targetId), false);
+          }
+        });
+
+        saveCountListsToStorage();
+        updateDashboardCounts();
+        renderManageProductsList();
+        renderCountListsManageView();
+        showToast(`✓ "${title}" ismi ve ürünleri kaydedildi!`);
+      }
     }
 
     function handleDeleteCountList(listId, evt) {
@@ -20667,7 +20721,6 @@
       }
       countLists = countLists.filter(l => l && l.id !== listId);
 
-      // Bu listedeki ürünlerin days dizisinden listId'yi temizle
       getAllProducts().forEach(p => {
         if (Array.isArray(p.days) && p.days.includes(listId)) {
           const nextDays = p.days.filter(d => d !== listId);
@@ -20677,34 +20730,12 @@
 
       saveCountListsToStorage();
       const remaining = getActiveCountLists();
-      if (selectedManageCountListId === listId) {
-        selectedManageCountListId = remaining[0] ? remaining[0].id : '';
-      }
+      selectedManageCountListId = remaining[0] ? remaining[0].id : '';
+      loadEditorStateForSelectedList();
       updateDashboardCounts();
+      renderManageProductsList();
       renderCountListsManageView();
       showToast(`"${target.title}" sayım listesi kaldırıldı.`);
-    }
-
-    function moveCountListOrder(listId, dir, evt) {
-      if (evt) evt.stopPropagation();
-      const lists = getActiveCountLists();
-      const idx = lists.findIndex(l => l.id === listId);
-      if (idx === -1) return;
-      const targetIdx = idx + dir;
-      if (targetIdx < 0 || targetIdx >= lists.length) return;
-
-      const temp = lists[idx];
-      lists[idx] = lists[targetIdx];
-      lists[targetIdx] = temp;
-
-      lists.forEach((item, i) => {
-        const ref = countLists.find(x => x && x.id === item.id);
-        if (ref) ref.order = i + 1;
-      });
-
-      saveCountListsToStorage();
-      updateDashboardCounts();
-      renderCountListsManageView();
     }
 
     function setProductDaysList(productId, nextDaysArray, triggerRender = true) {
@@ -20739,234 +20770,6 @@
         renderCountListsManageView();
         scheduleAutoCloudSync(150);
       }
-    }
-
-    function assignProductToCountList(productId, listId = selectedManageCountListId) {
-      if (!listId) return;
-      const prod = getAllProducts().find(p => p.id === productId);
-      const listObj = getActiveCountLists().find(l => l.id === listId);
-      if (!prod || !listObj) return;
-
-      const curDays = Array.isArray(prod.days) ? prod.days : [];
-      if (curDays.includes(listId)) return;
-
-      setProductDaysList(productId, [...curDays, listId], true);
-      showToast(`✓ "${prod.name}" → ${listObj.title} listesine eklendi!`);
-    }
-
-    function removeProductFromCountList(productId, listId = selectedManageCountListId) {
-      if (!listId) return;
-      const prod = getAllProducts().find(p => p.id === productId);
-      const listObj = getActiveCountLists().find(l => l.id === listId);
-      if (!prod || !listObj) return;
-
-      const curDays = Array.isArray(prod.days) ? prod.days : [];
-      const nextDays = curDays.filter(d => d !== listId);
-      setProductDaysList(productId, nextDays, true);
-      showToast(`"${prod.name}" ${listObj.title} listesinden çıkarıldı.`);
-    }
-
-    function handleQuickCreateProductForCountList(e) {
-      if (e) e.preventDefault();
-      if (!selectedManageCountListId) {
-        alert('Lütfen önce yukarıdan bir sayım listesi seçin.');
-        return;
-      }
-
-      const listObj = getActiveCountLists().find(l => l.id === selectedManageCountListId);
-      const nameInp = document.getElementById('clQuickProdName');
-      const unitSel = document.getElementById('clQuickProdUnit');
-      const catSel = document.getElementById('clQuickProdCategory');
-      const customCatInp = document.getElementById('clQuickCustomCategoryInput');
-      const supSel = document.getElementById('clQuickProdSupplier');
-
-      const name = (nameInp?.value || '').trim();
-      const unit = (unitSel?.value || 'ADET').trim();
-      if (!name) {
-        alert('Lütfen ürün adını girin.');
-        return;
-      }
-
-      let category = 'Genel';
-      if (catSel) {
-        if (catSel.value === '__NEW__') {
-          const customVal = (customCatInp?.value || '').trim();
-          category = customVal || 'Genel';
-          if (customVal) {
-            const normCat = customVal.toLowerCase().trim();
-            deletedCategories = deletedCategories.filter(c => c !== normCat);
-            try { localStorage.setItem('delinapolitan_deleted_categories', JSON.stringify(deletedCategories)); } catch (err) {}
-            if (!customCategories.includes(customVal)) {
-              customCategories.push(customVal);
-              localStorage.setItem('delinapolitan_categories', JSON.stringify(customCategories));
-            }
-          }
-        } else {
-          category = catSel.value || 'Genel';
-        }
-      }
-
-      const supplierId = supSel?.value || '';
-      const supplierIds = supplierId ? [supplierId] : [];
-
-      const normName = name.toLowerCase();
-      const existing = getAllProducts().find(p => p && p.name && p.name.trim().toLowerCase() === normName);
-
-      if (existing) {
-        // Ürün zaten sistemde varsa doğrudan bu sayım listesine dahil et
-        const curDays = Array.isArray(existing.days) ? existing.days : [];
-        if (!curDays.includes(selectedManageCountListId)) {
-          setProductDaysList(existing.id, [...curDays, selectedManageCountListId], true);
-          showToast(`"${existing.name}" zaten katalogda mevcuttu, ${listObj ? listObj.title : 'seçili'} listesine eklendi!`);
-        } else {
-          showToast(`"${existing.name}" zaten bu sayım listesinde bulunuyor.`);
-        }
-        if (nameInp) nameInp.value = '';
-        return;
-      }
-
-      const slug = slugifyProductName(name);
-      const newId = generateProductId(name);
-      deletedProductIds = deletedProductIds.filter(id => id !== newId && id !== slug && id !== ('cust_' + slug));
-      try { localStorage.setItem('delinapolitan_deleted_products', JSON.stringify(deletedProductIds)); } catch (err) {}
-
-      const newProd = {
-        id: newId,
-        name: name,
-        unit: unit,
-        category: category,
-        days: [selectedManageCountListId],
-        supplierIds: supplierIds,
-        supplierId: supplierId
-      };
-
-      customProducts.push(newProd);
-      deduplicateProducts();
-      localStorage.setItem('delinapolitan_custom_products', JSON.stringify(customProducts));
-      touchModuleTimestamp(['prod', 'prod_' + newId, 'cat']);
-
-      if (nameInp) nameInp.value = '';
-      showToast(`✓ "${name}" oluşturuldu ve ${listObj ? listObj.title : 'sayım'} listesine eklendi!`);
-
-      updateDashboardCounts();
-      renderCustomProductsSummary();
-      renderManageProductsList();
-      renderSuppliersList();
-      renderCountListsManageView();
-      scheduleAutoCloudSync(150);
-    }
-
-    function renderCountListAvailableProducts() {
-      const container = document.getElementById('clAvailableProductsListContainer');
-      if (!container || !selectedManageCountListId) return;
-
-      const query = (document.getElementById('clAssignExistingSearchInput')?.value || '').trim().toLowerCase();
-      const allProds = getAllProducts();
-      const available = allProds.filter(p => {
-        const inList = Array.isArray(p.days) && p.days.includes(selectedManageCountListId);
-        if (inList) return false;
-        if (!query) return true;
-        return (
-          (p.name && p.name.toLowerCase().includes(query)) ||
-          (p.category && p.category.toLowerCase().includes(query)) ||
-          (p.unit && p.unit.toLowerCase().includes(query))
-        );
-      });
-
-      available.sort((a, b) => (a.name || '').localeCompare(b.name || '', 'tr'));
-
-      if (available.length === 0) {
-        container.innerHTML = `
-          <div style="padding: 18px; text-align: center; color: var(--text-muted); font-size: 0.82rem;">
-            ${query ? 'Aramanızla eşleşen eklenmemiş ürün bulunamadı.' : 'Sistemdeki tüm ürünler zaten bu sayım listesinde yer alıyor.'}
-          </div>
-        `;
-        return;
-      }
-
-      container.innerHTML = available.map(p => {
-        return `
-          <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 10px; border-bottom: 1px solid #F1F5F9; background: #FFFFFF;">
-            <div style="min-width: 0; flex: 1;">
-              <div style="font-weight: 700; font-size: 0.86rem; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                ${escapeHtml(p.name)}
-              </div>
-              <div style="font-size: 0.73rem; color: var(--text-muted);">
-                ${escapeHtml(p.category || 'Genel')} • <strong>${escapeHtml(p.unit)}</strong>
-              </div>
-            </div>
-            <button
-              type="button"
-              onclick="assignProductToCountList('${escapeHtml(p.id)}')"
-              style="border: 1.5px solid #86EFAC; background: #DCFCE7; color: #166534; font-weight: 800; font-size: 0.76rem; padding: 5px 10px; border-radius: 8px; cursor: pointer; white-space: nowrap; flex-shrink: 0;"
-            >+ Listeye Ekle</button>
-          </div>
-        `;
-      }).join('');
-    }
-
-    function renderSelectedCountListProducts() {
-      const tbody = document.getElementById('selectedCountListProductsTbody');
-      const emptyEl = document.getElementById('selectedCountListEmptyState');
-      const countBadge = document.getElementById('selectedCountListTableCountBadge');
-      if (!tbody || !selectedManageCountListId) return;
-
-      const query = (document.getElementById('clCurrentListSearchInput')?.value || '').trim().toLowerCase();
-      const prods = getProductsForDay(selectedManageCountListId);
-      if (countBadge) countBadge.textContent = `${prods.length} Ürün`;
-
-      const filtered = query
-        ? prods.filter(p =>
-            (p.name && p.name.toLowerCase().includes(query)) ||
-            (p.category && p.category.toLowerCase().includes(query)) ||
-            (p.unit && p.unit.toLowerCase().includes(query))
-          )
-        : prods;
-
-      if (filtered.length === 0) {
-        tbody.innerHTML = '';
-        if (emptyEl) emptyEl.style.display = 'block';
-        return;
-      }
-      if (emptyEl) emptyEl.style.display = 'none';
-
-      tbody.innerHTML = filtered.map((p, idx) => {
-        const supIds = getProductSupplierIds(p);
-        const supNames = supIds.map(id => suppliers.find(s => s.id === id)?.name).filter(Boolean);
-        const supText = supNames.length > 0 ? supNames.map(escapeHtml).join(', ') : '<span style="color:#94A3B8;">—</span>';
-
-        return `
-          <tr>
-            <td class="col-idx" style="font-weight:700;">${idx + 1}</td>
-            <td class="col-name">
-              <div style="font-weight: 800; color: var(--text-main);">${escapeHtml(p.name)}</div>
-            </td>
-            <td>
-              <span class="recipe-ratio-tag" style="background:#F1F5F9; color:#334155;">${escapeHtml(p.category || 'Genel')}</span>
-            </td>
-            <td>
-              <span style="font-weight: 800; font-size: 0.82rem; color: #0F172A;">${escapeHtml(p.unit)}</span>
-            </td>
-            <td style="font-size: 0.82rem; color: #475569;">${supText}</td>
-            <td style="text-align: right; white-space: nowrap;">
-              <div style="display: inline-flex; align-items: center; gap: 6px;">
-                <button
-                  type="button"
-                  onclick="openEditProductModal('${escapeHtml(p.id)}')"
-                  style="border: 1px solid #CBD5E1; background: #F8FAFC; color: #334155; font-weight: 700; font-size: 0.76rem; padding: 5px 9px; border-radius: 7px; cursor: pointer;"
-                  title="Ürünün adını, birimini veya tedarikçisini düzenle"
-                >✏️ Düzenle</button>
-                <button
-                  type="button"
-                  onclick="removeProductFromCountList('${escapeHtml(p.id)}')"
-                  style="border: 1px solid #FCA5A5; background: #FEF2F2; color: #DC2626; font-weight: 800; font-size: 0.76rem; padding: 5px 9px; border-radius: 7px; cursor: pointer;"
-                  title="Bu sayım listesinden çıkar"
-                >✕ Listeden Çıkar</button>
-              </div>
-            </td>
-          </tr>
-        `;
-      }).join('');
     }
   </script>
 </body>
