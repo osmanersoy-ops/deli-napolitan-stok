@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-16T13:02:16.446Z",
-  "timestamp": 1794834134248,
+  "exportedAt": "2026-11-16T13:39:55.008Z",
+  "timestamp": 1794836394856,
   "deviceId": "dev_5yxsqly_mvle6qpu",
   "moduleTimestamps": {
     "cnt_hergun": 1794828869879,
@@ -208,7 +208,8 @@
     "rtag": 1794426043543,
     "crec": 1794426043542,
     "cnt_persembe": 1794569990542,
-    "cl": 1794834134248
+    "cl": 1794834134248,
+    "mnt": 1794836394856
   },
   "suppliers": [
     {
@@ -4803,5 +4804,18 @@
   ],
   "deletedCountListIds": [
     "deneme"
-  ]
+  ],
+  "maintenanceRequests": [
+    {
+      "id": "mnt_1794836394855_e8gr",
+      "type": "tamir",
+      "urgency": "kisa_zamanda",
+      "desc": "vida gevşedi",
+      "status": "yeni",
+      "dateText": "16 Kasım 2026 Pazartesi, 16:39",
+      "createdAt": 1794836394855,
+      "updatedAt": 1794836394855
+    }
+  ],
+  "deletedMaintenanceRequestIds": []
 }
