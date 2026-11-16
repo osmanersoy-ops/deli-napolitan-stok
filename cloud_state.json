@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-16T12:30:03.036Z",
-  "timestamp": 1794832200481,
+  "exportedAt": "2026-11-16T12:30:21.177Z",
+  "timestamp": 1794832220573,
   "deviceId": "dev_5yxsqly_mvle6qpu",
   "moduleTimestamps": {
     "cnt_hergun": 1794828869879,
@@ -4757,5 +4757,44 @@
     }
   },
   "deletedShiftEmployeeIds": [],
-  "shiftTimestamp": 1794179562902
+  "shiftTimestamp": 1794179562902,
+  "countLists": [
+    {
+      "id": "hergun",
+      "title": "Hergün Sayımı",
+      "badge": "GÜNLÜK RUTİN",
+      "subtitle": "Manav & Mise en Place",
+      "desc": "Günlük taze sebze-meyve (Manav) ve mutfak ön hazırlık (Mise en Place) stoklarının hızlı kontrolü.",
+      "order": 1,
+      "isBuiltin": true
+    },
+    {
+      "id": "sali",
+      "title": "Salı Sayımı",
+      "badge": "HAFTALIK ANA STOK",
+      "subtitle": "Ana Stok (Un, Peynir, Sos & Kuru Gıda)",
+      "desc": "Peynir çeşitleri, unlar, konserveler, zeytinyağları ve temel İtalyan mutfak ürünlerinin kapsamlı sayımı.",
+      "order": 2,
+      "isBuiltin": true
+    },
+    {
+      "id": "persembe",
+      "title": "Perşembe Sayımı",
+      "badge": "HAFTALIK DESTEK",
+      "subtitle": "Ana Stok & Çarşı-Diğer İhtiyaçlar",
+      "desc": "Hafta sonu yoğunluğu öncesi ana stok kontrolü ve çarşı/ambalaj/sarf malzeme eksikleri.",
+      "order": 3,
+      "isBuiltin": true
+    },
+    {
+      "id": "pazar",
+      "title": "Pazar Sayımı",
+      "badge": "HAFTA SONU KAPANIŞ",
+      "subtitle": "Et Şarküteri & Akçalar Şarküteri",
+      "desc": "Bresaola, prosciutto, salam, sosis, füme etler ve şarküteri grubu ürünlerinin detaylı sayımı.",
+      "order": 4,
+      "isBuiltin": true
+    }
+  ],
+  "deletedCountListIds": []
 }
