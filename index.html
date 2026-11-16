@@ -4868,21 +4868,35 @@
           </svg>
         </button>
 
-        <!-- 6. Sunumlar Butonu (Hazırlanıyor) -->
+        <!-- 6. Tamir ve Malzeme Talebi Butonu -->
+        <button type="button" class="btn-compact-count" onclick="openMaintenanceRequestsView()" title="Tamir, Malzeme ve Düzenleme Talepleri">
+          <span class="compact-count-icon">🛠️</span>
+          <span class="compact-count-title">Tamir ve Malzeme Talebi</span>
+          <span
+            id="maintNewAlertBadge"
+            style="display:none; width:24px; height:24px; min-width:24px; padding:0 6px; border-radius:999px; background:#DC2626; color:#FFFFFF; font-size:0.8rem; font-weight:900; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(220, 38, 38, 0.5); line-height:1; flex-shrink:0;"
+            title="Statüsü Yeni olan bekleyen talep sayısı"
+          >0</span>
+          <svg class="compact-count-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+
+        <!-- 7. Sunumlar Butonu (Hazırlanıyor) -->
         <div class="btn-compact-count disabled" onclick="showToast('Sunumlar dökümanı hazırlanıyor, çok yakında aktif olacaktır!')" title="Sunumlar dökümanı hazırlanıyor">
           <span class="compact-count-icon">📑</span>
           <span class="compact-count-title">Sunumlar</span>
           <span class="badge-preparing">⏳ Hazırlanıyor</span>
         </div>
 
-        <!-- 7. Açılış Rutini Butonu (Hazırlanıyor) -->
+        <!-- 8. Açılış Rutini Butonu (Hazırlanıyor) -->
         <div class="btn-compact-count disabled" onclick="showToast('Açılış Rutini dökümanı hazırlanıyor, çok yakında aktif olacaktır!')" title="Açılış Rutini dökümanı hazırlanıyor">
           <span class="compact-count-icon">🌅</span>
           <span class="compact-count-title">Açılış Rutini</span>
           <span class="badge-preparing">⏳ Hazırlanıyor</span>
         </div>
 
-        <!-- 8. Kapanış Rutini Butonu (Hazırlanıyor) -->
+        <!-- 9. Kapanış Rutini Butonu (Hazırlanıyor) -->
         <div class="btn-compact-count disabled" onclick="showToast('Kapanış Rutini dökümanı hazırlanıyor, çok yakında aktif olacaktır!')" title="Kapanış Rutini dökümanı hazırlanıyor">
           <span class="compact-count-icon">🌙</span>
           <span class="compact-count-title">Kapanış Rutini</span>
@@ -8328,6 +8342,212 @@
       </div>
     </main>
 
+    <!-- ============================================== -->
+    <!-- VIEW 12: TAMİR VE MALZEME TALEBİ               -->
+    <!-- ============================================== -->
+    <main id="maintenanceRequestsView" style="display: none;">
+      <!-- Üst Başlık Kartı -->
+      <section class="count-header-card" style="margin-bottom: 12px;">
+        <div class="count-header-brand-line">
+          <div class="count-header-logo" onclick="returnToDashboard()" style="cursor:pointer;" title="Ana Sayfaya Dön">
+            <span class="brand-logo-card" style="padding: 4px 10px; border-radius: 8px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+              <img class="app-header-logo-img" alt="Deli Napolitan" style="height: 22px; width: auto; object-fit: contain; vertical-align: middle; display: inline-block;">
+            </span>
+          </div>
+          <div style="font-size:0.75rem; color:#A8A29E; font-weight:600;">Döküman Merkezi • Tamir ve Malzeme Talebi</div>
+        </div>
+
+        <div>
+          <h2 class="count-header-main-title" style="margin-bottom:4px;">🛠️ Tamir ve Malzeme Talebi</h2>
+          <p style="color:#D6D3D1; font-size:0.86rem; margin:0;">
+            Tamir, malzeme ve düzenleme taleplerini oluşturun ve mevcut taleplerin güncel durumlarını takip edin.
+          </p>
+        </div>
+      </section>
+
+      <!-- Navigasyon Çubuğu -->
+      <nav class="count-nav-bar" style="margin-bottom: 16px; display: flex; align-items: center; justify-content: flex-start;">
+        <button type="button" class="btn-back-dashboard" onclick="returnToDashboard()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+          Ana Menüye Dön
+        </button>
+      </nav>
+
+      <!-- 1. BÖLÜM: TAMİR TALEBİ OLUŞTUR BUTONU & AÇILIR FORM -->
+      <section style="background:#FFFFFF; border:1.5px solid var(--border); border-radius:16px; padding:18px; margin-bottom:16px; box-shadow:var(--shadow-sm);">
+        <!-- İlk Karşılayan Buton -->
+        <div id="maintCreateBtnWrapper" style="display:flex; justify-content:center;">
+          <button
+            type="button"
+            onclick="openMaintenanceCreateForm()"
+            style="width:100%; max-width:480px; background:linear-gradient(135deg, #DC2626 0%, #B91C1C 100%); color:#FFFFFF; border:none; padding:15px 22px; border-radius:14px; font-size:1rem; font-weight:900; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:10px; box-shadow:0 6px 16px rgba(220, 38, 38, 0.28); transition:all 0.15s ease;"
+          >
+            <span style="font-size:1.25rem; line-height:1;">＋</span>
+            <span>Tamir Talebi Oluştur</span>
+          </button>
+        </div>
+
+        <!-- Butona Basıldığında Açılan Form -->
+        <form id="maintCreateFormCard" onsubmit="handleSaveMaintenanceRequest(event)" style="display:none;">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; padding-bottom:12px; border-bottom:1.5px solid #E2E8F0; margin-bottom:16px;">
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <span style="background:#FEE2E2; color:#B91C1C; font-size:0.75rem; font-weight:800; padding:4px 10px; border-radius:999px;">
+                YENİ TALEP FORMU
+              </span>
+              <h3 style="font-size:1.1rem; font-weight:900; color:var(--text-main); margin:0;">
+                Yeni Talep Oluştur
+              </h3>
+            </div>
+            <button
+              type="button"
+              onclick="closeMaintenanceCreateForm()"
+              style="border:1.5px solid #CBD5E1; background:#F8FAFC; color:#334155; border-radius:10px; padding:6px 12px; font-size:0.8rem; font-weight:800; cursor:pointer;"
+            >✕ Kapat</button>
+          </div>
+
+          <!-- Otomatik Tarih -->
+          <div style="background:#F8FAFC; border:1.5px solid #CBD5E1; border-radius:12px; padding:12px 14px; margin-bottom:16px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+            <span style="font-size:0.84rem; font-weight:800; color:#475569;">📅 Talep Tarihi (Otomatik):</span>
+            <span id="maintFormAutoDateText" style="font-size:0.92rem; font-weight:900; color:#0F172A; background:#FFFFFF; padding:4px 12px; border-radius:8px; border:1px solid #CBD5E1;">
+              —
+            </span>
+          </div>
+
+          <!-- Talep Türü Seçimi -->
+          <div style="margin-bottom:16px;">
+            <label style="display:block; font-size:0.85rem; font-weight:800; color:#0F172A; margin-bottom:8px;">
+              1. Talep Türünü Seçin *
+            </label>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(175px, 1fr)); gap:10px;" id="maintTypeOptionsGrid">
+              <div
+                id="maintTypeCard-tamir"
+                onclick="selectMaintRequestType('tamir')"
+                style="cursor:pointer; border:2px solid #2563EB; background:#EFF6FF; border-radius:12px; padding:12px 14px; display:flex; align-items:center; gap:10px; transition:all 0.15s ease;"
+              >
+                <input type="checkbox" id="maintTypeCb-tamir" checked onclick="event.stopPropagation(); selectMaintRequestType('tamir')" style="width:20px; height:20px; accent-color:#2563EB; cursor:pointer; flex-shrink:0;">
+                <span style="font-weight:800; font-size:0.92rem; color:#0F172A;">🔧 Tamir Talebi</span>
+              </div>
+
+              <div
+                id="maintTypeCard-malzeme"
+                onclick="selectMaintRequestType('malzeme')"
+                style="cursor:pointer; border:2px solid #CBD5E1; background:#FFFFFF; border-radius:12px; padding:12px 14px; display:flex; align-items:center; gap:10px; transition:all 0.15s ease;"
+              >
+                <input type="checkbox" id="maintTypeCb-malzeme" onclick="event.stopPropagation(); selectMaintRequestType('malzeme')" style="width:20px; height:20px; accent-color:#2563EB; cursor:pointer; flex-shrink:0;">
+                <span style="font-weight:800; font-size:0.92rem; color:#0F172A;">📦 Malzeme Talebi</span>
+              </div>
+
+              <div
+                id="maintTypeCard-duzenleme"
+                onclick="selectMaintRequestType('duzenleme')"
+                style="cursor:pointer; border:2px solid #CBD5E1; background:#FFFFFF; border-radius:12px; padding:12px 14px; display:flex; align-items:center; gap:10px; transition:all 0.15s ease;"
+              >
+                <input type="checkbox" id="maintTypeCb-duzenleme" onclick="event.stopPropagation(); selectMaintRequestType('duzenleme')" style="width:20px; height:20px; accent-color:#2563EB; cursor:pointer; flex-shrink:0;">
+                <span style="font-weight:800; font-size:0.92rem; color:#0F172A;">📐 Düzenleme Talebi</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Açıklama Yazı Kutusu -->
+          <div style="margin-bottom:16px;">
+            <label for="maintFormDescInput" style="display:block; font-size:0.85rem; font-weight:800; color:#0F172A; margin-bottom:6px;">
+              2. Talep Açıklaması *
+            </label>
+            <textarea
+              id="maintFormDescInput"
+              class="form-input"
+              rows="3"
+              placeholder="Talep detayını buraya yazın (Örn: Hamur mikseri zamanlayıcı düğmesi gevşedi / Yeni pizza küreği ihtiyacı vb.)..."
+              required
+              style="width:100%; font-size:0.92rem; padding:10px 12px; border-radius:12px; resize:vertical;"
+            ></textarea>
+          </div>
+
+          <!-- Aciliyet Durumu Seçeneği (Tik Şeklinde) -->
+          <div style="margin-bottom:18px;">
+            <label style="display:block; font-size:0.85rem; font-weight:800; color:#0F172A; margin-bottom:8px;">
+              3. Aciliyet Durumu *
+            </label>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(175px, 1fr)); gap:10px;" id="maintUrgencyOptionsGrid">
+              <div
+                id="maintUrgencyCard-acil"
+                onclick="selectMaintRequestUrgency('acil')"
+                style="cursor:pointer; border:2px solid #DC2626; background:#FEF2F2; border-radius:12px; padding:12px 14px; display:flex; align-items:center; gap:10px; transition:all 0.15s ease;"
+              >
+                <input type="checkbox" id="maintUrgencyCb-acil" checked onclick="event.stopPropagation(); selectMaintRequestUrgency('acil')" style="width:20px; height:20px; accent-color:#DC2626; cursor:pointer; flex-shrink:0;">
+                <span style="font-weight:800; font-size:0.92rem; color:#991B1B;">🚨 Acil</span>
+              </div>
+
+              <div
+                id="maintUrgencyCard-kisa_zamanda"
+                onclick="selectMaintRequestUrgency('kisa_zamanda')"
+                style="cursor:pointer; border:2px solid #CBD5E1; background:#FFFFFF; border-radius:12px; padding:12px 14px; display:flex; align-items:center; gap:10px; transition:all 0.15s ease;"
+              >
+                <input type="checkbox" id="maintUrgencyCb-kisa_zamanda" onclick="event.stopPropagation(); selectMaintRequestUrgency('kisa_zamanda')" style="width:20px; height:20px; accent-color:#D97706; cursor:pointer; flex-shrink:0;">
+                <span style="font-weight:800; font-size:0.92rem; color:#0F172A;">⚡ Kısa Zamanda</span>
+              </div>
+
+              <div
+                id="maintUrgencyCard-1_2_hafta"
+                onclick="selectMaintRequestUrgency('1_2_hafta')"
+                style="cursor:pointer; border:2px solid #CBD5E1; background:#FFFFFF; border-radius:12px; padding:12px 14px; display:flex; align-items:center; gap:10px; transition:all 0.15s ease;"
+              >
+                <input type="checkbox" id="maintUrgencyCb-1_2_hafta" onclick="event.stopPropagation(); selectMaintRequestUrgency('1_2_hafta')" style="width:20px; height:20px; accent-color:#2563EB; cursor:pointer; flex-shrink:0;">
+                <span style="font-weight:800; font-size:0.92rem; color:#0F172A;">🗓️ 1-2 Hafta İçinde</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kaydet / İptal Butonları -->
+          <div style="display:flex; justify-content:flex-end; gap:10px;">
+            <button
+              type="button"
+              onclick="closeMaintenanceCreateForm()"
+              style="height:44px; padding:0 18px; border-radius:10px; border:1.5px solid #CBD5E1; background:#F8FAFC; color:#334155; font-size:0.88rem; font-weight:800; cursor:pointer;"
+            >Vazgeç</button>
+            <button
+              type="submit"
+              style="height:44px; padding:0 24px; border-radius:10px; border:none; background:#16A34A; color:#FFFFFF; font-size:0.92rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:8px; box-shadow:0 4px 12px rgba(22, 163, 74, 0.25);"
+            >
+              <span>✓</span>
+              <span>Talebi Kaydet</span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- 2. BÖLÜM: KAYDEDİLEN TALEPLER LİSTESİ -->
+      <section style="background:#FFFFFF; border:1.5px solid var(--border); border-radius:16px; padding:18px; margin-bottom:20px; box-shadow:var(--shadow-sm);">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:14px;">
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <h3 style="font-size:1.05rem; font-weight:900; color:var(--text-main); margin:0;">
+              📋 Kayıtlı Talepler Listesi
+            </h3>
+            <span id="maintTotalCountBadge" style="background:#F1F5F9; color:#334155; border:1px solid #CBD5E1; padding:3px 10px; border-radius:999px; font-size:0.78rem; font-weight:800;">
+              0 Talep
+            </span>
+            <span id="maintPageNewCountBadge" style="display:none; background:#DC2626; color:#FFFFFF; padding:3px 10px; border-radius:999px; font-size:0.78rem; font-weight:900;">
+              0 Yeni
+            </span>
+          </div>
+        </div>
+
+        <div id="maintRequestsListContainer" style="display:flex; flex-direction:column; gap:12px;">
+          <!-- JS ile doldurulur -->
+        </div>
+      </section>
+
+      <!-- Canlı Senkronize Butonu (Sayfa Altı) -->
+      <div class="bottom-sync-wrapper">
+        <button type="button" class="btn-sync-cloud live-sync-pill" onclick="openSyncModal()" title="Canlı Bulut Senkronizasyon Durumu">
+          <span class="sync-pulse-dot"></span>
+          <span class="sync-text">Canlı Senkronize</span>
+        </button>
+      </div>
+    </main>
+
   </div><!-- /container -->
 
   <!-- ============================================== -->
@@ -10218,6 +10438,13 @@
         }
       } catch (e) { console.error('initCountListsFromStorage error:', e); }
 
+      // Tamir ve Malzeme Taleplerini (maintenanceRequests) hafızadan yükle
+      try {
+        if (typeof initMaintenanceRequestsFromStorage === 'function') {
+          initMaintenanceRequestsFromStorage();
+        }
+      } catch (e) { console.error('initMaintenanceRequestsFromStorage error:', e); }
+
       // Geçersiz veya boş günlere atanmış hatalı zaman damgalarını temizle
       try { cleanInvalidDayTimestamps(); } catch (e) { console.error('cleanInvalidDayTimestamps error:', e); }
 
@@ -10596,6 +10823,9 @@
       if (typeof renderDashboardCountLists === 'function') {
         renderDashboardCountLists();
       }
+      if (typeof updateMaintenanceDashboardAlertBadge === 'function') {
+        updateMaintenanceDashboardAlertBadge();
+      }
 
       const activeLists = typeof getActiveCountLists === 'function' ? getActiveCountLists() : [];
       const listIds = activeLists.length > 0 ? activeLists.map(l => l.id) : ['hergun', 'sali', 'persembe', 'pazar'];
@@ -10674,7 +10904,7 @@
        3. NAVIGATION: DASHBOARD <-> COUNT VIEW <-> MANAGE VIEW
        ========================================================= */
     function switchView(viewId) {
-      const views = ['dashboardView', 'countView', 'staticCountHistoryView', 'manageProductsView', 'countListsManageView', 'suppliersManageView', 'recipesView', 'recipeBolonezView', 'recipeMercimekView', 'recipeCreateView', 'recipeCustomDetailView', 'bigaDoughView', 'doughTempCalcView', 'orderSuppliersView', 'supplierOrderView', 'staffMealsView', 'staffMealsEditView', 'staffDishesView', 'shiftView', 'shiftEditView', 'shiftEmployeesView'];
+      const views = ['dashboardView', 'countView', 'staticCountHistoryView', 'manageProductsView', 'countListsManageView', 'maintenanceRequestsView', 'suppliersManageView', 'recipesView', 'recipeBolonezView', 'recipeMercimekView', 'recipeCreateView', 'recipeCustomDetailView', 'bigaDoughView', 'doughTempCalcView', 'orderSuppliersView', 'supplierOrderView', 'staffMealsView', 'staffMealsEditView', 'staffDishesView', 'shiftView', 'shiftEditView', 'shiftEmployeesView'];
       const targetId = (viewId && views.includes(viewId)) ? viewId : 'dashboardView';
       let foundTarget = false;
       views.forEach(id => {
@@ -10692,7 +10922,7 @@
       document.body.classList.remove('view-dashboard', 'view-count', 'view-manage', 'view-recipes');
       if (targetId === 'dashboardView') {
         document.body.classList.add('view-dashboard');
-      } else if (targetId === 'countView' || targetId === 'staticCountHistoryView' || targetId === 'supplierOrderView' || targetId === 'staffMealsView' || targetId === 'staffMealsEditView' || targetId === 'staffDishesView' || targetId === 'shiftView' || targetId === 'shiftEditView' || targetId === 'shiftEmployeesView') {
+      } else if (targetId === 'countView' || targetId === 'staticCountHistoryView' || targetId === 'supplierOrderView' || targetId === 'staffMealsView' || targetId === 'staffMealsEditView' || targetId === 'staffDishesView' || targetId === 'shiftView' || targetId === 'shiftEditView' || targetId === 'shiftEmployeesView' || targetId === 'maintenanceRequestsView') {
         document.body.classList.add('view-count');
       } else if (targetId === 'recipesView' || targetId === 'recipeBolonezView' || targetId === 'recipeMercimekView' || targetId === 'recipeCreateView' || targetId === 'recipeCustomDetailView' || targetId === 'bigaDoughView' || targetId === 'doughTempCalcView') {
         document.body.classList.add('view-recipes');
@@ -12366,7 +12596,9 @@
           delShe: (data.deletedShiftEmployeeIds || []).slice().sort(),
           sht: data.shiftTimestamp || 0,
           cl: (data.countLists || []).map(l => [l.id, l.title, l.badge || '', l.subtitle || '', l.desc || '', l.order || 0]),
-          delCl: (data.deletedCountListIds || []).slice().sort()
+          delCl: (data.deletedCountListIds || []).slice().sort(),
+          mnt: (data.maintenanceRequests || []).map(m => [m.id, m.type, m.urgency, m.desc, m.status, m.createdAt || 0, m.updatedAt || 0]),
+          delMnt: (data.deletedMaintenanceRequestIds || []).slice().sort()
         };
         const str = JSON.stringify(canonical);
         let hash = 0;
@@ -12647,6 +12879,13 @@
         min.delCl = data.deletedCountListIds;
       }
 
+      if (Array.isArray(data.maintenanceRequests) && data.maintenanceRequests.length > 0) {
+        min.mnt = data.maintenanceRequests;
+      }
+      if (Array.isArray(data.deletedMaintenanceRequestIds) && data.deletedMaintenanceRequestIds.length > 0) {
+        min.delMnt = data.deletedMaintenanceRequestIds;
+      }
+
       return min;
     }
 
@@ -12688,7 +12927,9 @@
         deletedShiftEmployeeIds: Array.isArray(raw.delShe) ? [...raw.delShe] : (Array.isArray(raw.deletedShiftEmployeeIds) ? [...raw.deletedShiftEmployeeIds] : []),
         shiftTimestamp: raw.sht || raw.shiftTimestamp || 0,
         countLists: Array.isArray(raw.cl) ? JSON.parse(JSON.stringify(raw.cl)) : (Array.isArray(raw.countLists) ? JSON.parse(JSON.stringify(raw.countLists)) : []),
-        deletedCountListIds: Array.isArray(raw.delCl) ? [...raw.delCl] : (Array.isArray(raw.deletedCountListIds) ? [...raw.deletedCountListIds] : [])
+        deletedCountListIds: Array.isArray(raw.delCl) ? [...raw.delCl] : (Array.isArray(raw.deletedCountListIds) ? [...raw.deletedCountListIds] : []),
+        maintenanceRequests: Array.isArray(raw.mnt) ? JSON.parse(JSON.stringify(raw.mnt)) : (Array.isArray(raw.maintenanceRequests) ? JSON.parse(JSON.stringify(raw.maintenanceRequests)) : []),
+        deletedMaintenanceRequestIds: Array.isArray(raw.delMnt) ? [...raw.delMnt] : (Array.isArray(raw.deletedMaintenanceRequestIds) ? [...raw.deletedMaintenanceRequestIds] : [])
       };
 
       if (Array.isArray(raw.she)) {
@@ -12842,7 +13083,9 @@
         deletedShiftEmployeeIds: deletedShiftEmployeeIds || [],
         shiftTimestamp: localShiftModified || 0,
         countLists: countLists || [],
-        deletedCountListIds: deletedCountListIds || []
+        deletedCountListIds: deletedCountListIds || [],
+        maintenanceRequests: maintenanceRequests || [],
+        deletedMaintenanceRequestIds: deletedMaintenanceRequestIds || []
       };
     }
 
@@ -12856,6 +13099,11 @@
       const clManageView = document.getElementById('countListsManageView');
       if (clManageView && clManageView.style.display !== 'none' && !isInputFocused && typeof renderCountListsManageView === 'function') {
         renderCountListsManageView();
+      }
+
+      const maintView = document.getElementById('maintenanceRequestsView');
+      if (maintView && maintView.style.display !== 'none' && !isInputFocused && typeof renderMaintenanceRequestsList === 'function') {
+        renderMaintenanceRequestsList();
       }
 
       const histView = document.getElementById('staticCountHistoryView');
@@ -13129,6 +13377,51 @@
         try { localStorage.setItem('delinapolitan_count_lists', JSON.stringify(countLists)); } catch(e) {}
         if (typeof syncDayConfigFromCountLists === 'function') syncDayConfigFromCountLists();
         if (remClTs > locClTs) moduleTimestamps.cl = remClTs;
+      }
+
+      const remMntTs = Number(remMt.mnt) || 0;
+      const locMntTs = Number(locMt.mnt) || 0;
+      const isMntRemoteNewer = (remMntTs > 0 || locMntTs > 0) ? (remMntTs >= locMntTs) : isGlobalRemoteNewer;
+
+      if (Array.isArray(data.deletedMaintenanceRequestIds) && data.deletedMaintenanceRequestIds.length > 0) {
+        if (isMntRemoteNewer) {
+          deletedMaintenanceRequestIds = Array.from(new Set([...(deletedMaintenanceRequestIds || []), ...data.deletedMaintenanceRequestIds]));
+        } else {
+          data.deletedMaintenanceRequestIds.forEach(delId => {
+            const existsLocally = Array.isArray(maintenanceRequests) && maintenanceRequests.some(m => m && m.id === delId);
+            if (!existsLocally && !deletedMaintenanceRequestIds.includes(delId)) {
+              deletedMaintenanceRequestIds.push(delId);
+            }
+          });
+        }
+        try { localStorage.setItem('delinapolitan_deleted_maintenance_requests', JSON.stringify(deletedMaintenanceRequestIds)); } catch(e) {}
+      }
+
+      if (Array.isArray(maintenanceRequests)) {
+        maintenanceRequests = maintenanceRequests.filter(m => m && m.id && !deletedMaintenanceRequestIds.includes(m.id));
+      }
+
+      if (Array.isArray(data.maintenanceRequests) && data.maintenanceRequests.length > 0) {
+        const mntMap = {};
+        (maintenanceRequests || []).forEach(m => {
+          if (m && m.id && !deletedMaintenanceRequestIds.includes(m.id)) mntMap[m.id] = { ...m };
+        });
+        data.maintenanceRequests.forEach(m => {
+          if (!m || !m.id || deletedMaintenanceRequestIds.includes(m.id)) return;
+          if (!mntMap[m.id]) {
+            mntMap[m.id] = { ...m };
+          } else {
+            const cur = mntMap[m.id];
+            const remUpd = Number(m.updatedAt) || Number(m.createdAt) || remMntTs || 0;
+            const locUpd = Number(cur.updatedAt) || Number(cur.createdAt) || locMntTs || 0;
+            if (remUpd >= locUpd || isMntRemoteNewer) {
+              mntMap[m.id] = { ...cur, ...m };
+            }
+          }
+        });
+        maintenanceRequests = Object.values(mntMap).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+        try { localStorage.setItem('delinapolitan_maintenance_requests', JSON.stringify(maintenanceRequests)); } catch(e) {}
+        if (remMntTs > locMntTs) moduleTimestamps.mnt = remMntTs;
       }
 
       // STEP 1: Merge Tombstones with Module-Timestamp Awareness (so re-added items on a newer local module aren't re-deleted by an older snapshot)
@@ -20791,6 +21084,316 @@
         renderCountListsManageView();
         scheduleAutoCloudSync(150);
       }
+    }
+
+    /* =========================================================
+       13. TAMİR VE MALZEME TALEBİ (MAINTENANCE & MATERIAL REQUESTS)
+       ========================================================= */
+    const MAINT_TYPE_META = {
+      tamir:     { label: 'Tamir Talebi',     icon: '🔧', bg: '#EFF6FF', color: '#1D4ED8', border: '#93C5FD' },
+      malzeme:   { label: 'Malzeme Talebi',   icon: '📦', bg: '#F0FDF4', color: '#15803D', border: '#86EFAC' },
+      duzenleme: { label: 'Düzenleme Talebi', icon: '📐', bg: '#FAF5FF', color: '#7E22CE', border: '#D8B4FE' }
+    };
+
+    const MAINT_URGENCY_META = {
+      acil:         { label: 'Acil',              icon: '🚨', bg: '#FEF2F2', color: '#DC2626', border: '#FCA5A5' },
+      kisa_zamanda: { label: 'Kısa Zamanda',      icon: '⚡', bg: '#FFFBEB', color: '#D97706', border: '#FCD34D' },
+      '1_2_hafta':  { label: '1-2 Hafta İçinde',  icon: '🗓️', bg: '#EFF6FF', color: '#2563EB', border: '#93C5FD' }
+    };
+
+    const MAINT_STATUS_META = {
+      yeni:         { label: 'Yeni',         bg: '#FEE2E2', color: '#DC2626', border: '#EF4444' },
+      alindi:       { label: 'Alındı',       bg: '#E0F2FE', color: '#0284C7', border: '#7DD3FC' },
+      hazirlaniyor: { label: 'Hazırlanıyor', bg: '#FEF3C7', color: '#B45309', border: '#FCD34D' },
+      tamamlandi:   { label: 'Tamamlandı',   bg: '#DCFCE7', color: '#15803D', border: '#86EFAC' }
+    };
+
+    let maintenanceRequests = [];
+    let deletedMaintenanceRequestIds = [];
+    let selectedMaintType = 'tamir';
+    let selectedMaintUrgency = 'acil';
+
+    function initMaintenanceRequestsFromStorage() {
+      try {
+        const savedDel = localStorage.getItem('delinapolitan_deleted_maintenance_requests');
+        deletedMaintenanceRequestIds = savedDel ? JSON.parse(savedDel) : [];
+        if (!Array.isArray(deletedMaintenanceRequestIds)) deletedMaintenanceRequestIds = [];
+      } catch (e) {
+        deletedMaintenanceRequestIds = [];
+      }
+
+      try {
+        const saved = localStorage.getItem('delinapolitan_maintenance_requests');
+        const parsed = saved ? JSON.parse(saved) : [];
+        if (Array.isArray(parsed)) {
+          maintenanceRequests = parsed
+            .filter(r => r && r.id && !deletedMaintenanceRequestIds.includes(r.id))
+            .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+        } else {
+          maintenanceRequests = [];
+        }
+      } catch (e) {
+        console.error('initMaintenanceRequestsFromStorage error:', e);
+        maintenanceRequests = [];
+      }
+    }
+
+    function saveMaintenanceRequestsToStorage() {
+      try {
+        touchModuleTimestamp('mnt');
+        localStorage.setItem('delinapolitan_maintenance_requests', JSON.stringify(maintenanceRequests));
+        localStorage.setItem('delinapolitan_deleted_maintenance_requests', JSON.stringify(deletedMaintenanceRequestIds));
+        updateMaintenanceDashboardAlertBadge();
+        scheduleAutoCloudSync(150);
+      } catch (e) {
+        console.error('saveMaintenanceRequestsToStorage error:', e);
+      }
+    }
+
+    function getActiveMaintenanceRequests() {
+      if (!Array.isArray(maintenanceRequests)) {
+        initMaintenanceRequestsFromStorage();
+      }
+      return (maintenanceRequests || [])
+        .filter(r => r && r.id && !deletedMaintenanceRequestIds.includes(r.id))
+        .slice()
+        .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+    }
+
+    function updateMaintenanceDashboardAlertBadge() {
+      const list = getActiveMaintenanceRequests();
+      const newCount = list.filter(r => !r.status || r.status === 'yeni').length;
+      const alertEl = document.getElementById('maintNewAlertBadge');
+      if (alertEl) {
+        if (newCount > 0) {
+          alertEl.textContent = String(newCount);
+          alertEl.style.display = 'inline-flex';
+        } else {
+          alertEl.textContent = '0';
+          alertEl.style.display = 'none';
+        }
+      }
+    }
+
+    function openMaintenanceRequestsView() {
+      if (activeDay && countData[activeDay]) {
+        try { localStorage.setItem('delinapolitan_counts_data', JSON.stringify(countData)); } catch (e) {}
+      }
+      activeDay = null;
+      initMaintenanceRequestsFromStorage();
+
+      closeMaintenanceCreateForm();
+      switchView('maintenanceRequestsView');
+      renderMaintenanceRequestsList();
+      if (typeof fetchAppStateFromCloud === 'function') {
+        fetchAppStateFromCloud({ showFeedback: false });
+      }
+    }
+
+    function openMaintenanceCreateForm() {
+      const btnWrap = document.getElementById('maintCreateBtnWrapper');
+      const formEl = document.getElementById('maintCreateFormCard');
+      const dateEl = document.getElementById('maintFormAutoDateText');
+      const descInp = document.getElementById('maintFormDescInput');
+
+      if (btnWrap) btnWrap.style.display = 'none';
+      if (formEl) formEl.style.display = 'block';
+      if (dateEl) dateEl.textContent = getFormattedDateTimeNow();
+      if (descInp) descInp.value = '';
+
+      selectMaintRequestType('tamir');
+      selectMaintRequestUrgency('acil');
+
+      if (descInp) {
+        setTimeout(() => descInp.focus(), 60);
+      }
+    }
+
+    function closeMaintenanceCreateForm() {
+      const btnWrap = document.getElementById('maintCreateBtnWrapper');
+      const formEl = document.getElementById('maintCreateFormCard');
+      if (formEl) formEl.style.display = 'none';
+      if (btnWrap) btnWrap.style.display = 'flex';
+    }
+
+    function selectMaintRequestType(type) {
+      selectedMaintType = ['tamir', 'malzeme', 'duzenleme'].includes(type) ? type : 'tamir';
+      ['tamir', 'malzeme', 'duzenleme'].forEach(t => {
+        const card = document.getElementById(`maintTypeCard-${t}`);
+        const cb = document.getElementById(`maintTypeCb-${t}`);
+        const isSel = (t === selectedMaintType);
+        if (cb) cb.checked = isSel;
+        if (card) {
+          card.style.borderColor = isSel ? '#2563EB' : '#CBD5E1';
+          card.style.background = isSel ? '#EFF6FF' : '#FFFFFF';
+        }
+      });
+    }
+
+    function selectMaintRequestUrgency(urgency) {
+      selectedMaintUrgency = ['acil', 'kisa_zamanda', '1_2_hafta'].includes(urgency) ? urgency : 'acil';
+      const styles = {
+        acil:         { border: '#DC2626', bg: '#FEF2F2', text: '#991B1B' },
+        kisa_zamanda: { border: '#D97706', bg: '#FFFBEB', text: '#92400E' },
+        '1_2_hafta':  { border: '#2563EB', bg: '#EFF6FF', text: '#1E40AF' }
+      };
+      ['acil', 'kisa_zamanda', '1_2_hafta'].forEach(u => {
+        const card = document.getElementById(`maintUrgencyCard-${u}`);
+        const cb = document.getElementById(`maintUrgencyCb-${u}`);
+        const isSel = (u === selectedMaintUrgency);
+        if (cb) cb.checked = isSel;
+        if (card) {
+          card.style.borderColor = isSel ? styles[u].border : '#CBD5E1';
+          card.style.background = isSel ? styles[u].bg : '#FFFFFF';
+        }
+      });
+    }
+
+    function handleSaveMaintenanceRequest(e) {
+      if (e) e.preventDefault();
+      const descInp = document.getElementById('maintFormDescInput');
+      const desc = (descInp?.value || '').trim();
+      if (!desc) {
+        alert('Lütfen talep açıklamasını yazın.');
+        if (descInp) descInp.focus();
+        return;
+      }
+
+      const now = Date.now();
+      const newReq = {
+        id: 'mnt_' + now + '_' + Math.random().toString(36).slice(2, 6),
+        type: selectedMaintType || 'tamir',
+        urgency: selectedMaintUrgency || 'acil',
+        desc: desc,
+        status: 'yeni',
+        dateText: getFormattedDateTimeNow(),
+        createdAt: now,
+        updatedAt: now
+      };
+
+      maintenanceRequests.unshift(newReq);
+      saveMaintenanceRequestsToStorage();
+      closeMaintenanceCreateForm();
+      updateDashboardCounts();
+      renderMaintenanceRequestsList();
+      showToast('✓ Talep kaydedildi! Statü: Yeni');
+    }
+
+    function handleChangeMaintenanceStatus(reqId, newStatus) {
+      const validStatuses = ['yeni', 'alindi', 'hazirlaniyor', 'tamamlandi'];
+      if (!validStatuses.includes(newStatus)) return;
+
+      const idx = maintenanceRequests.findIndex(r => r && r.id === reqId);
+      if (idx === -1) return;
+
+      maintenanceRequests[idx].status = newStatus;
+      maintenanceRequests[idx].updatedAt = Date.now();
+
+      saveMaintenanceRequestsToStorage();
+      updateDashboardCounts();
+      renderMaintenanceRequestsList();
+
+      const stMeta = MAINT_STATUS_META[newStatus] || { label: newStatus };
+      showToast(`✓ Talep statüsü "${stMeta.label}" olarak güncellendi.`);
+    }
+
+    function handleDeleteMaintenanceRequest(reqId) {
+      const req = maintenanceRequests.find(r => r && r.id === reqId);
+      if (!req) return;
+      if (!confirm('Bu talebi listeden silmek istediğinize emin misiniz?')) return;
+
+      if (!deletedMaintenanceRequestIds.includes(reqId)) {
+        deletedMaintenanceRequestIds.push(reqId);
+      }
+      maintenanceRequests = maintenanceRequests.filter(r => r && r.id !== reqId);
+
+      saveMaintenanceRequestsToStorage();
+      updateDashboardCounts();
+      renderMaintenanceRequestsList();
+      showToast('Talep silindi.');
+    }
+
+    function renderMaintenanceRequestsList() {
+      const container = document.getElementById('maintRequestsListContainer');
+      const totalBadge = document.getElementById('maintTotalCountBadge');
+      const newBadge = document.getElementById('maintPageNewCountBadge');
+      if (!container) return;
+
+      const list = getActiveMaintenanceRequests();
+      const newCount = list.filter(r => !r.status || r.status === 'yeni').length;
+
+      if (totalBadge) totalBadge.textContent = `${list.length} Talep`;
+      if (newBadge) {
+        if (newCount > 0) {
+          newBadge.textContent = `🔴 ${newCount} Yeni`;
+          newBadge.style.display = 'inline-flex';
+        } else {
+          newBadge.style.display = 'none';
+        }
+      }
+
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div style="padding: 32px 16px; text-align: center; color: var(--text-muted); font-size: 0.9rem; font-weight: 700; border: 1.5px dashed #CBD5E1; border-radius: 12px; background: #F8FAFC;">
+            Henüz oluşturulmuş bir tamir veya malzeme talebi bulunmuyor.<br>
+            Yukarıdaki <strong>"＋ Tamir Talebi Oluştur"</strong> butonuna basarak yeni talep ekleyebilirsiniz.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = list.map((req, idx) => {
+        const tMeta = MAINT_TYPE_META[req.type] || MAINT_TYPE_META.tamir;
+        const uMeta = MAINT_URGENCY_META[req.urgency] || MAINT_URGENCY_META.acil;
+        const curStatus = req.status || 'yeni';
+        const sMeta = MAINT_STATUS_META[curStatus] || MAINT_STATUS_META.yeni;
+        const isNew = (curStatus === 'yeni');
+        const dateStr = req.dateText || (req.createdAt ? `${formatTurkishDate(new Date(req.createdAt))}, ${formatTurkishTime(new Date(req.createdAt), false)}` : '—');
+
+        return `
+          <div
+            style="border: 2px solid ${isNew ? '#FCA5A5' : 'var(--border)'}; background: ${isNew ? '#FFF5F5' : '#FFFFFF'}; border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--shadow-sm); transition: all 0.15s ease;"
+          >
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+              <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <span style="background:#0F172A; color:#FFFFFF; font-size:0.74rem; font-weight:800; padding:3px 8px; border-radius:6px;">
+                  #${list.length - idx}
+                </span>
+                <span style="background:${tMeta.bg}; color:${tMeta.color}; border:1px solid ${tMeta.border}; font-size:0.78rem; font-weight:800; padding:4px 10px; border-radius:999px;">
+                  ${tMeta.icon} ${escapeHtml(tMeta.label)}
+                </span>
+                <span style="background:${uMeta.bg}; color:${uMeta.color}; border:1px solid ${uMeta.border}; font-size:0.78rem; font-weight:800; padding:4px 10px; border-radius:999px;">
+                  ${uMeta.icon} ${escapeHtml(uMeta.label)}
+                </span>
+                <span style="font-size:0.78rem; font-weight:700; color:var(--text-muted);">
+                  📅 ${escapeHtml(dateStr)}
+                </span>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                <label style="font-size:0.76rem; font-weight:800; color:#475569;">Statü:</label>
+                <select
+                  onchange="handleChangeMaintenanceStatus('${escapeHtml(req.id)}', this.value)"
+                  style="height: 36px; padding: 0 12px; border-radius: 9px; border: 2px solid ${sMeta.border}; background: ${sMeta.bg}; color: ${sMeta.color}; font-size: 0.84rem; font-weight: 900; cursor: pointer;"
+                >
+                  <option value="yeni" ${curStatus === 'yeni' ? 'selected' : ''}>🔴 Yeni</option>
+                  <option value="alindi" ${curStatus === 'alindi' ? 'selected' : ''}>📥 Alındı</option>
+                  <option value="hazirlaniyor" ${curStatus === 'hazirlaniyor' ? 'selected' : ''}>⏳ Hazırlanıyor</option>
+                  <option value="tamamlandi" ${curStatus === 'tamamlandi' ? 'selected' : ''}>✅ Tamamlandı</option>
+                </select>
+                <button
+                  type="button"
+                  onclick="handleDeleteMaintenanceRequest('${escapeHtml(req.id)}')"
+                  style="height: 36px; padding: 0 10px; border-radius: 9px; border: 1.5px solid #FCA5A5; background: #FEF2F2; color: #DC2626; font-size: 0.8rem; font-weight: 800; cursor: pointer;"
+                  title="Talebi Sil"
+                >🗑️</button>
+              </div>
+            </div>
+
+            <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 10px 12px; line-height: 1.45; white-space: pre-wrap;">${escapeHtml(req.desc)}</div>
+          </div>
+        `;
+      }).join('');
     }
 
     // App Startup (Immediate execution if ready, otherwise on DOMContentLoaded)
