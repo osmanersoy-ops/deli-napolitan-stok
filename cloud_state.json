@@ -1,12 +1,12 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-16T11:03:12.896Z",
-  "timestamp": 1794826992287,
+  "exportedAt": "2026-11-16T11:07:03.715Z",
+  "timestamp": 1794827205131,
   "deviceId": "dev_irn623d_mw0oagq7",
   "moduleTimestamps": {
     "cnt_hergun": 1794752797043,
-    "cnt_pazar": 1794753187192,
+    "cnt_pazar": 1794827205131,
     "rst_hergun": 1794144128904,
     "rst_pazar": 1793557180407,
     "wsm_pazartesi": 1792967245661,
@@ -1907,7 +1907,7 @@
         "notes": ""
       },
       "cust_bulasik_makinesi_konsantre_parlatici": {
-        "qty": "0",
+        "qty": 3,
         "notes": ""
       },
       "cust_aluminyum_folyo": {
@@ -1919,7 +1919,7 @@
         "notes": ""
       },
       "cust_strec_film": {
-        "qty": "0",
+        "qty": 3,
         "notes": ""
       },
       "cust_buzdolabi_poseti": {
@@ -1927,7 +1927,7 @@
         "notes": ""
       },
       "cust_kagit_havlu_i_cten_cekmeli": {
-        "qty": "0",
+        "qty": 4,
         "notes": ""
       },
       "cust_sikma_torbasi_krema_torbasi": {
