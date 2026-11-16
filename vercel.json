@@ -1,4 +1,9 @@
 {
+  "git": {
+    "deploymentEnabled": {
+      "sync-data": false
+    }
+  },
   "headers": [
     {
       "source": "/(.*)",
