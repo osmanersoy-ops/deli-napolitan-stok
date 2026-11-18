@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-18T20:43:18.624Z",
-  "timestamp": 1795034598017,
+  "exportedAt": "2026-11-18T20:43:26.635Z",
+  "timestamp": 1795034606482,
   "deviceId": "dev_9s3twk8_mvmwns8g",
   "moduleTimestamps": {
     "cnt_hergun": 1795002198480,
@@ -209,7 +209,7 @@
     "crec": 1794426043542,
     "cnt_persembe": 1794569990542,
     "cl": 1794834134248,
-    "mnt": 1794842521164
+    "mnt": 1795034606482
   },
   "suppliers": [
     {
@@ -4807,10 +4807,10 @@
       "type": "tamir",
       "urgency": "acil",
       "desc": "1. Musluk su fışkırtıyor",
-      "status": "alindi",
+      "status": "hazirlaniyor",
       "dateText": "16 Kasım 2026 Pazartesi, 17:45",
       "createdAt": 1794840327485,
-      "updatedAt": 1794842521164
+      "updatedAt": 1795034606482
     }
   ],
   "deletedMaintenanceRequestIds": [
