@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-18T11:34:16.535Z",
-  "timestamp": 1795001655291,
+  "exportedAt": "2026-11-18T11:34:25.101Z",
+  "timestamp": 1795001664495,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1795001655291,
@@ -1820,7 +1820,7 @@
       },
       "cust_tiramisu": {
         "qty": "0",
-        "notes": " "
+        "notes": ""
       },
       "cust_sote_jumbo_karides": {
         "qty": "5",
@@ -1831,7 +1831,7 @@
         "notes": ""
       },
       "cust_izgaralanmis_kabak": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "cust_patates": {
@@ -2416,7 +2416,7 @@
       },
       "cust_tiramisu": {
         "qty": "0",
-        "notes": " "
+        "notes": ""
       },
       "cust_sote_jumbo_karides": {
         "qty": "5",
@@ -2427,7 +2427,7 @@
         "notes": ""
       },
       "cust_izgaralanmis_kabak": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "cust_patates": {
@@ -3321,7 +3321,7 @@
       "updatedAt": 1795001655291
     },
     "cust_izgaralanmis_kabak": {
-      "qty": 0.5,
+      "qty": "0.5",
       "dayId": "hergun",
       "updatedAt": 1795001655291
     },
