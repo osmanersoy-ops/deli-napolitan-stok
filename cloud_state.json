@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-19T12:09:23.923Z",
-  "timestamp": 1795090162791,
+  "exportedAt": "2026-11-19T12:09:30.105Z",
+  "timestamp": 1795090166063,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -1815,7 +1815,7 @@
         "notes": ""
       },
       "hg_30": {
-        "qty": 8,
+        "qty": "8",
         "notes": ""
       },
       "cust_tiramisu": {
@@ -1823,7 +1823,7 @@
         "notes": ""
       },
       "cust_sote_jumbo_karides": {
-        "qty": 4,
+        "qty": "4",
         "notes": ""
       },
       "cust_pismis_dil_fume": {
@@ -2411,7 +2411,7 @@
         "notes": ""
       },
       "hg_30": {
-        "qty": 8,
+        "qty": "8",
         "notes": ""
       },
       "cust_tiramisu": {
@@ -2419,7 +2419,7 @@
         "notes": ""
       },
       "cust_sote_jumbo_karides": {
-        "qty": 4,
+        "qty": "4",
         "notes": ""
       },
       "cust_pismis_dil_fume": {
@@ -3261,7 +3261,7 @@
       "updatedAt": 1795090162791
     },
     "hg_30": {
-      "qty": 8,
+      "qty": "8",
       "dayId": "hergun",
       "updatedAt": 1795090162791
     },
@@ -3316,7 +3316,7 @@
       "updatedAt": 1795090162791
     },
     "cust_sote_jumbo_karides": {
-      "qty": 4,
+      "qty": "4",
       "dayId": "hergun",
       "updatedAt": 1795090162791
     },
