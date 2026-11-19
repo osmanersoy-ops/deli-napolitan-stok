@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-19T18:15:05.959Z",
-  "timestamp": 1795112102291,
+  "exportedAt": "2026-11-19T18:15:29.370Z",
+  "timestamp": 1795112129354,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -207,7 +207,7 @@
     "prod_hg_21": 1794358724406,
     "rtag": 1794426043543,
     "crec": 1794426043542,
-    "cnt_persembe": 1795112102290,
+    "cnt_persembe": 1795112129354,
     "cl": 1794834134248,
     "mnt": 1795034611797
   },
@@ -2888,6 +2888,60 @@
         "qty": "0.5",
         "notes": ""
       }
+    },
+    "persembe": {
+      "pr_1": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "pr_13": {
+        "qty": 4,
+        "notes": ""
+      },
+      "pr_2": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "pr_3": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "pr_5": {
+        "qty": 0.25,
+        "notes": ""
+      },
+      "pr_6": {
+        "qty": "0.25",
+        "notes": ""
+      },
+      "pr_10": {
+        "qty": 1,
+        "notes": ""
+      },
+      "pr_11": {
+        "qty": 9,
+        "notes": "27"
+      },
+      "pr_12": {
+        "qty": 0.5,
+        "notes": ""
+      },
+      "pr_14": {
+        "qty": 5,
+        "notes": ""
+      },
+      "pr_7": {
+        "qty": 0,
+        "notes": "Yarın box"
+      },
+      "pr_8": {
+        "qty": 0.25,
+        "notes": "1 gastro"
+      },
+      "pr_15": {
+        "qty": 5,
+        "notes": ""
+      }
     }
   },
   "staffDishes": [
@@ -3105,7 +3159,8 @@
     "hergun": 1795090162791,
     "pazar": 1794827631785,
     "metro": 1794144391783,
-    "sali": 1794322294574
+    "sali": 1794322294574,
+    "persembe": 1795112129354
   },
   "lastProductCounts": {
     "pz_1": {
@@ -3299,19 +3354,19 @@
       "updatedAt": 1794322294574
     },
     "pr_1": {
-      "qty": 0.25,
+      "qty": "0.5",
       "dayId": "persembe",
-      "updatedAt": 1792173530014
+      "updatedAt": 1795112129354
     },
     "pr_13": {
-      "qty": "7",
+      "qty": 4,
       "dayId": "persembe",
-      "updatedAt": 1792173224475
+      "updatedAt": 1795112129354
     },
     "pr_2": {
-      "qty": 0.25,
+      "qty": "0.5",
       "dayId": "persembe",
-      "updatedAt": 1792173530578
+      "updatedAt": 1795112129354
     },
     "cust_kabak": {
       "qty": "1",
@@ -3569,9 +3624,9 @@
       "updatedAt": 1794144391783
     },
     "pr_8": {
-      "qty": "0",
-      "dayId": "metro",
-      "updatedAt": 1794144391783
+      "qty": 0.25,
+      "dayId": "persembe",
+      "updatedAt": 1795112129354
     },
     "cust_beyaz_sarap_pirinc_sirkesi": {
       "qty": "0.5",
@@ -3637,6 +3692,51 @@
       "qty": "0",
       "dayId": "metro",
       "updatedAt": 1794144391783
+    },
+    "pr_3": {
+      "qty": "0.5",
+      "dayId": "persembe",
+      "updatedAt": 1795112129354
+    },
+    "pr_5": {
+      "qty": 0.25,
+      "dayId": "persembe",
+      "updatedAt": 1795112129354
+    },
+    "pr_6": {
+      "qty": "0.25",
+      "dayId": "persembe",
+      "updatedAt": 1795112129354
+    },
+    "pr_10": {
+      "qty": 1,
+      "dayId": "persembe",
+      "updatedAt": 1795112129354
+    },
+    "pr_11": {
+      "qty": 9,
+      "dayId": "persembe",
+      "updatedAt": 1795112129354
+    },
+    "pr_12": {
+      "qty": 0.5,
+      "dayId": "persembe",
+      "updatedAt": 1795112129354
+    },
+    "pr_14": {
+      "qty": 5,
+      "dayId": "persembe",
+      "updatedAt": 1795112129354
+    },
+    "pr_7": {
+      "qty": 0,
+      "dayId": "persembe",
+      "updatedAt": 1795112129354
+    },
+    "pr_15": {
+      "qty": 5,
+      "dayId": "persembe",
+      "updatedAt": 1795112129354
     }
   },
   "recipeTags": {
