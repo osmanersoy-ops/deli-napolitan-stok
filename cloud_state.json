@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-19T18:45:32.450Z",
-  "timestamp": 1795113929445,
+  "exportedAt": "2026-11-19T18:45:45.528Z",
+  "timestamp": 1795113945376,
   "deviceId": "dev_9s3twk8_mvmwns8g",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -209,7 +209,7 @@
     "crec": 1794426043542,
     "cnt_persembe": 1795112129354,
     "cl": 1794834134248,
-    "mnt": 1795113929445
+    "mnt": 1795113945376
   },
   "suppliers": [
     {
@@ -4935,10 +4935,10 @@
       "type": "tamir",
       "urgency": "acil",
       "desc": "Pizza tezgah altı ve tezgah altı 1 için servis gerekiyor",
-      "status": "yeni",
+      "status": "alindi",
       "dateText": "19 Kasım 2026 Perşembe, 21:45",
       "createdAt": 1795113929444,
-      "updatedAt": 1795113929444
+      "updatedAt": 1795113945376
     },
     {
       "id": "mnt_1794840327485_r418",
