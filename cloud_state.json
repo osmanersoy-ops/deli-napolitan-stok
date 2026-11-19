@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-19T18:43:31.502Z",
-  "timestamp": 1795113810896,
+  "exportedAt": "2026-11-19T18:43:37.751Z",
+  "timestamp": 1795113817147,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -2101,7 +2101,7 @@
         "notes": ""
       },
       "pr_13": {
-        "qty": 4,
+        "qty": "4",
         "notes": ""
       },
       "pr_2": {
@@ -2113,7 +2113,7 @@
         "notes": ""
       },
       "pr_5": {
-        "qty": 0.25,
+        "qty": "0.25",
         "notes": ""
       },
       "pr_6": {
@@ -2121,31 +2121,31 @@
         "notes": ""
       },
       "pr_10": {
-        "qty": 1,
+        "qty": "1",
         "notes": ""
       },
       "pr_11": {
-        "qty": 9,
+        "qty": "9",
         "notes": "27"
       },
       "pr_12": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "pr_14": {
-        "qty": 5,
+        "qty": "5",
         "notes": ""
       },
       "pr_7": {
-        "qty": 0,
+        "qty": "0",
         "notes": "Yarın box"
       },
       "pr_8": {
-        "qty": 0.25,
+        "qty": "0.25",
         "notes": "1 gastro"
       },
       "pr_15": {
-        "qty": 5,
+        "qty": "5",
         "notes": ""
       }
     },
@@ -2895,7 +2895,7 @@
         "notes": ""
       },
       "pr_13": {
-        "qty": 4,
+        "qty": "4",
         "notes": ""
       },
       "pr_2": {
@@ -2907,7 +2907,7 @@
         "notes": ""
       },
       "pr_5": {
-        "qty": 0.25,
+        "qty": "0.25",
         "notes": ""
       },
       "pr_6": {
@@ -2915,31 +2915,31 @@
         "notes": ""
       },
       "pr_10": {
-        "qty": 1,
+        "qty": "1",
         "notes": ""
       },
       "pr_11": {
-        "qty": 9,
+        "qty": "9",
         "notes": "27"
       },
       "pr_12": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "pr_14": {
-        "qty": 5,
+        "qty": "5",
         "notes": ""
       },
       "pr_7": {
-        "qty": 0,
+        "qty": "0",
         "notes": "Yarın box"
       },
       "pr_8": {
-        "qty": 0.25,
+        "qty": "0.25",
         "notes": "1 gastro"
       },
       "pr_15": {
-        "qty": 5,
+        "qty": "5",
         "notes": ""
       }
     }
@@ -3359,7 +3359,7 @@
       "updatedAt": 1795112129354
     },
     "pr_13": {
-      "qty": 4,
+      "qty": "4",
       "dayId": "persembe",
       "updatedAt": 1795112129354
     },
@@ -3624,7 +3624,7 @@
       "updatedAt": 1794144391783
     },
     "pr_8": {
-      "qty": 0.25,
+      "qty": "0.25",
       "dayId": "persembe",
       "updatedAt": 1795112129354
     },
@@ -3694,7 +3694,7 @@
       "updatedAt": 1795112129354
     },
     "pr_5": {
-      "qty": 0.25,
+      "qty": "0.25",
       "dayId": "persembe",
       "updatedAt": 1795112129354
     },
@@ -3704,32 +3704,32 @@
       "updatedAt": 1795112129354
     },
     "pr_10": {
-      "qty": 1,
+      "qty": "1",
       "dayId": "persembe",
       "updatedAt": 1795112129354
     },
     "pr_11": {
-      "qty": 9,
+      "qty": "9",
       "dayId": "persembe",
       "updatedAt": 1795112129354
     },
     "pr_12": {
-      "qty": 0.5,
+      "qty": "0.5",
       "dayId": "persembe",
       "updatedAt": 1795112129354
     },
     "pr_14": {
-      "qty": 5,
+      "qty": "5",
       "dayId": "persembe",
       "updatedAt": 1795112129354
     },
     "pr_7": {
-      "qty": 0,
+      "qty": "0",
       "dayId": "persembe",
       "updatedAt": 1795112129354
     },
     "pr_15": {
-      "qty": 5,
+      "qty": "5",
       "dayId": "persembe",
       "updatedAt": 1795112129354
     },
