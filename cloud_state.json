@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:30:25.813Z",
-  "timestamp": 1795134625661,
+  "exportedAt": "2026-11-20T00:31:00.422Z",
+  "timestamp": 1795134660269,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -31,7 +31,7 @@
     "prod_cust_sote_jumbo_karides": 1795134440505,
     "prod_cust_pismis_dil_fume": 1795134435604,
     "prod_cust_izgaralanmis_kabak": 1792968441598,
-    "prod_cust_kedi_dili": 1792968570222,
+    "prod_cust_kedi_dili": 1795134660254,
     "prod_cust_taze_kekik": 1792968617676,
     "prod_cust_tarhun": 1792968652152,
     "prod_cust_beyaz_sarimsak_puresi": 1792968715159,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134625648,
+    "prod": 1795134660254,
     "cat": 1795134625648,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -440,9 +440,7 @@
       "name": "Kedi Dili",
       "unit": "Paket",
       "category": "Kuru Depo",
-      "days": [
-        "sali"
-      ],
+      "days": [],
       "supplierIds": [
         "sup_1791988183271"
       ],
@@ -1806,6 +1804,16 @@
       "days": [],
       "supplierIds": [],
       "supplierId": ""
+    },
+    "cust_kedi_dili": {
+      "name": "Kedi Dili",
+      "unit": "Paket",
+      "category": "Kuru Depo",
+      "days": [],
+      "supplierIds": [
+        "sup_1791988183271"
+      ],
+      "supplierId": "sup_1791988183271"
     }
   },
   "deletedProductIds": [
