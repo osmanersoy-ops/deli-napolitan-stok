@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:28:10.182Z",
-  "timestamp": 1795134490029,
+  "exportedAt": "2026-11-20T00:28:39.039Z",
+  "timestamp": 1795134518885,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -82,7 +82,7 @@
     "prod_sl_34": 1792970300896,
     "prod_pr_11": 1795134341056,
     "prod_pr_13": 1792970300896,
-    "prod_pr_15": 1795134490020,
+    "prod_pr_15": 1795134518872,
     "prod_sl_11": 1794359030828,
     "prod_sl_12": 1794359038713,
     "prod_sl_13": 1792970300896,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134490020,
+    "prod": 1795134518872,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -207,7 +207,7 @@
     "prod_cust_patates": 1794358779227,
     "crec": 1794426043542,
     "rtag": 1794426043543,
-    "cl": 1795134449905,
+    "cl": 1795134496304,
     "mnt": 1795113947651,
     "cnt_persembe": 1795112129354,
     "prod_cust_eldiven": 1795134187189,
@@ -1059,7 +1059,9 @@
       ],
       "unit": "Çuval",
       "name": "Tellioğlu Pizza Unu 25 Kg",
-      "days": []
+      "days": [
+        "pazar"
+      ]
     },
     "sl_11": {
       "category": "Sos & Yağ",
