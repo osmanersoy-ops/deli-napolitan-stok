@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:25:06.822Z",
-  "timestamp": 1795134306669,
+  "exportedAt": "2026-11-20T00:25:09.749Z",
+  "timestamp": 1795134309596,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -112,7 +112,7 @@
     "prod_pz_6": 1795134298689,
     "prod_pz_10": 1795134306656,
     "prod_pz_11": 1795134299239,
-    "prod_pz_12": 1792970300896,
+    "prod_pz_12": 1795134309588,
     "prod_sl_15": 1792970300896,
     "prod_sl_29": 1792968794521,
     "prod_pr_1": 1792970300896,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134306656,
+    "prod": 1795134309588,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -1384,9 +1384,7 @@
       ],
       "unit": "KG",
       "name": "Tuzlu Tereyağ",
-      "days": [
-        "pazar"
-      ]
+      "days": []
     },
     "sl_15": {
       "category": "Ana Stok",
