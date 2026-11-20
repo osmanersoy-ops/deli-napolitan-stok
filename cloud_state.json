@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:31:04.444Z",
-  "timestamp": 1795134662484,
+  "exportedAt": "2026-11-20T00:31:08.688Z",
+  "timestamp": 1795134668535,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -113,7 +113,7 @@
     "prod_pz_10": 1795134306656,
     "prod_pz_11": 1795134299239,
     "prod_pz_12": 1795134309588,
-    "prod_sl_15": 1792970300896,
+    "prod_sl_15": 1795134668521,
     "prod_sl_29": 1795134361306,
     "prod_pr_1": 1792970300896,
     "prod_pr_2": 1792970300896,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134662471,
+    "prod": 1795134668521,
     "cat": 1795134625648,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -1417,9 +1417,7 @@
       ],
       "unit": "KG",
       "name": "Nohut",
-      "days": [
-        "sali"
-      ]
+      "days": []
     },
     "sl_29": {
       "category": "-18 Stoğu",
