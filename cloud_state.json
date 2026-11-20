@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:19:18.540Z",
-  "timestamp": 1795133958387,
+  "exportedAt": "2026-11-20T00:19:21.123Z",
+  "timestamp": 1795133960970,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -43,7 +43,7 @@
     "prod_cust_firin_kagidi": 1795133956474,
     "prod_cust_buzdolabi_poseti": 1792969721707,
     "prod_cust_kagit_havlu_i_cten_cekmeli": 1795133958374,
-    "prod_cust_sikma_torbasi_krema_torbasi": 1792969850680,
+    "prod_cust_sikma_torbasi_krema_torbasi": 1795133960957,
     "prod_cust_bulasik_makinesi_konsantre_deterjan": 1795133953607,
     "prod_cust_bulasik_makinesi_konsantre_parlatici": 1795133954607,
     "prod_cust_hopla_sivi_santi_bitkisel_krema": 1792969991468,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795133958374,
+    "prod": 1795133960957,
     "cat": 1794364990251,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -592,7 +592,8 @@
       "unit": "Paket",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazar"
+        "pazar",
+        "pazartesi_sarf"
       ],
       "supplierIds": [
         "sup_1791988183271",
@@ -1627,7 +1628,8 @@
       "unit": "Paket",
       "name": "Sıkma Torbası (Krema Torbası)",
       "days": [
-        "pazar"
+        "pazar",
+        "pazartesi_sarf"
       ]
     },
     "cust_i_likli_kemik_stok_suyu": {
