@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:31:00.422Z",
-  "timestamp": 1795134660269,
+  "exportedAt": "2026-11-20T00:31:02.637Z",
+  "timestamp": 1795134662484,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -97,7 +97,7 @@
     "prod_sl_21": 1794359095758,
     "prod_sl_22": 1792970300896,
     "prod_sl_25": 1792970300896,
-    "prod_sl_26": 1794359117275,
+    "prod_sl_26": 1795134662471,
     "prod_sl_27": 1794359135751,
     "prod_sl_28": 1794359143767,
     "prod_sl_30": 1792968801259,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134660254,
+    "prod": 1795134662471,
     "cat": 1795134625648,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -1251,9 +1251,7 @@
       ],
       "unit": "Paket",
       "name": "Kimyon",
-      "days": [
-        "sali"
-      ]
+      "days": []
     },
     "sl_27": {
       "category": "Kuru Depo",
