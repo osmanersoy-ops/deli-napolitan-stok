@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:25:03.255Z",
-  "timestamp": 1795134303102,
+  "exportedAt": "2026-11-20T00:25:06.822Z",
+  "timestamp": 1795134306669,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -38,7 +38,7 @@
     "prod_cust_donmus_yaban_mersini": 1792968775087,
     "prod_cust_beyaz_sarap_pirinc_sirkesi": 1792968907427,
     "prod_cust_lime": 1792969376288,
-    "prod_cust_strec_film": 1795133962058,
+    "prod_cust_strec_film": 1795134303689,
     "prod_cust_aluminyum_folyo": 1795134284622,
     "prod_cust_firin_kagidi": 1795134294339,
     "prod_cust_buzdolabi_poseti": 1795134277956,
@@ -110,7 +110,7 @@
     "prod_pz_4": 1795134292888,
     "prod_pz_5": 1795134292739,
     "prod_pz_6": 1795134298689,
-    "prod_pz_10": 1792970300896,
+    "prod_pz_10": 1795134306656,
     "prod_pz_11": 1795134299239,
     "prod_pz_12": 1792970300896,
     "prod_sl_15": 1792970300896,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134303089,
+    "prod": 1795134306656,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -525,7 +525,6 @@
       "unit": "Adet",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazar",
         "pazartesi_sarf"
       ],
       "supplierIds": [
@@ -1365,9 +1364,7 @@
       ],
       "unit": "KG",
       "name": "Yaban Mersinli Tulum",
-      "days": [
-        "pazar"
-      ]
+      "days": []
     },
     "pz_11": {
       "category": "Akçalar Şarküteri",
@@ -1609,7 +1606,6 @@
       "unit": "Adet",
       "name": "Streç Film",
       "days": [
-        "pazar",
         "pazartesi_sarf"
       ]
     },
