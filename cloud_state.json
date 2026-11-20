@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:18:39.880Z",
-  "timestamp": 1795133918074,
+  "exportedAt": "2026-11-20T00:19:01.344Z",
+  "timestamp": 1795133941191,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -207,7 +207,7 @@
     "prod_cust_patates": 1794358779227,
     "crec": 1794426043542,
     "rtag": 1794426043543,
-    "cl": 1795133918074,
+    "cl": 1795133941191,
     "mnt": 1795113947651,
     "cnt_persembe": 1795112129354
   },
@@ -4931,8 +4931,8 @@
     },
     {
       "id": "pazartesi_sarf",
-      "title": "PAZARTESİ SARF SAYIMI",
-      "badge": "PAZARTESİ SARF SAYIMI",
+      "title": "Pazartesi Sarf Sayımı",
+      "badge": "Pazartesi Sarf Sayımı",
       "badgeClass": "badge-sali",
       "subtitle": "Stok Sayım Listesi",
       "desc": "PAZARTESİ SARF SAYIMI kapsamında stok takibi yapılan ürünler.",
