@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:26:42.371Z",
-  "timestamp": 1795134402219,
+  "exportedAt": "2026-11-20T00:26:46.566Z",
+  "timestamp": 1795134406413,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134402206,
+    "prod": 1795134406404,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -213,7 +213,8 @@
     "prod_cust_eldiven": 1795134187189,
     "prod_hg_27": 1795134387306,
     "prod_hg_24": 1795134391306,
-    "prod_hg_29": 1795134402206
+    "prod_hg_29": 1795134402206,
+    "prod_hg_28": 1795134406404
   },
   "suppliers": [
     {
@@ -1755,6 +1756,14 @@
     "hg_29": {
       "name": "Haşlanmış Nohut",
       "unit": "Kuru KG",
+      "category": "Mise en Place",
+      "days": [],
+      "supplierIds": [],
+      "supplierId": ""
+    },
+    "hg_28": {
+      "name": "Humus",
+      "unit": "Box",
       "category": "Mise en Place",
       "days": [],
       "supplierIds": [],
