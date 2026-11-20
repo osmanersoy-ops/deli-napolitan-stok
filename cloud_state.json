@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:25:41.223Z",
-  "timestamp": 1795134341070,
+  "exportedAt": "2026-11-20T00:26:01.471Z",
+  "timestamp": 1795134361319,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -114,7 +114,7 @@
     "prod_pz_11": 1795134299239,
     "prod_pz_12": 1795134309588,
     "prod_sl_15": 1792970300896,
-    "prod_sl_29": 1792968794521,
+    "prod_sl_29": 1795134361306,
     "prod_pr_1": 1792970300896,
     "prod_pr_2": 1792970300896,
     "prod_pr_3": 1792970300896,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134341056,
+    "prod": 1795134361306,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -207,7 +207,7 @@
     "prod_cust_patates": 1794358779227,
     "crec": 1794426043542,
     "rtag": 1794426043543,
-    "cl": 1795134188505,
+    "cl": 1795134342422,
     "mnt": 1795113947651,
     "cnt_persembe": 1795112129354,
     "prod_cust_eldiven": 1795134187189
@@ -1419,7 +1419,8 @@
       "unit": "Adet",
       "name": "Limonata Özütü",
       "days": [
-        "sali"
+        "sali",
+        "pazar"
       ]
     },
     "pr_1": {
