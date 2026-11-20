@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:18:23.042Z",
-  "timestamp": 1795133902438,
+  "exportedAt": "2026-11-20T00:18:38.226Z",
+  "timestamp": 1795133918074,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -207,7 +207,7 @@
     "prod_cust_patates": 1794358779227,
     "crec": 1794426043542,
     "rtag": 1794426043543,
-    "cl": 1794834134248,
+    "cl": 1795133918074,
     "mnt": 1795113947651,
     "cnt_persembe": 1795112129354
   },
@@ -4928,6 +4928,16 @@
       "desc": "Bresaola, prosciutto, salam, sosis, füme etler ve şarküteri grubu ürünlerinin detaylı sayımı.",
       "order": 4,
       "isBuiltin": true
+    },
+    {
+      "id": "pazartesi_sarf",
+      "title": "PAZARTESİ SARF SAYIMI",
+      "badge": "PAZARTESİ SARF SAYIMI",
+      "badgeClass": "badge-sali",
+      "subtitle": "Stok Sayım Listesi",
+      "desc": "PAZARTESİ SARF SAYIMI kapsamında stok takibi yapılan ürünler.",
+      "order": 5,
+      "isBuiltin": false
     }
   ],
   "deletedCountListIds": [
