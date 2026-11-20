@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:26:11.079Z",
-  "timestamp": 1795134370476,
+  "exportedAt": "2026-11-20T00:26:27.420Z",
+  "timestamp": 1795134387318,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134361306,
+    "prod": 1795134387306,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -210,7 +210,8 @@
     "cl": 1795134362939,
     "mnt": 1795113947651,
     "cnt_persembe": 1795112129354,
-    "prod_cust_eldiven": 1795134187189
+    "prod_cust_eldiven": 1795134187189,
+    "prod_hg_27": 1795134387306
   },
   "suppliers": [
     {
@@ -1732,6 +1733,14 @@
         "sup_1791988183271"
       ],
       "supplierId": "sup_carsi_ve_migros"
+    },
+    "hg_27": {
+      "name": "Bolonez",
+      "unit": "Paket",
+      "category": "Mise en Place",
+      "days": [],
+      "supplierIds": [],
+      "supplierId": ""
     }
   },
   "deletedProductIds": [
