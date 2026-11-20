@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:24:40.853Z",
-  "timestamp": 1795134280250,
+  "exportedAt": "2026-11-20T00:24:43.222Z",
+  "timestamp": 1795134283069,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -126,13 +126,13 @@
     "prod_pr_10": 1792970300896,
     "prod_pr_12": 1792970300896,
     "prod_pz_16": 1792969462468,
-    "prod_pz_14": 1792969469433,
+    "prod_pz_14": 1795134283056,
     "prod_pz_7": 1792969243614,
     "prod_pz_2": 1792969249064,
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134278872,
+    "prod": 1795134283056,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -1616,9 +1616,7 @@
       "supplierIds": [],
       "unit": "Litre",
       "name": "Acı Yağ 6L",
-      "days": [
-        "pazar"
-      ],
+      "days": [],
       "supplierId": ""
     },
     "cust_strec_film": {
