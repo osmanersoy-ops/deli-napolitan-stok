@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:19:21.123Z",
-  "timestamp": 1795133960970,
+  "exportedAt": "2026-11-20T00:19:51.183Z",
+  "timestamp": 1795133991030,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -38,7 +38,7 @@
     "prod_cust_donmus_yaban_mersini": 1792968775087,
     "prod_cust_beyaz_sarap_pirinc_sirkesi": 1792968907427,
     "prod_cust_lime": 1792969376288,
-    "prod_cust_strec_film": 1792969633490,
+    "prod_cust_strec_film": 1795133962058,
     "prod_cust_aluminyum_folyo": 1795133952191,
     "prod_cust_firin_kagidi": 1795133956474,
     "prod_cust_buzdolabi_poseti": 1792969721707,
@@ -132,8 +132,8 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795133960957,
-    "cat": 1794364990251,
+    "prod": 1795133991017,
+    "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
     "cnt_metro": 1794144391783,
@@ -207,9 +207,10 @@
     "prod_cust_patates": 1794358779227,
     "crec": 1794426043542,
     "rtag": 1794426043543,
-    "cl": 1795133941191,
+    "cl": 1795133966007,
     "mnt": 1795113947651,
-    "cnt_persembe": 1795112129354
+    "cnt_persembe": 1795112129354,
+    "prod_cust_eldiven": 1795133991017
   },
   "suppliers": [
     {
@@ -524,7 +525,8 @@
       "unit": "Adet",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazar"
+        "pazar",
+        "pazartesi_sarf"
       ],
       "supplierIds": [
         "sup_sarfci"
@@ -710,6 +712,23 @@
         "sup_meyfresh"
       ],
       "supplierId": "sup_meyfresh"
+    },
+    {
+      "id": "cust_eldiven",
+      "name": "Eldiven",
+      "unit": "Paket",
+      "category": "Sarf Malzemeleri",
+      "days": [
+        "hergun",
+        "sali",
+        "persembe",
+        "pazar",
+        "pazartesi_sarf"
+      ],
+      "supplierIds": [
+        "sup_sarfci"
+      ],
+      "supplierId": "sup_sarfci"
     }
   ],
   "productOverrides": {
@@ -1615,7 +1634,8 @@
       "unit": "Adet",
       "name": "Streç Film",
       "days": [
-        "pazar"
+        "pazar",
+        "pazartesi_sarf"
       ]
     },
     "cust_sikma_torbasi_krema_torbasi": {
