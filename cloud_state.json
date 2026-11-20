@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:24:43.222Z",
-  "timestamp": 1795134283069,
+  "exportedAt": "2026-11-20T00:24:44.789Z",
+  "timestamp": 1795134284636,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -39,7 +39,7 @@
     "prod_cust_beyaz_sarap_pirinc_sirkesi": 1792968907427,
     "prod_cust_lime": 1792969376288,
     "prod_cust_strec_film": 1795133962058,
-    "prod_cust_aluminyum_folyo": 1795133952191,
+    "prod_cust_aluminyum_folyo": 1795134284622,
     "prod_cust_firin_kagidi": 1795133956474,
     "prod_cust_buzdolabi_poseti": 1795134277956,
     "prod_cust_kagit_havlu_i_cten_cekmeli": 1795133958374,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134283056,
+    "prod": 1795134284622,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -539,7 +539,6 @@
       "unit": "Adet",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazar",
         "pazartesi_sarf"
       ],
       "supplierIds": [
@@ -1664,7 +1663,6 @@
       "unit": "Adet",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazar",
         "pazartesi_sarf"
       ],
       "supplierIds": [
