@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:28:47.489Z",
-  "timestamp": 1795134527335,
+  "exportedAt": "2026-11-20T00:29:04.158Z",
+  "timestamp": 1795134544007,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -67,7 +67,7 @@
     "prod_hg_15": 1792970300896,
     "prod_hg_16": 1792970300896,
     "prod_hg_17": 1792970300896,
-    "prod_sl_1": 1794358957206,
+    "prod_sl_1": 1795134544003,
     "prod_sl_2": 1794358966730,
     "prod_sl_3": 1794358974693,
     "prod_sl_4": 1794358980044,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134527322,
+    "prod": 1795134544003,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -207,7 +207,7 @@
     "prod_cust_patates": 1794358779227,
     "crec": 1794426043542,
     "rtag": 1794426043543,
-    "cl": 1795134496304,
+    "cl": 1795134530538,
     "mnt": 1795113947651,
     "cnt_persembe": 1795112129354,
     "prod_cust_eldiven": 1795134187189,
@@ -885,7 +885,8 @@
       "unit": "Paket",
       "name": "Mozzarella Kaanlar 3,5KG",
       "days": [
-        "sali"
+        "sali",
+        "pazar"
       ]
     },
     "sl_2": {
