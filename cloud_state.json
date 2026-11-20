@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:23:24.718Z",
-  "timestamp": 1795134204116,
+  "exportedAt": "2026-11-20T00:24:38.123Z",
+  "timestamp": 1795134277970,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -41,7 +41,7 @@
     "prod_cust_strec_film": 1795133962058,
     "prod_cust_aluminyum_folyo": 1795133952191,
     "prod_cust_firin_kagidi": 1795133956474,
-    "prod_cust_buzdolabi_poseti": 1792969721707,
+    "prod_cust_buzdolabi_poseti": 1795134277956,
     "prod_cust_kagit_havlu_i_cten_cekmeli": 1795133958374,
     "prod_cust_sikma_torbasi_krema_torbasi": 1795133960957,
     "prod_cust_bulasik_makinesi_konsantre_deterjan": 1795133953607,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134187189,
+    "prod": 1795134277956,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -566,9 +566,7 @@
       "name": "Buzdolabı Poşeti",
       "unit": "Paket",
       "category": "Sarf Malzemeleri",
-      "days": [
-        "pazar"
-      ],
+      "days": [],
       "supplierIds": [
         "sup_carsi_ve_migros"
       ],
@@ -1737,6 +1735,16 @@
         "sup_sarfci"
       ],
       "supplierId": "sup_sarfci"
+    },
+    "cust_buzdolabi_poseti": {
+      "name": "Buzdolabı Poşeti",
+      "unit": "Paket",
+      "category": "Sarf Malzemeleri",
+      "days": [],
+      "supplierIds": [
+        "sup_carsi_ve_migros"
+      ],
+      "supplierId": "sup_carsi_ve_migros"
     }
   },
   "deletedProductIds": [
