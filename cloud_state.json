@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:19:52.391Z",
-  "timestamp": 1795133991030,
+  "exportedAt": "2026-11-20T00:20:47.810Z",
+  "timestamp": 1795134047657,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -207,7 +207,7 @@
     "prod_cust_patates": 1794358779227,
     "crec": 1794426043542,
     "rtag": 1794426043543,
-    "cl": 1795133966007,
+    "cl": 1795134047657,
     "mnt": 1795113947651,
     "cnt_persembe": 1795112129354,
     "prod_cust_eldiven": 1795133991017
@@ -4993,7 +4993,7 @@
     },
     {
       "id": "sali",
-      "title": "Salı Sayımı",
+      "title": "Çarşamba Sayımı",
       "badge": "Salı Günü",
       "badgeClass": "badge-sali",
       "subtitle": "Ana Stok (Un, Peynir, Sos & Kuru Gıda)",
