@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:25:34.925Z",
-  "timestamp": 1795134334321,
+  "exportedAt": "2026-11-20T00:25:41.223Z",
+  "timestamp": 1795134341070,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -80,7 +80,7 @@
     "prod_sl_23": 1794359101120,
     "prod_sl_24": 1794359110017,
     "prod_sl_34": 1792970300896,
-    "prod_pr_11": 1792970300896,
+    "prod_pr_11": 1795134341056,
     "prod_pr_13": 1792970300896,
     "prod_pr_15": 1792970300896,
     "prod_sl_11": 1794359030828,
@@ -106,7 +106,7 @@
     "prod_sl_35": 1794179909579,
     "prod_pr_8": 1794359172098,
     "prod_pz_1": 1792970300896,
-    "prod_pz_3": 1795134299905,
+    "prod_pz_3": 1795134335940,
     "prod_pz_4": 1795134292888,
     "prod_pz_5": 1795134292739,
     "prod_pz_6": 1795134298689,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134309588,
+    "prod": 1795134341056,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -1040,7 +1040,8 @@
       "unit": "Adet",
       "name": "Kuru Maya",
       "days": [
-        "persembe"
+        "persembe",
+        "pazar"
       ]
     },
     "pr_13": {
@@ -1332,7 +1333,9 @@
       ],
       "unit": "KG",
       "name": "Mortadella",
-      "days": []
+      "days": [
+        "pazar"
+      ]
     },
     "pz_4": {
       "category": "Akçalar Şarküteri",
