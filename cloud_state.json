@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:25:28.974Z",
-  "timestamp": 1795134328370,
+  "exportedAt": "2026-11-20T00:25:34.925Z",
+  "timestamp": 1795134334321,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -525,7 +525,8 @@
       "unit": "Adet",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazartesi_sarf"
+        "pazartesi_sarf",
+        "pazar"
       ],
       "supplierIds": [
         "sup_sarfci"
@@ -538,7 +539,8 @@
       "unit": "Adet",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazartesi_sarf"
+        "pazartesi_sarf",
+        "pazar"
       ],
       "supplierIds": [
         "sup_sarfci"
@@ -551,7 +553,8 @@
       "unit": "Paket",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazartesi_sarf"
+        "pazartesi_sarf",
+        "pazar"
       ],
       "supplierIds": [
         "sup_sarfci"
@@ -577,7 +580,8 @@
       "unit": "Paket",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazartesi_sarf"
+        "pazartesi_sarf",
+        "pazar"
       ],
       "supplierIds": [
         "sup_sarfci"
@@ -590,7 +594,8 @@
       "unit": "Paket",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazartesi_sarf"
+        "pazartesi_sarf",
+        "pazar"
       ],
       "supplierIds": [
         "sup_1791988183271",
@@ -604,7 +609,8 @@
       "unit": "Litre",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazartesi_sarf"
+        "pazartesi_sarf",
+        "pazar"
       ],
       "supplierIds": [
         "sup_sarfci"
