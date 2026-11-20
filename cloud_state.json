@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:22:39.934Z",
-  "timestamp": 1795134159781,
+  "exportedAt": "2026-11-20T00:22:50.289Z",
+  "timestamp": 1795134170136,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134159772,
+    "prod": 1795134170123,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -207,10 +207,10 @@
     "prod_cust_patates": 1794358779227,
     "crec": 1794426043542,
     "rtag": 1794426043543,
-    "cl": 1795134150823,
+    "cl": 1795134161207,
     "mnt": 1795113947651,
     "cnt_persembe": 1795112129354,
-    "prod_cust_eldiven": 1795134159772
+    "prod_cust_eldiven": 1795134170123
   },
   "suppliers": [
     {
@@ -719,7 +719,6 @@
       "unit": "Paket",
       "category": "Sarf Malzemeleri",
       "days": [
-        "persembe",
         "pazar",
         "pazartesi_sarf"
       ],
@@ -1733,7 +1732,6 @@
       "unit": "Paket",
       "category": "Sarf Malzemeleri",
       "days": [
-        "persembe",
         "pazar",
         "pazartesi_sarf"
       ],
