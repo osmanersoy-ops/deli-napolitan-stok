@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:24:58.855Z",
-  "timestamp": 1795134298702,
+  "exportedAt": "2026-11-20T00:25:03.255Z",
+  "timestamp": 1795134303102,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -43,7 +43,7 @@
     "prod_cust_firin_kagidi": 1795134294339,
     "prod_cust_buzdolabi_poseti": 1795134277956,
     "prod_cust_kagit_havlu_i_cten_cekmeli": 1795134297973,
-    "prod_cust_sikma_torbasi_krema_torbasi": 1795133960957,
+    "prod_cust_sikma_torbasi_krema_torbasi": 1795134303089,
     "prod_cust_bulasik_makinesi_konsantre_deterjan": 1795134286005,
     "prod_cust_bulasik_makinesi_konsantre_parlatici": 1795134278872,
     "prod_cust_hopla_sivi_santi_bitkisel_krema": 1792969991468,
@@ -106,12 +106,12 @@
     "prod_sl_35": 1794179909579,
     "prod_pr_8": 1794359172098,
     "prod_pz_1": 1792970300896,
-    "prod_pz_3": 1792970300896,
+    "prod_pz_3": 1795134299905,
     "prod_pz_4": 1795134292888,
     "prod_pz_5": 1795134292739,
     "prod_pz_6": 1795134298689,
     "prod_pz_10": 1792970300896,
-    "prod_pz_11": 1792970300896,
+    "prod_pz_11": 1795134299239,
     "prod_pz_12": 1792970300896,
     "prod_sl_15": 1792970300896,
     "prod_sl_29": 1792968794521,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134298689,
+    "prod": 1795134303089,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -591,7 +591,6 @@
       "unit": "Paket",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazar",
         "pazartesi_sarf"
       ],
       "supplierIds": [
@@ -1326,9 +1325,7 @@
       ],
       "unit": "KG",
       "name": "Mortadella",
-      "days": [
-        "pazar"
-      ]
+      "days": []
     },
     "pz_4": {
       "category": "Akçalar Şarküteri",
@@ -1380,9 +1377,7 @@
       ],
       "unit": "KG",
       "name": "Mihaliç Olgun",
-      "days": [
-        "pazar"
-      ]
+      "days": []
     },
     "pz_12": {
       "category": "Akçalar Şarküteri",
@@ -1628,7 +1623,6 @@
       "unit": "Paket",
       "name": "Sıkma Torbası (Krema Torbası)",
       "days": [
-        "pazar",
         "pazartesi_sarf"
       ]
     },
