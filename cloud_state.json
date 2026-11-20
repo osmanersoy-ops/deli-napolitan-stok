@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:25:09.749Z",
-  "timestamp": 1795134309596,
+  "exportedAt": "2026-11-20T00:25:28.974Z",
+  "timestamp": 1795134328370,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -657,7 +657,9 @@
       "name": "Çubuk Vanilya",
       "unit": "Adet",
       "category": "Baharatlar ve Taze Otlar",
-      "days": [],
+      "days": [
+        "pazar"
+      ],
       "supplierIds": [
         "sup_carsi_ve_migros",
         "sup_cosan_pasta",
