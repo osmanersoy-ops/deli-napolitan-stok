@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:19:01.344Z",
-  "timestamp": 1795133941191,
+  "exportedAt": "2026-11-20T00:19:12.356Z",
+  "timestamp": 1795133952204,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -39,7 +39,7 @@
     "prod_cust_beyaz_sarap_pirinc_sirkesi": 1792968907427,
     "prod_cust_lime": 1792969376288,
     "prod_cust_strec_film": 1792969633490,
-    "prod_cust_aluminyum_folyo": 1792969655519,
+    "prod_cust_aluminyum_folyo": 1795133952191,
     "prod_cust_firin_kagidi": 1792969696255,
     "prod_cust_buzdolabi_poseti": 1792969721707,
     "prod_cust_kagit_havlu_i_cten_cekmeli": 1792969766033,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1794834134248,
+    "prod": 1795133952191,
     "cat": 1794364990251,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -537,7 +537,8 @@
       "unit": "Adet",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazar"
+        "pazar",
+        "pazartesi_sarf"
       ],
       "supplierIds": [
         "sup_sarfci"
@@ -1637,6 +1638,19 @@
         "sup_carsi_ve_migros"
       ],
       "supplierId": "sup_1791988183271"
+    },
+    "cust_aluminyum_folyo": {
+      "name": "Alüminyum Folyo",
+      "unit": "Adet",
+      "category": "Sarf Malzemeleri",
+      "days": [
+        "pazar",
+        "pazartesi_sarf"
+      ],
+      "supplierIds": [
+        "sup_sarfci"
+      ],
+      "supplierId": "sup_sarfci"
     }
   },
   "deletedProductIds": [
