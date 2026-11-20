@@ -1,14 +1,15 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:32:03.456Z",
-  "timestamp": 1795134723448,
-  "deviceId": "dev_uxetyvk_mvtzuqrz",
+  "exportedAt": "2026-11-20T00:34:15.535Z",
+  "timestamp": 1795134854928,
+  "deviceId": "dev_99uzb4t_mvpnpi3a",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
-    "cnt_pazar": 1794827631785,
     "rst_hergun": 1794144128904,
     "rst_pazar": 1793557180407,
+    "cnt_pazar": 1794827631785,
+    "sd": 1792967388152,
     "wsm_pazartesi": 1792967245661,
     "wsm_sali": 1792967395559,
     "wsm_carsamba": 1792967410608,
@@ -17,7 +18,6 @@
     "wsm_cumartesi": 1792967445208,
     "wsm_pazar": 1792967460558,
     "wsm": 1792967462680,
-    "sd": 1792967388152,
     "sup": 1794358565096,
     "prod_cust_kabak": 1792969316562,
     "prod_cust_sili_biber": 1792967808268,
@@ -136,7 +136,6 @@
     "cat": 1795134625648,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
-    "cnt_metro": 1794144391783,
     "shf_emp_baha_pazartesi": 1793820260701,
     "shf_emp_baha_sali": 1793904518689,
     "shf_emp_baha_carsamba": 1793904518689,
@@ -201,23 +200,24 @@
     "shf_emp_ozge_cumartesi": 1793877135627,
     "shf_emp_ozge_pazar": 1793877135627,
     "shf": 1794833993181,
+    "cnt_metro": 1794144391783,
     "prod_cust_i_likli_kemik_stok_suyu": 1794359199028,
+    "prod_cust_patates": 1794358779227,
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
-    "prod_cust_patates": 1794358779227,
-    "crec": 1794426043542,
     "rtag": 1794426043543,
+    "crec": 1794426043542,
+    "cnt_persembe": 1795112129354,
     "cl": 1795134704271,
     "mnt": 1795113947651,
-    "cnt_persembe": 1795112129354,
     "prod_cust_eldiven": 1795134187189,
     "prod_hg_27": 1795134387306,
     "prod_hg_24": 1795134391306,
+    "prod_cust_donuk_ispanak": 1795134625648,
     "prod_hg_29": 1795134402206,
     "prod_hg_28": 1795134406404,
     "prod_hg_25": 1795134419488,
-    "prod_hg_30": 1795134424639,
-    "prod_cust_donuk_ispanak": 1795134625648
+    "prod_hg_30": 1795134424639
   },
   "suppliers": [
     {
@@ -1652,164 +1652,164 @@
       "supplierId": "sup_1791988183271"
     },
     "cust_aluminyum_folyo": {
-      "name": "Alüminyum Folyo",
-      "unit": "Adet",
       "category": "Sarf Malzemeleri",
-      "days": [
-        "pazartesi_sarf"
-      ],
+      "supplierId": "sup_sarfci",
       "supplierIds": [
         "sup_sarfci"
       ],
-      "supplierId": "sup_sarfci"
+      "unit": "Adet",
+      "name": "Alüminyum Folyo",
+      "days": [
+        "pazartesi_sarf"
+      ]
     },
     "cust_bulasik_makinesi_konsantre_deterjan": {
-      "name": "Bulaşık Makinesi Konsantre Deterjan",
-      "unit": "Litre",
       "category": "Sarf Malzemeleri",
-      "days": [
-        "pazartesi_sarf"
-      ],
+      "supplierId": "sup_sarfci",
       "supplierIds": [
         "sup_sarfci"
       ],
-      "supplierId": "sup_sarfci"
+      "unit": "Litre",
+      "name": "Bulaşık Makinesi Konsantre Deterjan",
+      "days": [
+        "pazartesi_sarf"
+      ]
     },
     "cust_bulasik_makinesi_konsantre_parlatici": {
-      "name": "Bulaşık Makinesi Konsantre Parlatıcı",
-      "unit": "Litre",
       "category": "Sarf Malzemeleri",
-      "days": [
-        "pazartesi_sarf"
-      ],
+      "supplierId": "sup_sarfci",
       "supplierIds": [
         "sup_sarfci"
       ],
-      "supplierId": "sup_sarfci"
+      "unit": "Litre",
+      "name": "Bulaşık Makinesi Konsantre Parlatıcı",
+      "days": [
+        "pazartesi_sarf"
+      ]
     },
     "cust_firin_kagidi": {
-      "name": "Fırın Kağıdı",
-      "unit": "Paket",
       "category": "Sarf Malzemeleri",
-      "days": [
-        "pazartesi_sarf"
-      ],
+      "supplierId": "sup_sarfci",
       "supplierIds": [
         "sup_sarfci"
       ],
-      "supplierId": "sup_sarfci"
+      "unit": "Paket",
+      "name": "Fırın Kağıdı",
+      "days": [
+        "pazartesi_sarf"
+      ]
     },
     "cust_kagit_havlu_i_cten_cekmeli": {
-      "name": "Kağıt Havlu (İçten Çekmeli)",
-      "unit": "Paket",
       "category": "Sarf Malzemeleri",
-      "days": [
-        "pazartesi_sarf"
-      ],
+      "supplierId": "sup_sarfci",
       "supplierIds": [
         "sup_sarfci"
       ],
-      "supplierId": "sup_sarfci"
+      "unit": "Paket",
+      "name": "Kağıt Havlu (İçten Çekmeli)",
+      "days": [
+        "pazartesi_sarf"
+      ]
     },
     "cust_eldiven": {
-      "name": "Eldiven",
-      "unit": "Paket",
       "category": "Sarf Malzemeleri",
-      "days": [
-        "pazartesi_sarf"
-      ],
+      "supplierId": "sup_sarfci",
       "supplierIds": [
         "sup_sarfci"
       ],
-      "supplierId": "sup_sarfci"
+      "unit": "Paket",
+      "name": "Eldiven",
+      "days": [
+        "pazartesi_sarf"
+      ]
     },
     "cust_buzdolabi_poseti": {
-      "name": "Buzdolabı Poşeti",
-      "unit": "Paket",
       "category": "Sarf Malzemeleri",
-      "days": [],
+      "supplierId": "sup_carsi_ve_migros",
       "supplierIds": [
         "sup_carsi_ve_migros"
       ],
-      "supplierId": "sup_carsi_ve_migros"
+      "unit": "Paket",
+      "name": "Buzdolabı Poşeti",
+      "days": []
     },
     "cust_cubuk_vanilya": {
-      "name": "Çubuk Vanilya",
-      "unit": "Adet",
       "category": "Baharatlar ve Taze Otlar",
-      "days": [],
+      "supplierId": "sup_carsi_ve_migros",
       "supplierIds": [
         "sup_carsi_ve_migros",
         "sup_cosan_pasta",
         "sup_1791988183271"
       ],
-      "supplierId": "sup_carsi_ve_migros"
+      "unit": "Adet",
+      "name": "Çubuk Vanilya",
+      "days": []
     },
     "hg_27": {
-      "name": "Bolonez",
-      "unit": "Paket",
       "category": "Mise en Place",
-      "days": [],
       "supplierIds": [],
+      "unit": "Paket",
+      "name": "Bolonez",
+      "days": [],
       "supplierId": ""
     },
     "hg_24": {
-      "name": "Doğranmış Ispanak",
-      "unit": "Box",
       "category": "Mise en Place",
-      "days": [],
       "supplierIds": [],
+      "unit": "Box",
+      "name": "Doğranmış Ispanak",
+      "days": [],
       "supplierId": ""
     },
     "hg_29": {
-      "name": "Haşlanmış Nohut",
-      "unit": "Kuru KG",
       "category": "Mise en Place",
-      "days": [],
       "supplierIds": [],
+      "unit": "Kuru KG",
+      "name": "Haşlanmış Nohut",
+      "days": [],
       "supplierId": ""
     },
     "hg_28": {
-      "name": "Humus",
-      "unit": "Box",
       "category": "Mise en Place",
-      "days": [],
       "supplierIds": [],
+      "unit": "Box",
+      "name": "Humus",
+      "days": [],
       "supplierId": ""
     },
     "hg_25": {
-      "name": "Marine Beef",
-      "unit": "Paket",
       "category": "Mise en Place",
-      "days": [],
       "supplierIds": [],
+      "unit": "Paket",
+      "name": "Marine Beef",
+      "days": [],
       "supplierId": ""
     },
     "hg_30": {
-      "name": "Panna Cotta",
-      "unit": "Porsiyon",
       "category": "Mise en Place",
-      "days": [],
       "supplierIds": [],
+      "unit": "Porsiyon",
+      "name": "Panna Cotta",
+      "days": [],
       "supplierId": ""
     },
     "cust_pismis_dil_fume": {
-      "name": "Pişmiş Dil Füme",
-      "unit": "Porsiyon",
       "category": "Mise en Place",
-      "days": [],
       "supplierIds": [],
+      "unit": "Porsiyon",
+      "name": "Pişmiş Dil Füme",
+      "days": [],
       "supplierId": ""
     },
     "cust_kedi_dili": {
-      "name": "Kedi Dili",
-      "unit": "Paket",
       "category": "Kuru Depo",
-      "days": [],
+      "supplierId": "sup_1791988183271",
       "supplierIds": [
         "sup_1791988183271"
       ],
-      "supplierId": "sup_1791988183271"
+      "unit": "Paket",
+      "name": "Kedi Dili",
+      "days": []
     }
   },
   "deletedProductIds": [
@@ -2009,104 +2009,6 @@
       },
       "cust_patates": {
         "qty": "7",
-        "notes": ""
-      }
-    },
-    "pazar": {
-      "cust_dana_brisket_fume": {
-        "qty": "3",
-        "notes": ""
-      },
-      "pz_3": {
-        "qty": "1.5",
-        "notes": ""
-      },
-      "cust_dana_dil_fume": {
-        "qty": "3.5",
-        "notes": ""
-      },
-      "pz_1": {
-        "qty": "3.5",
-        "notes": ""
-      },
-      "pz_4": {
-        "qty": "2",
-        "notes": ""
-      },
-      "pz_5": {
-        "qty": "2",
-        "notes": ""
-      },
-      "pz_8": {
-        "qty": "0.25",
-        "notes": ""
-      },
-      "pz_10": {
-        "qty": "1",
-        "notes": ""
-      },
-      "pz_11": {
-        "qty": "2.5",
-        "notes": ""
-      },
-      "pz_12": {
-        "qty": "0.5",
-        "notes": ""
-      },
-      "pz_6": {
-        "qty": "0.5",
-        "notes": ""
-      },
-      "cust_hopla_sivi_santi_bitkisel_krema": {
-        "qty": "3",
-        "notes": ""
-      },
-      "pz_14": {
-        "qty": "6",
-        "notes": ""
-      },
-      "pz_16": {
-        "qty": "1.5",
-        "notes": ""
-      },
-      "cust_yaprak_jelatin": {
-        "qty": "3",
-        "notes": ""
-      },
-      "cust_cubuk_vanilya": {
-        "qty": "0",
-        "notes": ""
-      },
-      "cust_bulasik_makinesi_konsantre_deterjan": {
-        "qty": "0",
-        "notes": ""
-      },
-      "cust_bulasik_makinesi_konsantre_parlatici": {
-        "qty": "3",
-        "notes": ""
-      },
-      "cust_aluminyum_folyo": {
-        "qty": "1",
-        "notes": ""
-      },
-      "cust_firin_kagidi": {
-        "qty": "1",
-        "notes": ""
-      },
-      "cust_strec_film": {
-        "qty": "3",
-        "notes": ""
-      },
-      "cust_buzdolabi_poseti": {
-        "qty": "0.5",
-        "notes": ""
-      },
-      "cust_kagit_havlu_i_cten_cekmeli": {
-        "qty": "4",
-        "notes": ""
-      },
-      "cust_sikma_torbasi_krema_torbasi": {
-        "qty": "0.5",
         "notes": ""
       }
     },
@@ -2322,6 +2224,104 @@
         "notes": ""
       }
     },
+    "pazar": {
+      "cust_dana_brisket_fume": {
+        "qty": "3",
+        "notes": ""
+      },
+      "pz_3": {
+        "qty": "1.5",
+        "notes": ""
+      },
+      "cust_dana_dil_fume": {
+        "qty": "3.5",
+        "notes": ""
+      },
+      "pz_1": {
+        "qty": "3.5",
+        "notes": ""
+      },
+      "pz_4": {
+        "qty": "2",
+        "notes": ""
+      },
+      "pz_5": {
+        "qty": "2",
+        "notes": ""
+      },
+      "pz_8": {
+        "qty": "0.25",
+        "notes": ""
+      },
+      "pz_10": {
+        "qty": "1",
+        "notes": ""
+      },
+      "pz_11": {
+        "qty": "2.5",
+        "notes": ""
+      },
+      "pz_12": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "pz_6": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "cust_hopla_sivi_santi_bitkisel_krema": {
+        "qty": "3",
+        "notes": ""
+      },
+      "pz_14": {
+        "qty": "6",
+        "notes": ""
+      },
+      "pz_16": {
+        "qty": "1.5",
+        "notes": ""
+      },
+      "cust_yaprak_jelatin": {
+        "qty": "3",
+        "notes": ""
+      },
+      "cust_cubuk_vanilya": {
+        "qty": "0",
+        "notes": ""
+      },
+      "cust_bulasik_makinesi_konsantre_deterjan": {
+        "qty": "0",
+        "notes": ""
+      },
+      "cust_bulasik_makinesi_konsantre_parlatici": {
+        "qty": "3",
+        "notes": ""
+      },
+      "cust_aluminyum_folyo": {
+        "qty": "1",
+        "notes": ""
+      },
+      "cust_firin_kagidi": {
+        "qty": "1",
+        "notes": ""
+      },
+      "cust_strec_film": {
+        "qty": "3",
+        "notes": ""
+      },
+      "cust_buzdolabi_poseti": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "cust_kagit_havlu_i_cten_cekmeli": {
+        "qty": "4",
+        "notes": ""
+      },
+      "cust_sikma_torbasi_krema_torbasi": {
+        "qty": "0.5",
+        "notes": ""
+      }
+    },
     "metro": {
       "sl_1": {
         "qty": "1.5",
@@ -2477,10 +2477,6 @@
       },
       "cust_cubuk_vanilya": {
         "qty": "1",
-        "notes": ""
-      },
-      "sl_35": {
-        "qty": "0",
         "notes": ""
       },
       "cust_taze_kekik": {
@@ -3337,61 +3333,6 @@
     "persembe": 1795112129354
   },
   "lastProductCounts": {
-    "pz_1": {
-      "qty": "3.5",
-      "dayId": "pazar",
-      "updatedAt": 1794827631785
-    },
-    "pz_3": {
-      "qty": "1.5",
-      "dayId": "pazar",
-      "updatedAt": 1794827631785
-    },
-    "pz_4": {
-      "qty": "2",
-      "dayId": "pazar",
-      "updatedAt": 1794827631785
-    },
-    "pz_5": {
-      "qty": "2",
-      "dayId": "pazar",
-      "updatedAt": 1794827631785
-    },
-    "pz_6": {
-      "qty": "0.5",
-      "dayId": "pazar",
-      "updatedAt": 1794827631785
-    },
-    "pz_8": {
-      "qty": "0.25",
-      "dayId": "pazar",
-      "updatedAt": 1794827631785
-    },
-    "pz_10": {
-      "qty": "1",
-      "dayId": "pazar",
-      "updatedAt": 1794827631785
-    },
-    "pz_11": {
-      "qty": "2.5",
-      "dayId": "pazar",
-      "updatedAt": 1794827631785
-    },
-    "pz_12": {
-      "qty": "0.5",
-      "dayId": "pazar",
-      "updatedAt": 1794827631785
-    },
-    "pz_14": {
-      "qty": "6",
-      "dayId": "pazar",
-      "updatedAt": 1794827631785
-    },
-    "pz_16": {
-      "qty": "1.5",
-      "dayId": "pazar",
-      "updatedAt": 1794827631785
-    },
     "hg_1": {
       "qty": "0",
       "dayId": "hergun",
@@ -3522,6 +3463,16 @@
       "dayId": "hergun",
       "updatedAt": 1795090162791
     },
+    "pz_3": {
+      "qty": "1.5",
+      "dayId": "pazar",
+      "updatedAt": 1794827631785
+    },
+    "pz_4": {
+      "qty": "2",
+      "dayId": "pazar",
+      "updatedAt": 1794827631785
+    },
     "sl_2": {
       "qty": "8",
       "dayId": "sali",
@@ -3541,6 +3492,51 @@
       "qty": "0.5",
       "dayId": "persembe",
       "updatedAt": 1795112129354
+    },
+    "pz_1": {
+      "qty": "3.5",
+      "dayId": "pazar",
+      "updatedAt": 1794827631785
+    },
+    "pz_5": {
+      "qty": "2",
+      "dayId": "pazar",
+      "updatedAt": 1794827631785
+    },
+    "pz_6": {
+      "qty": "0.5",
+      "dayId": "pazar",
+      "updatedAt": 1794827631785
+    },
+    "pz_8": {
+      "qty": "0.25",
+      "dayId": "pazar",
+      "updatedAt": 1794827631785
+    },
+    "pz_10": {
+      "qty": "1",
+      "dayId": "pazar",
+      "updatedAt": 1794827631785
+    },
+    "pz_11": {
+      "qty": "2.5",
+      "dayId": "pazar",
+      "updatedAt": 1794827631785
+    },
+    "pz_12": {
+      "qty": "0.5",
+      "dayId": "pazar",
+      "updatedAt": 1794827631785
+    },
+    "pz_14": {
+      "qty": "6",
+      "dayId": "pazar",
+      "updatedAt": 1794827631785
+    },
+    "pz_16": {
+      "qty": "1.5",
+      "dayId": "pazar",
+      "updatedAt": 1794827631785
     },
     "cust_kabak": {
       "qty": "1",
