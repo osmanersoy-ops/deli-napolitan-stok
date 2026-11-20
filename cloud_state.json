@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:24:54.505Z",
-  "timestamp": 1795134294352,
+  "exportedAt": "2026-11-20T00:24:57.155Z",
+  "timestamp": 1795134297002,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -87,7 +87,7 @@
     "prod_sl_12": 1794359038713,
     "prod_sl_13": 1792970300896,
     "prod_sl_14": 1794359051360,
-    "prod_pz_8": 1792970300896,
+    "prod_pz_8": 1795134296989,
     "prod_sl_10": 1794359017375,
     "prod_sl_16": 1792970300896,
     "prod_sl_17": 1794359062208,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134294339,
+    "prod": 1795134296989,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -1113,9 +1113,7 @@
       ],
       "unit": "KG",
       "name": "İsli Peynir",
-      "days": [
-        "pazar"
-      ]
+      "days": []
     },
     "sl_10": {
       "category": "Sos & Yağ",
