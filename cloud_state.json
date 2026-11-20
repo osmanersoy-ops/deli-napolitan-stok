@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:27:04.805Z",
-  "timestamp": 1795134424652,
+  "exportedAt": "2026-11-20T00:27:15.763Z",
+  "timestamp": 1795134435612,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -29,7 +29,7 @@
     "prod_cust_tiramisu": 1792968396282,
     "prod_cust_sote_baby_karides": 1794179785320,
     "prod_cust_sote_jumbo_karides": 1792968378187,
-    "prod_cust_pismis_dil_fume": 1792968261195,
+    "prod_cust_pismis_dil_fume": 1795134435604,
     "prod_cust_izgaralanmis_kabak": 1792968441598,
     "prod_cust_kedi_dili": 1792968570222,
     "prod_cust_taze_kekik": 1792968617676,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795134424639,
+    "prod": 1795134435604,
     "cat": 1795133991017,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -417,9 +417,7 @@
       "name": "Pişmiş Dil Füme",
       "unit": "Porsiyon",
       "category": "Mise en Place",
-      "days": [
-        "hergun"
-      ],
+      "days": [],
       "supplierIds": [],
       "supplierId": ""
     },
@@ -1781,6 +1779,14 @@
     },
     "hg_30": {
       "name": "Panna Cotta",
+      "unit": "Porsiyon",
+      "category": "Mise en Place",
+      "days": [],
+      "supplierIds": [],
+      "supplierId": ""
+    },
+    "cust_pismis_dil_fume": {
+      "name": "Pişmiş Dil Füme",
       "unit": "Porsiyon",
       "category": "Mise en Place",
       "days": [],
