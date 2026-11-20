@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-20T00:19:15.884Z",
-  "timestamp": 1795133954621,
+  "exportedAt": "2026-11-20T00:19:18.540Z",
+  "timestamp": 1795133958387,
   "deviceId": "dev_uxetyvk_mvtzuqrz",
   "moduleTimestamps": {
     "cnt_hergun": 1795090162791,
@@ -40,9 +40,9 @@
     "prod_cust_lime": 1792969376288,
     "prod_cust_strec_film": 1792969633490,
     "prod_cust_aluminyum_folyo": 1795133952191,
-    "prod_cust_firin_kagidi": 1792969696255,
+    "prod_cust_firin_kagidi": 1795133956474,
     "prod_cust_buzdolabi_poseti": 1792969721707,
-    "prod_cust_kagit_havlu_i_cten_cekmeli": 1792969766033,
+    "prod_cust_kagit_havlu_i_cten_cekmeli": 1795133958374,
     "prod_cust_sikma_torbasi_krema_torbasi": 1792969850680,
     "prod_cust_bulasik_makinesi_konsantre_deterjan": 1795133953607,
     "prod_cust_bulasik_makinesi_konsantre_parlatici": 1795133954607,
@@ -132,7 +132,7 @@
     "prod_pz_9": 1792969253280,
     "prod_hg_12": 1792969281163,
     "prod_hg_31": 1792969299230,
-    "prod": 1795133954607,
+    "prod": 1795133958374,
     "cat": 1794364990251,
     "rst_sali": 1793811787129,
     "cnt_sali": 1794322294574,
@@ -551,7 +551,8 @@
       "unit": "Paket",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazar"
+        "pazar",
+        "pazartesi_sarf"
       ],
       "supplierIds": [
         "sup_sarfci"
@@ -577,7 +578,8 @@
       "unit": "Paket",
       "category": "Sarf Malzemeleri",
       "days": [
-        "pazar"
+        "pazar",
+        "pazartesi_sarf"
       ],
       "supplierIds": [
         "sup_sarfci"
@@ -1670,6 +1672,32 @@
     "cust_bulasik_makinesi_konsantre_parlatici": {
       "name": "Bulaşık Makinesi Konsantre Parlatıcı",
       "unit": "Litre",
+      "category": "Sarf Malzemeleri",
+      "days": [
+        "pazar",
+        "pazartesi_sarf"
+      ],
+      "supplierIds": [
+        "sup_sarfci"
+      ],
+      "supplierId": "sup_sarfci"
+    },
+    "cust_firin_kagidi": {
+      "name": "Fırın Kağıdı",
+      "unit": "Paket",
+      "category": "Sarf Malzemeleri",
+      "days": [
+        "pazar",
+        "pazartesi_sarf"
+      ],
+      "supplierIds": [
+        "sup_sarfci"
+      ],
+      "supplierId": "sup_sarfci"
+    },
+    "cust_kagit_havlu_i_cten_cekmeli": {
+      "name": "Kağıt Havlu (İçten Çekmeli)",
+      "unit": "Paket",
       "category": "Sarf Malzemeleri",
       "days": [
         "pazar",
