@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-22T12:55:16.109Z",
-  "timestamp": 1795352115753,
+  "exportedAt": "2026-11-22T12:55:23.268Z",
+  "timestamp": 1795352122664,
   "deviceId": "dev_9hg13jx_mw7v2jf7",
   "moduleTimestamps": {
     "cnt_hergun": 1795352045779,
@@ -2058,7 +2058,7 @@
         "notes": ""
       },
       "cust_hopla_sivi_santi_bitkisel_krema": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "pz_14": {
