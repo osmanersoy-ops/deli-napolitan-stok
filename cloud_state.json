@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-23T11:34:08.300Z",
-  "timestamp": 1795433425857,
+  "exportedAt": "2026-11-23T11:34:09.942Z",
+  "timestamp": 1795433648432,
   "deviceId": "dev_irn623d_mw0oagq7",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -218,7 +218,7 @@
     "prod_hg_28": 1795134406404,
     "prod_hg_25": 1795134419488,
     "prod_hg_30": 1795134424639,
-    "cnt_pazartesi_sarf": 1795433425856
+    "cnt_pazartesi_sarf": 1795433648432
   },
   "suppliers": [
     {
@@ -3194,6 +3194,40 @@
         "qty": "5",
         "notes": ""
       }
+    },
+    "pazartesi_sarf": {
+      "cust_strec_film": {
+        "qty": 4,
+        "notes": ""
+      },
+      "cust_aluminyum_folyo": {
+        "qty": "1",
+        "notes": ""
+      },
+      "cust_firin_kagidi": {
+        "qty": "1",
+        "notes": ""
+      },
+      "cust_bulasik_makinesi_konsantre_deterjan": {
+        "qty": "3",
+        "notes": ""
+      },
+      "cust_sikma_torbasi_krema_torbasi": {
+        "qty": "0.5",
+        "notes": ""
+      },
+      "cust_bulasik_makinesi_konsantre_parlatici": {
+        "qty": 4,
+        "notes": ""
+      },
+      "cust_kagit_havlu_i_cten_cekmeli": {
+        "qty": 8,
+        "notes": ""
+      },
+      "cust_eldiven": {
+        "qty": 1,
+        "notes": "1 koli M"
+      }
     }
   },
   "staffDishes": [
@@ -3412,7 +3446,8 @@
     "pazar": 1795352462861,
     "metro": 1794144391783,
     "sali": 1794322294574,
-    "persembe": 1795112129354
+    "persembe": 1795112129354,
+    "pazartesi_sarf": 1795433648432
   },
   "lastProductCounts": {
     "pz_1": {
@@ -3686,29 +3721,29 @@
       "updatedAt": 1795352462861
     },
     "cust_bulasik_makinesi_konsantre_deterjan": {
-      "qty": "0",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
+      "qty": "3",
+      "dayId": "pazartesi_sarf",
+      "updatedAt": 1795433648432
     },
     "cust_bulasik_makinesi_konsantre_parlatici": {
-      "qty": "3",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
+      "qty": 4,
+      "dayId": "pazartesi_sarf",
+      "updatedAt": 1795433648432
     },
     "cust_aluminyum_folyo": {
       "qty": "1",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
+      "dayId": "pazartesi_sarf",
+      "updatedAt": 1795433648432
     },
     "cust_firin_kagidi": {
       "qty": "1",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
+      "dayId": "pazartesi_sarf",
+      "updatedAt": 1795433648432
     },
     "cust_strec_film": {
-      "qty": "3",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
+      "qty": 4,
+      "dayId": "pazartesi_sarf",
+      "updatedAt": 1795433648432
     },
     "cust_buzdolabi_poseti": {
       "qty": "0.5",
@@ -3716,14 +3751,14 @@
       "updatedAt": 1795352462861
     },
     "cust_kagit_havlu_i_cten_cekmeli": {
-      "qty": "4",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
+      "qty": 8,
+      "dayId": "pazartesi_sarf",
+      "updatedAt": 1795433648432
     },
     "cust_sikma_torbasi_krema_torbasi": {
       "qty": "0.5",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
+      "dayId": "pazartesi_sarf",
+      "updatedAt": 1795433648432
     },
     "sl_1": {
       "qty": "6",
@@ -3989,6 +4024,11 @@
       "qty": "0",
       "dayId": "metro",
       "updatedAt": 1794144391783
+    },
+    "cust_eldiven": {
+      "qty": 1,
+      "dayId": "pazartesi_sarf",
+      "updatedAt": 1795433648432
     }
   },
   "recipeTags": {
