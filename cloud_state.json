@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-23T11:23:23.673Z",
-  "timestamp": 1795433003669,
+  "exportedAt": "2026-11-23T11:23:29.905Z",
+  "timestamp": 1795433009301,
   "deviceId": "dev_irn623d_mw0oagq7",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -1952,19 +1952,19 @@
         "notes": ""
       },
       "hg_20": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "hg_19": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "hg_22": {
-        "qty": 1,
+        "qty": "1",
         "notes": ""
       },
       "hg_23": {
-        "qty": 2,
+        "qty": "2",
         "notes": ""
       },
       "hg_24": {
@@ -2004,7 +2004,7 @@
         "notes": ""
       },
       "cust_izgaralanmis_kabak": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "cust_patates": {
@@ -2597,19 +2597,19 @@
         "notes": ""
       },
       "hg_20": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "hg_19": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "hg_22": {
-        "qty": 1,
+        "qty": "1",
         "notes": ""
       },
       "hg_23": {
-        "qty": 2,
+        "qty": "2",
         "notes": ""
       },
       "hg_24": {
@@ -2649,7 +2649,7 @@
         "notes": ""
       },
       "cust_izgaralanmis_kabak": {
-        "qty": 0,
+        "qty": "0",
         "notes": ""
       },
       "cust_patates": {
@@ -3517,22 +3517,22 @@
       "updatedAt": 1795433003669
     },
     "hg_19": {
-      "qty": 0,
+      "qty": "0",
       "dayId": "hergun",
       "updatedAt": 1795433003669
     },
     "hg_20": {
-      "qty": 0.5,
+      "qty": "0.5",
       "dayId": "hergun",
       "updatedAt": 1795433003669
     },
     "hg_22": {
-      "qty": 1,
+      "qty": "1",
       "dayId": "hergun",
       "updatedAt": 1795433003669
     },
     "hg_23": {
-      "qty": 2,
+      "qty": "2",
       "dayId": "hergun",
       "updatedAt": 1795433003669
     },
@@ -3622,7 +3622,7 @@
       "updatedAt": 1795433003669
     },
     "cust_izgaralanmis_kabak": {
-      "qty": 0,
+      "qty": "0",
       "dayId": "hergun",
       "updatedAt": 1795433003669
     },
