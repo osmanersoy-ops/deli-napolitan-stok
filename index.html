@@ -339,24 +339,52 @@
       margin-bottom: 6px;
     }
 
-    .badge-hergun {
+    .badge-hergun, .badge-day-hergun {
       background: #FEF3C7;
       color: #92400E;
+      border: 1px solid #FDE68A;
     }
 
-    .badge-sali {
+    .badge-day-pazartesi {
+      background: #ECFEFF;
+      color: #0E7490;
+      border: 1px solid #A5F3FC;
+    }
+
+    .badge-sali, .badge-day-sali {
       background: #EFF6FF;
       color: #1E40AF;
+      border: 1px solid #BFDBFE;
     }
 
-    .badge-persembe {
+    .badge-day-carsamba {
+      background: #DCFCE7;
+      color: #15803D;
+      border: 1px solid #86EFAC;
+    }
+
+    .badge-persembe, .badge-day-persembe {
       background: #F3E8FF;
       color: #6B21A8;
+      border: 1px solid #E9D5FF;
     }
 
-    .badge-pazar {
+    .badge-day-cuma {
+      background: #FFEDD5;
+      color: #C2410C;
+      border: 1px solid #FED7AA;
+    }
+
+    .badge-day-cumartesi {
+      background: #E0E7FF;
+      color: #3730A3;
+      border: 1px solid #C7D2FE;
+    }
+
+    .badge-pazar, .badge-day-pazar {
       background: #FEE2E2;
       color: #991B1B;
+      border: 1px solid #FCA5A5;
     }
 
     .badge-metro {
@@ -4679,7 +4707,7 @@
         <div class="count-card-group">
           <article class="count-card" onclick="openCountView('hergun')">
             <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
-              <span class="card-badge badge-hergun" style="margin-bottom:0;">Her Gün</span>
+              <span class="card-badge badge-day-hergun" style="margin-bottom:0;">HER GÜN</span>
               <h3 class="card-title" style="margin:0; font-size:1.05rem;">Hergün Sayımı</h3>
             </div>
             <div class="card-footer">
@@ -4709,7 +4737,7 @@
         <div class="count-card-group">
           <article class="count-card" onclick="openCountView('sali')">
             <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
-              <span class="card-badge badge-sali" style="margin-bottom:0;">Salı Günü</span>
+              <span class="card-badge badge-day-sali" style="margin-bottom:0;">SALI</span>
               <h3 class="card-title" style="margin:0; font-size:1.05rem;">Salı Sayımı</h3>
             </div>
             <div class="card-footer">
@@ -4739,7 +4767,7 @@
         <div class="count-card-group">
           <article class="count-card" onclick="openCountView('persembe')">
             <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
-              <span class="card-badge badge-persembe" style="margin-bottom:0;">Perşembe Günü</span>
+              <span class="card-badge badge-day-persembe" style="margin-bottom:0;">PERŞEMBE</span>
               <h3 class="card-title" style="margin:0; font-size:1.05rem;">Perşembe Sayımı</h3>
             </div>
             <div class="card-footer">
@@ -4769,7 +4797,7 @@
         <div class="count-card-group">
           <article class="count-card" onclick="openCountView('pazar')">
             <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
-              <span class="card-badge badge-pazar" style="margin-bottom:0;">Pazar Akşamı</span>
+              <span class="card-badge badge-day-pazar" style="margin-bottom:0;">PAZAR</span>
               <h3 class="card-title" style="margin:0; font-size:1.05rem;">Pazar Sayımı</h3>
             </div>
             <div class="card-footer">
@@ -8264,28 +8292,41 @@
           </div>
         </div>
 
-        <!-- Sayım Listesi İsmi Alanı -->
+        <!-- Sayım Listesi İsmi ve Sayım Günü (Etiket) Seçimi Alanı -->
         <div style="background:#F8FAFC; border:1.5px solid #CBD5E1; border-radius:14px; padding:14px; margin-bottom:16px;">
-          <label for="clEditorListNameInput" style="display:block; font-size:0.84rem; font-weight:800; color:#0F172A; margin-bottom:6px;">
-            Sayım Listesi İsmi *
-          </label>
-          <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-            <input
-              type="text"
-              id="clEditorListNameInput"
-              class="form-input"
-              placeholder="Örn: Cuma Sayımı, Bar & İçecek Sayımı..."
-              style="flex:1; min-width:220px; height:44px; font-size:0.98rem; font-weight:800; background:#FFFFFF;"
-            >
-            <button
-              type="button"
-              id="clEditorSaveBtn"
-              onclick="handleSaveCountListEditor()"
-              style="height:44px; padding:0 22px; border-radius:10px; border:none; background:#16A34A; color:#FFFFFF; font-size:0.9rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:6px; box-shadow:0 3px 10px rgba(22, 163, 74, 0.25); white-space:nowrap;"
-            >
-              <span>✓</span>
-              <span id="clEditorSaveBtnText">Listeyi Kaydet</span>
-            </button>
+          <div style="margin-bottom:14px;">
+            <label for="clEditorListNameInput" style="display:block; font-size:0.84rem; font-weight:800; color:#0F172A; margin-bottom:6px;">
+              1. Sayım Listesi İsmi *
+            </label>
+            <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+              <input
+                type="text"
+                id="clEditorListNameInput"
+                class="form-input"
+                placeholder="Örn: Çarşamba Listesi, Cuma Sayımı..."
+                oninput="handleCountListNameInputAutoDay(this.value)"
+                style="flex:1; min-width:220px; height:44px; font-size:0.98rem; font-weight:800; background:#FFFFFF;"
+              >
+              <button
+                type="button"
+                id="clEditorSaveBtn"
+                onclick="handleSaveCountListEditor()"
+                style="height:44px; padding:0 22px; border-radius:10px; border:none; background:#16A34A; color:#FFFFFF; font-size:0.9rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:6px; box-shadow:0 3px 10px rgba(22, 163, 74, 0.25); white-space:nowrap;"
+              >
+                <span>✓</span>
+                <span id="clEditorSaveBtnText">Listeyi Kaydet</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Sayım Günü Seç (Renkli CAPS LOCK Etiket) -->
+          <div>
+            <label style="display:block; font-size:0.84rem; font-weight:800; color:#0F172A; margin-bottom:8px;">
+              2. Sayım Günü Seç (Renkli Etiket) *
+            </label>
+            <div id="clEditorDayBadgePills" style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+              <!-- JS ile haftanın günleri (HER GÜN, PAZARTESİ, SALI, ÇARŞAMBA, PERŞEMBE, CUMA, CUMARTESİ, PAZAR) doldurulur -->
+            </div>
           </div>
         </div>
 
@@ -12825,7 +12866,7 @@
           wsh: data.weeklyShifts || {},
           delShe: (data.deletedShiftEmployeeIds || []).slice().sort(),
           sht: data.shiftTimestamp || 0,
-          cl: (data.countLists || []).map(l => [l.id, l.title, l.badge || '', l.subtitle || '', l.desc || '', l.order || 0]),
+          cl: (data.countLists || []).map(l => [l.id, l.title, l.dayKey || '', l.badge || '', l.badgeClass || '', l.subtitle || '', l.desc || '', l.order || 0]),
           delCl: (data.deletedCountListIds || []).slice().sort(),
           mnt: (data.maintenanceRequests || []).map(m => [m.id, m.type, m.urgency, m.desc, m.status, m.createdAt || 0, m.updatedAt || 0]),
           delMnt: (data.deletedMaintenanceRequestIds || []).slice().sort(),
@@ -20687,12 +20728,55 @@
     /* =========================================================
        12. SAYIM DÜZENLEME (MEVCUT SAYIM LİSTELERİNİ DÜZENLEME & YENİ LİSTE OLUŞTURMA)
        ========================================================= */
+    const COUNT_DAY_BADGE_OPTIONS = [
+      { key: 'hergun',    label: 'HER GÜN',   badgeClass: 'badge-day-hergun',    bg: '#FEF3C7', color: '#92400E', border: '#F59E0B' },
+      { key: 'pazartesi', label: 'PAZARTESİ', badgeClass: 'badge-day-pazartesi', bg: '#ECFEFF', color: '#0E7490', border: '#06B6D4' },
+      { key: 'sali',      label: 'SALI',      badgeClass: 'badge-day-sali',      bg: '#EFF6FF', color: '#1E40AF', border: '#3B82F6' },
+      { key: 'carsamba',  label: 'ÇARŞAMBA',  badgeClass: 'badge-day-carsamba',  bg: '#DCFCE7', color: '#15803D', border: '#22C55E' },
+      { key: 'persembe',  label: 'PERŞEMBE',  badgeClass: 'badge-day-persembe',  bg: '#F3E8FF', color: '#6B21A8', border: '#A855F7' },
+      { key: 'cuma',      label: 'CUMA',      badgeClass: 'badge-day-cuma',      bg: '#FFEDD5', color: '#C2410C', border: '#F97316' },
+      { key: 'cumartesi', label: 'CUMARTESİ', badgeClass: 'badge-day-cumartesi', bg: '#E0E7FF', color: '#3730A3', border: '#6366F1' },
+      { key: 'pazar',     label: 'PAZAR',     badgeClass: 'badge-day-pazar',     bg: '#FEE2E2', color: '#991B1B', border: '#EF4444' }
+    ];
+
+    function detectDayBadgeKeyFromText(str) {
+      if (!str) return null;
+      const s = String(str).toLocaleLowerCase('tr-TR').trim();
+      if (s.includes('çarşamba') || s.includes('carsamba')) return 'carsamba';
+      if (s.includes('pazartesi')) return 'pazartesi';
+      if (s.includes('cumartesi')) return 'cumartesi';
+      if (s.includes('perşembe') || s.includes('persembe')) return 'persembe';
+      if (s.includes('cuma')) return 'cuma';
+      if (s.includes('salı') || s.includes('sali')) return 'sali';
+      if (s.includes('pazar')) return 'pazar';
+      if (s.includes('her gün') || s.includes('hergün') || s.includes('hergun') || s.includes('günlük')) return 'hergun';
+      return null;
+    }
+
+    function resolveCountListDayBadgeMeta(list) {
+      if (!list) return COUNT_DAY_BADGE_OPTIONS[0];
+      // 1. Eğer dayKey açıkça seçilmişse onu kullan; ancak eski kayıtlı listede dayKey yoksa önce liste ismine (örn. "Çarşamba Listesi") bak!
+      let key = list.dayKey || null;
+      const titleDetected = detectDayBadgeKeyFromText(list.title);
+      const badgeDetected = detectDayBadgeKeyFromText(list.badge);
+
+      if (!key) {
+        key = titleDetected || badgeDetected || detectDayBadgeKeyFromText(list.id) || 'hergun';
+      } else if (!list.dayKeyExplicit && titleDetected && titleDetected !== key) {
+        // Kullanıcı daha önce ismi "Çarşamba Listesi" yapıp kaydettiyse otomatik ÇARŞAMBA etiketine geçir
+        key = titleDetected;
+      }
+
+      return COUNT_DAY_BADGE_OPTIONS.find(o => o.key === key) || COUNT_DAY_BADGE_OPTIONS[0];
+    }
+
     const DEFAULT_COUNT_LISTS = [
       {
         id: 'hergun',
         title: 'Hergün Sayımı',
-        badge: 'Her Gün',
-        badgeClass: 'badge-hergun',
+        dayKey: 'hergun',
+        badge: 'HER GÜN',
+        badgeClass: 'badge-day-hergun',
         subtitle: 'Manav & Mise en Place',
         desc: 'Manav tazelik grubu ve mutfak Mise en Place hazırlık ürünleri sayımı.',
         order: 1,
@@ -20701,8 +20785,9 @@
       {
         id: 'sali',
         title: 'Salı Sayımı',
-        badge: 'Salı Günü',
-        badgeClass: 'badge-sali',
+        dayKey: 'sali',
+        badge: 'SALI',
+        badgeClass: 'badge-day-sali',
         subtitle: 'Ana Stok (Un, Peynir, Sos & Kuru Gıda)',
         desc: 'Ana stok deposu, peynirler, un, soslar, şarküteri ve konserve ürünleri.',
         order: 2,
@@ -20711,8 +20796,9 @@
       {
         id: 'persembe',
         title: 'Perşembe Sayımı',
-        badge: 'Perşembe Günü',
-        badgeClass: 'badge-persembe',
+        dayKey: 'persembe',
+        badge: 'PERŞEMBE',
+        badgeClass: 'badge-day-persembe',
         subtitle: 'Ana Stok & Çarşı-Diğer İhtiyaçlar',
         desc: 'Çarşı tedariği, zeytinler, turşular, baharatlar, yumurta ve yağ grubu.',
         order: 3,
@@ -20721,8 +20807,9 @@
       {
         id: 'pazar',
         title: 'Pazar Sayımı',
-        badge: 'Pazar Akşamı',
-        badgeClass: 'badge-pazar',
+        dayKey: 'pazar',
+        badge: 'PAZAR',
+        badgeClass: 'badge-day-pazar',
         subtitle: 'Et Şarküteri & Akçalar Şarküteri',
         desc: 'Et Şarküteri, Akçalar Şarküteri yerel peynirleri ve haftasonu kapanış stoku.',
         order: 4,
@@ -20734,6 +20821,8 @@
     let deletedCountListIds = [];
     let selectedManageCountListId = 'hergun';
     let clEditorIsNewMode = false;
+    let clEditorSelectedDayKey = 'hergun';
+    let clEditorUserManuallyPickedDay = false;
     let clEditorTempProductIds = new Set();
     let clEditorActiveCategoryFilter = 'ALL';
 
@@ -20755,18 +20844,14 @@
             map[item.id] = { ...item };
           }
         });
-        const oldAutoBadges = ['GÜNLÜK RUTİN', 'HAFTALIK ANA STOK', 'HAFTALIK DESTEK', 'HAFTA SONU KAPANIŞ'];
         if (Array.isArray(parsed)) {
           parsed.forEach(item => {
             if (item && item.id && !deletedCountListIds.includes(item.id)) {
-              const def = DEFAULT_COUNT_LISTS.find(d => d.id === item.id);
               const merged = { ...(map[item.id] || {}), ...item };
-              if (def && (!merged.badge || oldAutoBadges.includes(merged.badge))) {
-                merged.badge = def.badge;
-              }
-              if (def && !merged.badgeClass) {
-                merged.badgeClass = def.badgeClass;
-              }
+              const meta = resolveCountListDayBadgeMeta(merged);
+              merged.dayKey = meta.key;
+              merged.badge = meta.label;
+              merged.badgeClass = meta.badgeClass;
               map[item.id] = merged;
             }
           });
@@ -20809,11 +20894,15 @@
     function syncDayConfigFromCountLists() {
       (countLists || []).forEach(l => {
         if (!l || !l.id) return;
+        const meta = resolveCountListDayBadgeMeta(l);
+        l.dayKey = meta.key;
+        l.badge = meta.label;
+        l.badgeClass = meta.badgeClass;
         DAY_CONFIG[l.id] = {
           id: l.id,
           title: l.title || l.id,
           subtitle: l.subtitle || l.desc || 'Stok Sayım Listesi',
-          badge: l.badge || 'Sayım Listesi'
+          badge: meta.label
         };
       });
     }
@@ -20823,21 +20912,19 @@
       if (!grid) return;
 
       const lists = getActiveCountLists();
-      const badgeClasses = ['badge-hergun', 'badge-sali', 'badge-persembe', 'badge-pazar'];
       let html = '';
 
-      lists.forEach((list, idx) => {
+      lists.forEach((list) => {
         const total = getProductsForDay(list.id).length;
         const lastDate = getLastCountDateForDay(list.id);
         const lastBtnText = lastDate ? `Son Sayım (${formatShortDayMonth(lastDate)})` : 'Son Sayım (Yapılmadı)';
-        const badgeCls = list.badgeClass || badgeClasses[idx % badgeClasses.length] || 'badge-sali';
-        const badgeText = list.badge || list.title;
+        const meta = resolveCountListDayBadgeMeta(list);
 
         html += `
           <div class="count-card-group">
             <article class="count-card" onclick="openCountView('${escapeHtml(list.id)}')">
               <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
-                <span class="card-badge ${escapeHtml(badgeCls)}" style="margin-bottom:0;">${escapeHtml(badgeText)}</span>
+                <span class="card-badge ${escapeHtml(meta.badgeClass)}" style="margin-bottom:0; text-transform:uppercase;">${escapeHtml(meta.label)}</span>
                 <h3 class="card-title" style="margin:0; font-size:1.05rem;">${escapeHtml(list.title)}</h3>
               </div>
               <div class="card-footer">
@@ -20899,8 +20986,44 @@
       }
     }
 
+    function renderCountListEditorDayBadgePills() {
+      const container = document.getElementById('clEditorDayBadgePills');
+      if (!container) return;
+
+      container.innerHTML = COUNT_DAY_BADGE_OPTIONS.map(opt => {
+        const isSelected = (opt.key === clEditorSelectedDayKey);
+        return `
+          <button
+            type="button"
+            onclick="selectCountListEditorDayBadge('${escapeHtml(opt.key)}')"
+            style="cursor:pointer; padding:7px 13px; border-radius:999px; font-size:0.78rem; font-weight:900; letter-spacing:0.6px; text-transform:uppercase; border:2px solid ${isSelected ? opt.border : '#CBD5E1'}; background:${opt.bg}; color:${opt.color}; box-shadow:${isSelected ? '0 0 0 3px rgba(37, 99, 235, 0.22)' : 'none'}; transform:${isSelected ? 'scale(1.04)' : 'none'}; display:inline-flex; align-items:center; gap:5px; transition:all 0.14s ease;"
+          >
+            <span>${isSelected ? '✓ ' : ''}${escapeHtml(opt.label)}</span>
+          </button>
+        `;
+      }).join('');
+    }
+
+    function selectCountListEditorDayBadge(dayKey) {
+      const found = COUNT_DAY_BADGE_OPTIONS.find(o => o.key === dayKey);
+      if (!found) return;
+      clEditorSelectedDayKey = found.key;
+      clEditorUserManuallyPickedDay = true;
+      renderCountListEditorDayBadgePills();
+    }
+
+    function handleCountListNameInputAutoDay(val) {
+      if (clEditorUserManuallyPickedDay) return;
+      const detected = detectDayBadgeKeyFromText(val);
+      if (detected && detected !== clEditorSelectedDayKey) {
+        clEditorSelectedDayKey = detected;
+        renderCountListEditorDayBadgePills();
+      }
+    }
+
     function loadEditorStateForSelectedList() {
       clEditorIsNewMode = false;
+      clEditorUserManuallyPickedDay = false;
       const lists = getActiveCountLists();
       const activeList = lists.find(l => l.id === selectedManageCountListId);
       if (!activeList) {
@@ -20910,6 +21033,9 @@
       }
       const assignedIds = getProductsForDay(selectedManageCountListId).map(p => p.id);
       clEditorTempProductIds = new Set(assignedIds);
+
+      const meta = resolveCountListDayBadgeMeta(activeList);
+      clEditorSelectedDayKey = meta.key;
 
       const nameInp = document.getElementById('clEditorListNameInput');
       if (nameInp) {
@@ -20970,6 +21096,8 @@
     function startCreateNewCountList() {
       selectedManageCountListId = null;
       clEditorIsNewMode = true;
+      clEditorSelectedDayKey = 'pazartesi';
+      clEditorUserManuallyPickedDay = false;
       clEditorTempProductIds = new Set();
       clEditorActiveCategoryFilter = 'ALL';
 
@@ -21004,15 +21132,19 @@
         grid.innerHTML = lists.map(l => {
           const isEditingThis = (!clEditorIsNewMode && l.id === selectedManageCountListId);
           const prodCount = getProductsForDay(l.id).length;
+          const meta = resolveCountListDayBadgeMeta(l);
           return `
             <div
               style="border-radius: 14px; padding: 14px 16px; border: 2px solid ${isEditingThis ? '#2563EB' : 'var(--border)'}; background: ${isEditingThis ? '#EFF6FF' : '#FFFFFF'}; box-shadow: ${isEditingThis ? '0 6px 16px rgba(37, 99, 235, 0.14)' : 'var(--shadow-sm)'}; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: all 0.15s ease;"
             >
               <div style="min-width: 0; flex: 1;">
-                <div style="font-family: var(--font-serif); font-size: 1.05rem; font-weight: 800; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                  ${escapeHtml(l.title)}
+                <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-bottom:4px;">
+                  <span class="card-badge ${escapeHtml(meta.badgeClass)}" style="margin-bottom:0; text-transform:uppercase;">${escapeHtml(meta.label)}</span>
+                  <div style="font-family: var(--font-serif); font-size: 1.05rem; font-weight: 800; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                    ${escapeHtml(l.title)}
+                  </div>
                 </div>
-                <div style="font-size: 0.78rem; font-weight: 700; color: ${isEditingThis ? '#1D4ED8' : 'var(--text-muted)'}; margin-top: 3px;">
+                <div style="font-size: 0.78rem; font-weight: 700; color: ${isEditingThis ? '#1D4ED8' : 'var(--text-muted)'};">
                   📦 ${prodCount} Ürün
                 </div>
               </div>
@@ -21083,6 +21215,7 @@
         }
       }
 
+      renderCountListEditorDayBadgePills();
       renderCountListProductSelector();
     }
 
@@ -21216,6 +21349,10 @@
         return;
       }
 
+      const dayMeta = COUNT_DAY_BADGE_OPTIONS.find(o => o.key === clEditorSelectedDayKey)
+        || COUNT_DAY_BADGE_OPTIONS.find(o => o.key === detectDayBadgeKeyFromText(title))
+        || COUNT_DAY_BADGE_OPTIONS[0];
+
       const lists = getActiveCountLists();
 
       if (clEditorIsNewMode) {
@@ -21239,8 +21376,10 @@
         const newList = {
           id: newId,
           title: title,
-          badge: title,
-          badgeClass: 'badge-sali',
+          dayKey: dayMeta.key,
+          dayKeyExplicit: true,
+          badge: dayMeta.label,
+          badgeClass: dayMeta.badgeClass,
           subtitle: 'Stok Sayım Listesi',
           desc: `${title} kapsamında stok takibi yapılan ürünler.`,
           order: maxOrder + 1,
@@ -21266,7 +21405,7 @@
         updateDashboardCounts();
         renderManageProductsList();
         renderCountListsManageView();
-        showToast(`✓ "${title}" sayım listesi oluşturuldu (${selectedSize} ürün)!`);
+        showToast(`✓ "${title}" (${dayMeta.label}) sayım listesi oluşturuldu (${selectedSize} ürün)!`);
       } else {
         const targetId = selectedManageCountListId;
         const duplicate = lists.find(l => l.id !== targetId && l.title.trim().toLowerCase() === title.toLowerCase());
@@ -21278,9 +21417,10 @@
         const idx = countLists.findIndex(l => l && l.id === targetId);
         if (idx !== -1) {
           countLists[idx].title = title;
-          if (!countLists[idx].isBuiltin) {
-            countLists[idx].badge = title;
-          }
+          countLists[idx].dayKey = dayMeta.key;
+          countLists[idx].dayKeyExplicit = true;
+          countLists[idx].badge = dayMeta.label;
+          countLists[idx].badgeClass = dayMeta.badgeClass;
         }
 
         // Seçili ürün listesini senkronize et
@@ -21302,7 +21442,7 @@
         updateDashboardCounts();
         renderManageProductsList();
         renderCountListsManageView();
-        showToast(`✓ "${title}" ismi ve ürünleri kaydedildi!`);
+        showToast(`✓ "${title}" (${dayMeta.label}) kaydedildi!`);
       }
     }
 
