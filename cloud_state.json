@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-23T08:20:03.616Z",
-  "timestamp": 1795422001189,
+  "exportedAt": "2026-11-23T08:20:08.934Z",
+  "timestamp": 1795422008727,
   "deviceId": "dev_99uzb4t_mvpnpi3a",
   "moduleTimestamps": {
     "cnt_hergun": 1795352045779,
@@ -160,7 +160,7 @@
     "shf_emp_selim_pazartesi": 1795422001175,
     "shf_emp_selim_sali": 1793904518689,
     "shf_emp_selim_carsamba": 1793904518689,
-    "shf_emp_selim_persembe": 1794179552415,
+    "shf_emp_selim_persembe": 1795422008719,
     "shf_emp_selim_cuma": 1793904518689,
     "shf_emp_selim_cumartesi": 1793904518689,
     "shf_emp_selim_pazar": 1793904518689,
@@ -199,7 +199,7 @@
     "shf_emp_ozge_cuma": 1793877135627,
     "shf_emp_ozge_cumartesi": 1793877135627,
     "shf_emp_ozge_pazar": 1793877135627,
-    "shf": 1795422001175,
+    "shf": 1795422008719,
     "cnt_metro": 1794144391783,
     "prod_cust_i_likli_kemik_stok_suyu": 1794359199028,
     "prod_cust_patates": 1794358779227,
@@ -4898,7 +4898,7 @@
         "end": "20:00"
       },
       "persembe": {
-        "isOff": false,
+        "isOff": true,
         "start": "15:30",
         "end": "22:30"
       },
@@ -5105,7 +5105,7 @@
     }
   },
   "deletedShiftEmployeeIds": [],
-  "shiftTimestamp": 1795422001175,
+  "shiftTimestamp": 1795422008719,
   "countLists": [
     {
       "id": "hergun",
