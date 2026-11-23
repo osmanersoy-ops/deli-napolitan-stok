@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-23T11:34:17.769Z",
-  "timestamp": 1795433652601,
+  "exportedAt": "2026-11-23T11:34:20.172Z",
+  "timestamp": 1795433660080,
   "deviceId": "dev_irn623d_mw0oagq7",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -2515,7 +2515,7 @@
     },
     "pazartesi_sarf": {
       "cust_strec_film": {
-        "qty": 4,
+        "qty": "4",
         "notes": ""
       },
       "cust_aluminyum_folyo": {
@@ -2535,15 +2535,15 @@
         "notes": ""
       },
       "cust_bulasik_makinesi_konsantre_parlatici": {
-        "qty": 4,
+        "qty": "4",
         "notes": ""
       },
       "cust_kagit_havlu_i_cten_cekmeli": {
-        "qty": 8,
+        "qty": "8",
         "notes": ""
       },
       "cust_eldiven": {
-        "qty": 1,
+        "qty": "1",
         "notes": "1 koli M"
       }
     }
@@ -3197,7 +3197,7 @@
     },
     "pazartesi_sarf": {
       "cust_strec_film": {
-        "qty": 4,
+        "qty": "4",
         "notes": ""
       },
       "cust_aluminyum_folyo": {
@@ -3217,15 +3217,15 @@
         "notes": ""
       },
       "cust_bulasik_makinesi_konsantre_parlatici": {
-        "qty": 4,
+        "qty": "4",
         "notes": ""
       },
       "cust_kagit_havlu_i_cten_cekmeli": {
-        "qty": 8,
+        "qty": "8",
         "notes": ""
       },
       "cust_eldiven": {
-        "qty": 1,
+        "qty": "1",
         "notes": "1 koli M"
       }
     }
