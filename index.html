@@ -4657,6 +4657,203 @@
         font-size: 2.9rem;
       }
     }
+
+    /* =========================================================
+       AÇILIŞ & KAPANIŞ RUTİNİ (OKUMA VE ZENGİN METİN EDİTÖRÜ)
+       ========================================================= */
+    .routine-doc-card {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 18px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .routine-doc-content {
+      font-size: 1rem;
+      line-height: 1.68;
+      color: #1E293B;
+      word-break: break-word;
+    }
+
+    .routine-doc-content h1,
+    .routine-doc-content h2 {
+      font-size: 1.22rem;
+      font-weight: 900;
+      color: #0F172A;
+      margin: 16px 0 8px 0;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #E2E8F0;
+      line-height: 1.35;
+    }
+
+    .routine-doc-content h1:first-child,
+    .routine-doc-content h2:first-child,
+    .routine-doc-content h3:first-child {
+      margin-top: 0;
+    }
+
+    .routine-doc-content h3 {
+      font-size: 1.06rem;
+      font-weight: 800;
+      color: #1E293B;
+      margin: 14px 0 6px 0;
+      line-height: 1.4;
+    }
+
+    .routine-doc-content p,
+    .routine-doc-content div {
+      margin-bottom: 8px;
+    }
+
+    .routine-doc-content ul,
+    .routine-doc-content ol {
+      margin: 8px 0 12px 22px;
+      padding: 0;
+    }
+
+    .routine-doc-content li {
+      margin-bottom: 6px;
+      padding-left: 4px;
+    }
+
+    .routine-doc-content hr {
+      border: none;
+      border-top: 2px dashed #CBD5E1;
+      margin: 16px 0;
+    }
+
+    .routine-callout {
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin: 10px 0;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .routine-callout-red {
+      background: #FEF2F2;
+      border-left: 5px solid #DC2626;
+      color: #991B1B;
+    }
+
+    .routine-callout-yellow {
+      background: #FFFBEB;
+      border-left: 5px solid #F59E0B;
+      color: #92400E;
+    }
+
+    .routine-callout-green {
+      background: #F0FDF4;
+      border-left: 5px solid #16A34A;
+      color: #166534;
+    }
+
+    .routine-callout-blue {
+      background: #EFF6FF;
+      border-left: 5px solid #2563EB;
+      color: #1E40AF;
+      font-weight: 800;
+    }
+
+    .routine-check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: #F8FAFC;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 11px;
+      padding: 10px 12px;
+      margin: 7px 0;
+      font-weight: 700;
+      color: #0F172A;
+    }
+
+    .routine-editor-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      background: #F8FAFC;
+      border: 1.5px solid #CBD5E1;
+      border-bottom: none;
+      border-radius: 14px 14px 0 0;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .routine-tool-btn {
+      min-height: 38px;
+      padding: 6px 11px;
+      border-radius: 9px;
+      border: 1.5px solid #CBD5E1;
+      background: #FFFFFF;
+      color: #0F172A;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: all 0.12s ease;
+    }
+
+    .routine-tool-btn:active,
+    .routine-tool-btn:hover {
+      background: #EFF6FF;
+      border-color: #3B82F6;
+      color: #1D4ED8;
+    }
+
+    .routine-editable-area {
+      width: 100%;
+      min-height: 300px;
+      max-height: 62vh;
+      overflow-y: auto;
+      border: 2px solid #94A3B8;
+      border-radius: 0 0 14px 14px;
+      padding: 16px;
+      background: #FFFFFF;
+      font-size: 16px; /* iOS Safari otomatik yakınlaştırmayı engeller */
+      line-height: 1.65;
+      color: #0F172A;
+      outline: none;
+      box-sizing: border-box;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .routine-editable-area:focus {
+      border-color: #2563EB;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+    }
+
+    .routine-editable-area:empty:before {
+      content: attr(data-placeholder);
+      color: #94A3B8;
+      font-weight: 600;
+      pointer-events: none;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .routine-doc-card {
+        padding: 16px 14px;
+      }
+      .routine-tool-btn {
+        min-height: 36px;
+        padding: 5px 9px;
+        font-size: 0.78rem;
+      }
+      .routine-editable-area {
+        min-height: 260px;
+        padding: 14px 12px;
+      }
+    }
   </style>
 </head>
 <body class="view-dashboard">
@@ -4932,19 +5129,25 @@
           <span class="badge-preparing">⏳ Hazırlanıyor</span>
         </div>
 
-        <!-- 8. Açılış Rutini Butonu (Hazırlanıyor) -->
-        <div class="btn-compact-count disabled" onclick="showToast('Açılış Rutini dökümanı hazırlanıyor, çok yakında aktif olacaktır!')" title="Açılış Rutini dökümanı hazırlanıyor">
+        <!-- 8. Açılış Rutini Butonu -->
+        <button type="button" class="btn-compact-count" onclick="openRoutineView('acilis')" title="Restoran ve Mutfak Açılış Rutini">
           <span class="compact-count-icon">🌅</span>
           <span class="compact-count-title">Açılış Rutini</span>
-          <span class="badge-preparing">⏳ Hazırlanıyor</span>
-        </div>
+          <span class="compact-count-badge" id="routineDashboardBadge-acilis" style="background:#FEF3C7; color:#92400E; border-color:#FDE68A;">Rutin</span>
+          <svg class="compact-count-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
 
-        <!-- 9. Kapanış Rutini Butonu (Hazırlanıyor) -->
-        <div class="btn-compact-count disabled" onclick="showToast('Kapanış Rutini dökümanı hazırlanıyor, çok yakında aktif olacaktır!')" title="Kapanış Rutini dökümanı hazırlanıyor">
+        <!-- 9. Kapanış Rutini Butonu -->
+        <button type="button" class="btn-compact-count" onclick="openRoutineView('kapanis')" title="Restoran ve Mutfak Kapanış Rutini">
           <span class="compact-count-icon">🌙</span>
           <span class="compact-count-title">Kapanış Rutini</span>
-          <span class="badge-preparing">⏳ Hazırlanıyor</span>
-        </div>
+          <span class="compact-count-badge" id="routineDashboardBadge-kapanis" style="background:#E0E7FF; color:#3730A3; border-color:#C7D2FE;">Rutin</span>
+          <svg class="compact-count-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
 
       </div>
 
@@ -8809,6 +9012,284 @@
       </div>
     </main>
 
+    <!-- ============================================== -->
+    <!-- VIEW 14: AÇILIŞ RUTİNİ (OPENING ROUTINE)       -->
+    <!-- ============================================== -->
+    <main id="openingRoutineView" style="display: none;">
+      <!-- Üst Başlık Kartı -->
+      <section class="count-header-card" style="margin-bottom: 12px;">
+        <div class="count-header-brand-line">
+          <div class="count-header-logo" onclick="returnToDashboard()" style="cursor:pointer;" title="Ana Sayfaya Dön">
+            <span class="brand-logo-card" style="padding: 4px 10px; border-radius: 8px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+              <img class="app-header-logo-img" alt="Deli Napolitan" style="height: 22px; width: auto; object-fit: contain; vertical-align: middle; display: inline-block;">
+            </span>
+          </div>
+          <div style="font-size:0.75rem; color:#A8A29E; font-weight:600;">Döküman Merkezi • Açılış Rutini</div>
+        </div>
+
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+          <div>
+            <h2 class="count-header-main-title" style="margin-bottom:4px;">🌅 Açılış Rutini</h2>
+            <p style="color:#D6D3D1; font-size:0.86rem; margin:0;">
+              Mutfak ve restoran günlük açılış kontrol adımları ve hazırlık standartları.
+            </p>
+          </div>
+          <span id="routineLastUpdated-acilis" style="background:rgba(251, 191, 36, 0.18); border:1px solid rgba(251, 191, 36, 0.45); color:#FDE68A; padding:5px 11px; border-radius:999px; font-size:0.74rem; font-weight:800;">
+            📋 Açılış Rehberi
+          </span>
+        </div>
+      </section>
+
+      <!-- Navigasyon Çubuğu -->
+      <nav class="count-nav-bar" style="margin-bottom: 14px; display: flex; align-items: center; justify-content: flex-start;">
+        <button type="button" class="btn-back-dashboard" onclick="returnToDashboard()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+          Ana Menüye Dön
+        </button>
+      </nav>
+
+      <!-- 1. BÖLÜM: OKUMA EKRANI (METİN EKLENDİĞİNDE ÜSTTE GÖRÜNÜR) -->
+      <section id="routineReadSection-acilis" class="routine-doc-card">
+        <div id="routineReadBody-acilis" class="routine-doc-content">
+          <!-- JS ile doldurulur -->
+        </div>
+      </section>
+
+      <!-- 2. BÖLÜM: YÖNETİCİ ZENGİN METİN EDİTÖRÜ (BUTONA BASINCA AÇILIR) -->
+      <section id="routineEditorSection-acilis" class="routine-doc-card" style="display:none; border:2px solid #2563EB;">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; padding-bottom:12px; border-bottom:1.5px solid #E2E8F0; margin-bottom:14px;">
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <span style="background:#DBEAFE; color:#1D4ED8; font-size:0.74rem; font-weight:900; padding:4px 10px; border-radius:999px;">
+              YÖNETİCİ DÜZENLEME MODU
+            </span>
+            <h3 style="font-size:1.05rem; font-weight:900; color:var(--text-main); margin:0;">
+              🌅 Açılış Rutini Oluştur / Düzenle
+            </h3>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <button
+              type="button"
+              onclick="closeRoutineEditor('acilis')"
+              style="height:36px; padding:0 12px; border-radius:9px; border:1.5px solid #CBD5E1; background:#F8FAFC; color:#334155; font-size:0.8rem; font-weight:800; cursor:pointer;"
+            >✕ Kapat</button>
+            <button
+              type="button"
+              onclick="saveRoutineDoc('acilis')"
+              style="height:36px; padding:0 16px; border-radius:9px; border:none; background:#16A34A; color:#FFFFFF; font-size:0.84rem; font-weight:800; cursor:pointer;"
+            >✓ Kaydet</button>
+          </div>
+        </div>
+
+        <!-- Mobil Uyumlu Stil & Biçimlendirme Araç Çubuğu -->
+        <div class="routine-editor-toolbar">
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('acilis', 'formatBlock', 'H2')" title="Büyük Başlık">📌 Başlık</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('acilis', 'formatBlock', 'H3')" title="Alt Başlık">🔹 Alt Başlık</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('acilis', 'formatBlock', 'P')" title="Normal Metin">¶ Normal</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('acilis', 'bold')" title="Kalın Yazı"><b>B</b> Kalın</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('acilis', 'italic')" title="İtalik Yazı"><i>I</i> İtalik</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('acilis', 'underline')" title="Altı Çizili"><u>U</u> Çizili</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('acilis', 'insertUnorderedList')" title="Madde İşaretli Liste">• Liste</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('acilis', 'insertOrderedList')" title="Numaralı Liste">1. Sıralı</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="insertRoutineCustomBlock('acilis', 'check')" title="Kontrol Adımı Ekle" style="background:#F0FDF4; border-color:#86EFAC; color:#166534;">☑️ Adım</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="insertRoutineCustomBlock('acilis', 'red')" title="Kritik Uyarı Kutusu" style="background:#FEF2F2; border-color:#FCA5A5; color:#991B1B;">🔴 Uyarı Kutusu</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="insertRoutineCustomBlock('acilis', 'yellow')" title="Önemli Not Kutusu" style="background:#FFFBEB; border-color:#FCD34D; color:#92400E;">🟡 Not Kutusu</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="insertRoutineCustomBlock('acilis', 'green')" title="Onay / İpucu Kutusu" style="background:#F0FDF4; border-color:#86EFAC; color:#166534;">🟢 İpucu Kutusu</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="insertRoutineCustomBlock('acilis', 'blue')" title="Bölüm Başlığı Kutusu" style="background:#EFF6FF; border-color:#93C5FD; color:#1E40AF;">🔵 Bölüm Kutusu</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('acilis', 'foreColor', '#DC2626')" title="Kırmızı Yazı" style="color:#DC2626;">A Kırmızı</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('acilis', 'foreColor', '#2563EB')" title="Mavi Yazı" style="color:#2563EB;">A Mavi</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('acilis', 'foreColor', '#15803D')" title="Yeşil Yazı" style="color:#15803D;">A Yeşil</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('acilis', 'foreColor', '#0F172A')" title="Siyah Yazı" style="color:#0F172A;">A Siyah</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('acilis', 'insertHorizontalRule')" title="Ayırıcı Çizgi Ekle">― Çizgi</button>
+        </div>
+
+        <!-- Zengin Metin Yazım Alanı -->
+        <div
+          id="routineEditableArea-acilis"
+          class="routine-editable-area routine-doc-content"
+          contenteditable="true"
+          data-placeholder="Açılış rutini adımlarını buraya yazın veya yapıştırın; üstteki butonlarla başlık, kalın yazı, liste veya renkli uyarı kutusu stili verin..."
+        ></div>
+
+        <!-- Alt Kaydet / Vazgeç Butonları -->
+        <div style="margin-top:14px; display:flex; justify-content:flex-end; gap:10px; flex-wrap:wrap;">
+          <button
+            type="button"
+            onclick="closeRoutineEditor('acilis')"
+            style="height:46px; padding:0 18px; border-radius:11px; border:1.5px solid #CBD5E1; background:#F8FAFC; color:#334155; font-size:0.9rem; font-weight:800; cursor:pointer; flex:1; max-width:160px;"
+          >Vazgeç</button>
+          <button
+            type="button"
+            onclick="saveRoutineDoc('acilis')"
+            style="height:46px; padding:0 24px; border-radius:11px; border:none; background:linear-gradient(135deg, #16A34A 0%, #15803D 100%); color:#FFFFFF; font-size:0.95rem; font-weight:900; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:8px; box-shadow:0 4px 12px rgba(22, 163, 74, 0.25); flex:2; max-width:260px;"
+          >
+            <span>✓</span>
+            <span>Açılış Rutinini Kaydet</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- EN ALTTA YÖNETİCİ "RUTİNLERİ OLUŞTUR / DÜZENLE" BUTONU -->
+      <div id="routineBottomBtnWrap-acilis" style="display:flex; justify-content:center; margin-top: 12px; margin-bottom: 18px;">
+        <button
+          type="button"
+          onclick="openRoutineEditor('acilis')"
+          style="width:100%; max-width:420px; border:1.5px solid #93C5FD; background:#EFF6FF; color:#1D4ED8; border-radius:12px; padding:12px 18px; font-size:0.88rem; font-weight:900; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:8px; box-shadow:0 2px 6px rgba(37, 99, 235, 0.12); transition:all 0.15s ease;"
+        >
+          <span>✏️</span>
+          <span>Rutinleri Oluştur / Düzenle</span>
+        </button>
+      </div>
+
+      <!-- Canlı Senkronize Butonu (Sayfa Altı) -->
+      <div class="bottom-sync-wrapper">
+        <button type="button" class="btn-sync-cloud live-sync-pill" onclick="openSyncModal()" title="Canlı Bulut Senkronizasyon Durumu">
+          <span class="sync-pulse-dot"></span>
+          <span class="sync-text">Canlı Senkronize</span>
+        </button>
+      </div>
+    </main>
+
+    <!-- ============================================== -->
+    <!-- VIEW 15: KAPANIŞ RUTİNİ (CLOSING ROUTINE)      -->
+    <!-- ============================================== -->
+    <main id="closingRoutineView" style="display: none;">
+      <!-- Üst Başlık Kartı -->
+      <section class="count-header-card" style="margin-bottom: 12px;">
+        <div class="count-header-brand-line">
+          <div class="count-header-logo" onclick="returnToDashboard()" style="cursor:pointer;" title="Ana Sayfaya Dön">
+            <span class="brand-logo-card" style="padding: 4px 10px; border-radius: 8px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+              <img class="app-header-logo-img" alt="Deli Napolitan" style="height: 22px; width: auto; object-fit: contain; vertical-align: middle; display: inline-block;">
+            </span>
+          </div>
+          <div style="font-size:0.75rem; color:#A8A29E; font-weight:600;">Döküman Merkezi • Kapanış Rutini</div>
+        </div>
+
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+          <div>
+            <h2 class="count-header-main-title" style="margin-bottom:4px;">🌙 Kapanış Rutini</h2>
+            <p style="color:#D6D3D1; font-size:0.86rem; margin:0;">
+              Mutfak ve restoran günlük kapanış, temizlik ve güvenlik kontrol adımları.
+            </p>
+          </div>
+          <span id="routineLastUpdated-kapanis" style="background:rgba(165, 180, 252, 0.18); border:1px solid rgba(165, 180, 252, 0.45); color:#E0E7FF; padding:5px 11px; border-radius:999px; font-size:0.74rem; font-weight:800;">
+            📋 Kapanış Rehberi
+          </span>
+        </div>
+      </section>
+
+      <!-- Navigasyon Çubuğu -->
+      <nav class="count-nav-bar" style="margin-bottom: 14px; display: flex; align-items: center; justify-content: flex-start;">
+        <button type="button" class="btn-back-dashboard" onclick="returnToDashboard()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+          Ana Menüye Dön
+        </button>
+      </nav>
+
+      <!-- 1. BÖLÜM: OKUMA EKRANI (METİN EKLENDİĞİNDE ÜSTTE GÖRÜNÜR) -->
+      <section id="routineReadSection-kapanis" class="routine-doc-card">
+        <div id="routineReadBody-kapanis" class="routine-doc-content">
+          <!-- JS ile doldurulur -->
+        </div>
+      </section>
+
+      <!-- 2. BÖLÜM: YÖNETİCİ ZENGİN METİN EDİTÖRÜ (BUTONA BASINCA AÇILIR) -->
+      <section id="routineEditorSection-kapanis" class="routine-doc-card" style="display:none; border:2px solid #2563EB;">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; padding-bottom:12px; border-bottom:1.5px solid #E2E8F0; margin-bottom:14px;">
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <span style="background:#DBEAFE; color:#1D4ED8; font-size:0.74rem; font-weight:900; padding:4px 10px; border-radius:999px;">
+              YÖNETİCİ DÜZENLEME MODU
+            </span>
+            <h3 style="font-size:1.05rem; font-weight:900; color:var(--text-main); margin:0;">
+              🌙 Kapanış Rutini Oluştur / Düzenle
+            </h3>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <button
+              type="button"
+              onclick="closeRoutineEditor('kapanis')"
+              style="height:36px; padding:0 12px; border-radius:9px; border:1.5px solid #CBD5E1; background:#F8FAFC; color:#334155; font-size:0.8rem; font-weight:800; cursor:pointer;"
+            >✕ Kapat</button>
+            <button
+              type="button"
+              onclick="saveRoutineDoc('kapanis')"
+              style="height:36px; padding:0 16px; border-radius:9px; border:none; background:#16A34A; color:#FFFFFF; font-size:0.84rem; font-weight:800; cursor:pointer;"
+            >✓ Kaydet</button>
+          </div>
+        </div>
+
+        <!-- Mobil Uyumlu Stil & Biçimlendirme Araç Çubuğu -->
+        <div class="routine-editor-toolbar">
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('kapanis', 'formatBlock', 'H2')" title="Büyük Başlık">📌 Başlık</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('kapanis', 'formatBlock', 'H3')" title="Alt Başlık">🔹 Alt Başlık</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('kapanis', 'formatBlock', 'P')" title="Normal Metin">¶ Normal</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('kapanis', 'bold')" title="Kalın Yazı"><b>B</b> Kalın</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('kapanis', 'italic')" title="İtalik Yazı"><i>I</i> İtalik</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('kapanis', 'underline')" title="Altı Çizili"><u>U</u> Çizili</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('kapanis', 'insertUnorderedList')" title="Madde İşaretli Liste">• Liste</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('kapanis', 'insertOrderedList')" title="Numaralı Liste">1. Sıralı</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="insertRoutineCustomBlock('kapanis', 'check')" title="Kontrol Adımı Ekle" style="background:#F0FDF4; border-color:#86EFAC; color:#166534;">☑️ Adım</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="insertRoutineCustomBlock('kapanis', 'red')" title="Kritik Uyarı Kutusu" style="background:#FEF2F2; border-color:#FCA5A5; color:#991B1B;">🔴 Uyarı Kutusu</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="insertRoutineCustomBlock('kapanis', 'yellow')" title="Önemli Not Kutusu" style="background:#FFFBEB; border-color:#FCD34D; color:#92400E;">🟡 Not Kutusu</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="insertRoutineCustomBlock('kapanis', 'green')" title="Onay / İpucu Kutusu" style="background:#F0FDF4; border-color:#86EFAC; color:#166534;">🟢 İpucu Kutusu</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="insertRoutineCustomBlock('kapanis', 'blue')" title="Bölüm Başlığı Kutusu" style="background:#EFF6FF; border-color:#93C5FD; color:#1E40AF;">🔵 Bölüm Kutusu</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('kapanis', 'foreColor', '#DC2626')" title="Kırmızı Yazı" style="color:#DC2626;">A Kırmızı</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('kapanis', 'foreColor', '#2563EB')" title="Mavi Yazı" style="color:#2563EB;">A Mavi</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('kapanis', 'foreColor', '#15803D')" title="Yeşil Yazı" style="color:#15803D;">A Yeşil</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('kapanis', 'foreColor', '#0F172A')" title="Siyah Yazı" style="color:#0F172A;">A Siyah</button>
+          <button type="button" class="routine-tool-btn" onmousedown="event.preventDefault()" onclick="formatRoutineCmd('kapanis', 'insertHorizontalRule')" title="Ayırıcı Çizgi Ekle">― Çizgi</button>
+        </div>
+
+        <!-- Zengin Metin Yazım Alanı -->
+        <div
+          id="routineEditableArea-kapanis"
+          class="routine-editable-area routine-doc-content"
+          contenteditable="true"
+          data-placeholder="Kapanış rutini adımlarını buraya yazın veya yapıştırın; üstteki butonlarla başlık, kalın yazı, liste veya renkli uyarı kutusu stili verin..."
+        ></div>
+
+        <!-- Alt Kaydet / Vazgeç Butonları -->
+        <div style="margin-top:14px; display:flex; justify-content:flex-end; gap:10px; flex-wrap:wrap;">
+          <button
+            type="button"
+            onclick="closeRoutineEditor('kapanis')"
+            style="height:46px; padding:0 18px; border-radius:11px; border:1.5px solid #CBD5E1; background:#F8FAFC; color:#334155; font-size:0.9rem; font-weight:800; cursor:pointer; flex:1; max-width:160px;"
+          >Vazgeç</button>
+          <button
+            type="button"
+            onclick="saveRoutineDoc('kapanis')"
+            style="height:46px; padding:0 24px; border-radius:11px; border:none; background:linear-gradient(135deg, #16A34A 0%, #15803D 100%); color:#FFFFFF; font-size:0.95rem; font-weight:900; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:8px; box-shadow:0 4px 12px rgba(22, 163, 74, 0.25); flex:2; max-width:260px;"
+          >
+            <span>✓</span>
+            <span>Kapanış Rutinini Kaydet</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- EN ALTTA YÖNETİCİ "RUTİNLERİ OLUŞTUR / DÜZENLE" BUTONU -->
+      <div id="routineBottomBtnWrap-kapanis" style="display:flex; justify-content:center; margin-top: 12px; margin-bottom: 18px;">
+        <button
+          type="button"
+          onclick="openRoutineEditor('kapanis')"
+          style="width:100%; max-width:420px; border:1.5px solid #93C5FD; background:#EFF6FF; color:#1D4ED8; border-radius:12px; padding:12px 18px; font-size:0.88rem; font-weight:900; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:8px; box-shadow:0 2px 6px rgba(37, 99, 235, 0.12); transition:all 0.15s ease;"
+        >
+          <span>✏️</span>
+          <span>Rutinleri Oluştur / Düzenle</span>
+        </button>
+      </div>
+
+      <!-- Canlı Senkronize Butonu (Sayfa Altı) -->
+      <div class="bottom-sync-wrapper">
+        <button type="button" class="btn-sync-cloud live-sync-pill" onclick="openSyncModal()" title="Canlı Bulut Senkronizasyon Durumu">
+          <span class="sync-pulse-dot"></span>
+          <span class="sync-text">Canlı Senkronize</span>
+        </button>
+      </div>
+    </main>
+
   </div><!-- /container -->
 
   <!-- ============================================== -->
@@ -10713,6 +11194,13 @@
         }
       } catch (e) { console.error('initOvertimeRecordsFromStorage error:', e); }
 
+      // Açılış ve Kapanış Rutinlerini (routineDocs) hafızadan yükle
+      try {
+        if (typeof initRoutineDocsFromStorage === 'function') {
+          initRoutineDocsFromStorage();
+        }
+      } catch (e) { console.error('initRoutineDocsFromStorage error:', e); }
+
       // Geçersiz veya boş günlere atanmış hatalı zaman damgalarını temizle
       try { cleanInvalidDayTimestamps(); } catch (e) { console.error('cleanInvalidDayTimestamps error:', e); }
 
@@ -11097,6 +11585,9 @@
       if (typeof updateOvertimeDashboardAlertBadge === 'function') {
         updateOvertimeDashboardAlertBadge();
       }
+      if (typeof updateRoutineDashboardBadges === 'function') {
+        updateRoutineDashboardBadges();
+      }
 
       const activeLists = typeof getActiveCountLists === 'function' ? getActiveCountLists() : [];
       const listIds = activeLists.length > 0 ? activeLists.map(l => l.id) : ['hergun', 'sali', 'persembe', 'pazar'];
@@ -11175,7 +11666,7 @@
        3. NAVIGATION: DASHBOARD <-> COUNT VIEW <-> MANAGE VIEW
        ========================================================= */
     function switchView(viewId) {
-      const views = ['dashboardView', 'countView', 'staticCountHistoryView', 'manageProductsView', 'countListsManageView', 'maintenanceRequestsView', 'overtimeView', 'suppliersManageView', 'recipesView', 'recipeBolonezView', 'recipeMercimekView', 'recipeCreateView', 'recipeCustomDetailView', 'bigaDoughView', 'doughTempCalcView', 'orderSuppliersView', 'supplierOrderView', 'staffMealsView', 'staffMealsEditView', 'staffDishesView', 'shiftView', 'shiftEditView', 'shiftEmployeesView'];
+      const views = ['dashboardView', 'countView', 'staticCountHistoryView', 'manageProductsView', 'countListsManageView', 'maintenanceRequestsView', 'overtimeView', 'openingRoutineView', 'closingRoutineView', 'suppliersManageView', 'recipesView', 'recipeBolonezView', 'recipeMercimekView', 'recipeCreateView', 'recipeCustomDetailView', 'bigaDoughView', 'doughTempCalcView', 'orderSuppliersView', 'supplierOrderView', 'staffMealsView', 'staffMealsEditView', 'staffDishesView', 'shiftView', 'shiftEditView', 'shiftEmployeesView'];
       const targetId = (viewId && views.includes(viewId)) ? viewId : 'dashboardView';
       let foundTarget = false;
       views.forEach(id => {
@@ -11193,7 +11684,7 @@
       document.body.classList.remove('view-dashboard', 'view-count', 'view-manage', 'view-recipes');
       if (targetId === 'dashboardView') {
         document.body.classList.add('view-dashboard');
-      } else if (targetId === 'countView' || targetId === 'staticCountHistoryView' || targetId === 'supplierOrderView' || targetId === 'staffMealsView' || targetId === 'staffMealsEditView' || targetId === 'staffDishesView' || targetId === 'shiftView' || targetId === 'shiftEditView' || targetId === 'shiftEmployeesView' || targetId === 'maintenanceRequestsView' || targetId === 'overtimeView') {
+      } else if (targetId === 'countView' || targetId === 'staticCountHistoryView' || targetId === 'supplierOrderView' || targetId === 'staffMealsView' || targetId === 'staffMealsEditView' || targetId === 'staffDishesView' || targetId === 'shiftView' || targetId === 'shiftEditView' || targetId === 'shiftEmployeesView' || targetId === 'maintenanceRequestsView' || targetId === 'overtimeView' || targetId === 'openingRoutineView' || targetId === 'closingRoutineView') {
         document.body.classList.add('view-count');
       } else if (targetId === 'recipesView' || targetId === 'recipeBolonezView' || targetId === 'recipeMercimekView' || targetId === 'recipeCreateView' || targetId === 'recipeCustomDetailView' || targetId === 'bigaDoughView' || targetId === 'doughTempCalcView') {
         document.body.classList.add('view-recipes');
@@ -12871,7 +13362,8 @@
           mnt: (data.maintenanceRequests || []).map(m => [m.id, m.type, m.urgency, m.desc, m.status, m.createdAt || 0, m.updatedAt || 0]),
           delMnt: (data.deletedMaintenanceRequestIds || []).slice().sort(),
           ot: (data.overtimeRecords || []).map(o => [o.id, o.employeeName, o.day, o.month, o.hours, o.minutes, o.isRead ? 1 : 0, o.createdAt || 0, o.updatedAt || 0]),
-          delOt: (data.deletedOvertimeRecordIds || []).slice().sort()
+          delOt: (data.deletedOvertimeRecordIds || []).slice().sort(),
+          rdocs: data.routineDocs || {}
         };
         const str = JSON.stringify(canonical);
         let hash = 0;
@@ -13166,6 +13658,10 @@
         min.delOt = data.deletedOvertimeRecordIds;
       }
 
+      if (data.routineDocs && typeof data.routineDocs === 'object' && Object.keys(data.routineDocs).length > 0) {
+        min.rdocs = data.routineDocs;
+      }
+
       return min;
     }
 
@@ -13211,7 +13707,8 @@
         maintenanceRequests: Array.isArray(raw.mnt) ? JSON.parse(JSON.stringify(raw.mnt)) : (Array.isArray(raw.maintenanceRequests) ? JSON.parse(JSON.stringify(raw.maintenanceRequests)) : []),
         deletedMaintenanceRequestIds: Array.isArray(raw.delMnt) ? [...raw.delMnt] : (Array.isArray(raw.deletedMaintenanceRequestIds) ? [...raw.deletedMaintenanceRequestIds] : []),
         overtimeRecords: Array.isArray(raw.ot) ? JSON.parse(JSON.stringify(raw.ot)) : (Array.isArray(raw.overtimeRecords) ? JSON.parse(JSON.stringify(raw.overtimeRecords)) : []),
-        deletedOvertimeRecordIds: Array.isArray(raw.delOt) ? [...raw.delOt] : (Array.isArray(raw.deletedOvertimeRecordIds) ? [...raw.deletedOvertimeRecordIds] : [])
+        deletedOvertimeRecordIds: Array.isArray(raw.delOt) ? [...raw.delOt] : (Array.isArray(raw.deletedOvertimeRecordIds) ? [...raw.deletedOvertimeRecordIds] : []),
+        routineDocs: (raw.rdocs && typeof raw.rdocs === 'object') ? JSON.parse(JSON.stringify(raw.rdocs)) : ((raw.routineDocs && typeof raw.routineDocs === 'object') ? JSON.parse(JSON.stringify(raw.routineDocs)) : {})
       };
 
       if (Array.isArray(raw.she)) {
@@ -13369,7 +13866,8 @@
         maintenanceRequests: maintenanceRequests || [],
         deletedMaintenanceRequestIds: deletedMaintenanceRequestIds || [],
         overtimeRecords: overtimeRecords || [],
-        deletedOvertimeRecordIds: deletedOvertimeRecordIds || []
+        deletedOvertimeRecordIds: deletedOvertimeRecordIds || [],
+        routineDocs: routineDocs || {}
       };
     }
 
@@ -13393,6 +13891,22 @@
       const otView = document.getElementById('overtimeView');
       if (otView && otView.style.display !== 'none' && typeof renderOvertimeManagerList === 'function') {
         renderOvertimeManagerList();
+      }
+
+      const openRoutView = document.getElementById('openingRoutineView');
+      if (openRoutView && openRoutView.style.display !== 'none' && typeof renderRoutineDocView === 'function') {
+        const edSec = document.getElementById('routineEditorSection-acilis');
+        if (!edSec || edSec.style.display === 'none') {
+          renderRoutineDocView('acilis');
+        }
+      }
+
+      const closeRoutView = document.getElementById('closingRoutineView');
+      if (closeRoutView && closeRoutView.style.display !== 'none' && typeof renderRoutineDocView === 'function') {
+        const edSec = document.getElementById('routineEditorSection-kapanis');
+        if (!edSec || edSec.style.display === 'none') {
+          renderRoutineDocView('kapanis');
+        }
       }
 
       const histView = document.getElementById('staticCountHistoryView');
@@ -13756,6 +14270,29 @@
         overtimeRecords = Object.values(otMap).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
         try { localStorage.setItem('delinapolitan_overtime_records', JSON.stringify(overtimeRecords)); } catch(e) {}
         if (remOtTs > locOtTs) moduleTimestamps.ot = remOtTs;
+      }
+
+      if (data.routineDocs && typeof data.routineDocs === 'object') {
+        if (!routineDocs || typeof routineDocs !== 'object') {
+          routineDocs = { acilis: { html: '', updatedAt: 0 }, kapanis: { html: '', updatedAt: 0 } };
+        }
+        ['acilis', 'kapanis'].forEach(rKey => {
+          const remDoc = data.routineDocs[rKey];
+          if (!remDoc || typeof remDoc !== 'object') return;
+          const locDoc = routineDocs[rKey] || { html: '', updatedAt: 0 };
+          const remRdocTs = Number(remDoc.updatedAt) || Number(remMt['rdoc_' + rKey]) || 0;
+          const locRdocTs = Number(locDoc.updatedAt) || Number(locMt['rdoc_' + rKey]) || 0;
+          if ((remRdocTs > 0 && remRdocTs >= locRdocTs) || (!locDoc.html && remDoc.html)) {
+            routineDocs[rKey] = {
+              html: String(remDoc.html || ''),
+              updatedAt: remRdocTs
+            };
+            if (remRdocTs > locRdocTs) {
+              moduleTimestamps['rdoc_' + rKey] = remRdocTs;
+            }
+          }
+        });
+        try { localStorage.setItem('delinapolitan_routine_docs', JSON.stringify(routineDocs)); } catch (e) {}
       }
 
       // STEP 1: Merge Tombstones with Module-Timestamp Awareness (so re-added items on a newer local module aren't re-deleted by an older snapshot)
@@ -22164,6 +22701,287 @@
           </div>
         `;
       }).join('');
+    }
+
+    /* =========================================================
+       15. AÇILIŞ RUTİNİ & KAPANIŞ RUTİNİ (OPENING & CLOSING ROUTINES)
+       ========================================================= */
+    const ROUTINE_PAGE_META = {
+      acilis: {
+        key: 'acilis',
+        viewId: 'openingRoutineView',
+        title: 'Açılış Rutini',
+        icon: '🌅',
+        emptyHint: 'Henüz <strong>Açılış Rutini</strong> metni eklenmemiş.<br>Aşağıdaki <strong>"✏️ Rutinleri Oluştur / Düzenle"</strong> butonuna basarak açılış rutini adımlarını oluşturup kaydedebilirsiniz.'
+      },
+      kapanis: {
+        key: 'kapanis',
+        viewId: 'closingRoutineView',
+        title: 'Kapanış Rutini',
+        icon: '🌙',
+        emptyHint: 'Henüz <strong>Kapanış Rutini</strong> metni eklenmemiş.<br>Aşağıdaki <strong>"✏️ Rutinleri Oluştur / Düzenle"</strong> butonuna basarak kapanış rutini adımlarını oluşturup kaydedebilirsiniz.'
+      }
+    };
+
+    let routineDocs = {
+      acilis: { html: '', updatedAt: 0 },
+      kapanis: { html: '', updatedAt: 0 }
+    };
+
+    function initRoutineDocsFromStorage() {
+      try {
+        const saved = localStorage.getItem('delinapolitan_routine_docs');
+        const parsed = saved ? JSON.parse(saved) : null;
+        if (parsed && typeof parsed === 'object') {
+          ['acilis', 'kapanis'].forEach(k => {
+            if (parsed[k] && typeof parsed[k] === 'object') {
+              routineDocs[k] = {
+                html: String(parsed[k].html || ''),
+                updatedAt: Number(parsed[k].updatedAt) || 0
+              };
+            }
+          });
+        }
+      } catch (e) {
+        console.error('initRoutineDocsFromStorage error:', e);
+      }
+    }
+
+    function saveRoutineDocsToStorage(routineKey) {
+      try {
+        const ts = Date.now();
+        if (routineKey && routineDocs[routineKey]) {
+          routineDocs[routineKey].updatedAt = ts;
+          touchModuleTimestamp(['rdoc_' + routineKey]);
+        } else {
+          touchModuleTimestamp(['rdoc_acilis', 'rdoc_kapanis']);
+        }
+        localStorage.setItem('delinapolitan_routine_docs', JSON.stringify(routineDocs));
+        updateRoutineDashboardBadges();
+        scheduleAutoCloudSync(150);
+      } catch (e) {
+        console.error('saveRoutineDocsToStorage error:', e);
+      }
+    }
+
+    function isRoutineHtmlNonEmpty(htmlStr) {
+      if (!htmlStr) return false;
+      const cleanText = String(htmlStr)
+        .replace(/<[^>]*>/g, '')
+        .replace(/&nbsp;/gi, ' ')
+        .trim();
+      return cleanText.length > 0;
+    }
+
+    function updateRoutineDashboardBadges() {
+      ['acilis', 'kapanis'].forEach(k => {
+        const badgeEl = document.getElementById(`routineDashboardBadge-${k}`);
+        if (!badgeEl) return;
+        const hasContent = isRoutineHtmlNonEmpty(routineDocs?.[k]?.html);
+        if (hasContent) {
+          badgeEl.textContent = '✓ Aktif';
+          badgeEl.style.background = '#DCFCE7';
+          badgeEl.style.color = '#15803D';
+          badgeEl.style.borderColor = '#86EFAC';
+        } else {
+          badgeEl.textContent = 'Rutin';
+          if (k === 'acilis') {
+            badgeEl.style.background = '#FEF3C7';
+            badgeEl.style.color = '#92400E';
+            badgeEl.style.borderColor = '#FDE68A';
+          } else {
+            badgeEl.style.background = '#E0E7FF';
+            badgeEl.style.color = '#3730A3';
+            badgeEl.style.borderColor = '#C7D2FE';
+          }
+        }
+      });
+    }
+
+    function openRoutineView(routineKey) {
+      const key = (routineKey === 'kapanis') ? 'kapanis' : 'acilis';
+      const meta = ROUTINE_PAGE_META[key];
+
+      if (activeDay && countData[activeDay]) {
+        try { localStorage.setItem('delinapolitan_counts_data', JSON.stringify(countData)); } catch (e) {}
+      }
+      activeDay = null;
+
+      initRoutineDocsFromStorage();
+      closeRoutineEditor(key, false);
+      renderRoutineDocView(key);
+      switchView(meta.viewId);
+
+      if (typeof fetchAppStateFromCloud === 'function') {
+        fetchAppStateFromCloud({ showFeedback: false });
+      }
+    }
+
+    function renderRoutineDocView(routineKey) {
+      const key = (routineKey === 'kapanis') ? 'kapanis' : 'acilis';
+      const meta = ROUTINE_PAGE_META[key];
+      const docData = (routineDocs && routineDocs[key]) ? routineDocs[key] : { html: '', updatedAt: 0 };
+
+      const readBody = document.getElementById(`routineReadBody-${key}`);
+      const updatedBadge = document.getElementById(`routineLastUpdated-${key}`);
+
+      if (updatedBadge) {
+        if (docData.updatedAt > 0 && isRoutineHtmlNonEmpty(docData.html)) {
+          const d = new Date(docData.updatedAt);
+          updatedBadge.textContent = `🕒 Son Güncelleme: ${formatShortDayMonth(d)}, ${formatTurkishTime(d, false)}`;
+        } else {
+          updatedBadge.textContent = `📋 ${meta.title}`;
+        }
+      }
+
+      if (readBody) {
+        if (isRoutineHtmlNonEmpty(docData.html)) {
+          readBody.innerHTML = docData.html;
+        } else {
+          readBody.innerHTML = `
+            <div style="padding: 30px 16px; text-align: center; color: var(--text-muted); font-size: 0.92rem; font-weight: 700; border: 1.5px dashed #CBD5E1; border-radius: 14px; background: #F8FAFC; line-height: 1.55;">
+              <div style="font-size: 2rem; margin-bottom: 8px;">${meta.icon}</div>
+              ${meta.emptyHint}
+            </div>
+          `;
+        }
+      }
+    }
+
+    function openRoutineEditor(routineKey) {
+      const key = (routineKey === 'kapanis') ? 'kapanis' : 'acilis';
+      const readSec = document.getElementById(`routineReadSection-${key}`);
+      const editorSec = document.getElementById(`routineEditorSection-${key}`);
+      const bottomBtnWrap = document.getElementById(`routineBottomBtnWrap-${key}`);
+      const editableArea = document.getElementById(`routineEditableArea-${key}`);
+
+      const curHtml = (routineDocs && routineDocs[key] && isRoutineHtmlNonEmpty(routineDocs[key].html))
+        ? routineDocs[key].html
+        : '';
+
+      if (editableArea) {
+        editableArea.innerHTML = curHtml;
+      }
+      if (readSec) readSec.style.display = 'none';
+      if (bottomBtnWrap) bottomBtnWrap.style.display = 'none';
+      if (editorSec) {
+        editorSec.style.display = 'block';
+        setTimeout(() => {
+          try {
+            editorSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (editableArea) editableArea.focus();
+          } catch (e) {}
+        }, 60);
+      }
+    }
+
+    function closeRoutineEditor(routineKey, shouldRender = true) {
+      const key = (routineKey === 'kapanis') ? 'kapanis' : 'acilis';
+      const readSec = document.getElementById(`routineReadSection-${key}`);
+      const editorSec = document.getElementById(`routineEditorSection-${key}`);
+      const bottomBtnWrap = document.getElementById(`routineBottomBtnWrap-${key}`);
+
+      if (editorSec) editorSec.style.display = 'none';
+      if (readSec) readSec.style.display = 'block';
+      if (bottomBtnWrap) bottomBtnWrap.style.display = 'flex';
+      if (shouldRender) {
+        renderRoutineDocView(key);
+      }
+    }
+
+    function formatRoutineCmd(routineKey, command, value = null) {
+      const key = (routineKey === 'kapanis') ? 'kapanis' : 'acilis';
+      const editableArea = document.getElementById(`routineEditableArea-${key}`);
+      if (!editableArea) return;
+
+      editableArea.focus();
+      try {
+        document.execCommand(command, false, value);
+      } catch (e) {
+        console.warn('formatRoutineCmd error:', e);
+      }
+    }
+
+    function insertRoutineCustomBlock(routineKey, blockType) {
+      const key = (routineKey === 'kapanis') ? 'kapanis' : 'acilis';
+      const editableArea = document.getElementById(`routineEditableArea-${key}`);
+      if (!editableArea) return;
+
+      editableArea.focus();
+
+      let selectedText = '';
+      try {
+        const sel = window.getSelection();
+        if (sel && sel.rangeCount > 0 && editableArea.contains(sel.anchorNode)) {
+          selectedText = sel.toString().trim();
+        }
+      } catch (e) {}
+
+      let blockHtml = '';
+      if (blockType === 'check') {
+        const txt = selectedText || 'Kontrol adımı metnini buraya yazın...';
+        blockHtml = `<div class="routine-check-item"><span>☑️</span><span>${escapeHtml(txt)}</span></div><p><br></p>`;
+      } else if (blockType === 'red') {
+        const txt = selectedText || 'Kritik kural veya dikkat edilecek uyarıyı buraya yazın...';
+        blockHtml = `<div class="routine-callout routine-callout-red">🚨 <strong>KRİTİK UYARI:</strong> ${escapeHtml(txt)}</div><p><br></p>`;
+      } else if (blockType === 'yellow') {
+        const txt = selectedText || 'Önemli hatırlatma veya notu buraya yazın...';
+        blockHtml = `<div class="routine-callout routine-callout-yellow">📌 <strong>ÖNEMLİ NOT:</strong> ${escapeHtml(txt)}</div><p><br></p>`;
+      } else if (blockType === 'green') {
+        const txt = selectedText || 'Standart uygulama veya ipucunu buraya yazın...';
+        blockHtml = `<div class="routine-callout routine-callout-green">✅ <strong>STANDART:</strong> ${escapeHtml(txt)}</div><p><br></p>`;
+      } else if (blockType === 'blue') {
+        const txt = selectedText || 'BÖLÜM BAŞLIĞI';
+        blockHtml = `<div class="routine-callout routine-callout-blue">🔷 ${escapeHtml(txt)}</div><p><br></p>`;
+      }
+
+      if (!blockHtml) return;
+
+      try {
+        const ok = document.execCommand('insertHTML', false, blockHtml);
+        if (!ok) {
+          editableArea.innerHTML += blockHtml;
+        }
+      } catch (e) {
+        editableArea.innerHTML += blockHtml;
+      }
+    }
+
+    function sanitizeRoutineHtml(rawHtml) {
+      if (!rawHtml) return '';
+      const temp = document.createElement('div');
+      temp.innerHTML = rawHtml;
+      temp.querySelectorAll('script, iframe, object, embed').forEach(el => el.remove());
+      temp.querySelectorAll('*').forEach(el => {
+        Array.from(el.attributes).forEach(attr => {
+          if (attr.name.toLowerCase().startsWith('on')) {
+            el.removeAttribute(attr.name);
+          }
+        });
+      });
+      return temp.innerHTML.trim();
+    }
+
+    function saveRoutineDoc(routineKey) {
+      const key = (routineKey === 'kapanis') ? 'kapanis' : 'acilis';
+      const meta = ROUTINE_PAGE_META[key];
+      const editableArea = document.getElementById(`routineEditableArea-${key}`);
+      if (!editableArea) return;
+
+      const cleanedHtml = sanitizeRoutineHtml(editableArea.innerHTML);
+      if (!routineDocs || typeof routineDocs !== 'object') {
+        routineDocs = { acilis: { html: '', updatedAt: 0 }, kapanis: { html: '', updatedAt: 0 } };
+      }
+
+      routineDocs[key] = {
+        html: isRoutineHtmlNonEmpty(cleanedHtml) ? cleanedHtml : '',
+        updatedAt: Date.now()
+      };
+
+      saveRoutineDocsToStorage(key);
+      closeRoutineEditor(key, true);
+      resetScrollToTop();
+      showToast(`✓ ${meta.title} başarıyla kaydedildi!`);
     }
 
     // App Startup (Immediate execution if ready, otherwise on DOMContentLoaded)
