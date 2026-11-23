@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-23T11:27:58.666Z",
-  "timestamp": 1795433278659,
+  "exportedAt": "2026-11-23T11:28:01.682Z",
+  "timestamp": 1795433280777,
   "deviceId": "dev_irn623d_mw0oagq7",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -2519,23 +2519,23 @@
         "notes": ""
       },
       "cust_aluminyum_folyo": {
-        "qty": 1,
+        "qty": "1",
         "notes": ""
       },
       "cust_firin_kagidi": {
-        "qty": 1,
+        "qty": "1",
         "notes": ""
       },
       "cust_bulasik_makinesi_konsantre_deterjan": {
-        "qty": 3,
+        "qty": "3",
         "notes": ""
       },
       "cust_sikma_torbasi_krema_torbasi": {
-        "qty": 0.5,
+        "qty": "0.5",
         "notes": ""
       },
       "cust_bulasik_makinesi_konsantre_parlatici": {
-        "qty": 3,
+        "qty": "3",
         "notes": ""
       }
     }
