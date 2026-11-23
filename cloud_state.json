@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-23T18:38:09.621Z",
-  "timestamp": 1795459089466,
+  "exportedAt": "2026-11-23T18:38:12.982Z",
+  "timestamp": 1795459092379,
   "deviceId": "dev_xkmdxfa_mwrysg4x",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -219,7 +219,7 @@
     "shf_emp_ozge_pazar": 1793877135627,
     "shf": 1795422067049,
     "cnt_pazartesi_sarf": 1795433648432,
-    "ot": 1795459089465,
+    "ot": 1795459092173,
     "rdoc_acilis": 1795436248911,
     "rdoc_kapanis": 1795438335859
   },
@@ -5276,9 +5276,9 @@
       "month": "Kasım",
       "hours": 5,
       "minutes": 0,
-      "isRead": true,
+      "isRead": false,
       "createdAt": 1795449200495,
-      "updatedAt": 1795459089465
+      "updatedAt": 1795459092173
     },
     {
       "id": "ot_1795449067872_n5ii",
