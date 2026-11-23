@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-23T11:23:35.378Z",
-  "timestamp": 1795433013274,
+  "exportedAt": "2026-11-23T11:25:02.454Z",
+  "timestamp": 1795433102098,
   "deviceId": "dev_irn623d_mw0oagq7",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -217,7 +217,8 @@
     "prod_hg_29": 1795134402206,
     "prod_hg_28": 1795134406404,
     "prod_hg_25": 1795134419488,
-    "prod_hg_30": 1795134424639
+    "prod_hg_30": 1795134424639,
+    "cnt_pazartesi_sarf": 1795433102097
   },
   "suppliers": [
     {
@@ -2512,7 +2513,12 @@
         "notes": "Frenk soğanı ve maydanoz 2 paket var"
       }
     },
-    "pazartesi_sarf": {}
+    "pazartesi_sarf": {
+      "cust_strec_film": {
+        "qty": 1,
+        "notes": ""
+      }
+    }
   },
   "historyCountData": {
     "hergun": {
