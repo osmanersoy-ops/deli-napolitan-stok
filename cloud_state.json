@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-23T12:02:48.487Z",
-  "timestamp": 1795435368080,
+  "exportedAt": "2026-11-23T12:03:02.127Z",
+  "timestamp": 1795435382064,
   "deviceId": "dev_5yxsqly_mvle6qpu",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -5189,8 +5189,9 @@
     {
       "id": "hergun",
       "title": "Hergün Sayımı",
-      "badge": "Her Gün",
-      "badgeClass": "badge-hergun",
+      "dayKey": "hergun",
+      "badge": "HER GÜN",
+      "badgeClass": "badge-day-hergun",
       "subtitle": "Manav & Mise en Place",
       "desc": "Günlük taze sebze-meyve (Manav) ve mutfak ön hazırlık (Mise en Place) stoklarının hızlı kontrolü.",
       "order": 1,
@@ -5199,8 +5200,9 @@
     {
       "id": "sali",
       "title": "Çarşamba Sayımı",
-      "badge": "Salı Günü",
-      "badgeClass": "badge-sali",
+      "dayKey": "carsamba",
+      "badge": "ÇARŞAMBA",
+      "badgeClass": "badge-day-carsamba",
       "subtitle": "Ana Stok (Un, Peynir, Sos & Kuru Gıda)",
       "desc": "Peynir çeşitleri, unlar, konserveler, zeytinyağları ve temel İtalyan mutfak ürünlerinin kapsamlı sayımı.",
       "order": 2,
@@ -5209,8 +5211,9 @@
     {
       "id": "persembe",
       "title": "Perşembe Sayımı",
-      "badge": "Perşembe Günü",
-      "badgeClass": "badge-persembe",
+      "dayKey": "persembe",
+      "badge": "PERŞEMBE",
+      "badgeClass": "badge-day-persembe",
       "subtitle": "Ana Stok & Çarşı-Diğer İhtiyaçlar",
       "desc": "Hafta sonu yoğunluğu öncesi ana stok kontrolü ve çarşı/ambalaj/sarf malzeme eksikleri.",
       "order": 3,
@@ -5219,8 +5222,9 @@
     {
       "id": "pazar",
       "title": "Pazar Sayımı",
-      "badge": "Pazar Akşamı",
-      "badgeClass": "badge-pazar",
+      "dayKey": "pazar",
+      "badge": "PAZAR",
+      "badgeClass": "badge-day-pazar",
       "subtitle": "Et Şarküteri & Akçalar Şarküteri",
       "desc": "Bresaola, prosciutto, salam, sosis, füme etler ve şarküteri grubu ürünlerinin detaylı sayımı.",
       "order": 4,
@@ -5229,12 +5233,13 @@
     {
       "id": "pazartesi_sarf",
       "title": "Pazartesi Sarf Sayımı",
-      "badge": "Pazartesi Sarf Sayımı",
-      "badgeClass": "badge-sali",
+      "badge": "PAZARTESİ",
+      "badgeClass": "badge-day-pazartesi",
       "subtitle": "Stok Sayım Listesi",
       "desc": "PAZARTESİ SARF SAYIMI kapsamında stok takibi yapılan ürünler.",
       "order": 5,
-      "isBuiltin": false
+      "isBuiltin": false,
+      "dayKey": "pazartesi"
     }
   ],
   "deletedCountListIds": [
