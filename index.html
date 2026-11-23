@@ -6,7 +6,7 @@
   <!-- Search Engine Indexing Prevention -->
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
   <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
-  <title>Deli Napolitan | Dijital Sayım & Stok Sistemi</title>
+  <title>Deli Napolitan | Deli Super App</title>
   <meta name="description" content="Deli Napolitan dijital stok sayım, dinamik ürün ekleme ve WhatsApp paylaşım paneli">
   <meta name="theme-color" content="#991B1B">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -294,6 +294,11 @@
       min-height: 125px;
       box-shadow: var(--shadow-sm);
       overflow: hidden;
+    }
+
+    #dashboardCountListsGrid .count-card {
+      min-height: auto;
+      padding: 11px 16px;
     }
 
     .count-card::before {
@@ -4641,7 +4646,7 @@
             <img class="app-header-logo-img brand-main-logo" alt="Deli Napolitan">
           </div>
           <div class="brand-title-text">
-            <div class="tagline">Dijital Stok Sayım Sistemi</div>
+            <div class="tagline">Deli Super App</div>
           </div>
         </div>
 
@@ -4673,10 +4678,9 @@
         <!-- 1. Hergün Sayımı -->
         <div class="count-card-group">
           <article class="count-card" onclick="openCountView('hergun')">
-            <div>
-              <span class="card-badge badge-hergun">Her Gün</span>
-              <h3 class="card-title">Hergün Sayımı</h3>
-              <p class="card-desc">Manav tazelik grubu ve mutfak Mise en Place hazırlık ürünleri sayımı.</p>
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
+              <span class="card-badge badge-hergun" style="margin-bottom:0;">Her Gün</span>
+              <h3 class="card-title" style="margin:0; font-size:1.05rem;">Hergün Sayımı</h3>
             </div>
             <div class="card-footer">
               <span class="item-count" id="countBadge-hergun">31 Ürün</span>
@@ -4704,10 +4708,9 @@
         <!-- 2. Salı Sayımı -->
         <div class="count-card-group">
           <article class="count-card" onclick="openCountView('sali')">
-            <div>
-              <span class="card-badge badge-sali">Salı Günü</span>
-              <h3 class="card-title">Salı Sayımı</h3>
-              <p class="card-desc">Ana stok deposu, peynirler, un, soslar, şarküteri ve konserve ürünleri.</p>
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
+              <span class="card-badge badge-sali" style="margin-bottom:0;">Salı Günü</span>
+              <h3 class="card-title" style="margin:0; font-size:1.05rem;">Salı Sayımı</h3>
             </div>
             <div class="card-footer">
               <span class="item-count" id="countBadge-sali">35 Ürün</span>
@@ -4735,10 +4738,9 @@
         <!-- 3. Perşembe Sayımı -->
         <div class="count-card-group">
           <article class="count-card" onclick="openCountView('persembe')">
-            <div>
-              <span class="card-badge badge-persembe">Perşembe Günü</span>
-              <h3 class="card-title">Perşembe Sayımı</h3>
-              <p class="card-desc">Çarşı tedariği, zeytinler, turşular, baharatlar, yumurta ve yağ grubu.</p>
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
+              <span class="card-badge badge-persembe" style="margin-bottom:0;">Perşembe Günü</span>
+              <h3 class="card-title" style="margin:0; font-size:1.05rem;">Perşembe Sayımı</h3>
             </div>
             <div class="card-footer">
               <span class="item-count" id="countBadge-persembe">15 Ürün</span>
@@ -4766,10 +4768,9 @@
         <!-- 4. Pazar Sayımı -->
         <div class="count-card-group">
           <article class="count-card" onclick="openCountView('pazar')">
-            <div>
-              <span class="card-badge badge-pazar">Pazar Akşamı</span>
-              <h3 class="card-title">Pazar Sayımı</h3>
-              <p class="card-desc">Et Şarküteri, Akçalar Şarküteri yerel peynirleri ve haftasonu kapanış stoku.</p>
+            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
+              <span class="card-badge badge-pazar" style="margin-bottom:0;">Pazar Akşamı</span>
+              <h3 class="card-title" style="margin:0; font-size:1.05rem;">Pazar Sayımı</h3>
             </div>
             <div class="card-footer">
               <span class="item-count" id="countBadge-pazar">17 Ürün</span>
@@ -20831,15 +20832,13 @@
         const lastBtnText = lastDate ? `Son Sayım (${formatShortDayMonth(lastDate)})` : 'Son Sayım (Yapılmadı)';
         const badgeCls = list.badgeClass || badgeClasses[idx % badgeClasses.length] || 'badge-sali';
         const badgeText = list.badge || list.title;
-        const descText = list.desc || list.subtitle || `${list.title} kapsamında stok takibi yapılan ürünler.`;
 
         html += `
           <div class="count-card-group">
             <article class="count-card" onclick="openCountView('${escapeHtml(list.id)}')">
-              <div>
-                <span class="card-badge ${escapeHtml(badgeCls)}">${escapeHtml(badgeText)}</span>
-                <h3 class="card-title">${escapeHtml(list.title)}</h3>
-                <p class="card-desc">${escapeHtml(descText)}</p>
+              <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
+                <span class="card-badge ${escapeHtml(badgeCls)}" style="margin-bottom:0;">${escapeHtml(badgeText)}</span>
+                <h3 class="card-title" style="margin:0; font-size:1.05rem;">${escapeHtml(list.title)}</h3>
               </div>
               <div class="card-footer">
                 <span class="item-count" id="countBadge-${escapeHtml(list.id)}">${total} Ürün</span>
