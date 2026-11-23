@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-23T13:50:49.708Z",
-  "timestamp": 1795441848535,
+  "exportedAt": "2026-11-23T14:41:22.553Z",
+  "timestamp": 1795444882395,
   "deviceId": "dev_xkmdxfa_mwrysg4x",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -219,7 +219,7 @@
     "shf_emp_ozge_pazar": 1793877135627,
     "shf": 1795422067049,
     "cnt_pazartesi_sarf": 1795433648432,
-    "ot": 1795434591263,
+    "ot": 1795444882394,
     "rdoc_acilis": 1795436248911,
     "rdoc_kapanis": 1795438335859
   },
@@ -5268,7 +5268,19 @@
   "deletedMaintenanceRequestIds": [
     "mnt_1794836394855_e8gr"
   ],
-  "overtimeRecords": [],
+  "overtimeRecords": [
+    {
+      "id": "ot_1795444882394_baud",
+      "employeeName": "Alican Turgut",
+      "day": 23,
+      "month": "Kasım",
+      "hours": 5,
+      "minutes": 20,
+      "isRead": false,
+      "createdAt": 1795444882394,
+      "updatedAt": 1795444882394
+    }
+  ],
   "deletedOvertimeRecordIds": [
     "ot_1795434372862_ajtv",
     "ot_1795434406512_1c63",
