@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-23T15:52:12.566Z",
-  "timestamp": 1795449132010,
+  "exportedAt": "2026-11-23T15:53:20.650Z",
+  "timestamp": 1795449200497,
   "deviceId": "dev_99uzb4t_mvpnpi3a",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -221,7 +221,7 @@
     "rdoc_acilis": 1795436248911,
     "rdoc_kapanis": 1795438335859,
     "cnt_pazartesi_sarf": 1795433648432,
-    "ot": 1795449067873
+    "ot": 1795449200496
   },
   "suppliers": [
     {
@@ -5269,6 +5269,17 @@
     "mnt_1794836394855_e8gr"
   ],
   "overtimeRecords": [
+    {
+      "id": "ot_1795449200495_mw9q",
+      "employeeName": "Baha Şahin",
+      "day": 28,
+      "month": "Kasım",
+      "hours": 5,
+      "minutes": 0,
+      "isRead": false,
+      "createdAt": 1795449200495,
+      "updatedAt": 1795449200495
+    },
     {
       "id": "ot_1795449067872_n5ii",
       "employeeName": "Baha Şahin",
