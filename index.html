@@ -4882,6 +4882,20 @@
           </svg>
         </button>
 
+        <!-- 7. Fazla Mesai Butonu -->
+        <button type="button" class="btn-compact-count" onclick="openOvertimeView()" title="Çalışan Fazla Mesai Girişi ve Yönetici Takibi">
+          <span class="compact-count-icon">⏰</span>
+          <span class="compact-count-title">Fazla Mesai</span>
+          <span
+            id="overtimeUnreadAlertBadge"
+            style="display:none; width:24px; height:24px; min-width:24px; padding:0 6px; border-radius:999px; background:#DC2626; color:#FFFFFF; font-size:0.8rem; font-weight:900; align-items:center; justify-content:center; box-shadow:0 2px 8px rgba(220, 38, 38, 0.5); line-height:1; flex-shrink:0;"
+            title="Okunmamış fazla mesai kayıt sayısı"
+          >0</span>
+          <svg class="compact-count-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+
         <!-- 7. Sunumlar Butonu (Hazırlanıyor) -->
         <div class="btn-compact-count disabled" onclick="showToast('Sunumlar dökümanı hazırlanıyor, çok yakında aktif olacaktır!')" title="Sunumlar dökümanı hazırlanıyor">
           <span class="compact-count-icon">📑</span>
@@ -8548,6 +8562,211 @@
       </div>
     </main>
 
+    <!-- ============================================== -->
+    <!-- VIEW 13: FAZLA MESAİ (OVERTIME)                -->
+    <!-- ============================================== -->
+    <main id="overtimeView" style="display: none;">
+      <!-- Üst Başlık Kartı -->
+      <section class="count-header-card" style="margin-bottom: 12px;">
+        <div class="count-header-brand-line">
+          <div class="count-header-logo" onclick="returnToDashboard()" style="cursor:pointer;" title="Ana Sayfaya Dön">
+            <span class="brand-logo-card" style="padding: 4px 10px; border-radius: 8px; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+              <img class="app-header-logo-img" alt="Deli Napolitan" style="height: 22px; width: auto; object-fit: contain; vertical-align: middle; display: inline-block;">
+            </span>
+          </div>
+          <div style="font-size:0.75rem; color:#A8A29E; font-weight:600;">Döküman Merkezi • Fazla Mesai</div>
+        </div>
+
+        <div>
+          <h2 class="count-header-main-title" style="margin-bottom:4px;">⏰ Fazla Mesai Girişi</h2>
+          <p style="color:#D6D3D1; font-size:0.86rem; margin:0;">
+            Tarih, süre (saat / dakika) ve ad soyad bilgilerinizi girerek fazla mesainizi kaydedin.
+          </p>
+        </div>
+      </section>
+
+      <!-- Navigasyon Çubuğu -->
+      <nav class="count-nav-bar" style="margin-bottom: 16px; display: flex; align-items: center; justify-content: flex-start;">
+        <button type="button" class="btn-back-dashboard" onclick="returnToDashboard()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+          Ana Menüye Dön
+        </button>
+      </nav>
+
+      <!-- 1. BÖLÜM: ÇALIŞAN FAZLA MESAİ GİRİŞ FORMU -->
+      <section style="background:#FFFFFF; border:1.5px solid var(--border); border-radius:16px; padding:20px; margin-bottom:18px; box-shadow:var(--shadow-sm); max-width:560px; margin-left:auto; margin-right:auto;">
+        <form id="overtimeEntryForm" onsubmit="handleSaveOvertimeRecord(event)">
+          <!-- 1. Satır: Basit Tarih Seçimi (Gün & Ay Adı Otomatik Gelir) -->
+          <div style="margin-bottom: 16px;">
+            <label style="display:block; font-size:0.84rem; font-weight:800; color:#0F172A; margin-bottom:6px;">
+              📅 Tarih (Gün ve Ay Otomatik Gelir)
+            </label>
+            <div style="display:grid; grid-template-columns: 1fr 1.6fr; gap:10px;">
+              <div>
+                <select
+                  id="otDaySelect"
+                  class="form-select"
+                  style="width:100%; height:46px; font-size:0.96rem; font-weight:800; color:#0F172A; border-radius:12px; border:1.5px solid #CBD5E1; background:#F8FAFC; padding:0 12px; cursor:pointer;"
+                >
+                  <!-- JS ile 1..31 doldurulur -->
+                </select>
+              </div>
+              <div>
+                <select
+                  id="otMonthSelect"
+                  class="form-select"
+                  style="width:100%; height:46px; font-size:0.96rem; font-weight:800; color:#0F172A; border-radius:12px; border:1.5px solid #CBD5E1; background:#F8FAFC; padding:0 12px; cursor:pointer;"
+                >
+                  <option value="Ocak">Ocak</option>
+                  <option value="Şubat">Şubat</option>
+                  <option value="Mart">Mart</option>
+                  <option value="Nisan">Nisan</option>
+                  <option value="Mayıs">Mayıs</option>
+                  <option value="Haziran">Haziran</option>
+                  <option value="Temmuz">Temmuz</option>
+                  <option value="Ağustos">Ağustos</option>
+                  <option value="Eylül">Eylül</option>
+                  <option value="Ekim">Ekim</option>
+                  <option value="Kasım">Kasım</option>
+                  <option value="Aralık">Aralık</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Satır: Saat ve Dakika Seçimi -->
+          <div style="margin-bottom: 16px;">
+            <label style="display:block; font-size:0.84rem; font-weight:800; color:#0F172A; margin-bottom:6px;">
+              ⏱️ Fazla Mesai Süresi (Saat ve Dakika)
+            </label>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+              <div>
+                <select
+                  id="otHoursSelect"
+                  class="form-select"
+                  style="width:100%; height:46px; font-size:0.96rem; font-weight:800; color:#0F172A; border-radius:12px; border:1.5px solid #CBD5E1; background:#F8FAFC; padding:0 12px; cursor:pointer;"
+                >
+                  <option value="0">0 Saat</option>
+                  <option value="1" selected>1 Saat</option>
+                  <option value="2">2 Saat</option>
+                  <option value="3">3 Saat</option>
+                  <option value="4">4 Saat</option>
+                  <option value="5">5 Saat</option>
+                  <option value="6">6 Saat</option>
+                  <option value="7">7 Saat</option>
+                  <option value="8">8 Saat</option>
+                  <option value="9">9 Saat</option>
+                  <option value="10">10 Saat</option>
+                  <option value="11">11 Saat</option>
+                  <option value="12">12 Saat</option>
+                </select>
+              </div>
+              <div>
+                <select
+                  id="otMinutesSelect"
+                  class="form-select"
+                  style="width:100%; height:46px; font-size:0.96rem; font-weight:800; color:#0F172A; border-radius:12px; border:1.5px solid #CBD5E1; background:#F8FAFC; padding:0 12px; cursor:pointer;"
+                >
+                  <option value="0" selected>0 Dakika</option>
+                  <option value="5">5 Dakika</option>
+                  <option value="10">10 Dakika</option>
+                  <option value="15">15 Dakika</option>
+                  <option value="20">20 Dakika</option>
+                  <option value="25">25 Dakika</option>
+                  <option value="30">30 Dakika</option>
+                  <option value="35">35 Dakika</option>
+                  <option value="40">40 Dakika</option>
+                  <option value="45">45 Dakika</option>
+                  <option value="50">50 Dakika</option>
+                  <option value="55">55 Dakika</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Satır: Ad Soyad Girilen Alan -->
+          <div style="margin-bottom: 18px;">
+            <label for="otEmployeeNameInput" style="display:block; font-size:0.84rem; font-weight:800; color:#0F172A; margin-bottom:6px;">
+              👤 Ad Soyad *
+            </label>
+            <input
+              type="text"
+              id="otEmployeeNameInput"
+              class="form-input"
+              placeholder="Adınız ve Soyadınız..."
+              required
+              autocomplete="name"
+              style="width:100%; height:46px; font-size:0.96rem; font-weight:800; color:#0F172A; border-radius:12px; border:1.5px solid #CBD5E1; background:#FFFFFF; padding:0 14px;"
+            >
+          </div>
+
+          <!-- Kaydet Butonu -->
+          <button
+            type="submit"
+            style="width:100%; height:48px; border-radius:12px; border:none; background:linear-gradient(135deg, #16A34A 0%, #15803D 100%); color:#FFFFFF; font-size:1rem; font-weight:900; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:8px; box-shadow:0 4px 14px rgba(22, 163, 74, 0.28);"
+          >
+            <span>✓</span>
+            <span>Fazla Mesaiyi Kaydet</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- EN ALTTA UFAK YÖNETİCİ BUTONU -->
+      <div style="display:flex; justify-content:center; margin-top: 10px; margin-bottom: 14px;">
+        <button
+          type="button"
+          id="otManagerToggleBtn"
+          onclick="toggleOvertimeManagerSection()"
+          style="border:1.5px solid #CBD5E1; background:#F8FAFC; color:#475569; border-radius:999px; padding:7px 16px; font-size:0.78rem; font-weight:800; cursor:pointer; display:inline-flex; align-items:center; gap:7px; box-shadow:0 1px 3px rgba(0,0,0,0.05); transition:all 0.15s ease;"
+        >
+          <span>🔐 Yönetici</span>
+          <span
+            id="otManagerBtnUnreadBadge"
+            style="display:none; min-width:19px; height:19px; padding:0 5px; border-radius:999px; background:#DC2626; color:#FFFFFF; font-size:0.72rem; font-weight:900; align-items:center; justify-content:center; line-height:1;"
+          >0</span>
+        </button>
+      </div>
+
+      <!-- YÖNETİCİ KAYIT LİSTESİ BÖLÜMÜ (YÖNETİCİ BUTONUNA BASILINCA AÇILIR) -->
+      <section
+        id="otManagerPanelSection"
+        style="display:none; background:#FFFFFF; border:1.5px solid var(--border); border-radius:16px; padding:18px; margin-bottom:20px; box-shadow:var(--shadow-sm);"
+      >
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; margin-bottom:14px; padding-bottom:10px; border-bottom:1.5px solid #E2E8F0;">
+          <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <h3 style="font-size:1rem; font-weight:900; color:var(--text-main); margin:0;">
+              🔐 Yönetici • Fazla Mesai Kayıtları
+            </h3>
+            <span id="otTotalCountBadge" style="background:#F1F5F9; color:#334155; border:1px solid #CBD5E1; padding:3px 10px; border-radius:999px; font-size:0.76rem; font-weight:800;">
+              0 Kayıt
+            </span>
+            <span id="otUnreadCountBadge" style="display:none; background:#DC2626; color:#FFFFFF; padding:3px 10px; border-radius:999px; font-size:0.76rem; font-weight:900;">
+              0 Okunmadı
+            </span>
+          </div>
+          <button
+            type="button"
+            onclick="toggleOvertimeManagerSection(false)"
+            style="border:1px solid #CBD5E1; background:#F8FAFC; color:#475569; border-radius:8px; padding:5px 10px; font-size:0.76rem; font-weight:800; cursor:pointer;"
+          >Gizle ▲</button>
+        </div>
+
+        <div id="otRecordsListContainer" style="display:flex; flex-direction:column; gap:10px;">
+          <!-- JS ile doldurulur -->
+        </div>
+      </section>
+
+      <!-- Canlı Senkronize Butonu (Sayfa Altı) -->
+      <div class="bottom-sync-wrapper">
+        <button type="button" class="btn-sync-cloud live-sync-pill" onclick="openSyncModal()" title="Canlı Bulut Senkronizasyon Durumu">
+          <span class="sync-pulse-dot"></span>
+          <span class="sync-text">Canlı Senkronize</span>
+        </button>
+      </div>
+    </main>
+
   </div><!-- /container -->
 
   <!-- ============================================== -->
@@ -10445,6 +10664,13 @@
         }
       } catch (e) { console.error('initMaintenanceRequestsFromStorage error:', e); }
 
+      // Fazla Mesai Kayıtlarını (overtimeRecords) hafızadan yükle
+      try {
+        if (typeof initOvertimeRecordsFromStorage === 'function') {
+          initOvertimeRecordsFromStorage();
+        }
+      } catch (e) { console.error('initOvertimeRecordsFromStorage error:', e); }
+
       // Geçersiz veya boş günlere atanmış hatalı zaman damgalarını temizle
       try { cleanInvalidDayTimestamps(); } catch (e) { console.error('cleanInvalidDayTimestamps error:', e); }
 
@@ -10826,6 +11052,9 @@
       if (typeof updateMaintenanceDashboardAlertBadge === 'function') {
         updateMaintenanceDashboardAlertBadge();
       }
+      if (typeof updateOvertimeDashboardAlertBadge === 'function') {
+        updateOvertimeDashboardAlertBadge();
+      }
 
       const activeLists = typeof getActiveCountLists === 'function' ? getActiveCountLists() : [];
       const listIds = activeLists.length > 0 ? activeLists.map(l => l.id) : ['hergun', 'sali', 'persembe', 'pazar'];
@@ -10904,7 +11133,7 @@
        3. NAVIGATION: DASHBOARD <-> COUNT VIEW <-> MANAGE VIEW
        ========================================================= */
     function switchView(viewId) {
-      const views = ['dashboardView', 'countView', 'staticCountHistoryView', 'manageProductsView', 'countListsManageView', 'maintenanceRequestsView', 'suppliersManageView', 'recipesView', 'recipeBolonezView', 'recipeMercimekView', 'recipeCreateView', 'recipeCustomDetailView', 'bigaDoughView', 'doughTempCalcView', 'orderSuppliersView', 'supplierOrderView', 'staffMealsView', 'staffMealsEditView', 'staffDishesView', 'shiftView', 'shiftEditView', 'shiftEmployeesView'];
+      const views = ['dashboardView', 'countView', 'staticCountHistoryView', 'manageProductsView', 'countListsManageView', 'maintenanceRequestsView', 'overtimeView', 'suppliersManageView', 'recipesView', 'recipeBolonezView', 'recipeMercimekView', 'recipeCreateView', 'recipeCustomDetailView', 'bigaDoughView', 'doughTempCalcView', 'orderSuppliersView', 'supplierOrderView', 'staffMealsView', 'staffMealsEditView', 'staffDishesView', 'shiftView', 'shiftEditView', 'shiftEmployeesView'];
       const targetId = (viewId && views.includes(viewId)) ? viewId : 'dashboardView';
       let foundTarget = false;
       views.forEach(id => {
@@ -10922,7 +11151,7 @@
       document.body.classList.remove('view-dashboard', 'view-count', 'view-manage', 'view-recipes');
       if (targetId === 'dashboardView') {
         document.body.classList.add('view-dashboard');
-      } else if (targetId === 'countView' || targetId === 'staticCountHistoryView' || targetId === 'supplierOrderView' || targetId === 'staffMealsView' || targetId === 'staffMealsEditView' || targetId === 'staffDishesView' || targetId === 'shiftView' || targetId === 'shiftEditView' || targetId === 'shiftEmployeesView' || targetId === 'maintenanceRequestsView') {
+      } else if (targetId === 'countView' || targetId === 'staticCountHistoryView' || targetId === 'supplierOrderView' || targetId === 'staffMealsView' || targetId === 'staffMealsEditView' || targetId === 'staffDishesView' || targetId === 'shiftView' || targetId === 'shiftEditView' || targetId === 'shiftEmployeesView' || targetId === 'maintenanceRequestsView' || targetId === 'overtimeView') {
         document.body.classList.add('view-count');
       } else if (targetId === 'recipesView' || targetId === 'recipeBolonezView' || targetId === 'recipeMercimekView' || targetId === 'recipeCreateView' || targetId === 'recipeCustomDetailView' || targetId === 'bigaDoughView' || targetId === 'doughTempCalcView') {
         document.body.classList.add('view-recipes');
@@ -12598,7 +12827,9 @@
           cl: (data.countLists || []).map(l => [l.id, l.title, l.badge || '', l.subtitle || '', l.desc || '', l.order || 0]),
           delCl: (data.deletedCountListIds || []).slice().sort(),
           mnt: (data.maintenanceRequests || []).map(m => [m.id, m.type, m.urgency, m.desc, m.status, m.createdAt || 0, m.updatedAt || 0]),
-          delMnt: (data.deletedMaintenanceRequestIds || []).slice().sort()
+          delMnt: (data.deletedMaintenanceRequestIds || []).slice().sort(),
+          ot: (data.overtimeRecords || []).map(o => [o.id, o.employeeName, o.day, o.month, o.hours, o.minutes, o.isRead ? 1 : 0, o.createdAt || 0, o.updatedAt || 0]),
+          delOt: (data.deletedOvertimeRecordIds || []).slice().sort()
         };
         const str = JSON.stringify(canonical);
         let hash = 0;
@@ -12886,6 +13117,13 @@
         min.delMnt = data.deletedMaintenanceRequestIds;
       }
 
+      if (Array.isArray(data.overtimeRecords) && data.overtimeRecords.length > 0) {
+        min.ot = data.overtimeRecords;
+      }
+      if (Array.isArray(data.deletedOvertimeRecordIds) && data.deletedOvertimeRecordIds.length > 0) {
+        min.delOt = data.deletedOvertimeRecordIds;
+      }
+
       return min;
     }
 
@@ -12929,7 +13167,9 @@
         countLists: Array.isArray(raw.cl) ? JSON.parse(JSON.stringify(raw.cl)) : (Array.isArray(raw.countLists) ? JSON.parse(JSON.stringify(raw.countLists)) : []),
         deletedCountListIds: Array.isArray(raw.delCl) ? [...raw.delCl] : (Array.isArray(raw.deletedCountListIds) ? [...raw.deletedCountListIds] : []),
         maintenanceRequests: Array.isArray(raw.mnt) ? JSON.parse(JSON.stringify(raw.mnt)) : (Array.isArray(raw.maintenanceRequests) ? JSON.parse(JSON.stringify(raw.maintenanceRequests)) : []),
-        deletedMaintenanceRequestIds: Array.isArray(raw.delMnt) ? [...raw.delMnt] : (Array.isArray(raw.deletedMaintenanceRequestIds) ? [...raw.deletedMaintenanceRequestIds] : [])
+        deletedMaintenanceRequestIds: Array.isArray(raw.delMnt) ? [...raw.delMnt] : (Array.isArray(raw.deletedMaintenanceRequestIds) ? [...raw.deletedMaintenanceRequestIds] : []),
+        overtimeRecords: Array.isArray(raw.ot) ? JSON.parse(JSON.stringify(raw.ot)) : (Array.isArray(raw.overtimeRecords) ? JSON.parse(JSON.stringify(raw.overtimeRecords)) : []),
+        deletedOvertimeRecordIds: Array.isArray(raw.delOt) ? [...raw.delOt] : (Array.isArray(raw.deletedOvertimeRecordIds) ? [...raw.deletedOvertimeRecordIds] : [])
       };
 
       if (Array.isArray(raw.she)) {
@@ -13085,7 +13325,9 @@
         countLists: countLists || [],
         deletedCountListIds: deletedCountListIds || [],
         maintenanceRequests: maintenanceRequests || [],
-        deletedMaintenanceRequestIds: deletedMaintenanceRequestIds || []
+        deletedMaintenanceRequestIds: deletedMaintenanceRequestIds || [],
+        overtimeRecords: overtimeRecords || [],
+        deletedOvertimeRecordIds: deletedOvertimeRecordIds || []
       };
     }
 
@@ -13104,6 +13346,11 @@
       const maintView = document.getElementById('maintenanceRequestsView');
       if (maintView && maintView.style.display !== 'none' && !isInputFocused && typeof renderMaintenanceRequestsList === 'function') {
         renderMaintenanceRequestsList();
+      }
+
+      const otView = document.getElementById('overtimeView');
+      if (otView && otView.style.display !== 'none' && typeof renderOvertimeManagerList === 'function') {
+        renderOvertimeManagerList();
       }
 
       const histView = document.getElementById('staticCountHistoryView');
@@ -13422,6 +13669,51 @@
         maintenanceRequests = Object.values(mntMap).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
         try { localStorage.setItem('delinapolitan_maintenance_requests', JSON.stringify(maintenanceRequests)); } catch(e) {}
         if (remMntTs > locMntTs) moduleTimestamps.mnt = remMntTs;
+      }
+
+      const remOtTs = Number(remMt.ot) || 0;
+      const locOtTs = Number(locMt.ot) || 0;
+      const isOtRemoteNewer = (remOtTs > 0 || locOtTs > 0) ? (remOtTs >= locOtTs) : isGlobalRemoteNewer;
+
+      if (Array.isArray(data.deletedOvertimeRecordIds) && data.deletedOvertimeRecordIds.length > 0) {
+        if (isOtRemoteNewer) {
+          deletedOvertimeRecordIds = Array.from(new Set([...(deletedOvertimeRecordIds || []), ...data.deletedOvertimeRecordIds]));
+        } else {
+          data.deletedOvertimeRecordIds.forEach(delId => {
+            const existsLocally = Array.isArray(overtimeRecords) && overtimeRecords.some(o => o && o.id === delId);
+            if (!existsLocally && !deletedOvertimeRecordIds.includes(delId)) {
+              deletedOvertimeRecordIds.push(delId);
+            }
+          });
+        }
+        try { localStorage.setItem('delinapolitan_deleted_overtime_records', JSON.stringify(deletedOvertimeRecordIds)); } catch(e) {}
+      }
+
+      if (Array.isArray(overtimeRecords)) {
+        overtimeRecords = overtimeRecords.filter(o => o && o.id && !deletedOvertimeRecordIds.includes(o.id));
+      }
+
+      if (Array.isArray(data.overtimeRecords) && data.overtimeRecords.length > 0) {
+        const otMap = {};
+        (overtimeRecords || []).forEach(o => {
+          if (o && o.id && !deletedOvertimeRecordIds.includes(o.id)) otMap[o.id] = { ...o };
+        });
+        data.overtimeRecords.forEach(o => {
+          if (!o || !o.id || deletedOvertimeRecordIds.includes(o.id)) return;
+          if (!otMap[o.id]) {
+            otMap[o.id] = { ...o };
+          } else {
+            const cur = otMap[o.id];
+            const remUpd = Number(o.updatedAt) || Number(o.createdAt) || remOtTs || 0;
+            const locUpd = Number(cur.updatedAt) || Number(cur.createdAt) || locOtTs || 0;
+            if (remUpd >= locUpd || isOtRemoteNewer) {
+              otMap[o.id] = { ...cur, ...o };
+            }
+          }
+        });
+        overtimeRecords = Object.values(otMap).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+        try { localStorage.setItem('delinapolitan_overtime_records', JSON.stringify(overtimeRecords)); } catch(e) {}
+        if (remOtTs > locOtTs) moduleTimestamps.ot = remOtTs;
       }
 
       // STEP 1: Merge Tombstones with Module-Timestamp Awareness (so re-added items on a newer local module aren't re-deleted by an older snapshot)
@@ -21393,6 +21685,343 @@
             </div>
 
             <div style="font-size: 0.95rem; font-weight: 700; color: var(--text-main); background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 10px 12px; line-height: 1.45; white-space: pre-wrap;">${escapeHtml(req.desc)}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    /* =========================================================
+       14. FAZLA MESAİ (OVERTIME RECORDS & MANAGER TRACKING)
+       ========================================================= */
+    const OVERTIME_MONTH_NAMES = [
+      'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran',
+      'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'
+    ];
+
+    let overtimeRecords = [];
+    let deletedOvertimeRecordIds = [];
+
+    function initOvertimeRecordsFromStorage() {
+      try {
+        const savedDel = localStorage.getItem('delinapolitan_deleted_overtime_records');
+        deletedOvertimeRecordIds = savedDel ? JSON.parse(savedDel) : [];
+        if (!Array.isArray(deletedOvertimeRecordIds)) deletedOvertimeRecordIds = [];
+      } catch (e) {
+        deletedOvertimeRecordIds = [];
+      }
+
+      try {
+        const saved = localStorage.getItem('delinapolitan_overtime_records');
+        const parsed = saved ? JSON.parse(saved) : [];
+        if (Array.isArray(parsed)) {
+          overtimeRecords = parsed
+            .filter(r => r && r.id && !deletedOvertimeRecordIds.includes(r.id))
+            .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+        } else {
+          overtimeRecords = [];
+        }
+      } catch (e) {
+        console.error('initOvertimeRecordsFromStorage error:', e);
+        overtimeRecords = [];
+      }
+    }
+
+    function saveOvertimeRecordsToStorage() {
+      try {
+        touchModuleTimestamp('ot');
+        localStorage.setItem('delinapolitan_overtime_records', JSON.stringify(overtimeRecords));
+        localStorage.setItem('delinapolitan_deleted_overtime_records', JSON.stringify(deletedOvertimeRecordIds));
+        updateOvertimeDashboardAlertBadge();
+        scheduleAutoCloudSync(150);
+      } catch (e) {
+        console.error('saveOvertimeRecordsToStorage error:', e);
+      }
+    }
+
+    function getActiveOvertimeRecords() {
+      if (!Array.isArray(overtimeRecords)) {
+        initOvertimeRecordsFromStorage();
+      }
+      return (overtimeRecords || [])
+        .filter(r => r && r.id && !deletedOvertimeRecordIds.includes(r.id))
+        .slice()
+        .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+    }
+
+    function updateOvertimeDashboardAlertBadge() {
+      const list = getActiveOvertimeRecords();
+      const unreadCount = list.filter(r => !r.isRead).length;
+
+      const dashBadge = document.getElementById('overtimeUnreadAlertBadge');
+      if (dashBadge) {
+        if (unreadCount > 0) {
+          dashBadge.textContent = String(unreadCount);
+          dashBadge.style.display = 'inline-flex';
+        } else {
+          dashBadge.textContent = '0';
+          dashBadge.style.display = 'none';
+        }
+      }
+
+      const mgrBtnBadge = document.getElementById('otManagerBtnUnreadBadge');
+      if (mgrBtnBadge) {
+        if (unreadCount > 0) {
+          mgrBtnBadge.textContent = String(unreadCount);
+          mgrBtnBadge.style.display = 'inline-flex';
+        } else {
+          mgrBtnBadge.textContent = '0';
+          mgrBtnBadge.style.display = 'none';
+        }
+      }
+    }
+
+    function initOvertimeDateSelectorsToToday() {
+      const daySel = document.getElementById('otDaySelect');
+      const monthSel = document.getElementById('otMonthSelect');
+      const now = new Date();
+      const todayDay = now.getDate();
+      const todayMonthName = OVERTIME_MONTH_NAMES[now.getMonth()] || 'Kasım';
+
+      if (daySel) {
+        if (daySel.options.length !== 31) {
+          let html = '';
+          for (let d = 1; d <= 31; d++) {
+            html += `<option value="${d}">${d}</option>`;
+          }
+          daySel.innerHTML = html;
+        }
+        daySel.value = String(todayDay);
+      }
+
+      if (monthSel) {
+        monthSel.value = todayMonthName;
+      }
+    }
+
+    function openOvertimeView() {
+      if (activeDay && countData[activeDay]) {
+        try { localStorage.setItem('delinapolitan_counts_data', JSON.stringify(countData)); } catch (e) {}
+      }
+      activeDay = null;
+      initOvertimeRecordsFromStorage();
+      initOvertimeDateSelectorsToToday();
+
+      const hoursSel = document.getElementById('otHoursSelect');
+      const minsSel = document.getElementById('otMinutesSelect');
+      const nameInp = document.getElementById('otEmployeeNameInput');
+      if (hoursSel) hoursSel.value = '1';
+      if (minsSel) minsSel.value = '0';
+      if (nameInp) nameInp.value = '';
+
+      // Yönetici paneli başlangıçta kapalı gelsin; yönetici butonuna basınca açılsın
+      toggleOvertimeManagerSection(false);
+
+      switchView('overtimeView');
+      renderOvertimeManagerList();
+      updateOvertimeDashboardAlertBadge();
+
+      if (typeof fetchAppStateFromCloud === 'function') {
+        fetchAppStateFromCloud({ showFeedback: false });
+      }
+    }
+
+    function toggleOvertimeManagerSection(forceState) {
+      const panel = document.getElementById('otManagerPanelSection');
+      if (!panel) return;
+
+      const isCurrentlyOpen = panel.style.display !== 'none';
+      const nextOpen = (typeof forceState === 'boolean') ? forceState : !isCurrentlyOpen;
+
+      panel.style.display = nextOpen ? 'block' : 'none';
+      if (nextOpen) {
+        renderOvertimeManagerList();
+        setTimeout(() => {
+          try {
+            panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          } catch (e) {}
+        }, 50);
+      }
+    }
+
+    function formatOvertimeDurationText(hours, minutes) {
+      const h = parseInt(hours, 10) || 0;
+      const m = parseInt(minutes, 10) || 0;
+      const parts = [];
+      if (h > 0) parts.push(`${h} Saat`);
+      if (m > 0) parts.push(`${m} Dakika`);
+      return parts.length > 0 ? parts.join(' ') : '0 Dakika';
+    }
+
+    function handleSaveOvertimeRecord(e) {
+      if (e) e.preventDefault();
+
+      const daySel = document.getElementById('otDaySelect');
+      const monthSel = document.getElementById('otMonthSelect');
+      const hoursSel = document.getElementById('otHoursSelect');
+      const minsSel = document.getElementById('otMinutesSelect');
+      const nameInp = document.getElementById('otEmployeeNameInput');
+
+      const day = parseInt(daySel?.value || '1', 10) || new Date().getDate();
+      const month = (monthSel?.value || OVERTIME_MONTH_NAMES[new Date().getMonth()]).trim();
+      const hours = parseInt(hoursSel?.value || '0', 10) || 0;
+      const minutes = parseInt(minsSel?.value || '0', 10) || 0;
+      const employeeName = (nameInp?.value || '').trim();
+
+      if (hours <= 0 && minutes <= 0) {
+        alert('Lütfen fazla mesai süresini (saat veya dakika) seçin.');
+        if (hoursSel) hoursSel.focus();
+        return;
+      }
+
+      if (!employeeName) {
+        alert('Lütfen Ad Soyad bilginizi girin.');
+        if (nameInp) nameInp.focus();
+        return;
+      }
+
+      const now = Date.now();
+      const newRec = {
+        id: 'ot_' + now + '_' + Math.random().toString(36).slice(2, 6),
+        employeeName: employeeName,
+        day: day,
+        month: month,
+        hours: hours,
+        minutes: minutes,
+        isRead: false,
+        createdAt: now,
+        updatedAt: now
+      };
+
+      overtimeRecords.unshift(newRec);
+      saveOvertimeRecordsToStorage();
+      updateDashboardCounts();
+      renderOvertimeManagerList();
+
+      if (nameInp) nameInp.value = '';
+      if (hoursSel) hoursSel.value = '1';
+      if (minsSel) minsSel.value = '0';
+      initOvertimeDateSelectorsToToday();
+
+      showToast(`✓ ${employeeName} — ${day} ${month} (${formatOvertimeDurationText(hours, minutes)}) fazla mesai kaydedildi!`);
+    }
+
+    function handleSetOvertimeReadState(recordId, nextReadState = true) {
+      const idx = overtimeRecords.findIndex(r => r && r.id === recordId);
+      if (idx === -1) return;
+
+      overtimeRecords[idx].isRead = !!nextReadState;
+      overtimeRecords[idx].updatedAt = Date.now();
+
+      saveOvertimeRecordsToStorage();
+      updateDashboardCounts();
+      renderOvertimeManagerList();
+
+      if (nextReadState) {
+        showToast('✓ Kayıt "Okundu" olarak işaretlendi.');
+      } else {
+        showToast('Kayıt tekrar "Okunmadı" durumuna alındı.');
+      }
+    }
+
+    function handleDeleteOvertimeRecord(recordId) {
+      const rec = overtimeRecords.find(r => r && r.id === recordId);
+      if (!rec) return;
+      if (!confirm(`"${rec.employeeName}" (${rec.day} ${rec.month}) fazla mesai kaydını silmek istediğinize emin misiniz?`)) return;
+
+      if (!deletedOvertimeRecordIds.includes(recordId)) {
+        deletedOvertimeRecordIds.push(recordId);
+      }
+      overtimeRecords = overtimeRecords.filter(r => r && r.id !== recordId);
+
+      saveOvertimeRecordsToStorage();
+      updateDashboardCounts();
+      renderOvertimeManagerList();
+      showToast('Fazla mesai kaydı silindi.');
+    }
+
+    function renderOvertimeManagerList() {
+      const container = document.getElementById('otRecordsListContainer');
+      const totalBadge = document.getElementById('otTotalCountBadge');
+      const unreadBadge = document.getElementById('otUnreadCountBadge');
+      if (!container) return;
+
+      const list = getActiveOvertimeRecords();
+      const unreadCount = list.filter(r => !r.isRead).length;
+
+      if (totalBadge) totalBadge.textContent = `${list.length} Kayıt`;
+      if (unreadBadge) {
+        if (unreadCount > 0) {
+          unreadBadge.textContent = `🔴 ${unreadCount} Okunmadı`;
+          unreadBadge.style.display = 'inline-flex';
+        } else {
+          unreadBadge.style.display = 'none';
+        }
+      }
+
+      updateOvertimeDashboardAlertBadge();
+
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div style="padding: 28px 16px; text-align: center; color: var(--text-muted); font-size: 0.88rem; font-weight: 700; border: 1.5px dashed #CBD5E1; border-radius: 12px; background: #F8FAFC;">
+            Henüz girilmiş fazla mesai kaydı bulunmuyor.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = list.map((rec, idx) => {
+        const isUnread = !rec.isRead;
+        const durationStr = formatOvertimeDurationText(rec.hours, rec.minutes);
+        const dateLabel = `${rec.day || ''} ${rec.month || ''}`.trim();
+
+        return `
+          <div
+            style="border: 2px solid ${isUnread ? '#FCA5A5' : '#E2E8F0'}; background: ${isUnread ? '#FFF5F5' : '#FFFFFF'}; border-radius: 14px; padding: 13px 15px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; box-shadow: var(--shadow-sm);"
+          >
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+              <span style="background:#0F172A; color:#FFFFFF; font-size:0.74rem; font-weight:800; padding:3px 8px; border-radius:6px;">
+                #${list.length - idx}
+              </span>
+              <span style="font-size: 1rem; font-weight: 900; color: #0F172A;">
+                👤 ${escapeHtml(rec.employeeName || 'Çalışan')}
+              </span>
+              <span style="background:#EFF6FF; color:#1D4ED8; border:1px solid #BFDBFE; font-size:0.82rem; font-weight:800; padding:4px 10px; border-radius:999px;">
+                📅 ${escapeHtml(dateLabel)}
+              </span>
+              <span style="background:#FEF3C7; color:#92400E; border:1px solid #FDE68A; font-size:0.84rem; font-weight:900; padding:4px 11px; border-radius:999px;">
+                ⏱️ ${escapeHtml(durationStr)}
+              </span>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              ${isUnread ? `
+                <button
+                  type="button"
+                  onclick="handleSetOvertimeReadState('${escapeHtml(rec.id)}', true)"
+                  style="height: 36px; padding: 0 14px; border-radius: 9px; border: none; background: #16A34A; color: #FFFFFF; font-size: 0.82rem; font-weight: 900; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 2px 6px rgba(22, 163, 74, 0.25);"
+                  title="Okundu olarak işaretle (Ana sayfadaki uyarı sayısını 1 düşürür)"
+                >
+                  <span>✓</span>
+                  <span>Okundu Set Et</span>
+                </button>
+              ` : `
+                <button
+                  type="button"
+                  onclick="handleSetOvertimeReadState('${escapeHtml(rec.id)}', false)"
+                  style="height: 36px; padding: 0 12px; border-radius: 9px; border: 1.5px solid #86EFAC; background: #DCFCE7; color: #15803D; font-size: 0.8rem; font-weight: 900; cursor: pointer; display: inline-flex; align-items: center; gap: 5px;"
+                  title="Okundu (Tekrar okunmadı yapmak için tıklayın)"
+                >
+                  <span>✅</span>
+                  <span>Okundu</span>
+                </button>
+              `}
+              <button
+                type="button"
+                onclick="handleDeleteOvertimeRecord('${escapeHtml(rec.id)}')"
+                style="height: 36px; padding: 0 10px; border-radius: 9px; border: 1.5px solid #FCA5A5; background: #FEF2F2; color: #DC2626; font-size: 0.8rem; font-weight: 800; cursor: pointer;"
+                title="Kaydı Sil"
+              >🗑️</button>
+            </div>
           </div>
         `;
       }).join('');
