@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-23T08:20:50.640Z",
-  "timestamp": 1795422047786,
+  "exportedAt": "2026-11-23T08:36:01.200Z",
+  "timestamp": 1795422960594,
   "deviceId": "dev_99uzb4t_mvpnpi3a",
   "moduleTimestamps": {
     "cnt_hergun": 1795352045779,
@@ -179,7 +179,7 @@
     "shf_emp_begum_cumartesi": 1794179537864,
     "shf_emp_begum_pazar": 1793904518689,
     "shf_emp_alican_pazartesi": 1795422047783,
-    "shf_emp_alican_sali": 1793877123446,
+    "shf_emp_alican_sali": 1795422051455,
     "shf_emp_alican_carsamba": 1793877123446,
     "shf_emp_alican_persembe": 1793877123446,
     "shf_emp_alican_cuma": 1793877123446,
@@ -188,7 +188,7 @@
     "shf_emp_ali_pazartesi": 1793877129478,
     "shf_emp_ali_sali": 1793877129478,
     "shf_emp_ali_carsamba": 1793877129478,
-    "shf_emp_ali_persembe": 1793877129478,
+    "shf_emp_ali_persembe": 1795422064776,
     "shf_emp_ali_cuma": 1793877129478,
     "shf_emp_ali_cumartesi": 1793877129478,
     "shf_emp_ali_pazar": 1793877129478,
@@ -199,7 +199,7 @@
     "shf_emp_ozge_cuma": 1793877135627,
     "shf_emp_ozge_cumartesi": 1793877135627,
     "shf_emp_ozge_pazar": 1793877135627,
-    "shf": 1795422047783,
+    "shf": 1795422067049,
     "cnt_metro": 1794144391783,
     "prod_cust_i_likli_kemik_stok_suyu": 1794359199028,
     "prod_cust_patates": 1794358779227,
@@ -4999,7 +4999,7 @@
         "end": "21:00"
       },
       "sali": {
-        "isOff": false,
+        "isOff": true,
         "start": "11:00",
         "end": "21:00"
       },
@@ -5046,7 +5046,7 @@
         "end": "21:00"
       },
       "persembe": {
-        "isOff": false,
+        "isOff": true,
         "start": "11:00",
         "end": "21:00"
       },
@@ -5105,7 +5105,7 @@
     }
   },
   "deletedShiftEmployeeIds": [],
-  "shiftTimestamp": 1795422047783,
+  "shiftTimestamp": 1795422067049,
   "countLists": [
     {
       "id": "hergun",
