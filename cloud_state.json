@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-25T10:39:12.460Z",
-  "timestamp": 1795603152167,
+  "exportedAt": "2026-11-25T10:39:16.958Z",
+  "timestamp": 1795603156702,
   "deviceId": "dev_xkmdxfa_mwrysg4x",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -204,7 +204,7 @@
     "shf_emp_alican_cumartesi": 1795602711253,
     "shf_emp_alican_pazar": 1795602685760,
     "shf_emp_ali_pazartesi": 1793877129478,
-    "shf_emp_ali_sali": 1793877129478,
+    "shf_emp_ali_sali": 1795603156693,
     "shf_emp_ali_carsamba": 1795603152160,
     "shf_emp_ali_persembe": 1795422064776,
     "shf_emp_ali_cuma": 1795603107201,
@@ -217,7 +217,7 @@
     "shf_emp_ozge_cuma": 1793877135627,
     "shf_emp_ozge_cumartesi": 1793877135627,
     "shf_emp_ozge_pazar": 1793877135627,
-    "shf": 1795603152160,
+    "shf": 1795603156693,
     "cnt_pazartesi_sarf": 1795433648432,
     "ot": 1795459092173,
     "rdoc_acilis": 1795436248911,
@@ -5114,7 +5114,7 @@
       },
       "sali": {
         "isOff": false,
-        "start": "11:00",
+        "start": "12:30",
         "end": "21:00"
       },
       "carsamba": {
@@ -5182,7 +5182,7 @@
     }
   },
   "deletedShiftEmployeeIds": [],
-  "shiftTimestamp": 1795603152160,
+  "shiftTimestamp": 1795603156693,
   "countLists": [
     {
       "id": "hergun",
