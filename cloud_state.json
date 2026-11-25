@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-25T11:16:26.985Z",
-  "timestamp": 1795605384816,
+  "exportedAt": "2026-11-25T11:17:45.061Z",
+  "timestamp": 1795605464454,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -4063,15 +4063,15 @@
       "dayId": "pazartesi_sarf",
       "updatedAt": 1795433648432
     },
-    "sl_35": {
-      "qty": "0",
-      "dayId": "metro",
-      "updatedAt": 1794144391783
-    },
     "cust_donuk_ispanak": {
       "qty": "1.5",
       "dayId": "sali",
       "updatedAt": 1795605384816
+    },
+    "sl_35": {
+      "qty": "0",
+      "dayId": "metro",
+      "updatedAt": 1794144391783
     }
   },
   "recipeTags": {
