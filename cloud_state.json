@@ -1,11 +1,11 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-25T11:21:48.245Z",
-  "timestamp": 1795605707891,
+  "exportedAt": "2026-11-25T11:22:06.431Z",
+  "timestamp": 1795605726363,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
-    "cnt_hergun": 1795605707890,
+    "cnt_hergun": 1795605726362,
     "cnt_pazar": 1795352462861,
     "rst_hergun": 1794144128904,
     "rst_pazar": 1793557180407,
@@ -1923,7 +1923,7 @@
         "notes": "2 kg donuk var"
       },
       "hg_13": {
-        "qty": "1",
+        "qty": 0,
         "notes": ""
       },
       "hg_14": {
@@ -1947,7 +1947,7 @@
         "notes": ""
       },
       "cust_kabak": {
-        "qty": 1.5,
+        "qty": 1,
         "notes": ""
       },
       "cust_sili_biber": {
