@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-25T11:10:15.357Z",
-  "timestamp": 1795605015327,
+  "exportedAt": "2026-11-25T11:10:27.148Z",
+  "timestamp": 1795605027050,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -135,7 +135,7 @@
     "prod": 1795134723437,
     "cat": 1795134625648,
     "rst_sali": 1793811787129,
-    "cnt_sali": 1795605015325,
+    "cnt_sali": 1795605027049,
     "shf_emp_baha_pazartesi": 1793820260701,
     "shf_emp_baha_sali": 1793904518689,
     "shf_emp_baha_carsamba": 1793904518689,
@@ -2308,6 +2308,10 @@
       },
       "sl_24": {
         "qty": "0",
+        "notes": ""
+      },
+      "cust_donuk_ispanak": {
+        "qty": 0.5,
         "notes": ""
       }
     },
