@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-25T10:58:36.349Z",
-  "timestamp": 1795604315993,
+  "exportedAt": "2026-11-25T10:58:52.948Z",
+  "timestamp": 1795604332589,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -135,7 +135,7 @@
     "prod": 1795134723437,
     "cat": 1795134625648,
     "rst_sali": 1793811787129,
-    "cnt_sali": 1795604315992,
+    "cnt_sali": 1795604332587,
     "shf_emp_baha_pazartesi": 1793820260701,
     "shf_emp_baha_sali": 1793904518689,
     "shf_emp_baha_carsamba": 1793904518689,
@@ -2160,14 +2160,14 @@
       },
       "sl_4": {
         "qty": 1.5,
-        "notes": "650 Gr 2 vakum + 1 "
+        "notes": "650 Gr 2 vakum + 1 paket"
       },
       "sl_5": {
         "qty": "0",
         "notes": ""
       },
       "sl_6": {
-        "qty": "0.5",
+        "qty": 0.25,
         "notes": ""
       },
       "sl_7": {
