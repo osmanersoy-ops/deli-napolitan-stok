@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-25T11:02:43.243Z",
-  "timestamp": 1795604557787,
+  "exportedAt": "2026-11-25T11:02:45.148Z",
+  "timestamp": 1795604564924,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -135,7 +135,7 @@
     "prod": 1795134723437,
     "cat": 1795134625648,
     "rst_sali": 1793811787129,
-    "cnt_sali": 1795604557786,
+    "cnt_sali": 1795604564923,
     "shf_emp_baha_pazartesi": 1793820260701,
     "shf_emp_baha_sali": 1793904518689,
     "shf_emp_baha_carsamba": 1793904518689,
@@ -2255,7 +2255,7 @@
         "notes": "Hepsinden bir tane "
       },
       "sl_32": {
-        "qty": 7,
+        "qty": 4,
         "notes": ""
       },
       "sl_33": {
