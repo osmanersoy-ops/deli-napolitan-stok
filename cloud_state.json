@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-25T11:07:53.707Z",
-  "timestamp": 1795604872844,
+  "exportedAt": "2026-11-25T11:07:57.826Z",
+  "timestamp": 1795604873820,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -135,7 +135,7 @@
     "prod": 1795134723437,
     "cat": 1795134625648,
     "rst_sali": 1793811787129,
-    "cnt_sali": 1795604872844,
+    "cnt_sali": 1795604873819,
     "shf_emp_baha_pazartesi": 1793820260701,
     "shf_emp_baha_sali": 1793904518689,
     "shf_emp_baha_carsamba": 1793904518689,
@@ -2231,7 +2231,7 @@
         "notes": "6 metro 4 Tellioğlu"
       },
       "sl_23": {
-        "qty": 3,
+        "qty": 4,
         "notes": ""
       },
       "sl_25": {
