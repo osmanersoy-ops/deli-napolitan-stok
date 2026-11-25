@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-25T11:02:45.148Z",
-  "timestamp": 1795604564924,
+  "exportedAt": "2026-11-25T11:02:56.260Z",
+  "timestamp": 1795604575904,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -135,7 +135,7 @@
     "prod": 1795134723437,
     "cat": 1795134625648,
     "rst_sali": 1793811787129,
-    "cnt_sali": 1795604564923,
+    "cnt_sali": 1795604575903,
     "shf_emp_baha_pazartesi": 1793820260701,
     "shf_emp_baha_sali": 1793904518689,
     "shf_emp_baha_carsamba": 1793904518689,
@@ -2255,7 +2255,7 @@
         "notes": "Hepsinden bir tane "
       },
       "sl_32": {
-        "qty": 4,
+        "qty": 3,
         "notes": ""
       },
       "sl_33": {
@@ -2299,7 +2299,7 @@
         "notes": ""
       },
       "cust_beyaz_sarap_pirinc_sirkesi": {
-        "qty": "0.5",
+        "qty": 1,
         "notes": ""
       }
     },
