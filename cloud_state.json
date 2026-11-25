@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-25T11:09:06.480Z",
-  "timestamp": 1795604941145,
+  "exportedAt": "2026-11-25T11:10:10.566Z",
+  "timestamp": 1795605010206,
   "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -135,7 +135,7 @@
     "prod": 1795134723437,
     "cat": 1795134625648,
     "rst_sali": 1793811787129,
-    "cnt_sali": 1795604941144,
+    "cnt_sali": 1795605010205,
     "shf_emp_baha_pazartesi": 1793820260701,
     "shf_emp_baha_sali": 1793904518689,
     "shf_emp_baha_carsamba": 1793904518689,
@@ -2267,7 +2267,7 @@
         "notes": "6sı küçük boy 400gr"
       },
       "cust_beyaz_sarimsak_puresi": {
-        "qty": 0.25,
+        "qty": "0.25",
         "notes": ""
       },
       "cust_i_likli_kemik_stok_suyu": {
@@ -2275,7 +2275,7 @@
         "notes": ""
       },
       "sl_29": {
-        "qty": "5",
+        "qty": 6,
         "notes": ""
       },
       "sl_30": {
