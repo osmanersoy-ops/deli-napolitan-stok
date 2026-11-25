@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-25T14:53:50.771Z",
-  "timestamp": 1795618430168,
+  "exportedAt": "2026-11-25T14:54:16.222Z",
+  "timestamp": 1795618456069,
   "deviceId": "dev_9s3twk8_mvmwns8g",
   "moduleTimestamps": {
     "cnt_hergun": 1795605955334,
@@ -209,7 +209,7 @@
     "crec": 1795347901368,
     "cnt_persembe": 1795112129354,
     "cl": 1795134704271,
-    "mnt": 1795615204990,
+    "mnt": 1795618456068,
     "prod_cust_eldiven": 1795134187189,
     "prod_cust_donuk_ispanak": 1795134625648,
     "prod_hg_27": 1795134387306,
@@ -5328,10 +5328,10 @@
       "type": "tamir",
       "urgency": "acil",
       "desc": "Hamur açma tezgahı kenarlara silikon",
-      "status": "yeni",
+      "status": "alindi",
       "dateText": "25 Kasım 2026 Çarşamba, 17:00",
       "createdAt": 1795615204990,
-      "updatedAt": 1795615204990
+      "updatedAt": 1795618456068
     },
     {
       "id": "mnt_1795113929444_twk7",
