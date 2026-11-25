@@ -1,8 +1,8 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-25T10:40:57.856Z",
-  "timestamp": 1795603257847,
+  "exportedAt": "2026-11-25T10:48:05.630Z",
+  "timestamp": 1795603685474,
   "deviceId": "dev_xkmdxfa_mwrysg4x",
   "moduleTimestamps": {
     "cnt_hergun": 1795433003669,
@@ -217,11 +217,18 @@
     "shf_emp_ozge_cuma": 1795603230971,
     "shf_emp_ozge_cumartesi": 1795603234920,
     "shf_emp_ozge_pazar": 1795603237529,
-    "shf": 1795603257847,
+    "shf": 1795603685457,
     "cnt_pazartesi_sarf": 1795433648432,
     "ot": 1795459092173,
     "rdoc_acilis": 1795436248911,
-    "rdoc_kapanis": 1795438335859
+    "rdoc_kapanis": 1795438335859,
+    "shf_emp_ali_firat_pazartesi": 1795603685457,
+    "shf_emp_ali_firat_sali": 1795603685457,
+    "shf_emp_ali_firat_carsamba": 1795603685457,
+    "shf_emp_ali_firat_persembe": 1795603685457,
+    "shf_emp_ali_firat_cuma": 1795603685457,
+    "shf_emp_ali_firat_cumartesi": 1795603685457,
+    "shf_emp_ali_firat_pazar": 1795603685457
   },
   "suppliers": [
     {
@@ -4844,6 +4851,12 @@
       "name": "Ali",
       "order": 12,
       "position": "servis"
+    },
+    {
+      "id": "emp_ali_firat",
+      "name": "Ali Fırat",
+      "position": "servis",
+      "order": 13
     }
   ],
   "weeklyShifts": {
@@ -5179,10 +5192,47 @@
         "start": "11:00",
         "end": "21:00"
       }
+    },
+    "emp_ali_firat": {
+      "pazartesi": {
+        "isOff": false,
+        "start": "13:30",
+        "end": "22:30"
+      },
+      "sali": {
+        "isOff": false,
+        "start": "13:30",
+        "end": "22:30"
+      },
+      "carsamba": {
+        "isOff": false,
+        "start": "13:30",
+        "end": "22:30"
+      },
+      "persembe": {
+        "isOff": false,
+        "start": "13:30",
+        "end": "22:30"
+      },
+      "cuma": {
+        "isOff": false,
+        "start": "13:30",
+        "end": "22:30"
+      },
+      "cumartesi": {
+        "isOff": false,
+        "start": "13:30",
+        "end": "22:30"
+      },
+      "pazar": {
+        "isOff": false,
+        "start": "13:30",
+        "end": "22:30"
+      }
     }
   },
   "deletedShiftEmployeeIds": [],
-  "shiftTimestamp": 1795603257847,
+  "shiftTimestamp": 1795603685457,
   "countLists": [
     {
       "id": "hergun",
