@@ -1,11 +1,14 @@
 {
   "version": 2,
   "appName": "Deli Napolitan Stok",
-  "exportedAt": "2026-11-25T14:54:16.222Z",
-  "timestamp": 1795618456069,
-  "deviceId": "dev_9s3twk8_mvmwns8g",
+  "exportedAt": "2026-11-26T11:23:40.622Z",
+  "timestamp": 1795692220019,
+  "deviceId": "dev_hfy98gs_mvtnpxbq",
   "moduleTimestamps": {
     "cnt_hergun": 1795605955334,
+    "cnt_pazar": 1795352462861,
+    "rst_hergun": 1794144128904,
+    "rst_pazar": 1793557180407,
     "wsm_pazartesi": 1792967245661,
     "wsm_sali": 1792967395559,
     "wsm_carsamba": 1792967410608,
@@ -14,9 +17,6 @@
     "wsm_cumartesi": 1792967445208,
     "wsm_pazar": 1792967460558,
     "wsm": 1792967462680,
-    "cnt_pazar": 1795352462861,
-    "rst_hergun": 1794144128904,
-    "rst_pazar": 1793557180407,
     "sd": 1792967388152,
     "sup": 1794358565096,
     "prod_cust_kabak": 1792969316562,
@@ -200,8 +200,8 @@
     "shf_emp_ozge_cuma": 1795603230971,
     "shf_emp_ozge_cumartesi": 1795603234920,
     "shf_emp_ozge_pazar": 1795603237529,
-    "prod_cust_i_likli_kemik_stok_suyu": 1794359199028,
     "cnt_metro": 1794144391783,
+    "prod_cust_i_likli_kemik_stok_suyu": 1794359199028,
     "prod_cust_patates": 1794358779227,
     "prod_hg_26": 1794358192908,
     "prod_hg_21": 1794358724406,
@@ -218,10 +218,10 @@
     "prod_hg_28": 1795134406404,
     "prod_hg_25": 1795134419488,
     "prod_hg_30": 1795134424639,
-    "cnt_pazartesi_sarf": 1795433648432,
     "ot": 1795459092173,
     "rdoc_acilis": 1795436248911,
     "rdoc_kapanis": 1795438335859,
+    "cnt_pazartesi_sarf": 1795433648432,
     "shf_emp_ali_firat_pazartesi": 1795603727803,
     "shf_emp_ali_firat_sali": 1795603731970,
     "shf_emp_ali_firat_carsamba": 1795603735976,
@@ -2526,6 +2526,10 @@
         "qty": "1",
         "notes": ""
       },
+      "sl_35": {
+        "qty": "0",
+        "notes": ""
+      },
       "cust_taze_kekik": {
         "qty": "2",
         "notes": "Dil sotelenecek"
@@ -3484,6 +3488,61 @@
     "pazartesi_sarf": 1795433648432
   },
   "lastProductCounts": {
+    "pz_1": {
+      "qty": "3",
+      "dayId": "pazar",
+      "updatedAt": 1795352462861
+    },
+    "pz_3": {
+      "qty": "0.5",
+      "dayId": "pazar",
+      "updatedAt": 1795352462861
+    },
+    "pz_4": {
+      "qty": "2",
+      "dayId": "pazar",
+      "updatedAt": 1795352462861
+    },
+    "pz_5": {
+      "qty": "2",
+      "dayId": "pazar",
+      "updatedAt": 1795352462861
+    },
+    "pz_6": {
+      "qty": "0.5",
+      "dayId": "pazar",
+      "updatedAt": 1795352462861
+    },
+    "pz_8": {
+      "qty": "0.25",
+      "dayId": "pazar",
+      "updatedAt": 1795352462861
+    },
+    "pz_10": {
+      "qty": "1",
+      "dayId": "pazar",
+      "updatedAt": 1795352462861
+    },
+    "pz_11": {
+      "qty": "2.5",
+      "dayId": "pazar",
+      "updatedAt": 1795352462861
+    },
+    "pz_12": {
+      "qty": "0.5",
+      "dayId": "pazar",
+      "updatedAt": 1795352462861
+    },
+    "pz_14": {
+      "qty": "6",
+      "dayId": "pazar",
+      "updatedAt": 1795352462861
+    },
+    "pz_16": {
+      "qty": "1.5",
+      "dayId": "pazar",
+      "updatedAt": 1795352462861
+    },
     "hg_1": {
       "qty": "1.5",
       "dayId": "hergun",
@@ -3613,61 +3672,6 @@
       "qty": "8",
       "dayId": "hergun",
       "updatedAt": 1795605955334
-    },
-    "pz_1": {
-      "qty": "3",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
-    },
-    "pz_3": {
-      "qty": "0.5",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
-    },
-    "pz_4": {
-      "qty": "2",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
-    },
-    "pz_5": {
-      "qty": "2",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
-    },
-    "pz_6": {
-      "qty": "0.5",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
-    },
-    "pz_8": {
-      "qty": "0.25",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
-    },
-    "pz_10": {
-      "qty": "1",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
-    },
-    "pz_11": {
-      "qty": "2.5",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
-    },
-    "pz_12": {
-      "qty": "0.5",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
-    },
-    "pz_14": {
-      "qty": "6",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
-    },
-    "pz_16": {
-      "qty": "1.5",
-      "dayId": "pazar",
-      "updatedAt": 1795352462861
     },
     "sl_2": {
       "qty": "8",
